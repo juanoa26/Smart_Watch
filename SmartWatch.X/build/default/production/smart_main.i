@@ -5957,7 +5957,7 @@ void main()
     while ( 1 ){
         tempar = ReadADC();
         luz = ReadLUZ();
-        if(tempar >20&&(luz>0&&luz<200)){
+        if(tempar >20&&(luz>0&&luz<400)){
             sprintf(Stemp, "%0.1f C", tempar);
             LCD_String_xy(1, 0, Stemp);
             sprintf(Sluz, "%0.1f", luz);
@@ -5965,33 +5965,36 @@ void main()
             LCD_Custom_Char ( 0 ,character2);
             LCD_Command ( 0xc0);
             LCD_Char (0);
-            LATE0 = 0;
-            LATE1 = 0;
-            LATE2 = 0;
-        }
-        if((tempar >10||tempar<=20)&&(luz>200&&luz<500)){
-            sprintf(Stemp, "%0.1f C", tempar);
-            LCD_String_xy(1, 0, Stemp);
-            sprintf(Sluz, "%0.1f", luz);
-            LCD_String_xy(1, 6, Sluz);
-            LCD_Custom_Char ( 0 ,character1);
-            LCD_Command ( 0xc0);
-            LCD_Char (0);
-            LATE0 = 1;
-            LATE1 = 1;
-            LATE2 = 0;
-        }
-        if(tempar <10&&(luz>500&&luz<1500)){
-            sprintf(Stemp, "%0.1f C", tempar);
-            LCD_String_xy(1, 0, Stemp);
-            sprintf(Sluz, "%0.1f", luz);
-            LCD_String_xy(1, 6, Sluz);
-            LCD_Custom_Char ( 0 ,character1);
-            LCD_Command ( 0xc0);
-            LCD_Char (0);
+            MSdelay(5000);
             LATE0 = 1;
             LATE1 = 1;
             LATE2 = 1;
+        }
+        if((tempar >10&&tempar<=20)&&(luz>400&&luz<700)){
+            sprintf(Stemp, "%0.1f C", tempar);
+            LCD_String_xy(1, 0, Stemp);
+            sprintf(Sluz, "%0.1f", luz);
+            LCD_String_xy(1, 6, Sluz);
+            LCD_Custom_Char ( 0 ,character1);
+            LCD_Command ( 0xc0);
+            LCD_Char (0);
+            MSdelay(5000);
+            LATE0 = 1;
+            LATE1 = 1;
+            LATE2 = 0;
+        }
+        if(tempar <10&&(luz>700&&luz<1500)){
+            sprintf(Stemp, "%0.1f C", tempar);
+            LCD_String_xy(1, 0, Stemp);
+            sprintf(Sluz, "%0.1f", luz);
+            LCD_String_xy(1, 6, Sluz);
+            LCD_Custom_Char ( 0 ,character1);
+            LCD_Command ( 0xc0);
+            LCD_Char (0);
+            MSdelay(5000);
+            LATE0 = 0;
+            LATE1 = 0;
+            LATE2 = 0;
         }
         LCD_Clear();
     };
