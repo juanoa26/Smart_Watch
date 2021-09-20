@@ -1,4 +1,4 @@
-# 1 "smart_main.c"
+# 1 "Sensor_luz.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "smart_main.c" 2
+# 1 "Sensor_luz.c" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -5623,7 +5623,7 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 2 3
-# 1 "smart_main.c" 2
+# 1 "Sensor_luz.c" 2
 
 
 # 1 "./config.h" 1
@@ -5688,19 +5688,7 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 
 
 #pragma config EBTRB = OFF
-# 3 "smart_main.c" 2
-
-# 1 "./LCD_caracter.h" 1
-# 26 "./LCD_caracter.h"
-void MSdelay(unsigned int );
-void LCD_Init();
-void LCD_Command(unsigned char );
-void LCD_Char(unsigned char x);
-void LCD_String(const char *);
-void LCD_String_xy(char, char , const char *);
-void LCD_Clear();
-void LCD_Custom_Char ( unsigned char , unsigned char *);
-# 4 "smart_main.c" 2
+# 3 "Sensor_luz.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 3
@@ -5840,7 +5828,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 5 "smart_main.c" 2
+# 4 "Sensor_luz.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
@@ -5927,73 +5915,41 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
-# 6 "smart_main.c" 2
+# 5 "Sensor_luz.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
-# 7 "smart_main.c" 2
-# 23 "smart_main.c"
-float tempar;
-float luz;
-char Stemp[20];
-char Sluz[20];
-uint16_t ReadADC(void);
+# 6 "Sensor_luz.c" 2
+
+
 uint16_t ReadLUZ(void);
 
-unsigned char character1[ 8 ] = { 0x0e , 0x1f , 0x1f , 0x0e , 0x00 , 0x0a , 0x0a , 0x00 };
-unsigned char character2[ 8 ] = { 0x15 , 0x0e , 0x11 , 0x11 , 0x0e , 0x15 , 0x00 , 0x00 };
-unsigned char character3[ 8 ] = { 0x00 , 0x00 , 0x0e , 0x1f , 0x0e , 0x00 , 0x00 , 0x00 };
 
 
-void main()
-{
-    OSCCON=0x72;
-    TRISE=0x00;
+uint16_t ReadLUZ(void) {
+
+    uint16_t result;
+
+    TRISD = 0x00;
+    TRISA = 0xFF;
+
+    OSCCONbits.IRCF = 0b111;
+    OSCCONbits.SCS = 0b10;
 
 
- LCD_Init();
- LCD_String_xy ( 1 , 0 , " Buenos Dias " );
-    LCD_Clear();
-# 55 "smart_main.c"
-    while ( 1 ){
-        tempar = ReadADC();
-        luz = ReadLUZ();
-        if(tempar >20&&(luz>0&&luz<200)){
-            sprintf(Stemp, "%0.1f C", tempar);
-            LCD_String_xy(1, 0, Stemp);
-            sprintf(Sluz, "%0.1f", luz);
-            LCD_String_xy(1, 6, Sluz);
-            LCD_Custom_Char ( 0 ,character2);
-            LCD_Command ( 0xc0);
-            LCD_Char (0);
-            LATE0 = 0;
-            LATE1 = 0;
-            LATE2 = 0;
-        }
-        if((tempar >10||tempar<=20)&&(luz>200&&luz<500)){
-            sprintf(Stemp, "%0.1f C", tempar);
-            LCD_String_xy(1, 0, Stemp);
-            sprintf(Sluz, "%0.1f", luz);
-            LCD_String_xy(1, 6, Sluz);
-            LCD_Custom_Char ( 0 ,character1);
-            LCD_Command ( 0xc0);
-            LCD_Char (0);
-            LATE0 = 1;
-            LATE1 = 1;
-            LATE2 = 0;
-        }
-        if(tempar <10&&(luz>500&&luz<1500)){
-            sprintf(Stemp, "%0.1f C", tempar);
-            LCD_String_xy(1, 0, Stemp);
-            sprintf(Sluz, "%0.1f", luz);
-            LCD_String_xy(1, 6, Sluz);
-            LCD_Custom_Char ( 0 ,character1);
-            LCD_Command ( 0xc0);
-            LCD_Char (0);
-            LATE0 = 1;
-            LATE1 = 1;
-            LATE2 = 1;
-        }
-        LCD_Clear();
-    };
+    ADCON1bits.PCFG = 0b1101;
+    ADCON1bits.VCFG = 0b00;
+    ADCON0bits.CHS = 0b0001;
+    ADCON2bits.ACQT = 0b010;
+    ADCON2bits.ADCS = 0b001;
+    ADCON2bits.ADFM = 1;
+    ADCON0bits.ADON = 1;
+# 43 "Sensor_luz.c"
+    while (1) {
+        ADCON0bits.GO_DONE = 1;
+        while (ADCON0bits.GO_DONE);
+        result = ADRESH;
+        result = (result << 8) + ADRESL;
 
+        return result;
+    }
 }

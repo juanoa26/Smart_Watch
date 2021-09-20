@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=smart_main.c utils.c
+SOURCEFILES_QUOTED_IF_SPACED=smart_main.c LCD_caracter.c Temperatura.c Sensor_luz.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/smart_main.p1 ${OBJECTDIR}/utils.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/smart_main.p1.d ${OBJECTDIR}/utils.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/smart_main.p1 ${OBJECTDIR}/LCD_caracter.p1 ${OBJECTDIR}/Temperatura.p1 ${OBJECTDIR}/Sensor_luz.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/smart_main.p1.d ${OBJECTDIR}/LCD_caracter.p1.d ${OBJECTDIR}/Temperatura.p1.d ${OBJECTDIR}/Sensor_luz.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/smart_main.p1 ${OBJECTDIR}/utils.p1
+OBJECTFILES=${OBJECTDIR}/smart_main.p1 ${OBJECTDIR}/LCD_caracter.p1 ${OBJECTDIR}/Temperatura.p1 ${OBJECTDIR}/Sensor_luz.p1
 
 # Source Files
-SOURCEFILES=smart_main.c utils.c
+SOURCEFILES=smart_main.c LCD_caracter.c Temperatura.c Sensor_luz.c
 
 
 
@@ -102,13 +102,29 @@ ${OBJECTDIR}/smart_main.p1: smart_main.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/smart_main.d ${OBJECTDIR}/smart_main.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/smart_main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/utils.p1: utils.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/LCD_caracter.p1: LCD_caracter.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/utils.p1.d 
-	@${RM} ${OBJECTDIR}/utils.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/utils.p1 utils.c 
-	@-${MV} ${OBJECTDIR}/utils.d ${OBJECTDIR}/utils.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/utils.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	@${RM} ${OBJECTDIR}/LCD_caracter.p1.d 
+	@${RM} ${OBJECTDIR}/LCD_caracter.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/LCD_caracter.p1 LCD_caracter.c 
+	@-${MV} ${OBJECTDIR}/LCD_caracter.d ${OBJECTDIR}/LCD_caracter.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/LCD_caracter.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Temperatura.p1: Temperatura.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Temperatura.p1.d 
+	@${RM} ${OBJECTDIR}/Temperatura.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Temperatura.p1 Temperatura.c 
+	@-${MV} ${OBJECTDIR}/Temperatura.d ${OBJECTDIR}/Temperatura.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Temperatura.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Sensor_luz.p1: Sensor_luz.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Sensor_luz.p1.d 
+	@${RM} ${OBJECTDIR}/Sensor_luz.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Sensor_luz.p1 Sensor_luz.c 
+	@-${MV} ${OBJECTDIR}/Sensor_luz.d ${OBJECTDIR}/Sensor_luz.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Sensor_luz.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
 ${OBJECTDIR}/smart_main.p1: smart_main.c  nbproject/Makefile-${CND_CONF}.mk 
@@ -119,13 +135,29 @@ ${OBJECTDIR}/smart_main.p1: smart_main.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/smart_main.d ${OBJECTDIR}/smart_main.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/smart_main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/utils.p1: utils.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/LCD_caracter.p1: LCD_caracter.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/utils.p1.d 
-	@${RM} ${OBJECTDIR}/utils.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/utils.p1 utils.c 
-	@-${MV} ${OBJECTDIR}/utils.d ${OBJECTDIR}/utils.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/utils.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	@${RM} ${OBJECTDIR}/LCD_caracter.p1.d 
+	@${RM} ${OBJECTDIR}/LCD_caracter.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/LCD_caracter.p1 LCD_caracter.c 
+	@-${MV} ${OBJECTDIR}/LCD_caracter.d ${OBJECTDIR}/LCD_caracter.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/LCD_caracter.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Temperatura.p1: Temperatura.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Temperatura.p1.d 
+	@${RM} ${OBJECTDIR}/Temperatura.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Temperatura.p1 Temperatura.c 
+	@-${MV} ${OBJECTDIR}/Temperatura.d ${OBJECTDIR}/Temperatura.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Temperatura.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/Sensor_luz.p1: Sensor_luz.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/Sensor_luz.p1.d 
+	@${RM} ${OBJECTDIR}/Sensor_luz.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Sensor_luz.p1 Sensor_luz.c 
+	@-${MV} ${OBJECTDIR}/Sensor_luz.d ${OBJECTDIR}/Sensor_luz.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Sensor_luz.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

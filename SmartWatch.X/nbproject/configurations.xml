@@ -5,7 +5,7 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>config.h</itemPath>
-      <itemPath>utils.h</itemPath>
+      <itemPath>LCD_caracter.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -15,7 +15,9 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>smart_main.c</itemPath>
-      <itemPath>utils.c</itemPath>
+      <itemPath>LCD_caracter.c</itemPath>
+      <itemPath>Temperatura.c</itemPath>
+      <itemPath>Sensor_luz.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
