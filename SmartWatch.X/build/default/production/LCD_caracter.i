@@ -5628,15 +5628,19 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 
 
 # 1 "./config.h" 1
-# 44 "./config.h"
+
+
+
+
+
 #pragma config PLLDIV = 1
 #pragma config CPUDIV = OSC1_PLL2
 #pragma config USBDIV = 1
 
 
-#pragma config FOSC = INTOSCIO_EC
+#pragma config FOSC = INTOSC_EC
 #pragma config FCMEN = OFF
-#pragma config IESO = ON
+#pragma config IESO = OFF
 
 
 #pragma config PWRT = ON
@@ -5650,13 +5654,13 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 
 
 #pragma config CCP2MX = ON
-#pragma config PBADEN = ON
+#pragma config PBADEN = OFF
 #pragma config LPT1OSC = OFF
 #pragma config MCLRE = ON
 
 
-#pragma config STVREN = ON
-#pragma config LVP = ON
+#pragma config STVREN = OFF
+#pragma config LVP = OFF
 #pragma config ICPRT = OFF
 #pragma config XINST = OFF
 
@@ -5692,6 +5696,74 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 4 "LCD_caracter.c" 2
 
 # 1 "./LCD_caracter.h" 1
+# 15 "./LCD_caracter.h"
+# 1 "./config.h" 1
+
+
+
+
+
+#pragma config PLLDIV = 1
+#pragma config CPUDIV = OSC1_PLL2
+#pragma config USBDIV = 1
+
+
+#pragma config FOSC = INTOSC_EC
+#pragma config FCMEN = OFF
+#pragma config IESO = OFF
+
+
+#pragma config PWRT = ON
+#pragma config BOR = OFF
+#pragma config BORV = 3
+#pragma config VREGEN = OFF
+
+
+#pragma config WDT = OFF
+#pragma config WDTPS = 32768
+
+
+#pragma config CCP2MX = ON
+#pragma config PBADEN = OFF
+#pragma config LPT1OSC = OFF
+#pragma config MCLRE = ON
+
+
+#pragma config STVREN = OFF
+#pragma config LVP = OFF
+#pragma config ICPRT = OFF
+#pragma config XINST = OFF
+
+
+#pragma config CP0 = OFF
+#pragma config CP1 = OFF
+#pragma config CP2 = OFF
+#pragma config CP3 = OFF
+
+
+#pragma config CPB = OFF
+#pragma config CPD = OFF
+
+
+#pragma config WRT0 = OFF
+#pragma config WRT1 = OFF
+#pragma config WRT2 = OFF
+#pragma config WRT3 = OFF
+
+
+#pragma config WRTC = OFF
+#pragma config WRTB = OFF
+#pragma config WRTD = OFF
+
+
+#pragma config EBTR0 = OFF
+#pragma config EBTR1 = OFF
+#pragma config EBTR2 = OFF
+#pragma config EBTR3 = OFF
+
+
+#pragma config EBTRB = OFF
+# 15 "./LCD_caracter.h" 2
 # 26 "./LCD_caracter.h"
 void MSdelay(unsigned int );
 void LCD_Init();
@@ -5722,7 +5794,7 @@ unsigned char character3[ 8 ] = { 0x00 , 0x00 , 0x0e , 0x1f , 0x0e , 0x00 , 0x00
 
 void LCD_Init()
 {
-    TRISB = 0;
+    TRISD = 0;
     MSdelay(15);
     LCD_Command(0x02);
 
@@ -5735,32 +5807,32 @@ void LCD_Init()
 
 void LCD_Command(unsigned char cmd )
 {
- LATB = (LATB & 0x0f) |(0xF0 & cmd);
- LATB2 = 0;
- LATB3 = 1;
+ LATD = (LATD & 0x0f) |(0xF0 & cmd);
+ LATD0 = 0;
+ LATD1 = 1;
  __nop();
- LATB3 = 0;
+ LATD1 = 0;
  MSdelay(1);
-    LATB = (LATB & 0x0f) | (cmd<<4);
- LATB3 = 1;
+    LATD = (LATD & 0x0f) | (cmd<<4);
+ LATD1 = 1;
  __nop();
- LATB3 = 0;
+ LATD1 = 0;
  MSdelay(3);
 }
 
 
 void LCD_Char(unsigned char dat)
 {
- LATB = (LATB & 0x0f) | (0xF0 & dat);
- LATB2 = 1;
- LATB3 = 1;
+ LATD = (LATD & 0x0f) | (0xF0 & dat);
+ LATD0 = 1;
+ LATD1 = 1;
  __nop();
- LATB3 = 0;
+ LATD1 = 0;
  MSdelay(1);
-    LATB = (LATB & 0x0f) | (dat<<4);
- LATB3 = 1;
+    LATD = (LATD & 0x0f) | (dat<<4);
+ LATD1 = 1;
  __nop();
- LATB3 = 0;
+ LATD1 = 0;
  MSdelay(3);
 }
 void LCD_String(const char *msg)

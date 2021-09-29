@@ -15,6 +15,8 @@
 [v _pad pad `(i  1 s 2 pad ]
 "332
 [v _efgtoa efgtoa `(i  1 s 2 efgtoa ]
+"645
+[v _xtoa xtoa `(i  1 s 2 xtoa ]
 "692
 [v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
 "1390
@@ -39,8 +41,12 @@
 [v ___ftmul __ftmul `(f  1 e 4 0 ]
 "19 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\isalpha.c
+[v _isalpha isalpha `(i  1 e 2 0 ]
 "5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\isdigit.c
 [v _isdigit isdigit `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\islower.c
+[v _islower islower `(i  1 e 2 0 ]
 "5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\isspace.c
 [v _isspace isspace `(i  1 e 2 0 ]
 "5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\isupper.c
@@ -69,6 +75,8 @@
 [v _strncmp strncmp `(i  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\tolower.c
 [v _tolower tolower `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\toupper.c
+[v _toupper toupper `(i  1 e 2 0 ]
 "15 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 "15 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul32.c
@@ -93,101 +101,211 @@
 [v _LCD_Custom_Char LCD_Custom_Char `(v  1 e 1 0 ]
 "111
 [v _MSdelay MSdelay `(v  1 e 1 0 ]
+"20 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\reloj.c
+[v _RTC_Read_Clock RTC_Read_Clock `(v  1 e 1 0 ]
+"31
+[v _RTC_Read_Calendar RTC_Read_Calendar `(v  1 e 1 0 ]
+"45
+[v _Calendario Calendario `(v  1 e 1 0 ]
+"12 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Reloj_ar.c
+[v _I2C_Read I2C_Read `(uc  1 e 1 0 ]
+"29
+[v _I2C_Init I2C_Init `(v  1 e 1 0 ]
+"43
+[v _I2C_Ready I2C_Ready `(v  1 e 1 0 ]
+"68
+[v _I2C_Start I2C_Start `(uc  1 e 1 0 ]
+"79
+[v _I2C_Repeated_Start I2C_Repeated_Start `(uc  1 e 1 0 ]
+"93
+[v _I2C_Stop I2C_Stop `(uc  1 e 1 0 ]
+"101
+[v _I2C_Write I2C_Write `(uc  1 e 1 0 ]
+"111
+[v _I2C_Ack I2C_Ack `(v  1 e 1 0 ]
+"118
+[v _I2C_Nack I2C_Nack `(v  1 e 1 0 ]
 "12 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Sensor_luz.c
 [v _ReadLUZ ReadLUZ `(us  1 e 2 0 ]
-"35 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\smart_main.c
+"40 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\smart_main.c
 [v _main main `(v  1 e 1 0 ]
-"16 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Temperatura.c
+"13 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Temperatura.c
 [v _ReadADC ReadADC `(us  1 e 2 0 ]
-"3073 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
-[v _LATB LATB `VEuc  1 e 1 @3978 ]
+"3263 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
 "3427
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
-"3625
-[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
 "4001
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "4223
 [v _TRISE TRISE `VEuc  1 e 1 @3990 ]
-[s S270 . 1 `uc 1 ADCS 1 0 :3:0 
+[s S276 . 1 `uc 1 ADCS 1 0 :3:0 
 `uc 1 ACQT 1 0 :3:3 
 `uc 1 . 1 0 :1:6 
 `uc 1 ADFM 1 0 :1:7 
 ]
 "6531
-[s S275 . 1 `uc 1 ADCS0 1 0 :1:0 
+[s S281 . 1 `uc 1 ADCS0 1 0 :1:0 
 `uc 1 ADCS1 1 0 :1:1 
 `uc 1 ADCS2 1 0 :1:2 
 `uc 1 ACQT0 1 0 :1:3 
 `uc 1 ACQT1 1 0 :1:4 
 `uc 1 ACQT2 1 0 :1:5 
 ]
-[u S282 . 1 `S270 1 . 1 0 `S275 1 . 1 0 ]
-[v _ADCON2bits ADCON2bits `VES282  1 e 1 @4032 ]
-[s S167 . 1 `uc 1 PCFG 1 0 :4:0 
+[u S288 . 1 `S276 1 . 1 0 `S281 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES288  1 e 1 @4032 ]
+[s S173 . 1 `uc 1 PCFG 1 0 :4:0 
 `uc 1 VCFG 1 0 :2:4 
 ]
 "6606
-[s S170 . 1 `uc 1 PCFG0 1 0 :1:0 
+[s S176 . 1 `uc 1 PCFG0 1 0 :1:0 
 `uc 1 PCFG1 1 0 :1:1 
 `uc 1 PCFG2 1 0 :1:2 
 `uc 1 PCFG3 1 0 :1:3 
 `uc 1 VCFG0 1 0 :1:4 
 `uc 1 VCFG1 1 0 :1:5 
 ]
-[s S177 . 1 `uc 1 . 1 0 :3:0 
+[s S183 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CHSN3 1 0 :1:3 
 `uc 1 VCFG01 1 0 :1:4 
 `uc 1 VCFG11 1 0 :1:5 
 ]
-[u S182 . 1 `S167 1 . 1 0 `S170 1 . 1 0 `S177 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES182  1 e 1 @4033 ]
-[s S202 . 1 `uc 1 . 1 0 :1:0 
+[u S188 . 1 `S173 1 . 1 0 `S176 1 . 1 0 `S183 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES188  1 e 1 @4033 ]
+[s S208 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_NOT_DONE 1 0 :1:1 
 ]
 "6710
-[s S205 . 1 `uc 1 ADON 1 0 :1:0 
+[s S211 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 ]
-[s S209 . 1 `uc 1 . 1 0 :1:0 
+[s S215 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
 `uc 1 CHS2 1 0 :1:4 
 `uc 1 CHS3 1 0 :1:5 
 ]
-[s S216 . 1 `uc 1 . 1 0 :1:0 
+[s S222 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 DONE 1 0 :1:1 
 ]
-[s S219 . 1 `uc 1 . 1 0 :1:0 
+[s S225 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[s S222 . 1 `uc 1 . 1 0 :1:0 
+[s S228 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_DONE 1 0 :1:1 
 ]
-[s S225 . 1 `uc 1 . 1 0 :1:0 
+[s S231 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S228 . 1 `uc 1 . 1 0 :1:0 
+[s S234 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GODONE 1 0 :1:1 
 ]
-[u S231 . 1 `S202 1 . 1 0 `S205 1 . 1 0 `S209 1 . 1 0 `S216 1 . 1 0 `S219 1 . 1 0 `S222 1 . 1 0 `S225 1 . 1 0 `S228 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES231  1 e 1 @4034 ]
+[u S237 . 1 `S208 1 . 1 0 `S211 1 . 1 0 `S215 1 . 1 0 `S222 1 . 1 0 `S225 1 . 1 0 `S228 1 . 1 0 `S231 1 . 1 0 `S234 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES237  1 e 1 @4034 ]
 "6792
 [v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
 "6799
 [v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+"6806
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @4037 ]
+[s S666 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"6823
+[u S675 . 1 `S666 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES675  1 e 1 @4037 ]
+"6868
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @4038 ]
+"6938
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @4039 ]
+[s S504 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_NOT_W 1 0 :1:2 
+]
+"7021
+[s S507 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 D_NOT_A 1 0 :1:5 
+]
+[s S510 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+[s S519 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S524 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DAT 1 0 :1:5 
+]
+[s S530 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S535 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_WRITE 1 0 :1:2 
+]
+[s S538 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_ADDRESS 1 0 :1:5 
+]
+[s S541 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S546 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[s S551 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S556 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RW 1 0 :1:2 
+`uc 1 START 1 0 :1:3 
+`uc 1 STOP 1 0 :1:4 
+`uc 1 DA 1 0 :1:5 
+]
+[s S562 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 NOT_A 1 0 :1:5 
+]
+[u S567 . 1 `S504 1 . 1 0 `S507 1 . 1 0 `S510 1 . 1 0 `S519 1 . 1 0 `S524 1 . 1 0 `S530 1 . 1 0 `S535 1 . 1 0 `S538 1 . 1 0 `S541 1 . 1 0 `S546 1 . 1 0 `S551 1 . 1 0 `S556 1 . 1 0 `S562 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES567  1 e 1 @4039 ]
+"7186
+[v _SSPADD SSPADD `VEuc  1 e 1 @4040 ]
+"7193
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @4041 ]
 "7986
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
-[s S135 . 1 `uc 1 SCS 1 0 :2:0 
+[s S141 . 1 `uc 1 SCS 1 0 :2:0 
 `uc 1 IOFS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 `uc 1 IDLEN 1 0 :1:7 
 ]
 "8009
-[s S141 . 1 `uc 1 SCS0 1 0 :1:0 
+[s S147 . 1 `uc 1 SCS0 1 0 :1:0 
 `uc 1 SCS1 1 0 :1:1 
 `uc 1 FLTS 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -195,18 +313,38 @@
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S149 . 1 `S135 1 . 1 0 `S141 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES149  1 e 1 @4051 ]
-"9954
-[v _LATB2 LATB2 `VEb  1 e 0 @31826 ]
-"9957
-[v _LATB3 LATB3 `VEb  1 e 0 @31827 ]
+[u S155 . 1 `S141 1 . 1 0 `S147 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES155  1 e 1 @4051 ]
+"8910
+[v _ACKDT ACKDT `VEb  1 e 0 @32301 ]
+"8913
+[v _ACKEN ACKEN `VEb  1 e 0 @32300 ]
+"8916
+[v _ACKSTAT ACKSTAT `VEb  1 e 0 @32302 ]
+"9987
+[v _LATD0 LATD0 `VEb  1 e 0 @31840 ]
+"9990
+[v _LATD1 LATD1 `VEb  1 e 0 @31841 ]
 "10011
 [v _LATE0 LATE0 `VEb  1 e 0 @31848 ]
 "10014
 [v _LATE1 LATE1 `VEb  1 e 0 @31849 ]
 "10017
 [v _LATE2 LATE2 `VEb  1 e 0 @31850 ]
+"10275
+[v _PEN PEN `VEb  1 e 0 @32298 ]
+"10434
+[v _RCEN RCEN `VEb  1 e 0 @32299 ]
+"10515
+[v _RSEN RSEN `VEb  1 e 0 @32297 ]
+"10641
+[v _SSPIE SSPIE `VEb  1 e 0 @31979 ]
+"10644
+[v _SSPIF SSPIF `VEb  1 e 0 @31987 ]
+"10902
+[v _TRISB0 TRISB0 `VEb  1 e 0 @31896 ]
+"10905
+[v _TRISB1 TRISB1 `VEb  1 e 0 @31897 ]
 "55 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
 [v _flags flags `i  1 s 2 flags ]
 [v _prec prec `i  1 s 2 prec ]
@@ -219,61 +357,168 @@
 [v _character1 character1 `[8]uc  1 e 8 0 ]
 "14
 [v _character2 character2 `[8]uc  1 e 8 0 ]
-"23 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\smart_main.c
+"16 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\reloj.c
+[v _sec sec `i  1 e 2 0 ]
+[v _min min `i  1 e 2 0 ]
+[v _hour hour `i  1 e 2 0 ]
+"17
+[v _Day Day `i  1 e 2 0 ]
+[v _Date Date `i  1 e 2 0 ]
+[v _Month Month `i  1 e 2 0 ]
+[v _Year Year `i  1 e 2 0 ]
+"25 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\smart_main.c
 [v _tempar tempar `f  1 e 4 0 ]
-"24
-[v _luz luz `f  1 e 4 0 ]
-"25
-[v _Stemp Stemp `[20]uc  1 e 20 0 ]
 "26
-[v _Sluz Sluz `[20]uc  1 e 20 0 ]
-"35
+[v _luz luz `f  1 e 4 0 ]
+"27
+[v _Stemp Stemp `[20]uc  1 e 20 0 ]
+"40
 [v _main main `(v  1 e 1 0 ]
 {
-"100
+"97
+} 0
+"12 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Sensor_luz.c
+[v _ReadLUZ ReadLUZ `(us  1 e 2 0 ]
+{
+"14
+[v ReadLUZ@result result `us  1 a 2 4 ]
+"51
+} 0
+"13 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Temperatura.c
+[v _ReadADC ReadADC `(us  1 e 2 0 ]
+{
+"15
+[v ReadADC@result result `us  1 a 2 6 ]
+"53
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 16 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 15 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 6 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 14 ]
+"44
+} 0
+"99 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\LCD_caracter.c
+[v _LCD_Custom_Char LCD_Custom_Char `(v  1 e 1 0 ]
+{
+[v LCD_Custom_Char@loc loc `uc  1 a 1 wreg ]
+"101
+[v LCD_Custom_Char@i i `uc  1 a 1 11 ]
+"99
+[v LCD_Custom_Char@loc loc `uc  1 a 1 wreg ]
+[v LCD_Custom_Char@msg msg `*.39uc  1 p 2 8 ]
+"102
+[v LCD_Custom_Char@loc loc `uc  1 a 1 10 ]
+"109
+} 0
+"45 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\reloj.c
+[v _Calendario Calendario `(v  1 e 1 0 ]
+{
+"48
+[v Calendario@hours hours `[10]uc  1 a 10 57 ]
+[v Calendario@mins mins `[10]uc  1 a 10 47 ]
+[v Calendario@secs secs `[10]uc  1 a 10 37 ]
+"49
+[v Calendario@year year `[10]uc  1 a 10 27 ]
+[v Calendario@month month `[10]uc  1 a 10 17 ]
+[v Calendario@date date `[10]uc  1 a 10 7 ]
+"52
+[v Calendario@days days `[7]uc  1 a 7 0 ]
+"51
+[v Calendario@AM_PM AM_PM `uc  1 a 1 68 ]
+"50
+[v Calendario@Clock_type Clock_type `uc  1 a 1 67 ]
+"51
+[v Calendario@F3530 F3530 `[7]uc  1 s 7 F3530 ]
+"136
 } 0
 "9 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[s S863 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[s S1163 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
 "13
-[v sprintf@f f `S863  1 a 6 112 ]
+[v sprintf@f f `S1163  1 a 6 120 ]
 "12
-[v sprintf@ap ap `[1]*.39v  1 a 2 110 ]
+[v sprintf@ap ap `[1]*.39v  1 a 2 118 ]
 "9
-[v sprintf@s s `*.39uc  1 p 2 102 ]
-[v sprintf@fmt fmt `*.25Cuc  1 p 2 104 ]
+[v sprintf@s s `*.39uc  1 p 2 110 ]
+[v sprintf@fmt fmt `*.25Cuc  1 p 2 112 ]
 "23
 } 0
 "1390 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
 {
 "1393
-[v vfprintf@cfmt cfmt `*.25uc  1 a 2 100 ]
-[s S889 _IO_FILE 0 ]
+[v vfprintf@cfmt cfmt `*.25uc  1 a 2 108 ]
+[s S1189 _IO_FILE 0 ]
 "1390
-[v vfprintf@fp fp `*.39S889  1 p 2 94 ]
-[v vfprintf@fmt fmt `*.25Cuc  1 p 2 96 ]
-[v vfprintf@ap ap `*.39*.39v  1 p 2 98 ]
+[v vfprintf@fp fp `*.39S1189  1 p 2 102 ]
+[v vfprintf@fmt fmt `*.25Cuc  1 p 2 104 ]
+[v vfprintf@ap ap `*.39*.39v  1 p 2 106 ]
 "1404
 } 0
 "692
 [v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
 {
+"697
+[v vfpfcnvrt@llu llu `uo  1 a 8 80 ]
 "698
-[v vfpfcnvrt@f f `d  1 a 4 86 ]
+[v vfpfcnvrt@f f `d  1 a 4 94 ]
 "694
-[v vfpfcnvrt@ct ct `[3]uc  1 a 3 90 ]
+[v vfpfcnvrt@ct ct `[3]uc  1 a 3 98 ]
 "695
-[v vfpfcnvrt@done done `i  1 a 2 80 ]
+[v vfpfcnvrt@done done `i  1 a 2 88 ]
 "694
-[v vfpfcnvrt@c c `uc  1 a 1 93 ]
-[s S889 _IO_FILE 0 ]
+[v vfpfcnvrt@c c `uc  1 a 1 101 ]
+[s S1189 _IO_FILE 0 ]
 "692
-[v vfpfcnvrt@fp fp `*.39S889  1 p 2 70 ]
+[v vfpfcnvrt@fp fp `*.39S1189  1 p 2 70 ]
 [v vfpfcnvrt@fmt fmt `*.39*.25uc  1 p 2 72 ]
 [v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 74 ]
 "1387
+} 0
+"645
+[v _xtoa xtoa `(i  1 s 2 xtoa ]
+{
+"648
+[v xtoa@n n `uo  1 a 8 54 ]
+"647
+[v xtoa@c c `i  1 a 2 64 ]
+[v xtoa@i i `i  1 a 2 62 ]
+[v xtoa@w w `i  1 a 2 52 ]
+[v xtoa@p p `i  1 a 2 50 ]
+[s S1189 _IO_FILE 0 ]
+"645
+[v xtoa@fp fp `*.39S1189  1 p 2 27 ]
+[v xtoa@d d `uo  1 p 8 29 ]
+[v xtoa@x x `uc  1 p 1 37 ]
+"687
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\toupper.c
+[v _toupper toupper `(i  1 e 2 0 ]
+{
+[v toupper@c c `i  1 p 2 6 ]
+"8
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\islower.c
+[v _islower islower `(i  1 e 2 0 ]
+{
+[v islower@c c `i  1 p 2 0 ]
+"8
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\isalpha.c
+[v _isalpha isalpha `(i  1 e 2 0 ]
+{
+[v isalpha@c c `i  1 p 2 0 ]
+"8
 } 0
 "3 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\strncmp.c
 [v _strncmp strncmp `(i  1 e 2 0 ]
@@ -311,9 +556,9 @@
 "334
 [v efgtoa@mode mode `uc  1 a 1 47 ]
 [v efgtoa@nmode nmode `uc  1 a 1 46 ]
-[s S889 _IO_FILE 0 ]
+[s S1189 _IO_FILE 0 ]
 "332
-[v efgtoa@fp fp `*.39S889  1 p 2 2 ]
+[v efgtoa@fp fp `*.39S1189  1 p 2 2 ]
 [v efgtoa@f f `d  1 p 4 4 ]
 [v efgtoa@c c `uc  1 p 1 8 ]
 "525
@@ -348,9 +593,9 @@
 "74
 [v pad@w w `i  1 a 2 25 ]
 [v pad@i i `i  1 a 2 23 ]
-[s S889 _IO_FILE 0 ]
+[s S1189 _IO_FILE 0 ]
 "72
-[v pad@fp fp `*.39S889  1 p 2 16 ]
+[v pad@fp fp `*.39S1189  1 p 2 16 ]
 [v pad@buf buf `*.39uc  1 p 2 18 ]
 [v pad@p p `i  1 p 2 20 ]
 "95
@@ -373,16 +618,16 @@
 [v fputs@c c `uc  1 a 1 13 ]
 "8
 [v fputs@s s `*.39Cuc  1 p 2 9 ]
-[s S863 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputs@fp fp `*.39S863  1 p 2 11 ]
+[s S1163 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputs@fp fp `*.39S1163  1 p 2 11 ]
 "19
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 0 ]
-[s S863 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputc@fp fp `*.39S863  1 p 2 2 ]
+[s S1163 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputc@fp fp `*.39S1163  1 p 2 2 ]
 "24
 } 0
 "7 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\putch.c
@@ -393,9 +638,9 @@
 "3 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\floorf.c
 [v _floorf floorf `(f  1 e 4 0 ]
 {
-[u S1030 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1352 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "5
-[v floorf@u u `S1030  1 a 4 86 ]
+[v floorf@u u `S1352  1 a 4 86 ]
 "7
 [v floorf@m m `ul  1 a 4 80 ]
 "6
@@ -403,22 +648,32 @@
 "3
 [v floorf@x x `f  1 p 4 70 ]
 "4
-[v floorf@F527 F527 `S1030  1 s 4 F527 ]
+[v floorf@F527 F527 `S1352  1 s 4 F527 ]
 "27
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\__fpclassifyf.c
 [v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
 {
-[u S1030 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1352 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "6
-[v ___fpclassifyf@u u `S1030  1 a 4 10 ]
+[v ___fpclassifyf@u u `S1352  1 a 4 10 ]
 "7
 [v ___fpclassifyf@e e `i  1 a 2 8 ]
 "4
 [v ___fpclassifyf@x x `f  1 p 4 0 ]
 "5
-[v ___fpclassifyf@F465 F465 `S1030  1 s 4 F465 ]
+[v ___fpclassifyf@F465 F465 `S1352  1 s 4 F465 ]
 "11
+} 0
+"43 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 1 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 0 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 86 ]
+"70
 } 0
 "245 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
 [v ___flsub __flsub `(d  1 e 4 0 ]
@@ -427,11 +682,52 @@
 [v ___flsub@a a `d  1 p 4 90 ]
 "250
 } 0
+"10
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 85 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 84 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 83 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 82 ]
+"10
+[v ___fladd@b b `d  1 p 4 70 ]
+[v ___fladd@a a `d  1 p 4 74 ]
+"237
+} 0
 "15 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\flneg.c
 [v ___flneg __flneg `(d  1 e 4 0 ]
 {
 [v ___flneg@f1 f1 `d  1 p 4 0 ]
 "20
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S1028 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S1033 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1036 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1028 1 fAsBytes 4 0 `S1033 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1036  1 a 4 39 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 33 ]
+[s S1104 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S1107 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1104 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1107  1 a 2 43 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 38 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 37 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 32 ]
+"8
+[v ___flmul@b b `d  1 p 4 20 ]
+[v ___flmul@a a `d  1 p 4 24 ]
+"205
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\flge.c
 [v ___flge __flge `(b  1 e 0 0 ]
@@ -446,6 +742,26 @@
 [v ___fleq@ff1 ff1 `d  1 p 4 0 ]
 [v ___fleq@ff2 ff2 `d  1 p 4 4 ]
 "12
+} 0
+"11 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 64 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 57 ]
+"20
+[v ___fldiv@new_exp new_exp `s  1 a 2 62 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 69 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 68 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 61 ]
+"11
+[v ___fldiv@b b `d  1 p 4 45 ]
+[v ___fldiv@a a `d  1 p 4 49 ]
+"185
 } 0
 "7 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
@@ -503,105 +819,82 @@
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
 } 0
-"12 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Sensor_luz.c
-[v _ReadLUZ ReadLUZ `(us  1 e 2 0 ]
+"20 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\reloj.c
+[v _RTC_Read_Clock RTC_Read_Clock `(v  1 e 1 0 ]
 {
-"14
-[v ReadLUZ@result result `us  1 a 2 4 ]
-"51
-} 0
-"16 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Temperatura.c
-[v _ReadADC ReadADC `(us  1 e 2 0 ]
-{
-"18
-[v ReadADC@result result `us  1 a 2 6 ]
-"56
-} 0
-"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\xxtofl.c
-[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-{
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-"13
-[v ___xxtofl@arg arg `ul  1 a 4 16 ]
-"12
-[v ___xxtofl@exp exp `uc  1 a 1 15 ]
-"10
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-[v ___xxtofl@val val `l  1 p 4 6 ]
-"15
-[v ___xxtofl@sign sign `uc  1 a 1 14 ]
-"44
-} 0
-"43 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\fltol.c
-[v ___fltol __fltol `(l  1 e 4 0 ]
-{
-"45
-[v ___fltol@exp1 exp1 `uc  1 a 1 1 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 0 ]
-"43
-[v ___fltol@f1 f1 `d  1 p 4 86 ]
-"70
-} 0
-"8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcmul.c
-[v ___flmul __flmul `(d  1 e 4 0 ]
-{
-[s S728 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
-"13
-[s S733 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S736 . 4 `l 1 i 4 0 `d 1 f 4 0 `S728 1 fAsBytes 4 0 `S733 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S736  1 a 4 39 ]
-"12
-[v ___flmul@grs grs `ul  1 a 4 33 ]
-[s S804 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
-"14
-[u S807 . 2 `s 1 i 2 0 `us 1 n 2 0 `S804 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S807  1 a 2 43 ]
-"10
-[v ___flmul@bexp bexp `uc  1 a 1 38 ]
-"11
-[v ___flmul@aexp aexp `uc  1 a 1 37 ]
-"9
-[v ___flmul@sign sign `uc  1 a 1 32 ]
-"8
-[v ___flmul@b b `d  1 p 4 20 ]
-[v ___flmul@a a `d  1 p 4 24 ]
-"205
-} 0
-"11 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
-[v ___fldiv __fldiv `(d  1 e 4 0 ]
-{
-"21
-[v ___fldiv@grs grs `ul  1 a 4 64 ]
+[v RTC_Read_Clock@read_clock_address read_clock_address `uc  1 a 1 wreg ]
+[v RTC_Read_Clock@read_clock_address read_clock_address `uc  1 a 1 wreg ]
 "22
-[v ___fldiv@rem rem `ul  1 a 4 57 ]
-"20
-[v ___fldiv@new_exp new_exp `s  1 a 2 62 ]
-"19
-[v ___fldiv@aexp aexp `uc  1 a 1 69 ]
-"18
-[v ___fldiv@bexp bexp `uc  1 a 1 68 ]
-"16
-[v ___fldiv@sign sign `uc  1 a 1 61 ]
-"11
-[v ___fldiv@b b `d  1 p 4 45 ]
-[v ___fldiv@a a `d  1 p 4 49 ]
-"185
+[v RTC_Read_Clock@read_clock_address read_clock_address `uc  1 a 1 3 ]
+"29
 } 0
-"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
-[v ___fladd __fladd `(d  1 e 4 0 ]
+"31
+[v _RTC_Read_Calendar RTC_Read_Calendar `(v  1 e 1 0 ]
 {
-"17
-[v ___fladd@grs grs `uc  1 a 1 85 ]
+[v RTC_Read_Calendar@read_calendar_address read_calendar_address `uc  1 a 1 wreg ]
+[v RTC_Read_Calendar@read_calendar_address read_calendar_address `uc  1 a 1 wreg ]
+"33
+[v RTC_Read_Calendar@read_calendar_address read_calendar_address `uc  1 a 1 3 ]
+"41
+} 0
+"93 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Reloj_ar.c
+[v _I2C_Stop I2C_Stop `(uc  1 e 1 0 ]
+{
+"99
+} 0
+"68
+[v _I2C_Start I2C_Start `(uc  1 e 1 0 ]
+{
+[v I2C_Start@slave_write_address slave_write_address `uc  1 a 1 wreg ]
+[v I2C_Start@slave_write_address slave_write_address `uc  1 a 1 wreg ]
+"70
+[v I2C_Start@slave_write_address slave_write_address `uc  1 a 1 1 ]
+"77
+} 0
+"79
+[v _I2C_Repeated_Start I2C_Repeated_Start `(uc  1 e 1 0 ]
+{
+[v I2C_Repeated_Start@slave_read_address slave_read_address `uc  1 a 1 wreg ]
+[v I2C_Repeated_Start@slave_read_address slave_read_address `uc  1 a 1 wreg ]
+"81
+[v I2C_Repeated_Start@slave_read_address slave_read_address `uc  1 a 1 1 ]
+"91
+} 0
+"101
+[v _I2C_Write I2C_Write `(uc  1 e 1 0 ]
+{
+[v I2C_Write@data data `uc  1 a 1 wreg ]
+[v I2C_Write@data data `uc  1 a 1 wreg ]
+"103
+[v I2C_Write@data data `uc  1 a 1 0 ]
+"109
+} 0
+"12
+[v _I2C_Read I2C_Read `(uc  1 e 1 0 ]
+{
+[v I2C_Read@flag flag `uc  1 a 1 wreg ]
 "15
-[v ___fladd@bexp bexp `uc  1 a 1 84 ]
+[v I2C_Read@buffer buffer `uc  1 a 1 1 ]
+"12
+[v I2C_Read@flag flag `uc  1 a 1 wreg ]
 "16
-[v ___fladd@aexp aexp `uc  1 a 1 83 ]
-"13
-[v ___fladd@signs signs `uc  1 a 1 82 ]
-"10
-[v ___fladd@b b `d  1 p 4 70 ]
-[v ___fladd@a a `d  1 p 4 74 ]
-"237
+[v I2C_Read@flag flag `uc  1 a 1 0 ]
+"27
+} 0
+"43
+[v _I2C_Ready I2C_Ready `(v  1 e 1 0 ]
+{
+"47
+} 0
+"118
+[v _I2C_Nack I2C_Nack `(v  1 e 1 0 ]
+{
+"123
+} 0
+"111
+[v _I2C_Ack I2C_Ack `(v  1 e 1 0 ]
+{
+"116
 } 0
 "75 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\LCD_caracter.c
 [v _LCD_String_xy LCD_String_xy `(v  1 e 1 0 ]
@@ -622,24 +915,6 @@
 [v LCD_String@msg msg `*.35Cuc  1 p 2 8 ]
 "73
 } 0
-"23
-[v _LCD_Init LCD_Init `(v  1 e 1 0 ]
-{
-"34
-} 0
-"99
-[v _LCD_Custom_Char LCD_Custom_Char `(v  1 e 1 0 ]
-{
-[v LCD_Custom_Char@loc loc `uc  1 a 1 wreg ]
-"101
-[v LCD_Custom_Char@i i `uc  1 a 1 11 ]
-"99
-[v LCD_Custom_Char@loc loc `uc  1 a 1 wreg ]
-[v LCD_Custom_Char@msg msg `*.39uc  1 p 2 8 ]
-"102
-[v LCD_Custom_Char@loc loc `uc  1 a 1 10 ]
-"109
-} 0
 "52
 [v _LCD_Char LCD_Char `(v  1 e 1 0 ]
 {
@@ -648,6 +923,11 @@
 "54
 [v LCD_Char@dat dat `uc  1 a 1 7 ]
 "65
+} 0
+"23
+[v _LCD_Init LCD_Init `(v  1 e 1 0 ]
+{
+"34
 } 0
 "93
 [v _LCD_Clear LCD_Clear `(v  1 e 1 0 ]
@@ -672,4 +952,9 @@
 "111
 [v MSdelay@val val `ui  1 p 2 0 ]
 "116
+} 0
+"29 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Reloj_ar.c
+[v _I2C_Init I2C_Init `(v  1 e 1 0 ]
+{
+"40
 } 0

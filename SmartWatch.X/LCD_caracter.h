@@ -17,10 +17,10 @@
 #define _XTAL_FREQ 8000000
 /*********************Definition of Ports********************************/
 
-#define RS LATB2  /*PIN 0 of PORTB is assigned for register select Pin of LCD*/
-#define EN LATB3  /*PIN 1 of PORTB is assigned for enable Pin of LCD */
-#define ldata LATB  /*PORTB(PB4-PB7) is assigned for LCD Data Output*/ 
-#define LCD_Port TRISB  /*define macros for PORTB Direction Register*/
+#define RS LATD0  /*PIN 0 of PORTB is assigned for register select Pin of LCD*/
+#define EN LATD1  /*PIN 1 of PORTB is assigned for enable Pin of LCD */
+#define ldata LATD  /*PORTB(PB4-PB7) is assigned for LCD Data Output*/ 
+#define LCD_Port TRISD  /*define macros for PORTB Direction Register*/
 /*********************Proto-Type Declaration*****************************/
 
 void MSdelay(unsigned int );        /*Generate delay in ms*/

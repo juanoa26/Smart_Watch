@@ -5627,15 +5627,19 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 
 
 # 1 "./config.h" 1
-# 44 "./config.h"
+
+
+
+
+
 #pragma config PLLDIV = 1
 #pragma config CPUDIV = OSC1_PLL2
 #pragma config USBDIV = 1
 
 
-#pragma config FOSC = INTOSCIO_EC
+#pragma config FOSC = INTOSC_EC
 #pragma config FCMEN = OFF
-#pragma config IESO = ON
+#pragma config IESO = OFF
 
 
 #pragma config PWRT = ON
@@ -5649,13 +5653,13 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 
 
 #pragma config CCP2MX = ON
-#pragma config PBADEN = ON
+#pragma config PBADEN = OFF
 #pragma config LPT1OSC = OFF
 #pragma config MCLRE = ON
 
 
-#pragma config STVREN = ON
-#pragma config LVP = ON
+#pragma config STVREN = OFF
+#pragma config LVP = OFF
 #pragma config ICPRT = OFF
 #pragma config XINST = OFF
 

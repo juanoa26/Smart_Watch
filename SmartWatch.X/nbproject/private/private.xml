@@ -3,10 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Clases%202021/Arquitectura%20Computacional/Github/Smart_Watch/SmartWatch.X/LCD_caracter.c</file>
             <file>file:/D:/Clases%202021/Arquitectura%20Computacional/Github/Smart_Watch/SmartWatch.X/smart_main.c</file>
-            <file>file:/D:/Clases%202021/Arquitectura%20Computacional/Github/Smart_Watch/SmartWatch.X/Sensor_luz.c</file>
-            <file>file:/D:/Clases%202021/Arquitectura%20Computacional/Github/Smart_Watch/SmartWatch.X/Temperatura.c</file>
+            <file>file:/D:/Clases%202021/Arquitectura%20Computacional/Github/Smart_Watch/SmartWatch.X/reloj.c</file>
+            <file>file:/D:/Clases%202021/Arquitectura%20Computacional/Github/Smart_Watch/SmartWatch.X/Reloj_ar.c</file>
         </group>
     </open-files>
 </project-private>

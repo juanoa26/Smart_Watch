@@ -5628,15 +5628,19 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 
 
 # 1 "./config.h" 1
-# 44 "./config.h"
+
+
+
+
+
 #pragma config PLLDIV = 1
 #pragma config CPUDIV = OSC1_PLL2
 #pragma config USBDIV = 1
 
 
-#pragma config FOSC = INTOSCIO_EC
+#pragma config FOSC = INTOSC_EC
 #pragma config FCMEN = OFF
-#pragma config IESO = ON
+#pragma config IESO = OFF
 
 
 #pragma config PWRT = ON
@@ -5650,13 +5654,13 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 
 
 #pragma config CCP2MX = ON
-#pragma config PBADEN = ON
+#pragma config PBADEN = OFF
 #pragma config LPT1OSC = OFF
 #pragma config MCLRE = ON
 
 
-#pragma config STVREN = ON
-#pragma config LVP = ON
+#pragma config STVREN = OFF
+#pragma config LVP = OFF
 #pragma config ICPRT = OFF
 #pragma config XINST = OFF
 
@@ -5923,10 +5927,7 @@ typedef uint32_t uint_fast32_t;
 
 
 uint16_t ReadADC(void);
-unsigned int value_adc = 0;
-unsigned char counter_digito = 0;
 double temp = 0.0;
-unsigned char lm35 = 0;
 float temperatura;
 
 uint16_t ReadADC(void) {
@@ -5947,13 +5948,13 @@ uint16_t ReadADC(void) {
     ADCON2bits.ADCS = 0b001;
     ADCON2bits.ADFM = 1;
     ADCON0bits.ADON = 1;
-# 47 "Temperatura.c"
+# 44 "Temperatura.c"
     while (1) {
         ADCON0bits.GO_DONE = 1;
         while (ADCON0bits.GO_DONE);
         result = ADRESH;
         result = (result << 8) + ADRESL;
-        result = ((result*500.0)/1023.0)-50;
+        result = ((result*500.0)/1023.0)-49.5;
 
         return result;
     }

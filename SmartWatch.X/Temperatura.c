@@ -7,10 +7,7 @@
 #include <stdbool.h>
 
 uint16_t ReadADC(void);
-unsigned int value_adc = 0;
-unsigned char counter_digito = 0;
 double temp = 0.0;
-unsigned char lm35 = 0;
 float temperatura;
 
 uint16_t ReadADC(void) {
@@ -49,7 +46,7 @@ uint16_t ReadADC(void) {
         while (ADCON0bits.GO_DONE); //  Espera a que termine la conversión AD.
         result = ADRESH; //  Lectura de valor AD.
         result = (result << 8) + ADRESL;
-        result = ((result*500.0)/1023.0)-50;
+        result = ((result*500.0)/1023.0)-49.5;
        
         return result;
     }

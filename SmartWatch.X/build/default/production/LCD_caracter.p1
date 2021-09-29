@@ -1,22 +1,22 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"3625 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3625: extern volatile unsigned char TRISB __attribute__((address(0xF93)));
-[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"4001 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 4001: extern volatile unsigned char TRISD __attribute__((address(0xF95)));
+[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
 "26 ./LCD_caracter.h
 [; ;./LCD_caracter.h: 26: void MSdelay(unsigned int );
 [v _MSdelay `(v ~T0 @X0 0 ef1`ui ]
 "28
 [; ;./LCD_caracter.h: 28: void LCD_Command(unsigned char );
 [v _LCD_Command `(v ~T0 @X0 0 ef1`uc ]
-"3073 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3073: extern volatile unsigned char LATB __attribute__((address(0xF8A)));
-[v _LATB `Vuc ~T0 @X0 0 e@3978 ]
-"9954
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 9954: extern volatile __bit LATB2 __attribute__((address(0x7C52)));
-[v _LATB2 `Vb ~T0 @X0 0 e@31826 ]
-"9957
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 9957: extern volatile __bit LATB3 __attribute__((address(0x7C53)));
-[v _LATB3 `Vb ~T0 @X0 0 e@31827 ]
+"3263 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3263: extern volatile unsigned char LATD __attribute__((address(0xF8C)));
+[v _LATD `Vuc ~T0 @X0 0 e@3980 ]
+"9987
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 9987: extern volatile __bit LATD0 __attribute__((address(0x7C60)));
+[v _LATD0 `Vb ~T0 @X0 0 e@31840 ]
+"9990
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 9990: extern volatile __bit LATD1 __attribute__((address(0x7C61)));
+[v _LATD1 `Vb ~T0 @X0 0 e@31841 ]
 "50 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\pic18.h
 [v ___nop `(v ~T0 @X0 0 ef ]
 [p i ___nop ]
@@ -530,81 +530,157 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"44 ./config.h
+"6 ./config.h
 [p x PLLDIV  =  1        ]
-"45
+"7
 [p x CPUDIV  =  OSC1_PLL2 ]
-"46
+"8
 [p x USBDIV  =  1        ]
-"49
-[p x FOSC  =  INTOSCIO_EC  ]
-"50
+"11
+[p x FOSC  =  INTOSC_EC         ]
+"12
 [p x FCMEN  =  OFF       ]
-"51
-[p x IESO  =  ON        ]
-"54
-[p x PWRT  =  ON        ]
-"55
-[p x BOR  =  OFF          ]
-"56
+"13
+[p x IESO  =  OFF        ]
+"16
+[p x PWRT  =  ON         ]
+"17
+[p x BOR  =  OFF         ]
+"18
 [p x BORV  =  3          ]
-"57
+"19
 [p x VREGEN  =  OFF      ]
-"60
+"22
 [p x WDT  =  OFF         ]
-"61
+"23
 [p x WDTPS  =  32768     ]
-"64
+"26
 [p x CCP2MX  =  ON       ]
-"65
-[p x PBADEN  =  ON       ]
-"66
+"27
+[p x PBADEN  =  OFF       ]
+"28
 [p x LPT1OSC  =  OFF     ]
-"67
+"29
 [p x MCLRE  =  ON        ]
-"70
-[p x STVREN  =  ON       ]
-"71
-[p x LVP  =  ON          ]
-"72
+"32
+[p x STVREN  =  OFF      ]
+"33
+[p x LVP  =  OFF         ]
+"34
 [p x ICPRT  =  OFF       ]
-"73
+"35
 [p x XINST  =  OFF       ]
-"76
+"38
 [p x CP0  =  OFF         ]
-"77
+"39
 [p x CP1  =  OFF         ]
-"78
+"40
 [p x CP2  =  OFF         ]
-"79
+"41
 [p x CP3  =  OFF         ]
-"82
+"44
 [p x CPB  =  OFF         ]
-"83
+"45
 [p x CPD  =  OFF         ]
-"86
+"48
 [p x WRT0  =  OFF        ]
-"87
+"49
 [p x WRT1  =  OFF        ]
-"88
+"50
 [p x WRT2  =  OFF        ]
-"89
+"51
 [p x WRT3  =  OFF        ]
-"92
+"54
 [p x WRTC  =  OFF        ]
-"93
+"55
 [p x WRTB  =  OFF        ]
-"94
+"56
 [p x WRTD  =  OFF        ]
-"97
+"59
 [p x EBTR0  =  OFF       ]
-"98
+"60
 [p x EBTR1  =  OFF       ]
-"99
+"61
 [p x EBTR2  =  OFF       ]
-"100
+"62
 [p x EBTR3  =  OFF       ]
-"103
+"65
+[p x EBTRB  =  OFF       ]
+"6
+[p x PLLDIV  =  1        ]
+"7
+[p x CPUDIV  =  OSC1_PLL2 ]
+"8
+[p x USBDIV  =  1        ]
+"11
+[p x FOSC  =  INTOSC_EC         ]
+"12
+[p x FCMEN  =  OFF       ]
+"13
+[p x IESO  =  OFF        ]
+"16
+[p x PWRT  =  ON         ]
+"17
+[p x BOR  =  OFF         ]
+"18
+[p x BORV  =  3          ]
+"19
+[p x VREGEN  =  OFF      ]
+"22
+[p x WDT  =  OFF         ]
+"23
+[p x WDTPS  =  32768     ]
+"26
+[p x CCP2MX  =  ON       ]
+"27
+[p x PBADEN  =  OFF       ]
+"28
+[p x LPT1OSC  =  OFF     ]
+"29
+[p x MCLRE  =  ON        ]
+"32
+[p x STVREN  =  OFF      ]
+"33
+[p x LVP  =  OFF         ]
+"34
+[p x ICPRT  =  OFF       ]
+"35
+[p x XINST  =  OFF       ]
+"38
+[p x CP0  =  OFF         ]
+"39
+[p x CP1  =  OFF         ]
+"40
+[p x CP2  =  OFF         ]
+"41
+[p x CP3  =  OFF         ]
+"44
+[p x CPB  =  OFF         ]
+"45
+[p x CPD  =  OFF         ]
+"48
+[p x WRT0  =  OFF        ]
+"49
+[p x WRT1  =  OFF        ]
+"50
+[p x WRT2  =  OFF        ]
+"51
+[p x WRT3  =  OFF        ]
+"54
+[p x WRTC  =  OFF        ]
+"55
+[p x WRTB  =  OFF        ]
+"56
+[p x WRTD  =  OFF        ]
+"59
+[p x EBTR0  =  OFF       ]
+"60
+[p x EBTR1  =  OFF       ]
+"61
+[p x EBTR2  =  OFF       ]
+"62
+[p x EBTR3  =  OFF       ]
+"65
 [p x EBTRB  =  OFF       ]
 "13 LCD_caracter.c
 [; ;LCD_caracter.c: 13: unsigned char character1[ 8 ] = { 0x0e , 0x1f , 0x1f , 0x0e , 0x00 , 0x0a , 0x0a , 0x00 };
@@ -660,8 +736,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _LCD_Init ]
 [f ]
 "25
-[; ;LCD_caracter.c: 25:     TRISB = 0;
-[e = _TRISB -> -> 0 `i `uc ]
+[; ;LCD_caracter.c: 25:     TRISD = 0;
+[e = _TRISD -> -> 0 `i `uc ]
 "26
 [; ;LCD_caracter.c: 26:     MSdelay(15);
 [e ( _MSdelay (1 -> -> 15 `i `ui ]
@@ -698,35 +774,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LCD_caracter.c: 37: {
 [f ]
 "38
-[; ;LCD_caracter.c: 38:  LATB = (LATB & 0x0f) |(0xF0 & cmd);
-[e = _LATB -> | & -> _LATB `i -> 15 `i & -> 240 `i -> _cmd `i `uc ]
+[; ;LCD_caracter.c: 38:  LATD = (LATD & 0x0f) |(0xF0 & cmd);
+[e = _LATD -> | & -> _LATD `i -> 15 `i & -> 240 `i -> _cmd `i `uc ]
 "39
-[; ;LCD_caracter.c: 39:  LATB2 = 0;
-[e = _LATB2 -> -> 0 `i `b ]
+[; ;LCD_caracter.c: 39:  LATD0 = 0;
+[e = _LATD0 -> -> 0 `i `b ]
 "40
-[; ;LCD_caracter.c: 40:  LATB3 = 1;
-[e = _LATB3 -> -> 1 `i `b ]
+[; ;LCD_caracter.c: 40:  LATD1 = 1;
+[e = _LATD1 -> -> 1 `i `b ]
 "41
 [; ;LCD_caracter.c: 41:  __nop();
 [e ( ___nop ..  ]
 "42
-[; ;LCD_caracter.c: 42:  LATB3 = 0;
-[e = _LATB3 -> -> 0 `i `b ]
+[; ;LCD_caracter.c: 42:  LATD1 = 0;
+[e = _LATD1 -> -> 0 `i `b ]
 "43
 [; ;LCD_caracter.c: 43:  MSdelay(1);
 [e ( _MSdelay (1 -> -> 1 `i `ui ]
 "44
-[; ;LCD_caracter.c: 44:     LATB = (LATB & 0x0f) | (cmd<<4);
-[e = _LATB -> | & -> _LATB `i -> 15 `i << -> _cmd `i -> 4 `i `uc ]
+[; ;LCD_caracter.c: 44:     LATD = (LATD & 0x0f) | (cmd<<4);
+[e = _LATD -> | & -> _LATD `i -> 15 `i << -> _cmd `i -> 4 `i `uc ]
 "45
-[; ;LCD_caracter.c: 45:  LATB3 = 1;
-[e = _LATB3 -> -> 1 `i `b ]
+[; ;LCD_caracter.c: 45:  LATD1 = 1;
+[e = _LATD1 -> -> 1 `i `b ]
 "46
 [; ;LCD_caracter.c: 46:  __nop();
 [e ( ___nop ..  ]
 "47
-[; ;LCD_caracter.c: 47:  LATB3 = 0;
-[e = _LATB3 -> -> 0 `i `b ]
+[; ;LCD_caracter.c: 47:  LATD1 = 0;
+[e = _LATD1 -> -> 0 `i `b ]
 "48
 [; ;LCD_caracter.c: 48:  MSdelay(3);
 [e ( _MSdelay (1 -> -> 3 `i `ui ]
@@ -748,35 +824,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LCD_caracter.c: 53: {
 [f ]
 "54
-[; ;LCD_caracter.c: 54:  LATB = (LATB & 0x0f) | (0xF0 & dat);
-[e = _LATB -> | & -> _LATB `i -> 15 `i & -> 240 `i -> _dat `i `uc ]
+[; ;LCD_caracter.c: 54:  LATD = (LATD & 0x0f) | (0xF0 & dat);
+[e = _LATD -> | & -> _LATD `i -> 15 `i & -> 240 `i -> _dat `i `uc ]
 "55
-[; ;LCD_caracter.c: 55:  LATB2 = 1;
-[e = _LATB2 -> -> 1 `i `b ]
+[; ;LCD_caracter.c: 55:  LATD0 = 1;
+[e = _LATD0 -> -> 1 `i `b ]
 "56
-[; ;LCD_caracter.c: 56:  LATB3 = 1;
-[e = _LATB3 -> -> 1 `i `b ]
+[; ;LCD_caracter.c: 56:  LATD1 = 1;
+[e = _LATD1 -> -> 1 `i `b ]
 "57
 [; ;LCD_caracter.c: 57:  __nop();
 [e ( ___nop ..  ]
 "58
-[; ;LCD_caracter.c: 58:  LATB3 = 0;
-[e = _LATB3 -> -> 0 `i `b ]
+[; ;LCD_caracter.c: 58:  LATD1 = 0;
+[e = _LATD1 -> -> 0 `i `b ]
 "59
 [; ;LCD_caracter.c: 59:  MSdelay(1);
 [e ( _MSdelay (1 -> -> 1 `i `ui ]
 "60
-[; ;LCD_caracter.c: 60:     LATB = (LATB & 0x0f) | (dat<<4);
-[e = _LATB -> | & -> _LATB `i -> 15 `i << -> _dat `i -> 4 `i `uc ]
+[; ;LCD_caracter.c: 60:     LATD = (LATD & 0x0f) | (dat<<4);
+[e = _LATD -> | & -> _LATD `i -> 15 `i << -> _dat `i -> 4 `i `uc ]
 "61
-[; ;LCD_caracter.c: 61:  LATB3 = 1;
-[e = _LATB3 -> -> 1 `i `b ]
+[; ;LCD_caracter.c: 61:  LATD1 = 1;
+[e = _LATD1 -> -> 1 `i `b ]
 "62
 [; ;LCD_caracter.c: 62:  __nop();
 [e ( ___nop ..  ]
 "63
-[; ;LCD_caracter.c: 63:  LATB3 = 0;
-[e = _LATB3 -> -> 0 `i `b ]
+[; ;LCD_caracter.c: 63:  LATD1 = 0;
+[e = _LATD1 -> -> 0 `i `b ]
 "64
 [; ;LCD_caracter.c: 64:  MSdelay(3);
 [e ( _MSdelay (1 -> -> 3 `i `ui ]
