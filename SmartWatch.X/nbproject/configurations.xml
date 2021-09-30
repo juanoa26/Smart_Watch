@@ -166,7 +166,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item path="Melodia2.c" ex="true" overriding="false">
+      <item path="Melodia2.c" ex="false" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>

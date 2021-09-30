@@ -14,194 +14,139 @@
 #include "LCD_caracter.h"
 #define _XTAL_FREQ 4000000 
 
+void conf_CLK(void);
+void conf_IO(void);
+void conf_TA1(void);
 
 
+/**
+ *  \brief     void conf_CLK (void)
+ *  \details   Configura los relojes disponibles
+ *                  - Reloj Principal: INTERNO 8 MHz.
+ *
+ *  \author    Manuel Caballero
+ *  \version   0.0
+ *  \date      17/3/2015
+ */
 
-#ifndef  MUSIC_NOTES
-#define  MUSIC_NOTES
+void PlayCancion( void ) {
 
-//            NOTE                 FREQUENCY
-//                     Octave0  Octave1  Octave2  Octave3
-const long C_NOTE[4] = {262, 523, 1047, 2093};
-const long Db_NOTE[4] = {277, 554, 1109, 2217};
-const long D_NOTE[4] = {294, 587, 1175, 2349};
-const long Eb_NOTE[4] = {311, 622, 1245, 2489};
-const long E_NOTE[4] = {330, 659, 1329, 2637};
-const long F_NOTE[4] = {349, 698, 1397, 2794};
-const long Gb_NOTE[4] = {370, 740, 1480, 2960};
-const long G_NOTE[4] = {392, 784, 1568, 3136};
-const long Ab_NOTE[4] = {415, 831, 1661, 3322};
-const long A_NOTE[4] = {440, 880, 1760, 3520};
-const long Bb_NOTE[4] = {466, 923, 1865, 3729};
-const long B_NOTE[4] = {494, 988, 1976, 3951};
-#endif
-
-int FreqNota[12] = {// retardos entre estado alto
-    // y bajo para generar las notas
-    15289, // DO
-    14430, // DO#
-    13620, // RE
-    12856, // RE#
-    12134, // MI
-    11453, // FA
-    10810, // FA#
-    10204, // SOL
-    9631, // SOL#
-    9090, // LA
-    8580, // LA#
-    8099 // SI
-};
+    uint8_t var3seg     =   0;  /**< Variable contador que junto al Timer1 nos permite contabilizar 3 s */
+    uint8_t var3beep    =   0;  /**< Variable contador que junto al Timer1 nos permite realizar tres Beep */
 
 
-void Play(int nota, int octava, int duracion);
-void PlayCancion();
-void delay_ms(int x);
-void delay_us(int x);
+    conf_CLK    ();     // Configura Relojes
+    conf_IO     ();     // Configura I/O
+    conf_TA1    ();     // Configura Timer1
 
-void do_delay(int ms_delay, int num_ms, int us_delay, int num_us) {
-    int i;
+    
+    INTCONbits.PEIE     =   1;      // Peripheral Interrupt Enable
+    ei  ();                         // enable interrupts
 
-    for (i = 0; i < num_ms; i++) {
-        delay_us(250);
-        delay_us(ms_delay);
-    }
 
-    for (i = 0; i < num_us; i++) {
-        delay_ms(250);
-        delay_ms(us_delay);
-    }
+    do{
+        SLEEP();                    // uC modo IDLE
 
+        if ( var3seg == 60 && var3beep < 6 )
+        {
+        // Tres Beep cada 3 segundos
+            LATCbits.LC1        =   ~LATCbits.LC1;
+            var3beep++;
+        }
+        else
+        {
+            if ( var3beep > 5 )
+            {
+            // Reset variables ( vuelta a empezar! )
+                var3beep    =   0;
+                var3seg     =   0;
+            }
+
+            var3seg++;
+        }
+
+    } while ( 1 );
 }
 
-void delay_ms(int x) {
-    for (int i = 0; i < x; i++) {
-        __delay_ms(1);
-    }
+void conf_CLK(void) {
+    OSCCONbits.IRCF0 = 1; // Internal clock...
+    OSCCONbits.IRCF1 = 1;
+    OSCCONbits.IRCF2 = 1; //...8 MHz.
+
+    OSCCONbits.SCS = 0b10; // Internal oscillator
+
+    OSCCONbits.IDLEN = 1; // SLEEP() == Idle mode
+
+
+    //OSCCONbits.IOFS     =   1;      // Frequency is stable
+    //OSCCONbits.OSTS     =   1;      // Device is running from the primary system clock
 }
 
-void delay_us(int x) {
-    for (int i = 0; i < x; i++) {
-        __delay_us(1);
-    }
+/**
+ *  \brief     void conf_IO (void)
+ *  \details   Configura los pines del MCU a usar en este proyecto.
+ *                  - Puerto D: Buzzer.
+ *  			- RD2:	Salida.	  ( Serie Resistor 220 Ohms con Base Transistor NPN )
+ *
+ *  \author    Manuel Caballero
+ *  \version   0.0
+ *  \date      13/3/2015
+ */
+void conf_IO(void) {
+    ADCON1bits.PCFG = 0b1111; // All Port Digital
+
+    TRISCbits.RC1 = 0; // RD2 OUTPUT
+
+    LATCbits.LC1 = 0; // reset pin
 }
 
-void play(long frequency, long duration) {
-    long total_delay_time; // in microseconds
-    long total_ms_delay_time, total_us_delay_time;
-    int num_us_delays, num_ms_delays, ms_delay_time, us_delay_time;
-    long num_periods;
+/**
+ *  \brief     void conf_TA1 (void)
+ *  \details   Configura el Timer1 como 16-bit timer.
+ *
+ *             El Timer1 será el encargado de ejecutar las acciones requeridas:
+ *
+ *                  1. Cuenta de 3 segundos.
+ *                  2. Tres Beep por el Buzzer.
+ *
+ *             Se realizará todo el proceso cada, aproximadamente 3 segundos.
+ *
+ *           Teniendo en cuenta la expresión del Timer1:
+ *
+ *                  Interrupt_Timer1 = ( 1/( f_OSC/4 ) )·( 65536 - TMR1 )·Prescaler
+ *
+ *            Tenemos que:
+ *
+ *                  50 ms = ( 1/( 8MHz/4 ) )·( 65536 - TMR1 )·8
+ *
+ *                  TMR1 = 65536 - 12500 = 53036 ( 0xCF2C )
+ *
+ *
+ *  \pre       El reloj debe ser 8 MHz.
+ *  \author    Manuel Caballero
+ *  \version   0.0
+ *  \date      14/3/2015
+ */
+void conf_TA1(void) {
+    T1CONbits.T1CKPS0 = 1; // 1:8 Prescale value
+    T1CONbits.T1CKPS1 = 1; // 1:8 Prescale value
 
-    total_delay_time = (1000000 / frequency) / 2 - 10; // calculate total delay time (10 for error)
+    TMR1H = 0xCF;
+    TMR1L = 0x2C;
 
-    total_ms_delay_time = total_delay_time / 1000; // total delay time of ms
-    num_ms_delays = total_ms_delay_time / 250; // number of 250ms delays needed
-    ms_delay_time = total_ms_delay_time % 250; // left over ms delay time needed
+    PIR1bits.TMR1IF = 0; // Reset flag
+    PIE1bits.TMR1IE = 1; // TA1 interrupt ON
 
-    total_us_delay_time = total_delay_time % 1000; // total delay time of us (ms already acounted for)
-    num_us_delays = total_us_delay_time / 250; // number of 250us delays needed
-    us_delay_time = total_us_delay_time % 250; // left over us delay time needed
-
-    num_periods = ((long) duration * 1000) / (1000000 / frequency);
-
-    while ((num_periods--) != 0) {
-        do_delay(ms_delay_time, num_ms_delays, us_delay_time, num_us_delays);
-        TRISCbits . TRISC1 = 0; // Genera la frecuancia
-        LATCbits . LATC1 = 1;
-        do_delay(ms_delay_time, num_ms_delays, us_delay_time, num_us_delays);
-        LATCbits . LATC1 = 0;
-    }
-
-    return;
+    T1CONbits.TMR1ON = 1; // TA1 enabled
 }
 
-void PlayCancion() {
+void __interrupt() ISR ( void )
+{
+    if ( PIR1bits.TMR1IF == 1 )                 // Timer1 Interrupt
+    {
+        PIR1bits.TMR1IF     =   0;              
 
-    play(C_NOTE[0], 1000);
-    play(D_NOTE[0], 1000);
-    play(E_NOTE[0], 1000);
-    play(F_NOTE[0], 1000);
-    play(G_NOTE[0], 1000);
-    play(A_NOTE[0], 1000);
-    play(B_NOTE[0], 1000);
-
-    play(B_NOTE[0], 800);
-    play(C_NOTE[1], 600);
-    play(D_NOTE[1], 500);
-    play(D_NOTE[1], 500);
-    play(C_NOTE[1], 500);
-    play(B_NOTE[0], 500);
-
-    play(A_NOTE[0], 500);
-    play(G_NOTE[0], 500);
-    play(G_NOTE[0], 500);
-    play(A_NOTE[0], 600);
-    play(B_NOTE[0], 500);
-    play(B_NOTE[0], 700);
-    play(A_NOTE[0], 400);
-    play(A_NOTE[0], 600);
-
-
-    play(B_NOTE[0], 800);
-    play(C_NOTE[1], 600);
-    play(D_NOTE[1], 500);
-    play(D_NOTE[1], 500);
-    play(C_NOTE[1], 500);
-    play(B_NOTE[0], 500);
-
-    play(A_NOTE[0], 500);
-    play(G_NOTE[0], 500);
-    play(G_NOTE[0], 500);
-    play(A_NOTE[0], 600);
-    play(B_NOTE[0], 500);
-    play(A_NOTE[0], 700);
-    play(G_NOTE[0], 400);
-    play(G_NOTE[0], 600);
-
-
-
-    //delay_ms(100);
-
-    play(A_NOTE[0], 800);
-    play(B_NOTE[0], 500);
-    play(G_NOTE[0], 500);
-    play(A_NOTE[0], 800);
-    play(B_NOTE[0], 300);
-    play(C_NOTE[1], 300);
-    play(B_NOTE[0], 300);
-    play(G_NOTE[0], 400);
-
-    play(A_NOTE[0], 500);
-    play(B_NOTE[0], 300);
-    play(C_NOTE[1], 300);
-    play(B_NOTE[0], 300);
-    play(A_NOTE[0], 500);
-    play(G_NOTE[0], 500);
-    play(A_NOTE[0], 500);
-    play(D_NOTE[0], 500);
-
-
-
-    //delay_ms(100);
-
-    play(B_NOTE[0], 800);
-    play(C_NOTE[1], 700);
-    play(D_NOTE[1], 500);
-    play(D_NOTE[1], 500);
-    play(C_NOTE[1], 500);
-    play(B_NOTE[0], 500);
-
-    play(A_NOTE[0], 500);
-    play(G_NOTE[0], 500);
-    play(G_NOTE[0], 500);
-    play(A_NOTE[0], 600);
-    play(B_NOTE[0], 500);
-    play(A_NOTE[0], 700);
-    play(G_NOTE[0], 300);
-    play(G_NOTE[0], 600);
-
-
-    delay_ms(2000);
-
-
-
+        TMR1H               =   0xCF;
+        TMR1L               =   0x2C;
+    }
 }

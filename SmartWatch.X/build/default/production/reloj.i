@@ -5937,6 +5937,7 @@ char I2C_Write(unsigned char);
 void I2C_Ack();
 void I2C_Nack();
 char I2C_Read(char flag);
+void RTC_Calendario();
 # 11 "reloj.c" 2
 
 
@@ -5945,8 +5946,7 @@ char I2C_Read(char flag);
 
 int sec,min,hour;
 int Day,Date,Month,Year;
-
-
+# 34 "reloj.c"
 void RTC_Read_Clock(char read_clock_address)
 {
     I2C_Start(0xD0);
@@ -5957,7 +5957,7 @@ void RTC_Read_Clock(char read_clock_address)
     hour= I2C_Read(1);
 
 }
-
+# 57 "reloj.c"
 void RTC_Read_Calendar(char read_calendar_address)
 {
     I2C_Start(0xD0);
@@ -5969,10 +5969,8 @@ void RTC_Read_Calendar(char read_calendar_address)
     Year = I2C_Read(1);
     I2C_Stop();
 }
-
-
-
-void Calendario()
+# 85 "reloj.c"
+void RTC_Calendario()
 {
 
     char secs[10],mins[10],hours[10];
@@ -6029,31 +6027,31 @@ void Calendario()
 
         switch(days[Day])
         {
-            case 'S':
+            case 's':
                         LCD_String("Sun");
                         return;
                         break;
-            case 'M':
+            case 'S':
                         LCD_String("Mon");
                         return;
                         break;
-            case 'T':
+            case 'M':
                         LCD_String("Tue");
                         return;
                         break;
-            case 'W':
+            case 'T':
                         LCD_String("Wed");
                         return;
                         break;
-            case 't':
+            case 'W':
                         LCD_String("Thu");
                         return;
                         break;
-            case 'F':
+            case 't':
                         LCD_String("Fri");
                         return;
                         break;
-            case 's':
+            case 'F':
                         LCD_String("Sat");
                         return;
                         break;

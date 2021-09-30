@@ -5656,6 +5656,7 @@ char I2C_Write(unsigned char);
 void I2C_Ack();
 void I2C_Nack();
 char I2C_Read(char flag);
+void RTC_Calendario();
 # 9 "Reloj_ar.c" 2
 
 

@@ -17,6 +17,20 @@ int sec,min,hour;
 int Day,Date,Month,Year;
 
 
+
+/*********************************************************************
+ * Function:        void RTC_Read_Clock(char read_clock_address)
+ *
+ * Input:           read_clock_address: direccion para leer la hora, minutos y segundos
+ *
+ * Output:          None
+ *
+ * Overview:        Permite leer la hora del reloj RTC
+ *
+ * Note:            None
+ ********************************************************************/
+
+
 void RTC_Read_Clock(char read_clock_address)
 {
     I2C_Start(device_id_write);
@@ -27,6 +41,18 @@ void RTC_Read_Clock(char read_clock_address)
     hour= I2C_Read(1);                 /*read data and send nack for indicating stop reading*/
     
 }
+
+/*********************************************************************
+ * Function:        void RTC_Read_Calendar(char read_calendar_address)
+ *
+ * Input:           read_calendar_address: direccion para leer dia,mes,fecha
+ *
+ * Output:          None
+ *
+ * Overview:        Permite leer la fecha del RTC
+ *
+ * Note:            None
+ ********************************************************************/
 
 void RTC_Read_Calendar(char read_calendar_address)
 {   
@@ -40,9 +66,23 @@ void RTC_Read_Calendar(char read_calendar_address)
     I2C_Stop();
 }
 
+/*********************************************************************
+ * Function:        RTC_Calendario()
+ *
+ *
+ * Input:           None
+ *
+ * Output:          None
+ *
+ *
+ * Overview:        Hace el llamado de las funciones de reloj y calendario
+ *                  para luego hacer las conversiones necesarias y mostrarlas en 
+ *                  una pantalla LCD
+ *
+ * Note:            None
+ ********************************************************************/
 
-
-void Calendario()
+void RTC_Calendario()
 {
     
     char secs[10],mins[10],hours[10];

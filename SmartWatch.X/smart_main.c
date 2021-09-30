@@ -31,11 +31,11 @@ char i;
 uint16_t ReadADC(void);
 uint16_t ReadLUZ(void);
 void PlayCancion();
-void Calendario();
 
-unsigned char character1[ 8 ] = {0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00}; /*  Value for Pi  */
-unsigned char character2[ 8 ] = {0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00}; /*  Value for Diode  */
-unsigned char character3[ 8 ] = {0x00, 0x00, 0x0e, 0x1f, 0x0e, 0x00, 0x00, 0x00}; /*  Value for Transistor  */
+
+unsigned char character1[ 8 ] = {0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00}; /*  Value for Rainy day  */
+unsigned char character2[ 8 ] = {0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00}; /*  Value for Sunny day  */
+unsigned char character3[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00}; /*  Value for Cloudy day  */
 
 void main() {
     OSCCON = 0x72; /* Use internal oscillator of 8MHz Frequency */
@@ -50,8 +50,9 @@ void main() {
     while (1) {
         tempar = ReadADC();
         luz = ReadLUZ();
-        Calendario();
+        RTC_Calendario();
         MSdelay(10);
+
         if (tempar > 15 && (luz > 0 && luz < 400)) {
             LED_GREEN = OFF;
             LED_GREEN1 = OFF;
@@ -71,7 +72,7 @@ void main() {
             LED_GREEN2 = OFF;
             sprintf(Stemp, "%0.0fC", tempar);
             LCD_String_xy(1, 0, Stemp);
-            LCD_Custom_Char(0, character1); /* Write custom character to CGRAM 0x00 memory location */
+            LCD_Custom_Char(0, character3); /* Write custom character to CGRAM 0x00 memory location */
             LCD_Command(0xc0);
             LCD_Char(0);
             MSdelay(3000);

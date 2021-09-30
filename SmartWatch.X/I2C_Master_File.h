@@ -21,7 +21,7 @@ char I2C_Write(unsigned char);              /* transmit/write data/address to sl
 void I2C_Ack();                             /* send acknowledge from master for another read */
 void I2C_Nack();                            /* send negative acknowledge from master for stop reading */
 char I2C_Read(char flag);                   /* read data from slave devices*/
-
+void RTC_Calendario();                      /* call the clock, calendar functions and display the data*/
 
 
 
