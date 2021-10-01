@@ -50,8 +50,9 @@ void PlayCancion( void ) {
         if ( var3seg == 60 && var3beep < 6 )
         {
         // Tres Beep cada 3 segundos
-            LATCbits.LC1        =   ~LATCbits.LC1;
+            LATDbits.LD2       =   ~LATDbits.LD2;
             var3beep++;
+            return;
         }
         else
         {
@@ -60,11 +61,11 @@ void PlayCancion( void ) {
             // Reset variables ( vuelta a empezar! )
                 var3beep    =   0;
                 var3seg     =   0;
+                return;
             }
 
             var3seg++;
         }
-
     } while ( 1 );
 }
 
@@ -95,9 +96,9 @@ void conf_CLK(void) {
 void conf_IO(void) {
     ADCON1bits.PCFG = 0b1111; // All Port Digital
 
-    TRISCbits.RC1 = 0; // RD2 OUTPUT
+    TRISDbits.RD2 = 0; // RD2 OUTPUT
 
-    LATCbits.LC1 = 0; // reset pin
+    LATDbits.LD2 = 0; // reset pin
 }
 
 /**
@@ -144,9 +145,11 @@ void __interrupt() ISR ( void )
 {
     if ( PIR1bits.TMR1IF == 1 )                 // Timer1 Interrupt
     {
-        PIR1bits.TMR1IF     =   0;              
+                     
 
         TMR1H               =   0xCF;
         TMR1L               =   0x2C;
+        
+        PIR1bits.TMR1IF     =   0; 
     }
 }

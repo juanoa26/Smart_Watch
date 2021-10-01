@@ -963,7 +963,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;reloj.c: 141:         {
 {
 "142
-[; ;reloj.c: 142:             case 's':
+[; ;reloj.c: 142:             case 'S':
 [e :U 381 ]
 "143
 [; ;reloj.c: 143:                         LCD_String("Sun");
@@ -975,7 +975,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;reloj.c: 145:                         break;
 [e $U 379  ]
 "146
-[; ;reloj.c: 146:             case 'S':
+[; ;reloj.c: 146:             case 'M':
 [e :U 382 ]
 "147
 [; ;reloj.c: 147:                         LCD_String("Mon");
@@ -987,7 +987,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;reloj.c: 149:                         break;
 [e $U 379  ]
 "150
-[; ;reloj.c: 150:             case 'M':
+[; ;reloj.c: 150:             case 'T':
 [e :U 383 ]
 "151
 [; ;reloj.c: 151:                         LCD_String("Tue");
@@ -999,7 +999,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;reloj.c: 153:                         break;
 [e $U 379  ]
 "154
-[; ;reloj.c: 154:             case 'T':
+[; ;reloj.c: 154:             case 'W':
 [e :U 384 ]
 "155
 [; ;reloj.c: 155:                         LCD_String("Wed");
@@ -1011,7 +1011,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;reloj.c: 157:                         break;
 [e $U 379  ]
 "158
-[; ;reloj.c: 158:             case 'W':
+[; ;reloj.c: 158:             case 't':
 [e :U 385 ]
 "159
 [; ;reloj.c: 159:                         LCD_String("Thu");
@@ -1023,7 +1023,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;reloj.c: 161:                         break;
 [e $U 379  ]
 "162
-[; ;reloj.c: 162:             case 't':
+[; ;reloj.c: 162:             case 'F':
 [e :U 386 ]
 "163
 [; ;reloj.c: 163:                         LCD_String("Fri");
@@ -1035,7 +1035,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;reloj.c: 165:                         break;
 [e $U 379  ]
 "166
-[; ;reloj.c: 166:             case 'F':
+[; ;reloj.c: 166:             case 's':
 [e :U 387 ]
 "167
 [; ;reloj.c: 167:                         LCD_String("Sat");
@@ -1057,13 +1057,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 379  ]
 [e :U 380 ]
-[e [\ -> *U + &U _days * -> -> _Day `ui `ux -> -> # *U &U _days `ui `ux `i , $ -> -> 115 `ui `i 381
- , $ -> -> 83 `ui `i 382
- , $ -> -> 77 `ui `i 383
- , $ -> -> 84 `ui `i 384
- , $ -> -> 87 `ui `i 385
- , $ -> -> 116 `ui `i 386
- , $ -> -> 70 `ui `i 387
+[e [\ -> *U + &U _days * -> -> _Day `ui `ux -> -> # *U &U _days `ui `ux `i , $ -> -> 83 `ui `i 381
+ , $ -> -> 77 `ui `i 382
+ , $ -> -> 84 `ui `i 383
+ , $ -> -> 87 `ui `i 384
+ , $ -> -> 116 `ui `i 385
+ , $ -> -> 70 `ui `i 386
+ , $ -> -> 115 `ui `i 387
  388 ]
 [e :U 379 ]
 "175

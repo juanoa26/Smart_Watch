@@ -6027,31 +6027,31 @@ void RTC_Calendario()
 
         switch(days[Day])
         {
-            case 's':
+            case 'S':
                         LCD_String("Sun");
                         return;
                         break;
-            case 'S':
+            case 'M':
                         LCD_String("Mon");
                         return;
                         break;
-            case 'M':
+            case 'T':
                         LCD_String("Tue");
                         return;
                         break;
-            case 'T':
+            case 'W':
                         LCD_String("Wed");
                         return;
                         break;
-            case 'W':
+            case 't':
                         LCD_String("Thu");
                         return;
                         break;
-            case 't':
+            case 'F':
                         LCD_String("Fri");
                         return;
                         break;
-            case 'F':
+            case 's':
                         LCD_String("Sat");
                         return;
                         break;

@@ -6060,9 +6060,7 @@ void main() {
             LCD_Custom_Char(0, character2);
             LCD_Command(0xc0);
             LCD_Char(0);
-            MSdelay(3000);
-
-
+            PlayCancion();
         }
         if ((tempar >= 12 && tempar <= 15)&&(luz > 400 && luz < 700)) {
             LATE0 = 1;
@@ -6073,8 +6071,6 @@ void main() {
             LCD_Custom_Char(0, character3);
             LCD_Command(0xc0);
             LCD_Char(0);
-            MSdelay(3000);
-
 
         }
         if (tempar < 12 && (luz > 700 && luz < 1500)) {
@@ -6086,10 +6082,10 @@ void main() {
             LCD_Custom_Char(0, character1);
             LCD_Command(0xc0);
             LCD_Char(0);
-            MSdelay(3000);
 
 
         }
+        MSdelay(3000);
         LCD_Clear();
     };
 

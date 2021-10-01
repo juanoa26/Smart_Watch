@@ -50,6 +50,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "29
 [; ;./LCD_caracter.h: 29: void LCD_Char(unsigned char x);
 [v _LCD_Char `(v ~T0 @X0 0 ef1`uc ]
+"33 smart_main.c
+[; ;smart_main.c: 33: void PlayCancion();
+[v _PlayCancion `(v ~T0 @X0 0 e? ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -842,93 +845,90 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;smart_main.c: 64:             LCD_Char(0);
 [e ( _LCD_Char (1 -> -> 0 `i `uc ]
 "65
-[; ;smart_main.c: 65:             MSdelay(3000);
-[e ( _MSdelay (1 -> -> 3000 `i `ui ]
-"68
-[; ;smart_main.c: 68:         }
+[; ;smart_main.c: 65:             PlayCancion();
+[e ( _PlayCancion ..  ]
+"66
+[; ;smart_main.c: 66:         }
 }
 [e :U 373 ]
-"69
-[; ;smart_main.c: 69:         if ((tempar >= 12 && tempar <= 15)&&(luz > 400 && luz < 700)) {
+"67
+[; ;smart_main.c: 67:         if ((tempar >= 12 && tempar <= 15)&&(luz > 400 && luz < 700)) {
 [e $ ! && && >= _tempar -> -> 12 `i `f <= _tempar -> -> 15 `i `f && > _luz -> -> 400 `i `f < _luz -> -> 700 `i `f 374  ]
 {
-"70
-[; ;smart_main.c: 70:             LATE0 = 1;
+"68
+[; ;smart_main.c: 68:             LATE0 = 1;
 [e = _LATE0 -> -> 1 `i `b ]
-"71
-[; ;smart_main.c: 71:             LATE1 = 1;
+"69
+[; ;smart_main.c: 69:             LATE1 = 1;
 [e = _LATE1 -> -> 1 `i `b ]
-"72
-[; ;smart_main.c: 72:             LATE2 = 0;
+"70
+[; ;smart_main.c: 70:             LATE2 = 0;
 [e = _LATE2 -> -> 0 `i `b ]
-"73
-[; ;smart_main.c: 73:             sprintf(Stemp, "%0.0fC", tempar);
+"71
+[; ;smart_main.c: 71:             sprintf(Stemp, "%0.0fC", tempar);
 [e ( _sprintf (1 , (. , &U _Stemp :s 3C -> _tempar `d ]
-"74
-[; ;smart_main.c: 74:             LCD_String_xy(1, 0, Stemp);
+"72
+[; ;smart_main.c: 72:             LCD_String_xy(1, 0, Stemp);
 [e ( _LCD_String_xy (3 , , -> -> 1 `i `uc -> -> 0 `i `uc -> &U _Stemp `*Cuc ]
-"75
-[; ;smart_main.c: 75:             LCD_Custom_Char(0, character3);
+"73
+[; ;smart_main.c: 73:             LCD_Custom_Char(0, character3);
 [e ( _LCD_Custom_Char (2 , -> -> 0 `i `uc &U _character3 ]
-"76
-[; ;smart_main.c: 76:             LCD_Command(0xc0);
+"74
+[; ;smart_main.c: 74:             LCD_Command(0xc0);
 [e ( _LCD_Command (1 -> -> 192 `i `uc ]
-"77
-[; ;smart_main.c: 77:             LCD_Char(0);
+"75
+[; ;smart_main.c: 75:             LCD_Char(0);
 [e ( _LCD_Char (1 -> -> 0 `i `uc ]
-"78
-[; ;smart_main.c: 78:             MSdelay(3000);
-[e ( _MSdelay (1 -> -> 3000 `i `ui ]
-"81
-[; ;smart_main.c: 81:         }
+"77
+[; ;smart_main.c: 77:         }
 }
 [e :U 374 ]
-"82
-[; ;smart_main.c: 82:         if (tempar < 12 && (luz > 700 && luz < 1500)) {
+"78
+[; ;smart_main.c: 78:         if (tempar < 12 && (luz > 700 && luz < 1500)) {
 [e $ ! && < _tempar -> -> 12 `i `f && > _luz -> -> 700 `i `f < _luz -> -> 1500 `i `f 375  ]
 {
-"83
-[; ;smart_main.c: 83:             LATE0 = 1;
+"79
+[; ;smart_main.c: 79:             LATE0 = 1;
 [e = _LATE0 -> -> 1 `i `b ]
-"84
-[; ;smart_main.c: 84:             LATE1 = 1;
+"80
+[; ;smart_main.c: 80:             LATE1 = 1;
 [e = _LATE1 -> -> 1 `i `b ]
-"85
-[; ;smart_main.c: 85:             LATE2 = 1;
+"81
+[; ;smart_main.c: 81:             LATE2 = 1;
 [e = _LATE2 -> -> 1 `i `b ]
-"86
-[; ;smart_main.c: 86:             sprintf(Stemp, "%0.0fC", tempar);
+"82
+[; ;smart_main.c: 82:             sprintf(Stemp, "%0.0fC", tempar);
 [e ( _sprintf (1 , (. , &U _Stemp :s 4C -> _tempar `d ]
-"87
-[; ;smart_main.c: 87:             LCD_String_xy(1, 0, Stemp);
+"83
+[; ;smart_main.c: 83:             LCD_String_xy(1, 0, Stemp);
 [e ( _LCD_String_xy (3 , , -> -> 1 `i `uc -> -> 0 `i `uc -> &U _Stemp `*Cuc ]
-"88
-[; ;smart_main.c: 88:             LCD_Custom_Char(0, character1);
+"84
+[; ;smart_main.c: 84:             LCD_Custom_Char(0, character1);
 [e ( _LCD_Custom_Char (2 , -> -> 0 `i `uc &U _character1 ]
-"89
-[; ;smart_main.c: 89:             LCD_Command(0xc0);
+"85
+[; ;smart_main.c: 85:             LCD_Command(0xc0);
 [e ( _LCD_Command (1 -> -> 192 `i `uc ]
-"90
-[; ;smart_main.c: 90:             LCD_Char(0);
+"86
+[; ;smart_main.c: 86:             LCD_Char(0);
 [e ( _LCD_Char (1 -> -> 0 `i `uc ]
-"91
-[; ;smart_main.c: 91:             MSdelay(3000);
-[e ( _MSdelay (1 -> -> 3000 `i `ui ]
-"94
-[; ;smart_main.c: 94:         }
+"89
+[; ;smart_main.c: 89:         }
 }
 [e :U 375 ]
-"95
-[; ;smart_main.c: 95:         LCD_Clear();
+"90
+[; ;smart_main.c: 90:         MSdelay(3000);
+[e ( _MSdelay (1 -> -> 3000 `i `ui ]
+"91
+[; ;smart_main.c: 91:         LCD_Clear();
 [e ( _LCD_Clear ..  ]
-"96
-[; ;smart_main.c: 96:     };
+"92
+[; ;smart_main.c: 92:     };
 }
 [e :U 370 ]
 [e $U 371  ]
 [e :U 372 ]
-"98
-[; ;smart_main.c: 98: }
+"94
+[; ;smart_main.c: 94: }
 [e :UE 369 ]
 }
 [p f _sprintf 8462340 ]
