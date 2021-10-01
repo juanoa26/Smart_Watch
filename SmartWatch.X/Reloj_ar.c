@@ -26,7 +26,7 @@ char I2C_Read(char flag)                 /*read data from location and
         return(buffer);
 }
 
-void I2C_Init()
+void I2C_Init(void)
 {
     TRISB0=1;							/*set up I2C lines by setting as input*/
 	TRISB1=1;

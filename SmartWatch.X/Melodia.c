@@ -62,13 +62,13 @@ void play(int nota, int octava, int duracion){
                             // a la octava actual
    
     do{
-       
-        TRISCbits . TRISC0 =  0;   // Genera la frecuancia
-        LATCbits . LATC0 =  1 ;
+        
+        TRISDbits . TRISD2 =  0;   // Genera la frecuancia
+        LATDbits . LATD2 =  1 ;
         MSdelay(fn);;           // con los retardos mientras
         CiclosL+=(fn);          // aumenta el contador de
                             // ciclos transcurridos
-        LATCbits . LATC0 =  0 ;    // en dos partes para repartir el
+        LATDbits . LATD2 =  0 ;    // en dos partes para repartir el
          MSdelay(fn);           // trabajo entre estado alto y bajo.
         CiclosL+=(fn);          //
         CiclosL+=25;            // Compensador.

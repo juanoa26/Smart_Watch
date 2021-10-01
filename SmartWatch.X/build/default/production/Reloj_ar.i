@@ -5646,7 +5646,7 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 
 
 void I2C_Ready();
-void I2C_Init();
+void I2C_Init(void);
 char I2C_Start(char);
 void I2C_Start_Wait(char);
 
@@ -5678,7 +5678,7 @@ char I2C_Read(char flag)
         return(buffer);
 }
 
-void I2C_Init()
+void I2C_Init(void)
 {
     TRISB0=1;
  TRISB1=1;

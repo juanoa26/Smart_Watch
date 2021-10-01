@@ -17,7 +17,7 @@
 void conf_CLK(void);
 void conf_IO(void);
 void conf_TA1(void);
-
+void desabilitar_Time();
 
 /**
  *  \brief     void conf_CLK (void)
@@ -27,12 +27,16 @@ void conf_TA1(void);
  *  \author    Manuel Caballero
  *  \version   0.0
  *  \date      17/3/2015
+ 
+ *
  */
+
+uint8_t volatile var3seg     =   0;  /**< Variable contador que junto al Timer1 nos permite contabilizar 3 s */
+    uint8_t volatile var3beep    =   0;  /**< Variable contador que junto al Timer1 nos permite realizar tres Beep */
 
 void PlayCancion( void ) {
 
-    uint8_t var3seg     =   0;  /**< Variable contador que junto al Timer1 nos permite contabilizar 3 s */
-    uint8_t var3beep    =   0;  /**< Variable contador que junto al Timer1 nos permite realizar tres Beep */
+    
 
 
     conf_CLK    ();     // Configura Relojes
@@ -40,10 +44,10 @@ void PlayCancion( void ) {
     conf_TA1    ();     // Configura Timer1
 
     
-    INTCONbits.PEIE     =   1;      // Peripheral Interrupt Enable
+    INTCONbits.PEIE     =   0;      // Peripheral Interrupt Enable
     ei  ();                         // enable interrupts
 
-
+/*
     do{
         SLEEP();                    // uC modo IDLE
 
@@ -67,6 +71,8 @@ void PlayCancion( void ) {
             var3seg++;
         }
     } while ( 1 );
+    desabilitar_Time();
+ */
 }
 
 void conf_CLK(void) {
@@ -96,9 +102,9 @@ void conf_CLK(void) {
 void conf_IO(void) {
     ADCON1bits.PCFG = 0b1111; // All Port Digital
 
-    TRISDbits.RD2 = 0; // RD2 OUTPUT
+    TRISCbits.RC1 = 0; // RD2 OUTPUT
 
-    LATDbits.LD2 = 0; // reset pin
+    LATCbits.LC1 = 0; // reset pin
 }
 
 /**
@@ -145,11 +151,41 @@ void __interrupt() ISR ( void )
 {
     if ( PIR1bits.TMR1IF == 1 )                 // Timer1 Interrupt
     {
-                     
+        LATCbits.LC1       =   ~LATCbits.LC1;
+        if ( var3seg == 60 && var3beep < 6 )
+        {
+        // Tres Beep cada 3 segundos
+            
+            var3beep++;
+            
+        }
+        else
+        {
+            if ( var3beep > 5 )
+            {
+            // Reset variables ( vuelta a empezar! )
+                var3beep    =   0;
+                var3seg     =   0;
+                desabilitar_Time(); 
+            }
+
+            var3seg++;
+        }
+    
+                
 
         TMR1H               =   0xCF;
         TMR1L               =   0x2C;
         
         PIR1bits.TMR1IF     =   0; 
     }
+}
+
+void desabilitar_Time(){
+PIE1bits.TMR1IE = 0; // TA1 interrupt ON
+
+    T1CONbits.TMR1ON = 0; // TA1 enabled
+    
+     INTCONbits.PEIE     =   0;      // Peripheral Interrupt Enable
+    di  ();                         // enable interrupts
 }

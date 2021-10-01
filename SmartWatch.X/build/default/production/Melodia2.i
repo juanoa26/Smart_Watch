@@ -6020,11 +6020,14 @@ void LCD_Custom_Char ( unsigned char , unsigned char *);
 void conf_CLK(void);
 void conf_IO(void);
 void conf_TA1(void);
-# 32 "Melodia2.c"
+void desabilitar_Time();
+# 34 "Melodia2.c"
+uint8_t volatile var3seg = 0;
+    uint8_t volatile var3beep = 0;
+
 void PlayCancion( void ) {
 
-    uint8_t var3seg = 0;
-    uint8_t var3beep = 0;
+
 
 
     conf_CLK ();
@@ -6032,33 +6035,9 @@ void PlayCancion( void ) {
     conf_TA1 ();
 
 
-    INTCONbits.PEIE = 1;
+    INTCONbits.PEIE = 0;
     (INTCONbits.GIE = 1);
-
-
-    do{
-
-
-        if ( var3seg == 60 && var3beep < 6 )
-        {
-
-            LATDbits.LD2 = ~LATDbits.LD2;
-            var3beep++;
-            return;
-        }
-        else
-        {
-            if ( var3beep > 5 )
-            {
-
-                var3beep = 0;
-                var3seg = 0;
-                return;
-            }
-
-            var3seg++;
-        }
-    } while ( 1 );
+# 76 "Melodia2.c"
 }
 
 void conf_CLK(void) {
@@ -6068,21 +6047,21 @@ void conf_CLK(void) {
 
     OSCCONbits.SCS = 0b10;
 
-    OSCCONbits.IDLEN = 0;
+    OSCCONbits.IDLEN = 1;
 
 
 
 
 }
-# 96 "Melodia2.c"
+# 102 "Melodia2.c"
 void conf_IO(void) {
     ADCON1bits.PCFG = 0b1111;
 
-    TRISDbits.RD2 = 0;
+    TRISCbits.RC1 = 0;
 
-    LATDbits.LD2 = 0;
+    LATCbits.LC1 = 0;
 }
-# 131 "Melodia2.c"
+# 137 "Melodia2.c"
 void conf_TA1(void) {
     T1CONbits.T1CKPS0 = 1;
     T1CONbits.T1CKPS1 = 1;
@@ -6100,6 +6079,27 @@ void __attribute__((picinterrupt(("")))) ISR ( void )
 {
     if ( PIR1bits.TMR1IF == 1 )
     {
+        LATCbits.LC1 = ~LATCbits.LC1;
+        if ( var3seg == 60 && var3beep < 6 )
+        {
+
+
+            var3beep++;
+
+        }
+        else
+        {
+            if ( var3beep > 5 )
+            {
+
+                var3beep = 0;
+                var3seg = 0;
+                desabilitar_Time();
+            }
+
+            var3seg++;
+        }
+
 
 
         TMR1H = 0xCF;
@@ -6107,4 +6107,13 @@ void __attribute__((picinterrupt(("")))) ISR ( void )
 
         PIR1bits.TMR1IF = 0;
     }
+}
+
+void desabilitar_Time(){
+PIE1bits.TMR1IE = 0;
+
+    T1CONbits.TMR1ON = 0;
+
+     INTCONbits.PEIE = 0;
+    (INTCONbits.GIE = 0);
 }

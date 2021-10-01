@@ -11,7 +11,7 @@
 #define BITRATE ((F_OSC/(4*I2C_CLOCK))-1)  /* find bit rate to assign this value to SSPADD register*/
 
 void I2C_Ready();                           /* check and wait weather I2C is ready or not */
-void I2C_Init();                            /* initialize I2C register configuration*/
+void I2C_Init(void);                            /* initialize I2C register configuration*/
 char I2C_Start(char);                       /* send start pulse along with slave device address */
 void I2C_Start_Wait(char);                  /* send start pulse along with slave device address 
                                              * and wait if not work */
