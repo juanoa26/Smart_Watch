@@ -28,7 +28,7 @@ void LCD_Init(void);                    /*Initialize LCD*/
 void LCD_Command(unsigned char );   /*Send command to LCD*/
 void LCD_Char(unsigned char x);     /*Send data to LCD*/
 void LCD_String(const char *);      /*Display data string on LCD*/
-void LCD_String_xy(char, char , const char *);
+void LCD_String_xy(char, char , const char *);/*Display data string on LCD*/
 void LCD_Clear(void);                   /*Clear LCD Screen*/
 void  LCD_Custom_Char ( unsigned  char , unsigned  char *); 
 #endif	/* XC_HEADER_TEMPLATE_H */

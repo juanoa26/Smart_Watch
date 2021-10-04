@@ -5,34 +5,34 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p i __delay ]
 "3858 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3858:     struct {
-[s S149 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S149 . TRISC0 TRISC1 TRISC2 . TRISC6 TRISC7 ]
+[s S154 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S154 . TRISC0 TRISC1 TRISC2 . TRISC6 TRISC7 ]
 "3866
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3866:     struct {
-[s S150 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S150 . RC0 RC1 RC2 . RC6 RC7 ]
+[s S155 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S155 . RC0 RC1 RC2 . RC6 RC7 ]
 "3857
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3857: typedef union {
-[u S148 `S149 1 `S150 1 ]
-[n S148 . . . ]
+[u S153 `S154 1 `S155 1 ]
+[n S153 . . . ]
 "3875
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3875: extern volatile TRISCbits_t TRISCbits __attribute__((address(0xF94)));
-[v _TRISCbits `VS148 ~T0 @X0 0 e@3988 ]
+[v _TRISCbits `VS153 ~T0 @X0 0 e@3988 ]
 "3191
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3191:     struct {
-[s S128 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S128 . LATC0 LATC1 LATC2 . LATC6 LATC7 ]
+[s S133 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S133 . LATC0 LATC1 LATC2 . LATC6 LATC7 ]
 "3199
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3199:     struct {
-[s S129 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S129 . LC0 LC1 LC2 . LC6 LC7 ]
+[s S134 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S134 . LC0 LC1 LC2 . LC6 LC7 ]
 "3190
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3190: typedef union {
-[u S127 `S128 1 `S129 1 ]
-[n S127 . . . ]
+[u S132 `S133 1 `S134 1 ]
+[n S132 . . . ]
 "3208
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3208: extern volatile LATCbits_t LATCbits __attribute__((address(0xF8B)));
-[v _LATCbits `VS127 ~T0 @X0 0 e@3979 ]
+[v _LATCbits `VS132 ~T0 @X0 0 e@3979 ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -695,8 +695,71 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3  =  OFF       ]
 "65
 [p x EBTRB  =  OFF       ]
-"32 Melodia.c
-[; ;Melodia.c: 32: int FreqNota[12]={
+"25 ./Funciones.h
+[; ;./Funciones.h: 25: float tempar;
+[v _tempar `f ~T0 @X0 1 e ]
+"26
+[; ;./Funciones.h: 26: float luz;
+[v _luz `f ~T0 @X0 1 e ]
+"27
+[; ;./Funciones.h: 27: char Stemp[20];
+[v _Stemp `uc ~T0 @X0 -> 20 `i e ]
+"28
+[; ;./Funciones.h: 28: char Sluz[20];
+[v _Sluz `uc ~T0 @X0 -> 20 `i e ]
+"29
+[; ;./Funciones.h: 29: uint16_t result;
+[v _result `us ~T0 @X0 1 e ]
+"30
+[; ;./Funciones.h: 30: char i;
+[v _i `uc ~T0 @X0 1 e ]
+"32
+[; ;./Funciones.h: 32: unsigned char character1[ 8 ] = {0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00};
+[v _character1 `uc ~T0 @X0 -> 8 `i e ]
+[i _character1
+:U ..
+-> -> 14 `i `uc
+-> -> 31 `i `uc
+-> -> 31 `i `uc
+-> -> 14 `i `uc
+-> -> 0 `i `uc
+-> -> 10 `i `uc
+-> -> 10 `i `uc
+-> -> 0 `i `uc
+..
+]
+"33
+[; ;./Funciones.h: 33: unsigned char character2[ 8 ] = {0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00};
+[v _character2 `uc ~T0 @X0 -> 8 `i e ]
+[i _character2
+:U ..
+-> -> 21 `i `uc
+-> -> 14 `i `uc
+-> -> 17 `i `uc
+-> -> 17 `i `uc
+-> -> 14 `i `uc
+-> -> 21 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+]
+"34
+[; ;./Funciones.h: 34: unsigned char character3[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00};
+[v _character3 `uc ~T0 @X0 -> 8 `i e ]
+[i _character3
+:U ..
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 22 `i `uc
+-> -> 31 `i `uc
+-> -> 31 `i `uc
+-> -> 22 `i `uc
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+..
+]
+"21 ./Melodia.h
+[; ;./Melodia.h: 21: int FreqNota[12]={
 [v _FreqNota `i ~T0 @X0 -> 12 `i e ]
 [i _FreqNota
 :U ..
@@ -714,38 +777,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 8099 `i
 ..
 ]
-"54
-[; ;Melodia.c: 54: void delay_us(int nota){
+"11 Melodia.c
+[; ;Melodia.c: 11: void delay_us(int nota){
 [v _delay_us `(v ~T0 @X0 1 ef1`i ]
 {
 [e :U _delay_us ]
 [v _nota `i ~T0 @X0 1 r1 ]
 [f ]
-"55
-[; ;Melodia.c: 55:     for(int i=0; i<=nota;i++ ){
+"12
+[; ;Melodia.c: 12:     for(int i=0; i<=nota;i++ ){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
 [e $U 373  ]
 [e :U 370 ]
 {
-"56
-[; ;Melodia.c: 56:         _delay((unsigned long)((1)*(8000000/4000000.0)));
+"13
+[; ;Melodia.c: 13:         _delay((unsigned long)((1)*(8000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-"57
-[; ;Melodia.c: 57:     }
+"14
+[; ;Melodia.c: 14:     }
 }
 [e ++ _i -> 1 `i ]
 [e :U 373 ]
 [e $ <= _i _nota 370  ]
 [e :U 371 ]
 }
-"58
-[; ;Melodia.c: 58: }
+"15
+[; ;Melodia.c: 15: }
 [e :UE 369 ]
 }
-"61
-[; ;Melodia.c: 61: void play(int nota, int octava, int duracion){
+"18
+[; ;Melodia.c: 18: void play(int nota, int octava, int duracion){
 [v _play `(v ~T0 @X0 1 ef3`i`i`i ]
 {
 [e :U _play ]
@@ -753,134 +816,134 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _octava `i ~T0 @X0 1 r2 ]
 [v _duracion `i ~T0 @X0 1 r3 ]
 [f ]
-"62
-[; ;Melodia.c: 62:      int fn;
+"19
+[; ;Melodia.c: 19:      int fn;
 [v _fn `i ~T0 @X0 1 a ]
-"63
-[; ;Melodia.c: 63:      int mS_Transcurridos=0;
+"20
+[; ;Melodia.c: 20:      int mS_Transcurridos=0;
 [v _mS_Transcurridos `i ~T0 @X0 1 a ]
 [e = _mS_Transcurridos -> 0 `i ]
-"64
-[; ;Melodia.c: 64:      int CiclosL=0;
+"21
+[; ;Melodia.c: 21:      int CiclosL=0;
 [v _CiclosL `i ~T0 @X0 1 a ]
 [e = _CiclosL -> 0 `i ]
-"66
-[; ;Melodia.c: 66:      fn=FreqNota[nota];
+"23
+[; ;Melodia.c: 23:      fn=FreqNota[nota];
 [e = _fn *U + &U _FreqNota * -> -> _nota `ui `ux -> -> # *U &U _FreqNota `ui `ux ]
-"68
-[; ;Melodia.c: 68:      fn>>=(octava);
+"25
+[; ;Melodia.c: 25:      fn>>=(octava);
 [e =>> _fn _octava ]
-"71
-[; ;Melodia.c: 71:     do{
+"28
+[; ;Melodia.c: 28:     do{
 [e :U 377 ]
 {
-"73
-[; ;Melodia.c: 73:         TRISCbits . TRISC1 = 0;
+"30
+[; ;Melodia.c: 30:         TRISCbits . TRISC1 = 0;
 [e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
-"74
-[; ;Melodia.c: 74:         LATCbits . LATC1 = 1 ;
+"31
+[; ;Melodia.c: 31:         LATCbits . LATC1 = 1 ;
 [e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
-"75
-[; ;Melodia.c: 75:         delay_us(fn);;
+"32
+[; ;Melodia.c: 32:         delay_us(fn);;
 [e ( _delay_us (1 _fn ]
-"76
-[; ;Melodia.c: 76:         CiclosL+=(fn);
+"33
+[; ;Melodia.c: 33:         CiclosL+=(fn);
 [e =+ _CiclosL _fn ]
-"78
-[; ;Melodia.c: 78:         LATCbits . LATC1 = 0 ;
+"35
+[; ;Melodia.c: 35:         LATCbits . LATC1 = 0 ;
 [e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
-"79
-[; ;Melodia.c: 79:          delay_us(fn);
+"36
+[; ;Melodia.c: 36:          delay_us(fn);
 [e ( _delay_us (1 _fn ]
-"80
-[; ;Melodia.c: 80:         CiclosL+=(fn);
+"37
+[; ;Melodia.c: 37:         CiclosL+=(fn);
 [e =+ _CiclosL _fn ]
-"81
-[; ;Melodia.c: 81:         CiclosL+=25;
+"38
+[; ;Melodia.c: 38:         CiclosL+=25;
 [e =+ _CiclosL -> 25 `i ]
-"83
-[; ;Melodia.c: 83:         while(CiclosL>999){
+"40
+[; ;Melodia.c: 40:         while(CiclosL>999){
 [e $U 378  ]
 [e :U 379 ]
 {
-"85
-[; ;Melodia.c: 85:            CiclosL-=1000;
+"42
+[; ;Melodia.c: 42:            CiclosL-=1000;
 [e =- _CiclosL -> 1000 `i ]
-"86
-[; ;Melodia.c: 86:            mS_Transcurridos++;
+"43
+[; ;Melodia.c: 43:            mS_Transcurridos++;
 [e ++ _mS_Transcurridos -> 1 `i ]
-"87
-[; ;Melodia.c: 87:            CiclosL+=25;
+"44
+[; ;Melodia.c: 44:            CiclosL+=25;
 [e =+ _CiclosL -> 25 `i ]
-"88
-[; ;Melodia.c: 88:         }
+"45
+[; ;Melodia.c: 45:         }
 }
 [e :U 378 ]
-"83
-[; ;Melodia.c: 83:         while(CiclosL>999){
+"40
+[; ;Melodia.c: 40:         while(CiclosL>999){
 [e $ > _CiclosL -> 999 `i 379  ]
 [e :U 380 ]
-"89
-[; ;Melodia.c: 89:      }while (duracion>mS_Transcurridos);
+"46
+[; ;Melodia.c: 46:      }while (duracion>mS_Transcurridos);
 }
 [e $ > _duracion _mS_Transcurridos 377  ]
 [e :U 376 ]
-"94
-[; ;Melodia.c: 94: }
+"51
+[; ;Melodia.c: 51: }
 [e :UE 374 ]
 }
-"96
-[; ;Melodia.c: 96: void PlayCancion(){
+"53
+[; ;Melodia.c: 53: void PlayCancion(){
 [v _PlayCancion `(v ~T0 @X0 1 ef ]
 {
 [e :U _PlayCancion ]
 [f ]
-"99
-[; ;Melodia.c: 99:         play (4 ,4,150);
+"56
+[; ;Melodia.c: 56:         play (4 ,4,150);
 [e ( _play (3 , , -> 4 `i -> 4 `i -> 150 `i ]
-"100
-[; ;Melodia.c: 100:         _delay((unsigned long)((50)*(8000000/4000.0)));
+"57
+[; ;Melodia.c: 57:         _delay((unsigned long)((50)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"101
-[; ;Melodia.c: 101:         play (4 ,4,150);
+"58
+[; ;Melodia.c: 58:         play (4 ,4,150);
 [e ( _play (3 , , -> 4 `i -> 4 `i -> 150 `i ]
-"102
-[; ;Melodia.c: 102:         _delay((unsigned long)((150)*(8000000/4000.0)));
+"59
+[; ;Melodia.c: 59:         _delay((unsigned long)((150)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 150 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"103
-[; ;Melodia.c: 103:         play (4 ,4,150);
+"60
+[; ;Melodia.c: 60:         play (4 ,4,150);
 [e ( _play (3 , , -> 4 `i -> 4 `i -> 150 `i ]
-"104
-[; ;Melodia.c: 104:         _delay((unsigned long)((200)*(8000000/4000.0)));
+"61
+[; ;Melodia.c: 61:         _delay((unsigned long)((200)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"106
-[; ;Melodia.c: 106:         play (0 ,4,125);
+"63
+[; ;Melodia.c: 63:         play (0 ,4,125);
 [e ( _play (3 , , -> 0 `i -> 4 `i -> 125 `i ]
-"107
-[; ;Melodia.c: 107:         _delay((unsigned long)((50)*(8000000/4000.0)));
+"64
+[; ;Melodia.c: 64:         _delay((unsigned long)((50)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"108
-[; ;Melodia.c: 108:         play (4 ,4,125);
+"65
+[; ;Melodia.c: 65:         play (4 ,4,125);
 [e ( _play (3 , , -> 4 `i -> 4 `i -> 125 `i ]
-"109
-[; ;Melodia.c: 109:         _delay((unsigned long)((150)*(8000000/4000.0)));
+"66
+[; ;Melodia.c: 66:         _delay((unsigned long)((150)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 150 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"110
-[; ;Melodia.c: 110:         play (7 ,4,200);
+"67
+[; ;Melodia.c: 67:         play (7 ,4,200);
 [e ( _play (3 , , -> 7 `i -> 4 `i -> 200 `i ]
-"111
-[; ;Melodia.c: 111:         _delay((unsigned long)((400)*(8000000/4000.0)));
+"68
+[; ;Melodia.c: 68:         _delay((unsigned long)((400)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 400 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"112
-[; ;Melodia.c: 112:         play (7 ,3,350);
+"69
+[; ;Melodia.c: 69:         play (7 ,3,350);
 [e ( _play (3 , , -> 7 `i -> 3 `i -> 350 `i ]
-"113
-[; ;Melodia.c: 113:         _delay((unsigned long)((300)*(8000000/4000.0)));
+"70
+[; ;Melodia.c: 70:         _delay((unsigned long)((300)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 300 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"115
-[; ;Melodia.c: 115:         return;
+"72
+[; ;Melodia.c: 72:         return;
 [e $UE 381  ]
-"116
-[; ;Melodia.c: 116: }
+"73
+[; ;Melodia.c: 73: }
 [e :UE 381 ]
 }

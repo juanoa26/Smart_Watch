@@ -7,6 +7,9 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "smart_main.c" 2
+
+# 1 "./LCD_caracter.h" 1
+# 12 "./LCD_caracter.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -5623,79 +5626,10 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 2 3
-# 1 "smart_main.c" 2
-
-
-# 1 "./config.h" 1
+# 12 "./LCD_caracter.h" 2
 
 
 
-
-
-#pragma config PLLDIV = 1
-#pragma config CPUDIV = OSC1_PLL2
-#pragma config USBDIV = 1
-
-
-#pragma config FOSC = INTOSC_EC
-#pragma config FCMEN = OFF
-#pragma config IESO = OFF
-
-
-#pragma config PWRT = ON
-#pragma config BOR = OFF
-#pragma config BORV = 3
-#pragma config VREGEN = OFF
-
-
-#pragma config WDT = OFF
-#pragma config WDTPS = 32768
-
-
-#pragma config CCP2MX = ON
-#pragma config PBADEN = OFF
-#pragma config LPT1OSC = OFF
-#pragma config MCLRE = ON
-
-
-#pragma config STVREN = OFF
-#pragma config LVP = OFF
-#pragma config ICPRT = OFF
-#pragma config XINST = OFF
-
-
-#pragma config CP0 = OFF
-#pragma config CP1 = OFF
-#pragma config CP2 = OFF
-#pragma config CP3 = OFF
-
-
-#pragma config CPB = OFF
-#pragma config CPD = OFF
-
-
-#pragma config WRT0 = OFF
-#pragma config WRT1 = OFF
-#pragma config WRT2 = OFF
-#pragma config WRT3 = OFF
-
-
-#pragma config WRTC = OFF
-#pragma config WRTB = OFF
-#pragma config WRTD = OFF
-
-
-#pragma config EBTR0 = OFF
-#pragma config EBTR1 = OFF
-#pragma config EBTR2 = OFF
-#pragma config EBTR3 = OFF
-
-
-#pragma config EBTRB = OFF
-# 3 "smart_main.c" 2
-
-# 1 "./LCD_caracter.h" 1
-# 15 "./LCD_caracter.h"
 # 1 "./config.h" 1
 
 
@@ -5772,7 +5706,7 @@ void LCD_String(const char *);
 void LCD_String_xy(char, char , const char *);
 void LCD_Clear(void);
 void LCD_Custom_Char ( unsigned char , unsigned char *);
-# 4 "smart_main.c" 2
+# 2 "smart_main.c" 2
 
 # 1 "./I2C_Master_File.h" 1
 # 13 "./I2C_Master_File.h"
@@ -5788,7 +5722,78 @@ void I2C_Ack(void);
 void I2C_Nack(void);
 char I2C_Read(char flag);
 void RTC_Calendario(void);
-# 5 "smart_main.c" 2
+# 3 "smart_main.c" 2
+
+# 1 "./Funciones.h" 1
+# 13 "./Funciones.h"
+# 1 "./config.h" 1
+
+
+
+
+
+#pragma config PLLDIV = 1
+#pragma config CPUDIV = OSC1_PLL2
+#pragma config USBDIV = 1
+
+
+#pragma config FOSC = INTOSC_EC
+#pragma config FCMEN = OFF
+#pragma config IESO = OFF
+
+
+#pragma config PWRT = ON
+#pragma config BOR = OFF
+#pragma config BORV = 3
+#pragma config VREGEN = OFF
+
+
+#pragma config WDT = OFF
+#pragma config WDTPS = 32768
+
+
+#pragma config CCP2MX = ON
+#pragma config PBADEN = OFF
+#pragma config LPT1OSC = OFF
+#pragma config MCLRE = ON
+
+
+#pragma config STVREN = OFF
+#pragma config LVP = OFF
+#pragma config ICPRT = OFF
+#pragma config XINST = OFF
+
+
+#pragma config CP0 = OFF
+#pragma config CP1 = OFF
+#pragma config CP2 = OFF
+#pragma config CP3 = OFF
+
+
+#pragma config CPB = OFF
+#pragma config CPD = OFF
+
+
+#pragma config WRT0 = OFF
+#pragma config WRT1 = OFF
+#pragma config WRT2 = OFF
+#pragma config WRT3 = OFF
+
+
+#pragma config WRTC = OFF
+#pragma config WRTB = OFF
+#pragma config WRTD = OFF
+
+
+#pragma config EBTR0 = OFF
+#pragma config EBTR1 = OFF
+#pragma config EBTR2 = OFF
+#pragma config EBTR3 = OFF
+
+
+#pragma config EBTRB = OFF
+# 13 "./Funciones.h" 2
+
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 3
@@ -5928,7 +5933,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 6 "smart_main.c" 2
+# 15 "./Funciones.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
@@ -6015,26 +6020,38 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
-# 7 "smart_main.c" 2
+# 16 "./Funciones.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
-# 8 "smart_main.c" 2
-# 27 "smart_main.c"
+# 17 "./Funciones.h" 2
+
+
+
+
+
+
+
+
 float tempar;
 float luz;
 char Stemp[20];
 char Sluz[20];
-
+uint16_t result;
 char i;
-uint16_t ReadADC(void);
-uint16_t ReadLUZ(void);
-void PlayCancion(void);
-
 
 unsigned char character1[ 8 ] = {0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00};
 unsigned char character2[ 8 ] = {0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00};
 unsigned char character3[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00};
-# 55 "smart_main.c"
+
+uint16_t ReadADC(void);
+uint16_t ReadLUZ(void);
+void PlayCancion(void);
+int Estados(void);
+void Estado_Soleado(void);
+void Estado_Nublado(void);
+void Estado_Lluvioso(void);
+# 4 "smart_main.c" 2
+# 19 "smart_main.c"
 void main() {
     OSCCON = 0x72;
     TRISE = 0x00;
@@ -6045,42 +6062,24 @@ void main() {
     LCD_Clear();
 
     while (1) {
-        tempar = ReadADC();
-        luz = ReadLUZ();
         RTC_Calendario();
-        LCD_MSdelay(10);
+        int caso = Estados();
+        switch(caso){
+            case 1:
+                Estado_Soleado();
+                break;
 
-        if (tempar > 15 && (luz > 0 && luz < 400)) {
-            LATE0 = 0;
-            LATE1 = 0;
-            LATE2 = 0;
-            sprintf(Stemp, "%0.0fC", tempar);
-            LCD_String_xy(1, 0, Stemp);
-            LCD_Custom_Char(0, character2);
-            LCD_Command(0xc0);
-            LCD_Char(0);
-            PlayCancion();
-        }
-        else if ((tempar >= 12 && tempar <= 15)&&(luz > 400 && luz < 700)) {
-            LATE0 = 1;
-            LATE1 = 1;
-            LATE2 = 0;
-            sprintf(Stemp, "%0.0fC", tempar);
-            LCD_String_xy(1, 0, Stemp);
-            LCD_Custom_Char(0, character3);
-            LCD_Command(0xc0);
-            LCD_Char(0);
+            case 2:
+                Estado_Nublado();
+                break;
 
-        }
-        else if(tempar < 12 && (luz > 700 && luz < 1500)) {
-            LATE0 = 1;
-            LATE1 = 1;
-            LATE2 = 1;
-            sprintf(Stemp, "%0.0fC", tempar);
-            LCD_String_xy(1, 0, Stemp);
-            LCD_Custom_Char(0, character1);
-            LCD_Command(0xc0);
-            LCD_Char(0);
+            case 3:
+                Estado_Lluvioso();
+                break;
+
+            default:
+                break;
+
         }
         LCD_MSdelay(3000);
         LCD_Clear();

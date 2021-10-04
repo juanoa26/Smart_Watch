@@ -37,82 +37,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "30 ./LCD_caracter.h
 [; ;./LCD_caracter.h: 30: void LCD_String(const char *);
 [v _LCD_String `(v ~T0 @X0 0 ef1`*Cuc ]
-"6 ./config.h
-[p x PLLDIV  =  1        ]
-"7
-[p x CPUDIV  =  OSC1_PLL2 ]
-"8
-[p x USBDIV  =  1        ]
-"11
-[p x FOSC  =  INTOSC_EC         ]
-"12
-[p x FCMEN  =  OFF       ]
-"13
-[p x IESO  =  OFF        ]
-"16
-[p x PWRT  =  ON         ]
-"17
-[p x BOR  =  OFF         ]
-"18
-[p x BORV  =  3          ]
-"19
-[p x VREGEN  =  OFF      ]
-"22
-[p x WDT  =  OFF         ]
-"23
-[p x WDTPS  =  32768     ]
-"26
-[p x CCP2MX  =  ON       ]
-"27
-[p x PBADEN  =  OFF       ]
-"28
-[p x LPT1OSC  =  OFF     ]
-"29
-[p x MCLRE  =  ON        ]
-"32
-[p x STVREN  =  OFF      ]
-"33
-[p x LVP  =  OFF         ]
-"34
-[p x ICPRT  =  OFF       ]
-"35
-[p x XINST  =  OFF       ]
-"38
-[p x CP0  =  OFF         ]
-"39
-[p x CP1  =  OFF         ]
-"40
-[p x CP2  =  OFF         ]
-"41
-[p x CP3  =  OFF         ]
-"44
-[p x CPB  =  OFF         ]
-"45
-[p x CPD  =  OFF         ]
-"48
-[p x WRT0  =  OFF        ]
-"49
-[p x WRT1  =  OFF        ]
-"50
-[p x WRT2  =  OFF        ]
-"51
-[p x WRT3  =  OFF        ]
-"54
-[p x WRTC  =  OFF        ]
-"55
-[p x WRTB  =  OFF        ]
-"56
-[p x WRTD  =  OFF        ]
-"59
-[p x EBTR0  =  OFF       ]
-"60
-[p x EBTR1  =  OFF       ]
-"61
-[p x EBTR2  =  OFF       ]
-"62
-[p x EBTR3  =  OFF       ]
-"65
-[p x EBTRB  =  OFF       ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -699,124 +623,263 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3  =  OFF       ]
 "65
 [p x EBTRB  =  OFF       ]
-"16 reloj.c
-[; ;reloj.c: 16: int sec,min,hour;
+"6
+[p x PLLDIV  =  1        ]
+"7
+[p x CPUDIV  =  OSC1_PLL2 ]
+"8
+[p x USBDIV  =  1        ]
+"11
+[p x FOSC  =  INTOSC_EC         ]
+"12
+[p x FCMEN  =  OFF       ]
+"13
+[p x IESO  =  OFF        ]
+"16
+[p x PWRT  =  ON         ]
+"17
+[p x BOR  =  OFF         ]
+"18
+[p x BORV  =  3          ]
+"19
+[p x VREGEN  =  OFF      ]
+"22
+[p x WDT  =  OFF         ]
+"23
+[p x WDTPS  =  32768     ]
+"26
+[p x CCP2MX  =  ON       ]
+"27
+[p x PBADEN  =  OFF       ]
+"28
+[p x LPT1OSC  =  OFF     ]
+"29
+[p x MCLRE  =  ON        ]
+"32
+[p x STVREN  =  OFF      ]
+"33
+[p x LVP  =  OFF         ]
+"34
+[p x ICPRT  =  OFF       ]
+"35
+[p x XINST  =  OFF       ]
+"38
+[p x CP0  =  OFF         ]
+"39
+[p x CP1  =  OFF         ]
+"40
+[p x CP2  =  OFF         ]
+"41
+[p x CP3  =  OFF         ]
+"44
+[p x CPB  =  OFF         ]
+"45
+[p x CPD  =  OFF         ]
+"48
+[p x WRT0  =  OFF        ]
+"49
+[p x WRT1  =  OFF        ]
+"50
+[p x WRT2  =  OFF        ]
+"51
+[p x WRT3  =  OFF        ]
+"54
+[p x WRTC  =  OFF        ]
+"55
+[p x WRTB  =  OFF        ]
+"56
+[p x WRTD  =  OFF        ]
+"59
+[p x EBTR0  =  OFF       ]
+"60
+[p x EBTR1  =  OFF       ]
+"61
+[p x EBTR2  =  OFF       ]
+"62
+[p x EBTR3  =  OFF       ]
+"65
+[p x EBTRB  =  OFF       ]
+"25 ./Funciones.h
+[; ;./Funciones.h: 25: float tempar;
+[v _tempar `f ~T0 @X0 1 e ]
+"26
+[; ;./Funciones.h: 26: float luz;
+[v _luz `f ~T0 @X0 1 e ]
+"27
+[; ;./Funciones.h: 27: char Stemp[20];
+[v _Stemp `uc ~T0 @X0 -> 20 `i e ]
+"28
+[; ;./Funciones.h: 28: char Sluz[20];
+[v _Sluz `uc ~T0 @X0 -> 20 `i e ]
+"29
+[; ;./Funciones.h: 29: uint16_t result;
+[v _result `us ~T0 @X0 1 e ]
+"30
+[; ;./Funciones.h: 30: char i;
+[v _i `uc ~T0 @X0 1 e ]
+"32
+[; ;./Funciones.h: 32: unsigned char character1[ 8 ] = {0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00};
+[v _character1 `uc ~T0 @X0 -> 8 `i e ]
+[i _character1
+:U ..
+-> -> 14 `i `uc
+-> -> 31 `i `uc
+-> -> 31 `i `uc
+-> -> 14 `i `uc
+-> -> 0 `i `uc
+-> -> 10 `i `uc
+-> -> 10 `i `uc
+-> -> 0 `i `uc
+..
+]
+"33
+[; ;./Funciones.h: 33: unsigned char character2[ 8 ] = {0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00};
+[v _character2 `uc ~T0 @X0 -> 8 `i e ]
+[i _character2
+:U ..
+-> -> 21 `i `uc
+-> -> 14 `i `uc
+-> -> 17 `i `uc
+-> -> 17 `i `uc
+-> -> 14 `i `uc
+-> -> 21 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+]
+"34
+[; ;./Funciones.h: 34: unsigned char character3[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00};
+[v _character3 `uc ~T0 @X0 -> 8 `i e ]
+[i _character3
+:U ..
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 22 `i `uc
+-> -> 31 `i `uc
+-> -> 31 `i `uc
+-> -> 22 `i `uc
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+..
+]
+"13 reloj.c
+[; ;reloj.c: 13: int sec,min,hour;
 [v _sec `i ~T0 @X0 1 e ]
 [v _min `i ~T0 @X0 1 e ]
 [v _hour `i ~T0 @X0 1 e ]
-"17
-[; ;reloj.c: 17: int Day,Date,Month,Year;
+"14
+[; ;reloj.c: 14: int Day,Date,Month,Year;
 [v _Day `i ~T0 @X0 1 e ]
 [v _Date `i ~T0 @X0 1 e ]
 [v _Month `i ~T0 @X0 1 e ]
 [v _Year `i ~T0 @X0 1 e ]
-"34
-[; ;reloj.c: 34: void RTC_Read_Clock(char read_clock_address)
+"31
+[; ;reloj.c: 31: void RTC_Read_Clock(char read_clock_address)
 [v _RTC_Read_Clock `(v ~T0 @X0 1 ef1`uc ]
-"35
-[; ;reloj.c: 35: {
+"32
+[; ;reloj.c: 32: {
 {
 [e :U _RTC_Read_Clock ]
-"34
-[; ;reloj.c: 34: void RTC_Read_Clock(char read_clock_address)
+"31
+[; ;reloj.c: 31: void RTC_Read_Clock(char read_clock_address)
 [v _read_clock_address `uc ~T0 @X0 1 r1 ]
-"35
-[; ;reloj.c: 35: {
+"32
+[; ;reloj.c: 32: {
 [f ]
-"36
-[; ;reloj.c: 36:     I2C_Start(0xD0);
+"33
+[; ;reloj.c: 33:     I2C_Start(0xD0);
 [e ( _I2C_Start (1 -> -> 208 `i `uc ]
-"37
-[; ;reloj.c: 37:     I2C_Write(read_clock_address);
+"34
+[; ;reloj.c: 34:     I2C_Write(read_clock_address);
 [e ( _I2C_Write (1 -> _read_clock_address `uc ]
-"38
-[; ;reloj.c: 38:     I2C_Repeated_Start(0xD1);
+"35
+[; ;reloj.c: 35:     I2C_Repeated_Start(0xD1);
 [e ( _I2C_Repeated_Start (1 -> -> 209 `i `uc ]
-"39
-[; ;reloj.c: 39:     sec = I2C_Read(0);
+"36
+[; ;reloj.c: 36:     sec = I2C_Read(0);
 [e = _sec -> ( _I2C_Read (1 -> -> 0 `i `uc `i ]
-"40
-[; ;reloj.c: 40:     min = I2C_Read(0);
+"37
+[; ;reloj.c: 37:     min = I2C_Read(0);
 [e = _min -> ( _I2C_Read (1 -> -> 0 `i `uc `i ]
-"41
-[; ;reloj.c: 41:     hour= I2C_Read(1);
+"38
+[; ;reloj.c: 38:     hour= I2C_Read(1);
 [e = _hour -> ( _I2C_Read (1 -> -> 1 `i `uc `i ]
-"43
-[; ;reloj.c: 43: }
+"40
+[; ;reloj.c: 40: }
 [e :UE 369 ]
 }
-"57
-[; ;reloj.c: 57: void RTC_Read_Calendar(char read_calendar_address)
+"54
+[; ;reloj.c: 54: void RTC_Read_Calendar(char read_calendar_address)
 [v _RTC_Read_Calendar `(v ~T0 @X0 1 ef1`uc ]
-"58
-[; ;reloj.c: 58: {
+"55
+[; ;reloj.c: 55: {
 {
 [e :U _RTC_Read_Calendar ]
-"57
-[; ;reloj.c: 57: void RTC_Read_Calendar(char read_calendar_address)
+"54
+[; ;reloj.c: 54: void RTC_Read_Calendar(char read_calendar_address)
 [v _read_calendar_address `uc ~T0 @X0 1 r1 ]
-"58
-[; ;reloj.c: 58: {
+"55
+[; ;reloj.c: 55: {
 [f ]
-"59
-[; ;reloj.c: 59:     I2C_Start(0xD0);
+"56
+[; ;reloj.c: 56:     I2C_Start(0xD0);
 [e ( _I2C_Start (1 -> -> 208 `i `uc ]
-"60
-[; ;reloj.c: 60:     I2C_Write(read_calendar_address);
+"57
+[; ;reloj.c: 57:     I2C_Write(read_calendar_address);
 [e ( _I2C_Write (1 -> _read_calendar_address `uc ]
-"61
-[; ;reloj.c: 61:     I2C_Repeated_Start(0xD1);
+"58
+[; ;reloj.c: 58:     I2C_Repeated_Start(0xD1);
 [e ( _I2C_Repeated_Start (1 -> -> 209 `i `uc ]
-"62
-[; ;reloj.c: 62:     Day = I2C_Read(0);
+"59
+[; ;reloj.c: 59:     Day = I2C_Read(0);
 [e = _Day -> ( _I2C_Read (1 -> -> 0 `i `uc `i ]
-"63
-[; ;reloj.c: 63:     Date = I2C_Read(0);
+"60
+[; ;reloj.c: 60:     Date = I2C_Read(0);
 [e = _Date -> ( _I2C_Read (1 -> -> 0 `i `uc `i ]
-"64
-[; ;reloj.c: 64:     Month = I2C_Read(0);
+"61
+[; ;reloj.c: 61:     Month = I2C_Read(0);
 [e = _Month -> ( _I2C_Read (1 -> -> 0 `i `uc `i ]
-"65
-[; ;reloj.c: 65:     Year = I2C_Read(1);
+"62
+[; ;reloj.c: 62:     Year = I2C_Read(1);
 [e = _Year -> ( _I2C_Read (1 -> -> 1 `i `uc `i ]
-"66
-[; ;reloj.c: 66:     I2C_Stop();
+"63
+[; ;reloj.c: 63:     I2C_Stop();
 [e ( _I2C_Stop ..  ]
-"67
-[; ;reloj.c: 67: }
+"64
+[; ;reloj.c: 64: }
 [e :UE 370 ]
 }
-"85
-[; ;reloj.c: 85: void RTC_Calendario(void)
+"82
+[; ;reloj.c: 82: void RTC_Calendario(void)
 [v _RTC_Calendario `(v ~T0 @X0 1 ef ]
-"86
-[; ;reloj.c: 86: {
+"83
+[; ;reloj.c: 83: {
 {
 [e :U _RTC_Calendario ]
 [f ]
-"88
-[; ;reloj.c: 88:     char secs[10],mins[10],hours[10];
+"85
+[; ;reloj.c: 85:     char secs[10],mins[10],hours[10];
 [v _secs `uc ~T0 @X0 -> 10 `i a ]
 [v _mins `uc ~T0 @X0 -> 10 `i a ]
 [v _hours `uc ~T0 @X0 -> 10 `i a ]
-"89
-[; ;reloj.c: 89:     char date[10],month[10],year[10];
+"86
+[; ;reloj.c: 86:     char date[10],month[10],year[10];
 [v _date `uc ~T0 @X0 -> 10 `i a ]
 [v _month `uc ~T0 @X0 -> 10 `i a ]
 [v _year `uc ~T0 @X0 -> 10 `i a ]
-"90
-[; ;reloj.c: 90:     char Clock_type = 0x06;
+"87
+[; ;reloj.c: 87:     char Clock_type = 0x06;
 [v _Clock_type `uc ~T0 @X0 1 a ]
 [e = _Clock_type -> -> 6 `i `uc ]
-"91
-[; ;reloj.c: 91:     char AM_PM = 0x05;
+"88
+[; ;reloj.c: 88:     char AM_PM = 0x05;
 [v _AM_PM `uc ~T0 @X0 1 a ]
 [e = _AM_PM -> -> 5 `i `uc ]
-[v F3531 `uc ~T0 @X0 -> 7 `i s ]
-[i F3531
+[v F3579 `uc ~T0 @X0 -> 7 `i s ]
+[i F3579
 :U ..
-"92
-[; ;reloj.c: 92:     char days[7] = {'S','M','T','W','t','F','s'};
+"89
+[; ;reloj.c: 89:     char days[7] = {'S','M','T','W','t','F','s'};
 -> -> 83 `ui `uc
 -> -> 77 `ui `uc
 -> -> 84 `ui `uc
@@ -827,233 +890,233 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _days `uc ~T0 @X0 -> 7 `i a ]
-[e = _days F3531 ]
-"93
-[; ;reloj.c: 93:     OSCCON=0x72;
+[e = _days F3579 ]
+"90
+[; ;reloj.c: 90:     OSCCON=0x72;
 [e = _OSCCON -> -> 114 `i `uc ]
-"95
-[; ;reloj.c: 95:     I2C_Init();
+"92
+[; ;reloj.c: 92:     I2C_Init();
 [e ( _I2C_Init ..  ]
-"96
-[; ;reloj.c: 96:     LCD_Init();
+"93
+[; ;reloj.c: 93:     LCD_Init();
 [e ( _LCD_Init ..  ]
-"97
-[; ;reloj.c: 97:     LCD_Clear();
+"94
+[; ;reloj.c: 94:     LCD_Clear();
 [e ( _LCD_Clear ..  ]
-"98
-[; ;reloj.c: 98:     LCD_MSdelay(10);
+"95
+[; ;reloj.c: 95:     LCD_MSdelay(10);
 [e ( _LCD_MSdelay (1 -> -> 10 `i `ui ]
-"99
-[; ;reloj.c: 99:     while(1)
+"96
+[; ;reloj.c: 96:     while(1)
 [e :U 373 ]
-"100
-[; ;reloj.c: 100:     {
+"97
+[; ;reloj.c: 97:     {
 {
-"101
-[; ;reloj.c: 101:         RTC_Read_Clock(0);
+"98
+[; ;reloj.c: 98:         RTC_Read_Clock(0);
 [e ( _RTC_Read_Clock (1 -> -> 0 `i `uc ]
-"102
-[; ;reloj.c: 102:         if(hour & (1<<Clock_type)){
+"99
+[; ;reloj.c: 99:         if(hour & (1<<Clock_type)){
 [e $ ! != & _hour << -> 1 `i -> _Clock_type `i -> 0 `i 375  ]
 {
-"104
-[; ;reloj.c: 104:             if(hour & (1<<AM_PM)){
+"101
+[; ;reloj.c: 101:             if(hour & (1<<AM_PM)){
 [e $ ! != & _hour << -> 1 `i -> _AM_PM `i -> 0 `i 376  ]
 {
-"105
-[; ;reloj.c: 105:                 LCD_String_xy(1,14,"PM");
+"102
+[; ;reloj.c: 102:                 LCD_String_xy(1,14,"PM");
 [e ( _LCD_String_xy (3 , , -> -> 1 `i `uc -> -> 14 `i `uc :s 1C ]
+"103
+[; ;reloj.c: 103:             }
+}
+[e $U 377  ]
+"104
+[; ;reloj.c: 104:             else{
+[e :U 376 ]
+{
+"105
+[; ;reloj.c: 105:                 LCD_String_xy(1,14,"AM");
+[e ( _LCD_String_xy (3 , , -> -> 1 `i `uc -> -> 14 `i `uc :s 2C ]
 "106
 [; ;reloj.c: 106:             }
 }
-[e $U 377  ]
-"107
-[; ;reloj.c: 107:             else{
-[e :U 376 ]
-{
-"108
-[; ;reloj.c: 108:                 LCD_String_xy(1,14,"AM");
-[e ( _LCD_String_xy (3 , , -> -> 1 `i `uc -> -> 14 `i `uc :s 2C ]
-"109
-[; ;reloj.c: 109:             }
-}
 [e :U 377 ]
-"111
-[; ;reloj.c: 111:             hour = hour & (0x1f);
+"108
+[; ;reloj.c: 108:             hour = hour & (0x1f);
 [e = _hour & _hour -> 31 `i ]
-"112
-[; ;reloj.c: 112:             sprintf(secs,"%x ",sec);
+"109
+[; ;reloj.c: 109:             sprintf(secs,"%x ",sec);
 [e ( _sprintf (1 , (. , &U _secs :s 3C _sec ]
-"113
-[; ;reloj.c: 113:             sprintf(mins,"%x:",min);
+"110
+[; ;reloj.c: 110:             sprintf(mins,"%x:",min);
 [e ( _sprintf (1 , (. , &U _mins :s 4C _min ]
-"114
-[; ;reloj.c: 114:             sprintf(hours,"%x:",hour);
+"111
+[; ;reloj.c: 111:             sprintf(hours,"%x:",hour);
 [e ( _sprintf (1 , (. , &U _hours :s 5C _hour ]
-"115
-[; ;reloj.c: 115:             LCD_String_xy(0,4,hours);
+"112
+[; ;reloj.c: 112:             LCD_String_xy(0,4,hours);
 [e ( _LCD_String_xy (3 , , -> -> 0 `i `uc -> -> 4 `i `uc -> &U _hours `*Cuc ]
-"116
-[; ;reloj.c: 116:             LCD_String(mins);
+"113
+[; ;reloj.c: 113:             LCD_String(mins);
 [e ( _LCD_String (1 -> &U _mins `*Cuc ]
-"117
-[; ;reloj.c: 117:             LCD_String(secs);
+"114
+[; ;reloj.c: 114:             LCD_String(secs);
 [e ( _LCD_String (1 -> &U _secs `*Cuc ]
-"118
-[; ;reloj.c: 118:         }
+"115
+[; ;reloj.c: 115:         }
 }
 [e $U 378  ]
-"119
-[; ;reloj.c: 119:         else{
+"116
+[; ;reloj.c: 116:         else{
 [e :U 375 ]
 {
-"121
-[; ;reloj.c: 121:             hour = hour & (0x3f);
+"118
+[; ;reloj.c: 118:             hour = hour & (0x3f);
 [e = _hour & _hour -> 63 `i ]
-"122
-[; ;reloj.c: 122:             sprintf(secs,"%x ",sec);
+"119
+[; ;reloj.c: 119:             sprintf(secs,"%x ",sec);
 [e ( _sprintf (1 , (. , &U _secs :s 6C _sec ]
-"123
-[; ;reloj.c: 123:             sprintf(mins,"%x:",min);
+"120
+[; ;reloj.c: 120:             sprintf(mins,"%x:",min);
 [e ( _sprintf (1 , (. , &U _mins :s 7C _min ]
-"124
-[; ;reloj.c: 124:             sprintf(hours,"%x:",hour);
+"121
+[; ;reloj.c: 121:             sprintf(hours,"%x:",hour);
 [e ( _sprintf (1 , (. , &U _hours :s 8C _hour ]
-"125
-[; ;reloj.c: 125:             LCD_String_xy(0,4,hours);
+"122
+[; ;reloj.c: 122:             LCD_String_xy(0,4,hours);
 [e ( _LCD_String_xy (3 , , -> -> 0 `i `uc -> -> 4 `i `uc -> &U _hours `*Cuc ]
-"126
-[; ;reloj.c: 126:             LCD_String(mins);
+"123
+[; ;reloj.c: 123:             LCD_String(mins);
 [e ( _LCD_String (1 -> &U _mins `*Cuc ]
-"127
-[; ;reloj.c: 127:             LCD_String(secs);
+"124
+[; ;reloj.c: 124:             LCD_String(secs);
 [e ( _LCD_String (1 -> &U _secs `*Cuc ]
-"128
-[; ;reloj.c: 128:         }
+"125
+[; ;reloj.c: 125:         }
 }
 [e :U 378 ]
-"130
-[; ;reloj.c: 130:         RTC_Read_Calendar(3);
+"127
+[; ;reloj.c: 127:         RTC_Read_Calendar(3);
 [e ( _RTC_Read_Calendar (1 -> -> 3 `i `uc ]
-"131
-[; ;reloj.c: 131:         I2C_Stop();
+"128
+[; ;reloj.c: 128:         I2C_Stop();
 [e ( _I2C_Stop ..  ]
-"132
-[; ;reloj.c: 132:         sprintf(date,"%x-",Date);
+"129
+[; ;reloj.c: 129:         sprintf(date,"%x-",Date);
 [e ( _sprintf (1 , (. , &U _date :s 9C _Date ]
-"133
-[; ;reloj.c: 133:         sprintf(month,"%x-",Month);
+"130
+[; ;reloj.c: 130:         sprintf(month,"%x-",Month);
 [e ( _sprintf (1 , (. , &U _month :s 10C _Month ]
-"134
-[; ;reloj.c: 134:         sprintf(year,"%x ",Year);
+"131
+[; ;reloj.c: 131:         sprintf(year,"%x ",Year);
 [e ( _sprintf (1 , (. , &U _year :s 11C _Year ]
-"135
-[; ;reloj.c: 135:         LCD_String_xy(2,2,date);
+"132
+[; ;reloj.c: 132:         LCD_String_xy(2,2,date);
 [e ( _LCD_String_xy (3 , , -> -> 2 `i `uc -> -> 2 `i `uc -> &U _date `*Cuc ]
-"136
-[; ;reloj.c: 136:         LCD_String(month);
+"133
+[; ;reloj.c: 133:         LCD_String(month);
 [e ( _LCD_String (1 -> &U _month `*Cuc ]
-"137
-[; ;reloj.c: 137:         LCD_String(year);
+"134
+[; ;reloj.c: 134:         LCD_String(year);
 [e ( _LCD_String (1 -> &U _year `*Cuc ]
-"140
-[; ;reloj.c: 140:         switch(days[Day])
+"137
+[; ;reloj.c: 137:         switch(days[Day])
 [e $U 380  ]
-"141
-[; ;reloj.c: 141:         {
+"138
+[; ;reloj.c: 138:         {
 {
-"142
-[; ;reloj.c: 142:             case 'S':
+"139
+[; ;reloj.c: 139:             case 'S':
 [e :U 381 ]
-"143
-[; ;reloj.c: 143:                         LCD_String("Sun");
+"140
+[; ;reloj.c: 140:                         LCD_String("Sun");
 [e ( _LCD_String (1 :s 12C ]
-"144
-[; ;reloj.c: 144:                         return;
+"141
+[; ;reloj.c: 141:                         return;
 [e $UE 371  ]
-"145
-[; ;reloj.c: 145:                         break;
+"142
+[; ;reloj.c: 142:                         break;
 [e $U 379  ]
-"146
-[; ;reloj.c: 146:             case 'M':
+"143
+[; ;reloj.c: 143:             case 'M':
 [e :U 382 ]
-"147
-[; ;reloj.c: 147:                         LCD_String("Mon");
+"144
+[; ;reloj.c: 144:                         LCD_String("Mon");
 [e ( _LCD_String (1 :s 13C ]
-"148
-[; ;reloj.c: 148:                         return;
+"145
+[; ;reloj.c: 145:                         return;
 [e $UE 371  ]
-"149
-[; ;reloj.c: 149:                         break;
+"146
+[; ;reloj.c: 146:                         break;
 [e $U 379  ]
-"150
-[; ;reloj.c: 150:             case 'T':
+"147
+[; ;reloj.c: 147:             case 'T':
 [e :U 383 ]
-"151
-[; ;reloj.c: 151:                         LCD_String("Tue");
+"148
+[; ;reloj.c: 148:                         LCD_String("Tue");
 [e ( _LCD_String (1 :s 14C ]
-"152
-[; ;reloj.c: 152:                         return;
+"149
+[; ;reloj.c: 149:                         return;
 [e $UE 371  ]
-"153
-[; ;reloj.c: 153:                         break;
+"150
+[; ;reloj.c: 150:                         break;
 [e $U 379  ]
-"154
-[; ;reloj.c: 154:             case 'W':
+"151
+[; ;reloj.c: 151:             case 'W':
 [e :U 384 ]
-"155
-[; ;reloj.c: 155:                         LCD_String("Wed");
+"152
+[; ;reloj.c: 152:                         LCD_String("Wed");
 [e ( _LCD_String (1 :s 15C ]
-"156
-[; ;reloj.c: 156:                         return;
+"153
+[; ;reloj.c: 153:                         return;
 [e $UE 371  ]
-"157
-[; ;reloj.c: 157:                         break;
+"154
+[; ;reloj.c: 154:                         break;
 [e $U 379  ]
-"158
-[; ;reloj.c: 158:             case 't':
+"155
+[; ;reloj.c: 155:             case 't':
 [e :U 385 ]
-"159
-[; ;reloj.c: 159:                         LCD_String("Thu");
+"156
+[; ;reloj.c: 156:                         LCD_String("Thu");
 [e ( _LCD_String (1 :s 16C ]
-"160
-[; ;reloj.c: 160:                         return;
+"157
+[; ;reloj.c: 157:                         return;
 [e $UE 371  ]
-"161
-[; ;reloj.c: 161:                         break;
+"158
+[; ;reloj.c: 158:                         break;
 [e $U 379  ]
-"162
-[; ;reloj.c: 162:             case 'F':
+"159
+[; ;reloj.c: 159:             case 'F':
 [e :U 386 ]
-"163
-[; ;reloj.c: 163:                         LCD_String("Fri");
+"160
+[; ;reloj.c: 160:                         LCD_String("Fri");
 [e ( _LCD_String (1 :s 17C ]
-"164
-[; ;reloj.c: 164:                         return;
+"161
+[; ;reloj.c: 161:                         return;
 [e $UE 371  ]
-"165
-[; ;reloj.c: 165:                         break;
+"162
+[; ;reloj.c: 162:                         break;
 [e $U 379  ]
-"166
-[; ;reloj.c: 166:             case 's':
+"163
+[; ;reloj.c: 163:             case 's':
 [e :U 387 ]
-"167
-[; ;reloj.c: 167:                         LCD_String("Sat");
+"164
+[; ;reloj.c: 164:                         LCD_String("Sat");
 [e ( _LCD_String (1 :s 18C ]
-"168
-[; ;reloj.c: 168:                         return;
+"165
+[; ;reloj.c: 165:                         return;
 [e $UE 371  ]
-"169
-[; ;reloj.c: 169:                         break;
+"166
+[; ;reloj.c: 166:                         break;
+[e $U 379  ]
+"167
+[; ;reloj.c: 167:             default:
+[e :U 388 ]
+"168
+[; ;reloj.c: 168:                         break;
 [e $U 379  ]
 "170
-[; ;reloj.c: 170:             default:
-[e :U 388 ]
-"171
-[; ;reloj.c: 171:                         break;
-[e $U 379  ]
-"173
-[; ;reloj.c: 173:         }
+[; ;reloj.c: 170:         }
 }
 [e $U 379  ]
 [e :U 380 ]
@@ -1066,17 +1129,17 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> -> 115 `ui `i 387
  388 ]
 [e :U 379 ]
-"174
-[; ;reloj.c: 174:         return;
+"171
+[; ;reloj.c: 171:         return;
 [e $UE 371  ]
-"175
-[; ;reloj.c: 175:     }
+"172
+[; ;reloj.c: 172:     }
 }
 [e :U 372 ]
 [e $U 373  ]
 [e :U 374 ]
-"176
-[; ;reloj.c: 176: }
+"173
+[; ;reloj.c: 173: }
 [e :UE 371 ]
 }
 [p f _sprintf 12582912 ]

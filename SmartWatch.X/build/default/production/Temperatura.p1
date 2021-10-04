@@ -685,91 +685,221 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3  =  OFF       ]
 "65
 [p x EBTRB  =  OFF       ]
-"10 Temperatura.c
-[; ;Temperatura.c: 10: double temp = 0.0;
-[v _temp `d ~T0 @X0 1 e ]
-[i _temp
-.0.0
-]
+"6
+[p x PLLDIV  =  1        ]
+"7
+[p x CPUDIV  =  OSC1_PLL2 ]
+"8
+[p x USBDIV  =  1        ]
 "11
-[; ;Temperatura.c: 11: float temperatura;
-[v _temperatura `f ~T0 @X0 1 e ]
+[p x FOSC  =  INTOSC_EC         ]
+"12
+[p x FCMEN  =  OFF       ]
 "13
-[; ;Temperatura.c: 13: uint16_t ReadADC(void) {
+[p x IESO  =  OFF        ]
+"16
+[p x PWRT  =  ON         ]
+"17
+[p x BOR  =  OFF         ]
+"18
+[p x BORV  =  3          ]
+"19
+[p x VREGEN  =  OFF      ]
+"22
+[p x WDT  =  OFF         ]
+"23
+[p x WDTPS  =  32768     ]
+"26
+[p x CCP2MX  =  ON       ]
+"27
+[p x PBADEN  =  OFF       ]
+"28
+[p x LPT1OSC  =  OFF     ]
+"29
+[p x MCLRE  =  ON        ]
+"32
+[p x STVREN  =  OFF      ]
+"33
+[p x LVP  =  OFF         ]
+"34
+[p x ICPRT  =  OFF       ]
+"35
+[p x XINST  =  OFF       ]
+"38
+[p x CP0  =  OFF         ]
+"39
+[p x CP1  =  OFF         ]
+"40
+[p x CP2  =  OFF         ]
+"41
+[p x CP3  =  OFF         ]
+"44
+[p x CPB  =  OFF         ]
+"45
+[p x CPD  =  OFF         ]
+"48
+[p x WRT0  =  OFF        ]
+"49
+[p x WRT1  =  OFF        ]
+"50
+[p x WRT2  =  OFF        ]
+"51
+[p x WRT3  =  OFF        ]
+"54
+[p x WRTC  =  OFF        ]
+"55
+[p x WRTB  =  OFF        ]
+"56
+[p x WRTD  =  OFF        ]
+"59
+[p x EBTR0  =  OFF       ]
+"60
+[p x EBTR1  =  OFF       ]
+"61
+[p x EBTR2  =  OFF       ]
+"62
+[p x EBTR3  =  OFF       ]
+"65
+[p x EBTRB  =  OFF       ]
+"25 ./Funciones.h
+[; ;./Funciones.h: 25: float tempar;
+[v _tempar `f ~T0 @X0 1 e ]
+"26
+[; ;./Funciones.h: 26: float luz;
+[v _luz `f ~T0 @X0 1 e ]
+"27
+[; ;./Funciones.h: 27: char Stemp[20];
+[v _Stemp `uc ~T0 @X0 -> 20 `i e ]
+"28
+[; ;./Funciones.h: 28: char Sluz[20];
+[v _Sluz `uc ~T0 @X0 -> 20 `i e ]
+"29
+[; ;./Funciones.h: 29: uint16_t result;
+[v _result `us ~T0 @X0 1 e ]
+"30
+[; ;./Funciones.h: 30: char i;
+[v _i `uc ~T0 @X0 1 e ]
+"32
+[; ;./Funciones.h: 32: unsigned char character1[ 8 ] = {0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00};
+[v _character1 `uc ~T0 @X0 -> 8 `i e ]
+[i _character1
+:U ..
+-> -> 14 `i `uc
+-> -> 31 `i `uc
+-> -> 31 `i `uc
+-> -> 14 `i `uc
+-> -> 0 `i `uc
+-> -> 10 `i `uc
+-> -> 10 `i `uc
+-> -> 0 `i `uc
+..
+]
+"33
+[; ;./Funciones.h: 33: unsigned char character2[ 8 ] = {0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00};
+[v _character2 `uc ~T0 @X0 -> 8 `i e ]
+[i _character2
+:U ..
+-> -> 21 `i `uc
+-> -> 14 `i `uc
+-> -> 17 `i `uc
+-> -> 17 `i `uc
+-> -> 14 `i `uc
+-> -> 21 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+]
+"34
+[; ;./Funciones.h: 34: unsigned char character3[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00};
+[v _character3 `uc ~T0 @X0 -> 8 `i e ]
+[i _character3
+:U ..
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 22 `i `uc
+-> -> 31 `i `uc
+-> -> 31 `i `uc
+-> -> 22 `i `uc
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+..
+]
+"22 Temperatura.c
+[; ;Temperatura.c: 22: uint16_t ReadADC(void) {
 [v _ReadADC `(us ~T0 @X0 1 ef ]
 {
 [e :U _ReadADC ]
 [f ]
-"15
-[; ;Temperatura.c: 15:     uint16_t result;
-[v _result `us ~T0 @X0 1 a ]
-"17
-[; ;Temperatura.c: 17:     TRISD = 0x00;
-[e = _TRISD -> -> 0 `i `uc ]
-"18
-[; ;Temperatura.c: 18:     TRISA = 0xFF;
-[e = _TRISA -> -> 255 `i `uc ]
-"20
-[; ;Temperatura.c: 20:     OSCCONbits.IRCF = 0b111;
-[e = . . _OSCCONbits 0 3 -> -> 7 `i `uc ]
-"21
-[; ;Temperatura.c: 21:     OSCCONbits.SCS = 0b10;
-[e = . . _OSCCONbits 0 0 -> -> 2 `i `uc ]
 "24
-[; ;Temperatura.c: 24:     ADCON1bits.PCFG = 0b1110;
-[e = . . _ADCON1bits 0 0 -> -> 14 `i `uc ]
-"25
-[; ;Temperatura.c: 25:     ADCON1bits.VCFG = 0b00;
-[e = . . _ADCON1bits 0 1 -> -> 0 `i `uc ]
+[; ;Temperatura.c: 24:     uint16_t result;
+[v _result `us ~T0 @X0 1 a ]
 "26
-[; ;Temperatura.c: 26:     ADCON0bits.CHS = 0b0000;
-[e = . . _ADCON0bits 1 2 -> -> 0 `i `uc ]
+[; ;Temperatura.c: 26:     TRISD = 0x00;
+[e = _TRISD -> -> 0 `i `uc ]
 "27
-[; ;Temperatura.c: 27:     ADCON2bits.ACQT = 0b010;
-[e = . . _ADCON2bits 0 1 -> -> 2 `i `uc ]
-"28
-[; ;Temperatura.c: 28:     ADCON2bits.ADCS = 0b001;
-[e = . . _ADCON2bits 0 0 -> -> 1 `i `uc ]
+[; ;Temperatura.c: 27:     TRISA = 0xFF;
+[e = _TRISA -> -> 255 `i `uc ]
 "29
-[; ;Temperatura.c: 29:     ADCON2bits.ADFM = 1;
-[e = . . _ADCON2bits 0 3 -> -> 1 `i `uc ]
+[; ;Temperatura.c: 29:     OSCCONbits.IRCF = 0b111;
+[e = . . _OSCCONbits 0 3 -> -> 7 `i `uc ]
 "30
-[; ;Temperatura.c: 30:     ADCON0bits.ADON = 1;
+[; ;Temperatura.c: 30:     OSCCONbits.SCS = 0b10;
+[e = . . _OSCCONbits 0 0 -> -> 2 `i `uc ]
+"33
+[; ;Temperatura.c: 33:     ADCON1bits.PCFG = 0b1110;
+[e = . . _ADCON1bits 0 0 -> -> 14 `i `uc ]
+"34
+[; ;Temperatura.c: 34:     ADCON1bits.VCFG = 0b00;
+[e = . . _ADCON1bits 0 1 -> -> 0 `i `uc ]
+"35
+[; ;Temperatura.c: 35:     ADCON0bits.CHS = 0b0000;
+[e = . . _ADCON0bits 1 2 -> -> 0 `i `uc ]
+"36
+[; ;Temperatura.c: 36:     ADCON2bits.ACQT = 0b010;
+[e = . . _ADCON2bits 0 1 -> -> 2 `i `uc ]
+"37
+[; ;Temperatura.c: 37:     ADCON2bits.ADCS = 0b001;
+[e = . . _ADCON2bits 0 0 -> -> 1 `i `uc ]
+"38
+[; ;Temperatura.c: 38:     ADCON2bits.ADFM = 1;
+[e = . . _ADCON2bits 0 3 -> -> 1 `i `uc ]
+"39
+[; ;Temperatura.c: 39:     ADCON0bits.ADON = 1;
 [e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-"32
-[; ;Temperatura.c: 32:       while (1) {
+"41
+[; ;Temperatura.c: 41:       while (1) {
 [e :U 371 ]
 {
-"33
-[; ;Temperatura.c: 33:         ADCON0bits.GO_DONE = 1;
+"42
+[; ;Temperatura.c: 42:         ADCON0bits.GO_DONE = 1;
 [e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
-"34
-[; ;Temperatura.c: 34:         while (ADCON0bits.GO_DONE);
+"43
+[; ;Temperatura.c: 43:         while (ADCON0bits.GO_DONE);
 [e $U 373  ]
 [e :U 374 ]
 [e :U 373 ]
 [e $ != -> . . _ADCON0bits 2 1 `i -> 0 `i 374  ]
 [e :U 375 ]
-"35
-[; ;Temperatura.c: 35:         result = ADRESH;
+"44
+[; ;Temperatura.c: 44:         result = ADRESH;
 [e = _result -> _ADRESH `us ]
-"36
-[; ;Temperatura.c: 36:         result = (result << 8) + ADRESL;
+"45
+[; ;Temperatura.c: 45:         result = (result << 8) + ADRESL;
 [e = _result -> + << -> _result `ui -> 8 `i -> _ADRESL `ui `us ]
-"37
-[; ;Temperatura.c: 37:         result = ((result*500.0)/1023.0)-49.5;
+"46
+[; ;Temperatura.c: 46:         result = ((result*500.0)/1023.0)-49.5;
 [e = _result -> - / * -> -> _result `ui `d .500.0 .1023.0 .49.5 `us ]
-"39
-[; ;Temperatura.c: 39:         return result;
+"48
+[; ;Temperatura.c: 48:         return result;
 [e ) _result ]
 [e $UE 369  ]
-"40
-[; ;Temperatura.c: 40:     }
+"49
+[; ;Temperatura.c: 49:     }
 }
 [e :U 370 ]
 [e $U 371  ]
 [e :U 372 ]
-"41
-[; ;Temperatura.c: 41: }
+"50
+[; ;Temperatura.c: 50: }
 [e :UE 369 ]
 }

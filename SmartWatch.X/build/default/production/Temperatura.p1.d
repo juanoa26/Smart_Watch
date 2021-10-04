@@ -1,3 +1,5 @@
 build/default/production/Temperatura.p1:  \
 Temperatura.c  \
-config.h 
+Funciones.h  \
+config.h  \
+LCD_caracter.h 

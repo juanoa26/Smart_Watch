@@ -4,10 +4,7 @@
  */ 
 
 
-#include <stdio.h>
-#include "config.h"
-#include "LCD_caracter.h"
-#include <pic18f4550.h>
+#include "Funciones.h"
 #include "I2C_Master_File.h"
 
 #define device_id_write 0xD0
@@ -16,12 +13,10 @@
 int sec,min,hour;
 int Day,Date,Month,Year;
 
-
-
 /*********************************************************************
  * Function:        void RTC_Read_Clock(char read_clock_address)
  *
- * Input:           read_clock_address: direccion para leer la hora, minutos y segundos
+ * Input:           char read_clock_address: direccion para leer la hora, minutos y segundos
  *
  * Output:          None
  *
@@ -29,7 +24,6 @@ int Day,Date,Month,Year;
  *
  * Note:            None
  ********************************************************************/
-
 
 void RTC_Read_Clock(char read_clock_address)
 {
@@ -45,7 +39,7 @@ void RTC_Read_Clock(char read_clock_address)
 /*********************************************************************
  * Function:        void RTC_Read_Calendar(char read_calendar_address)
  *
- * Input:           read_calendar_address: direccion para leer dia,mes,fecha
+ * Input:           char read_calendar_address: direccion para leer dia,mes,fecha
  *
  * Output:          None
  *

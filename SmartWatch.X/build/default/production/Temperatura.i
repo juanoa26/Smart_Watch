@@ -8,6 +8,12 @@
 # 2 "<built-in>" 2
 # 1 "Temperatura.c" 2
 
+
+
+
+
+# 1 "./Funciones.h" 1
+# 11 "./Funciones.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -5624,7 +5630,7 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 2 3
-# 2 "Temperatura.c" 2
+# 11 "./Funciones.h" 2
 
 
 # 1 "./config.h" 1
@@ -5693,7 +5699,87 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 
 
 #pragma config EBTRB = OFF
-# 4 "Temperatura.c" 2
+# 13 "./Funciones.h" 2
+
+# 1 "./LCD_caracter.h" 1
+# 15 "./LCD_caracter.h"
+# 1 "./config.h" 1
+
+
+
+
+
+#pragma config PLLDIV = 1
+#pragma config CPUDIV = OSC1_PLL2
+#pragma config USBDIV = 1
+
+
+#pragma config FOSC = INTOSC_EC
+#pragma config FCMEN = OFF
+#pragma config IESO = OFF
+
+
+#pragma config PWRT = ON
+#pragma config BOR = OFF
+#pragma config BORV = 3
+#pragma config VREGEN = OFF
+
+
+#pragma config WDT = OFF
+#pragma config WDTPS = 32768
+
+
+#pragma config CCP2MX = ON
+#pragma config PBADEN = OFF
+#pragma config LPT1OSC = OFF
+#pragma config MCLRE = ON
+
+
+#pragma config STVREN = OFF
+#pragma config LVP = OFF
+#pragma config ICPRT = OFF
+#pragma config XINST = OFF
+
+
+#pragma config CP0 = OFF
+#pragma config CP1 = OFF
+#pragma config CP2 = OFF
+#pragma config CP3 = OFF
+
+
+#pragma config CPB = OFF
+#pragma config CPD = OFF
+
+
+#pragma config WRT0 = OFF
+#pragma config WRT1 = OFF
+#pragma config WRT2 = OFF
+#pragma config WRT3 = OFF
+
+
+#pragma config WRTC = OFF
+#pragma config WRTB = OFF
+#pragma config WRTD = OFF
+
+
+#pragma config EBTR0 = OFF
+#pragma config EBTR1 = OFF
+#pragma config EBTR2 = OFF
+#pragma config EBTR3 = OFF
+
+
+#pragma config EBTRB = OFF
+# 15 "./LCD_caracter.h" 2
+# 26 "./LCD_caracter.h"
+void LCD_MSdelay(unsigned int );
+void LCD_Init(void);
+void LCD_Command(unsigned char );
+void LCD_Char(unsigned char x);
+void LCD_String(const char *);
+void LCD_String_xy(char, char , const char *);
+void LCD_Clear(void);
+void LCD_Custom_Char ( unsigned char , unsigned char *);
+# 14 "./Funciones.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 3
@@ -5833,7 +5919,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 5 "Temperatura.c" 2
+# 15 "./Funciones.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
@@ -5920,16 +6006,38 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
-# 6 "Temperatura.c" 2
+# 16 "./Funciones.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
-# 7 "Temperatura.c" 2
+# 17 "./Funciones.h" 2
 
+
+
+
+
+
+
+
+float tempar;
+float luz;
+char Stemp[20];
+char Sluz[20];
+uint16_t result;
+char i;
+
+unsigned char character1[ 8 ] = {0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00};
+unsigned char character2[ 8 ] = {0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00};
+unsigned char character3[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00};
 
 uint16_t ReadADC(void);
-double temp = 0.0;
-float temperatura;
-
+uint16_t ReadLUZ(void);
+void PlayCancion(void);
+int Estados(void);
+void Estado_Soleado(void);
+void Estado_Nublado(void);
+void Estado_Lluvioso(void);
+# 6 "Temperatura.c" 2
+# 22 "Temperatura.c"
 uint16_t ReadADC(void) {
 
     uint16_t result;

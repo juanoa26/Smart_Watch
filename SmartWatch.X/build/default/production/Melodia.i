@@ -13,6 +13,133 @@
 
 
 
+# 1 "./Funciones.h" 1
+# 11 "./Funciones.h"
+# 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 1 3
+# 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 3
+extern const char __xc8_OPTIM_SPEED;
+
+extern double __fpnormalize(double);
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\xc8debug.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 2 3
+
+
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\features.h" 1 3
+# 10 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 2 3
+# 21 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 18 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long int wchar_t;
+# 122 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned size_t;
+# 168 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef __int24 int24_t;
+# 204 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef __uint24 uint24_t;
+# 21 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 2 3
+
+
+int atoi (const char *);
+long atol (const char *);
+long long atoll (const char *);
+double atof (const char *);
+
+float strtof (const char *restrict, char **restrict);
+double strtod (const char *restrict, char **restrict);
+long double strtold (const char *restrict, char **restrict);
+
+
+
+long strtol (const char *restrict, char **restrict, int);
+unsigned long strtoul (const char *restrict, char **restrict, int);
+long long strtoll (const char *restrict, char **restrict, int);
+unsigned long long strtoull (const char *restrict, char **restrict, int);
+
+int rand (void);
+void srand (unsigned);
+
+          void abort (void);
+int atexit (void (*) (void));
+          void exit (int);
+          void _Exit (int);
+
+void *bsearch (const void *, const void *, size_t, size_t, int (*)(const void *, const void *));
+
+__attribute__((nonreentrant)) void qsort (void *, size_t, size_t, int (*)(const void *, const void *));
+
+int abs (int);
+long labs (long);
+long long llabs (long long);
+
+typedef struct { int quot, rem; } div_t;
+typedef struct { long quot, rem; } ldiv_t;
+typedef struct { long long quot, rem; } lldiv_t;
+
+div_t div (int, int);
+ldiv_t ldiv (long, long);
+lldiv_t lldiv (long long, long long);
+
+typedef struct { unsigned int quot, rem; } udiv_t;
+typedef struct { unsigned long quot, rem; } uldiv_t;
+udiv_t udiv (unsigned int, unsigned int);
+uldiv_t uldiv (unsigned long, unsigned long);
+
+
+
+
+
+size_t __ctype_get_mb_cur_max(void);
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\xc8debug.h" 2 3
+
+
+
+
+
+
+
+
+#pragma intrinsic(__builtin_software_breakpoint)
+extern void __builtin_software_breakpoint(void);
+# 24 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 2 3
+
+
+
+
+
+
+
+
+# 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18.h" 1 3
+
+
+
+
+# 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\htc.h" 1 3
+
+
+
+# 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 1 3
+# 5 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\htc.h" 2 3
+# 6 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18.h" 2 3
+
+
+# 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18_chip_select.h" 1 3
+# 339 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18_chip_select.h" 3
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\proc\\pic18f4550.h" 1 3
 # 44 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\proc\\pic18f4550.h" 3
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\__at.h" 1 3
@@ -5467,7 +5594,45 @@ extern volatile __bit nW __attribute__((address(0x7E3A)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
-# 7 "Melodia.c" 2
+# 340 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18_chip_select.h" 2 3
+# 9 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18.h" 2 3
+# 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18.h" 3
+__attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
+__attribute__((__unsupported__("The " "EraseFlash" " routine is no longer supported. Please use the MPLAB X MCC."))) void EraseFlash(unsigned long startaddr, unsigned long endaddr);
+
+
+
+
+
+
+
+# 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\errata.h" 1 3
+# 27 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18.h" 2 3
+# 49 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18.h" 3
+#pragma intrinsic(__nop)
+extern void __nop(void);
+# 158 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18.h" 3
+__attribute__((__unsupported__("The " "Read_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) unsigned char Read_b_eep(unsigned int badd);
+__attribute__((__unsupported__("The " "Busy_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Busy_eep(void);
+__attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Write_b_eep(unsigned int badd, unsigned char bdat);
+# 194 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18.h" 3
+unsigned char __t1rd16on(void);
+unsigned char __t3rd16on(void);
+
+
+
+
+
+
+#pragma intrinsic(_delay)
+extern __attribute__((nonreentrant)) void _delay(unsigned long);
+#pragma intrinsic(_delaywdt)
+extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
+#pragma intrinsic(_delay3)
+extern __attribute__((nonreentrant)) void _delay3(unsigned char);
+# 33 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 2 3
+# 11 "./Funciones.h" 2
+
 
 # 1 "./config.h" 1
 
@@ -5535,173 +5700,87 @@ extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
 
 
 #pragma config EBTRB = OFF
+# 13 "./Funciones.h" 2
 
+# 1 "./LCD_caracter.h" 1
+# 15 "./LCD_caracter.h"
+# 1 "./config.h" 1
 
 
 
 
-# 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 1 3
-# 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 3
-extern const char __xc8_OPTIM_SPEED;
 
-extern double __fpnormalize(double);
+#pragma config PLLDIV = 1
+#pragma config CPUDIV = OSC1_PLL2
+#pragma config USBDIV = 1
 
 
+#pragma config FOSC = INTOSC_EC
+#pragma config FCMEN = OFF
+#pragma config IESO = OFF
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\xc8debug.h" 1 3
 
+#pragma config PWRT = ON
+#pragma config BOR = OFF
+#pragma config BORV = 3
+#pragma config VREGEN = OFF
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 1 3
+#pragma config WDT = OFF
+#pragma config WDTPS = 32768
 
 
+#pragma config CCP2MX = ON
+#pragma config PBADEN = OFF
+#pragma config LPT1OSC = OFF
+#pragma config MCLRE = ON
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 2 3
 
+#pragma config STVREN = OFF
+#pragma config LVP = OFF
+#pragma config ICPRT = OFF
+#pragma config XINST = OFF
 
 
+#pragma config CP0 = OFF
+#pragma config CP1 = OFF
+#pragma config CP2 = OFF
+#pragma config CP3 = OFF
 
 
+#pragma config CPB = OFF
+#pragma config CPD = OFF
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\features.h" 1 3
-# 10 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 2 3
-# 21 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 18 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long int wchar_t;
-# 122 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned size_t;
-# 168 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __int24 int24_t;
-# 204 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __uint24 uint24_t;
-# 21 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdlib.h" 2 3
 
+#pragma config WRT0 = OFF
+#pragma config WRT1 = OFF
+#pragma config WRT2 = OFF
+#pragma config WRT3 = OFF
 
-int atoi (const char *);
-long atol (const char *);
-long long atoll (const char *);
-double atof (const char *);
 
-float strtof (const char *restrict, char **restrict);
-double strtod (const char *restrict, char **restrict);
-long double strtold (const char *restrict, char **restrict);
+#pragma config WRTC = OFF
+#pragma config WRTB = OFF
+#pragma config WRTD = OFF
 
 
+#pragma config EBTR0 = OFF
+#pragma config EBTR1 = OFF
+#pragma config EBTR2 = OFF
+#pragma config EBTR3 = OFF
 
-long strtol (const char *restrict, char **restrict, int);
-unsigned long strtoul (const char *restrict, char **restrict, int);
-long long strtoll (const char *restrict, char **restrict, int);
-unsigned long long strtoull (const char *restrict, char **restrict, int);
 
-int rand (void);
-void srand (unsigned);
-
-          void abort (void);
-int atexit (void (*) (void));
-          void exit (int);
-          void _Exit (int);
-
-void *bsearch (const void *, const void *, size_t, size_t, int (*)(const void *, const void *));
-
-__attribute__((nonreentrant)) void qsort (void *, size_t, size_t, int (*)(const void *, const void *));
-
-int abs (int);
-long labs (long);
-long long llabs (long long);
-
-typedef struct { int quot, rem; } div_t;
-typedef struct { long quot, rem; } ldiv_t;
-typedef struct { long long quot, rem; } lldiv_t;
-
-div_t div (int, int);
-ldiv_t ldiv (long, long);
-lldiv_t lldiv (long long, long long);
-
-typedef struct { unsigned int quot, rem; } udiv_t;
-typedef struct { unsigned long quot, rem; } uldiv_t;
-udiv_t udiv (unsigned int, unsigned int);
-uldiv_t uldiv (unsigned long, unsigned long);
-
-
-
-
-
-size_t __ctype_get_mb_cur_max(void);
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\xc8debug.h" 2 3
-
-
-
-
-
-
-
-
-#pragma intrinsic(__builtin_software_breakpoint)
-extern void __builtin_software_breakpoint(void);
-# 24 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 2 3
-
-
-
-
-
-
-
-
-# 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18.h" 1 3
-
-
-
-
-# 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\htc.h" 1 3
-
-
-
-# 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 1 3
-# 5 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\htc.h" 2 3
-# 6 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18.h" 2 3
-
-
-# 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18_chip_select.h" 1 3
-# 9 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18.h" 2 3
-# 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18.h" 3
-__attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
-__attribute__((__unsupported__("The " "EraseFlash" " routine is no longer supported. Please use the MPLAB X MCC."))) void EraseFlash(unsigned long startaddr, unsigned long endaddr);
-
-
-
-
-
-
-
-# 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\errata.h" 1 3
-# 27 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18.h" 2 3
-# 49 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18.h" 3
-#pragma intrinsic(__nop)
-extern void __nop(void);
-# 158 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18.h" 3
-__attribute__((__unsupported__("The " "Read_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) unsigned char Read_b_eep(unsigned int badd);
-__attribute__((__unsupported__("The " "Busy_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Busy_eep(void);
-__attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Write_b_eep(unsigned int badd, unsigned char bdat);
-# 194 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\pic18.h" 3
-unsigned char __t1rd16on(void);
-unsigned char __t3rd16on(void);
-
-
-
-
-
-
-#pragma intrinsic(_delay)
-extern __attribute__((nonreentrant)) void _delay(unsigned long);
-#pragma intrinsic(_delaywdt)
-extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
-#pragma intrinsic(_delay3)
-extern __attribute__((nonreentrant)) void _delay3(unsigned char);
-# 33 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 2 3
-# 70 "./config.h" 2
-# 8 "Melodia.c" 2
+#pragma config EBTRB = OFF
+# 15 "./LCD_caracter.h" 2
+# 26 "./LCD_caracter.h"
+void LCD_MSdelay(unsigned int );
+void LCD_Init(void);
+void LCD_Command(unsigned char );
+void LCD_Char(unsigned char x);
+void LCD_String(const char *);
+void LCD_String_xy(char, char , const char *);
+void LCD_Clear(void);
+void LCD_Custom_Char ( unsigned char , unsigned char *);
+# 14 "./Funciones.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 3
@@ -5841,7 +5920,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 9 "Melodia.c" 2
+# 15 "./Funciones.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
@@ -5928,91 +6007,41 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
-# 10 "Melodia.c" 2
+# 16 "./Funciones.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
-# 11 "Melodia.c" 2
-
-# 1 "./LCD_caracter.h" 1
-# 15 "./LCD_caracter.h"
-# 1 "./config.h" 1
+# 17 "./Funciones.h" 2
 
 
 
 
 
-#pragma config PLLDIV = 1
-#pragma config CPUDIV = OSC1_PLL2
-#pragma config USBDIV = 1
 
 
-#pragma config FOSC = INTOSC_EC
-#pragma config FCMEN = OFF
-#pragma config IESO = OFF
+
+float tempar;
+float luz;
+char Stemp[20];
+char Sluz[20];
+uint16_t result;
+char i;
+
+unsigned char character1[ 8 ] = {0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00};
+unsigned char character2[ 8 ] = {0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00};
+unsigned char character3[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00};
+
+uint16_t ReadADC(void);
+uint16_t ReadLUZ(void);
+void PlayCancion(void);
+int Estados(void);
+void Estado_Soleado(void);
+void Estado_Nublado(void);
+void Estado_Lluvioso(void);
+# 7 "Melodia.c" 2
 
 
-#pragma config PWRT = ON
-#pragma config BOR = OFF
-#pragma config BORV = 3
-#pragma config VREGEN = OFF
-
-
-#pragma config WDT = OFF
-#pragma config WDTPS = 32768
-
-
-#pragma config CCP2MX = ON
-#pragma config PBADEN = OFF
-#pragma config LPT1OSC = OFF
-#pragma config MCLRE = ON
-
-
-#pragma config STVREN = OFF
-#pragma config LVP = OFF
-#pragma config ICPRT = OFF
-#pragma config XINST = OFF
-
-
-#pragma config CP0 = OFF
-#pragma config CP1 = OFF
-#pragma config CP2 = OFF
-#pragma config CP3 = OFF
-
-
-#pragma config CPB = OFF
-#pragma config CPD = OFF
-
-
-#pragma config WRT0 = OFF
-#pragma config WRT1 = OFF
-#pragma config WRT2 = OFF
-#pragma config WRT3 = OFF
-
-
-#pragma config WRTC = OFF
-#pragma config WRTB = OFF
-#pragma config WRTD = OFF
-
-
-#pragma config EBTR0 = OFF
-#pragma config EBTR1 = OFF
-#pragma config EBTR2 = OFF
-#pragma config EBTR3 = OFF
-
-
-#pragma config EBTRB = OFF
-# 15 "./LCD_caracter.h" 2
-# 26 "./LCD_caracter.h"
-void LCD_MSdelay(unsigned int );
-void LCD_Init(void);
-void LCD_Command(unsigned char );
-void LCD_Char(unsigned char x);
-void LCD_String(const char *);
-void LCD_String_xy(char, char , const char *);
-void LCD_Clear(void);
-void LCD_Custom_Char ( unsigned char , unsigned char *);
-# 12 "Melodia.c" 2
-# 32 "Melodia.c"
+# 1 "./Melodia.h" 1
+# 21 "./Melodia.h"
 int FreqNota[12]={
 
 15289,
@@ -6033,6 +6062,7 @@ int FreqNota[12]={
 void Play(int nota,int octava,int duracion);
 void PlayCancion();
 void delay_us(int nota);
+# 9 "Melodia.c" 2
 
 
 void delay_us(int nota){

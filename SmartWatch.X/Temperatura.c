@@ -1,14 +1,23 @@
+/*
+ * PIC18F4550 I2C Source File
+ * http://www.electronicwings.com
+ */ 
 
-#include <xc.h>
-#include <pic18f4550.h>  /*Header file PIC18f4550 definitions*/
-#include "config.h"
-#include <stdio.h>
-#include <stdint.h>
-#include <stdbool.h>
+#include "Funciones.h"
 
-uint16_t ReadADC(void);
-double temp = 0.0;
-float temperatura;
+/*********************************************************************
+ * Function:        uint16_t ReadADC(void)
+ *
+ * Input:           None
+ *
+ * Output:          uint16_t result: Informacion de la temperatura luego de la 
+ *                  conversion
+ *
+ * Overview:        Funcion que se encarga de tomar la informacion en el ADC
+ *                  y volverla mas facil de enterder para poder mostrala en el LCD
+ *
+ * Note:            None
+ ********************************************************************/
 
 uint16_t ReadADC(void) {
     

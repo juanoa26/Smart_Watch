@@ -1,10 +1,24 @@
+/*
+ * PIC18F4550 I2C Source File
+ * http://www.electronicwings.com
+ */ 
 
-#include <xc.h>
-#include <pic18f4550.h>
-#include "config.h"
+#include "Funciones.h"
 #include "LCD_caracter.h"
 
 /****************************Functions********************************/
+
+/*********************************************************************
+ * Function:        void LCD_Init(void)
+ *
+ * Input:           None
+ *
+ * Output:          None
+ *
+ * Overview:        Inicializa la configuracion de la pantalla LCD
+ *
+ * Note:            None
+ ********************************************************************/
 
 void LCD_Init(void)
 {
@@ -18,6 +32,18 @@ void LCD_Init(void)
     LCD_Command(0x0c);  /*display on cursor off*/
 	LCD_Command(0x06);  /*increment cursor (shift cursor to right)*/	   
 }
+
+/*********************************************************************
+ * Function:        void LCD_Command(unsigned char cmd )
+ *
+ * Input:           unsigned char cmd: Resibe la fila en donde se imprimira la informacion
+ *
+ * Output:          None
+ *
+ * Overview:        Con la direccion recibida determina en donde se mostrara la informacion
+ *
+ * Note:            None
+ ********************************************************************/
 
 void LCD_Command(unsigned char cmd )
 {
@@ -34,6 +60,17 @@ void LCD_Command(unsigned char cmd )
 	LCD_MSdelay(3);
 }
 
+/*********************************************************************
+ * Function:        void LCD_Char(unsigned char dat)
+ *
+ * Input:           unsigned char dat: Resibe los datos que se enviaran al LCD
+ *
+ * Output:          None
+ *
+ * Overview:        Trasmite la informacion recibida al LCD
+ *
+ * Note:            None
+ ********************************************************************/
 
 void LCD_Char(unsigned char dat)
 {
@@ -49,6 +86,18 @@ void LCD_Char(unsigned char dat)
 	EN = 0;
 	LCD_MSdelay(3);
 }
+/*********************************************************************
+ * Function:        void LCD_String(const char *msg)
+ *
+ * Input:           const char *msg: Lleva la informacion
+ *
+ * Output:          None
+ *
+ * Overview:        Muestra la informacion en el LCD
+ *
+ * Note:            None
+ ********************************************************************/
+
 void LCD_String(const char *msg)
 {
 	while((*msg)!=0)
@@ -57,6 +106,20 @@ void LCD_String(const char *msg)
 	  msg++;	
     }
 }
+
+/*********************************************************************
+ * Function:        void LCD_String_xy(char row,char pos,const char *msg)
+ *
+ * Input:           char row: Determina la Fila
+ *                  char pos: Determina la posicion
+ *                  const char *msg: Lleva la informacion a imprimir
+ *
+ * Output:          None
+ *
+ * Overview:        Muestra la informacion en el LCD
+ *
+ * Note:            None
+ ********************************************************************/
 
 void LCD_String_xy(char row,char pos,const char *msg)
 {
@@ -76,11 +139,37 @@ void LCD_String_xy(char row,char pos,const char *msg)
     LCD_String(msg);
 
 }
+
+/*********************************************************************
+ * Function:       void LCD_Clear(void)
+ *
+ * Input:           None
+ *
+ * Output:          None
+ *
+ * Overview:        Limpia la pantalla LCD
+ *
+ * Note:            None
+ ********************************************************************/
+
 void LCD_Clear(void)
 {
    	LCD_Command(0x01);  /*clear display screen*/
     LCD_MSdelay(3);
 }
+
+/*********************************************************************
+ * Function:       void  LCD_Custom_Char ( unsigned  char  loc, unsigned  char  *msg) 
+ *
+ * Input:           unsigned  char  loc: Determina la posicion
+ *                  unsigned  char  *msg: Lleva la informacion
+ *
+ * Output:          None
+ *
+ * Overview:        Determina el tamaño de ventana en donde se mostrara la informacion
+ *
+ * Note:            None
+ ********************************************************************/
 
 void  LCD_Custom_Char ( unsigned  char  loc, unsigned  char  *msg) 
 { 
@@ -93,6 +182,19 @@ void  LCD_Custom_Char ( unsigned  char  loc, unsigned  char  *msg)
         
     }    
 }
+
+/*********************************************************************
+ * Function:       void LCD_MSdelay(unsigned int val)
+ *
+ * Input:           unsigned int val: Determina el tiempo del retardo
+ *
+ * Output:          None
+ *
+ * Overview:        Se encarga del tiempo que se mostrara la infprmacion 
+ *                  en el LCD
+ *
+ * Note:            None
+ ********************************************************************/
 
 void LCD_MSdelay(unsigned int val)
 {

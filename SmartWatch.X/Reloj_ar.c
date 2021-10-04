@@ -13,9 +13,9 @@
  * Function:        char I2C_Read(char flag)
  *
  *
- * Input:           flag: bandera utilizada para seguir leyendo o para salir
+ * Input:           char flag: bandera utilizada para seguir leyendo o para salir
  *
- * Output:          buffer: dato recuperado
+ * Output:          char buffer: dato recuperado
  *
  *
  * Overview:        Lee la informacion del reloj y la retorna para cada variable
@@ -89,7 +89,7 @@ void I2C_Ready(void)
 /*********************************************************************
  * Function:        void I2C_Start_Wait(char slave_write_address)
  *
- * Input:           slave_write_address: Direccion de escritura del esclavo
+ * Input:           char slave_write_address: Direccion de escritura del esclavo
  *
  * Output:          None
  *
@@ -120,9 +120,9 @@ void I2C_Start_Wait(char slave_write_address)
 /*********************************************************************
  * Function:        char I2C_Start(char slave_write_address)
  *
- * Input:           slave_write_address: Direccion de escritura del esclavo
+ * Input:           char slave_write_address: Direccion de escritura del esclavo
  *
- * Output:          I2C_Write(slave_write_address): Retorna la direccion de erscritura
+ * Output:          char I2C_Write(slave_write_address): Retorna la direccion de erscritura
  *                  del esclavo para comunicarse
  *
  * Overview:        Se encarga iniciar la comunicacion con el esclavo
@@ -145,9 +145,9 @@ char I2C_Start(char slave_write_address)
 /*********************************************************************
  * Function:        char I2C_Repeated_Start(char slave_read_address)
  *
- * Input:           slave_read_address: Direccion de lectura del esclavo
+ * Input:           char slave_read_address: Direccion de lectura del esclavo
  *
- * Output:          Numero: Bandera para determinar si se continua
+ * Output:          char Numero: Bandera para determinar si se continua
  *                  leyendo o no
  *
  * Overview:        Se encarga de determinar si se debe seguir leyendo
@@ -175,7 +175,7 @@ char I2C_Repeated_Start(char slave_read_address)
  *
  * Input:           None
  *
- * Output:          Numero: Si se falla en deterner la comunicacion
+ * Output:          char Numero: Si se falla en deterner la comunicacion
  *
  * Overview:        Se encarga de deterner la comunicacion con el esclavo
  *                  ya sea en modo lectura o escritura
@@ -194,9 +194,9 @@ char I2C_Stop(void)
 /*********************************************************************
  * Function:        char I2C_Write(unsigned char data)
  *
- * Input:          data: El dato a escribir en el SSPBUF
+ * Input:           char data: El dato a escribir en el SSPBUF
  *
- * Output:          Numero: Bandera para determinar si la escritura
+ * Output:          char Numero: Bandera para determinar si la escritura
  *                  fue correcta o no
  *
  * Overview:        Se encarga de escrinir la informacion en el registro 

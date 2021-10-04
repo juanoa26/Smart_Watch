@@ -1,43 +1,7 @@
-#include <xc.h>
-#include <pic18f4550.h>  /*Header file PIC18f4550 definitions*/
-#include "config.h"
+
 #include "LCD_caracter.h"
 #include "I2C_Master_File.h"
-#include <stdio.h>
-#include <stdint.h>
-#include <stdbool.h>
-
-/* Definition of ports, outputs and inputs */
-
-//#define _User_
-#ifdef _User_
-#define DELAY(a) MSdelay(a);
-#else 
-#define DELAY(a) __delay_ms(a);
-#endif
-
-#define LED_GREEN LATE0
-#define LED_GREEN1 LATE1
-#define LED_GREEN2 LATE2
-#define ON 1
-#define OFF 0
-
-/* Definition of variables, emoticons and functions */
-
-float tempar;
-float luz;
-char Stemp[20];
-char Sluz[20];
-
-char i;
-uint16_t ReadADC(void);
-uint16_t ReadLUZ(void);
-void PlayCancion(void);
-
-
-unsigned char character1[ 8 ] = {0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00}; /*  Value for Rainy day  */
-unsigned char character2[ 8 ] = {0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00}; /*  Value for Sunny day  */
-unsigned char character3[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00}; /*  Value for Cloudy day  */
+#include "Funciones.h"
 
 /*********************************************************************
  * Function:        void main()
@@ -62,42 +26,24 @@ void main() {
     LCD_Clear();
 
     while (1) {
-        tempar = ReadADC();
-        luz = ReadLUZ();
         RTC_Calendario();
-        LCD_MSdelay(10);
-
-        if (tempar > 15 && (luz > 0 && luz < 400)) {
-            LED_GREEN = OFF;
-            LED_GREEN1 = OFF;
-            LED_GREEN2 = OFF;
-            sprintf(Stemp, "%0.0fC", tempar);
-            LCD_String_xy(1, 0, Stemp);
-            LCD_Custom_Char(0, character2); /* Write custom character to CGRAM 0x00 memory location */
-            LCD_Command(0xc0);
-            LCD_Char(0);
-            PlayCancion();
-        }
-        else if ((tempar >= 12 && tempar <= 15)&&(luz > 400 && luz < 700)) {
-            LED_GREEN = ON;
-            LED_GREEN1 = ON;
-            LED_GREEN2 = OFF;
-            sprintf(Stemp, "%0.0fC", tempar);
-            LCD_String_xy(1, 0, Stemp);
-            LCD_Custom_Char(0, character3); /* Write custom character to CGRAM 0x00 memory location */
-            LCD_Command(0xc0);
-            LCD_Char(0);
+        int caso = Estados();
+        switch(caso){
+            case 1:
+                Estado_Soleado();
+                break;
+             
+            case 2:
+                Estado_Nublado();
+                break;
+                
+            case 3:
+                Estado_Lluvioso();
+                break;
             
-        }
-        else if(tempar < 12 && (luz > 700 && luz < 1500)) {
-            LED_GREEN = ON;
-            LED_GREEN1 = ON;
-            LED_GREEN2 = ON;
-            sprintf(Stemp, "%0.0fC", tempar);
-            LCD_String_xy(1, 0, Stemp);
-            LCD_Custom_Char(0, character1); /* Write custom character to CGRAM 0x00 memory location */
-            LCD_Command(0xc0);
-            LCD_Char(0);
+            default:
+                break;
+                    
         }
         LCD_MSdelay(3000);
         LCD_Clear();

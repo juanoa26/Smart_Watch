@@ -4,58 +4,43 @@
 
 // ARCHIVOS DE DEFINICIONES
 
-#include <pic18f4550.h>  /*Header file PIC18f4550 definitions*/
-#include "config.h"
-#include <stdio.h>
-#include <stdint.h>
-#include <stdbool.h>
+#include "Funciones.h"
 #include "LCD_caracter.h"
+#include "Melodia.h"
 
-
-
-#define nDO     0    // DO
-#define nDO_    1    // DO#
-#define nRE     2    // RE
-#define nRE_    3    // RE#
-#define nMI     4    // MI
-#define nFA     5    // FA
-#define nFA_    6    // FA#
-#define nSOL    7    // SOL
-#define nSOL_   8    // SOL#
-#define nLA     9    // LA
-#define nLA_    10   // LA#
-#define nSI     11   // SI
-
-
-
-
-int FreqNota[12]={  // retardos entre estado alto
-                            // y bajo para generar las notas
-15289, // DO
-14430, // DO#
-13620, // RE
-12856, // RE#
-12134, // MI
-11453, // FA
-10810, // FA#
-10204, // SOL
-9631,  // SOL#
-9090,  // LA
-8580,  // LA#
-8099   // SI
-};
-
-
-void Play(int nota,int octava,int duracion);
-void PlayCancion();
-void delay_us(int nota);
-
+/*********************************************************************
+ * Function:        void delay_us(int nota)
+ *
+ * Input:           int nota: Entero que determina la duracion del retardo
+ *
+ * Output:          None
+ *
+ * Overview:        Determina la duracion del retardo en funcion del 
+ *                  entero recibido
+ *
+ * Note:            None
+ ********************************************************************/
 
 void delay_us(int nota){
     for(int i=0; i<=nota;i++ ){
         __delay_us(1);
     }
 }
+
+/*********************************************************************
+ * Function:        void play(int nota, int octava, int duracion)
+ *
+ * Input:           int nota: Entero que determina la duracion del retardo
+ *                  int octava: Entero para determinar la nota a tocar
+ *                  int duracion: El tiempo que se tocara la nota determinada
+ *
+ * Output:          None
+ *
+ * Overview:        Se encarga de configurar el parlante donde sonara la melodia
+ *                  ademas de determinar la frecuencia y duracion de la misma
+ *
+ * Note:            None
+ ********************************************************************/
 
 
 void play(int nota, int octava, int duracion){
@@ -92,6 +77,18 @@ void play(int nota, int octava, int duracion){
     
   
 }
+
+/*********************************************************************
+ * Function:        void PlayCancion(
+ *
+ * Input:           None
+ *
+ * Output:          None
+ *
+ * Overview:        Contiene la melodia que se va a tocar
+ *
+ * Note:            None
+ ********************************************************************/
 
 void PlayCancion(){
 

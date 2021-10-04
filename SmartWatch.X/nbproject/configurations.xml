@@ -7,6 +7,8 @@
       <itemPath>config.h</itemPath>
       <itemPath>LCD_caracter.h</itemPath>
       <itemPath>I2C_Master_File.h</itemPath>
+      <itemPath>Funciones.h</itemPath>
+      <itemPath>Melodia.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -23,6 +25,7 @@
       <itemPath>Melodia2.c</itemPath>
       <itemPath>reloj.c</itemPath>
       <itemPath>Reloj_ar.c</itemPath>
+      <itemPath>Estados.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

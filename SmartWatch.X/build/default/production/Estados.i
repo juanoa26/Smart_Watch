@@ -1,4 +1,4 @@
-# 1 "Sensor_luz.c"
+# 1 "Estados.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,9 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "Sensor_luz.c" 2
+# 1 "Estados.c" 2
+
+
 
 
 
@@ -6036,31 +6038,55 @@ int Estados(void);
 void Estado_Soleado(void);
 void Estado_Nublado(void);
 void Estado_Lluvioso(void);
-# 6 "Sensor_luz.c" 2
-# 21 "Sensor_luz.c"
-uint16_t ReadLUZ(void) {
+# 8 "Estados.c" 2
+# 23 "Estados.c"
+int Estados() {
+    tempar = ReadADC();
+    luz = ReadLUZ();
 
-    TRISD = 0x00;
-    TRISA = 0xFF;
+    if (tempar > 15 && (luz > 0 && luz < 400)) {
+        return 1;
+    } else if ((tempar >= 12 && tempar <= 15)&&(luz > 400 && luz < 700)) {
+        return 2;
 
-    OSCCONbits.IRCF = 0b111;
-    OSCCONbits.SCS = 0b10;
-
-
-    ADCON1bits.PCFG = 0b1101;
-    ADCON1bits.VCFG = 0b00;
-    ADCON0bits.CHS = 0b0001;
-    ADCON2bits.ACQT = 0b010;
-    ADCON2bits.ADCS = 0b001;
-    ADCON2bits.ADFM = 1;
-    ADCON0bits.ADON = 1;
-
-    while (1) {
-        ADCON0bits.GO_DONE = 1;
-        while (ADCON0bits.GO_DONE);
-        result = ADRESH;
-        result = (result << 8) + ADRESL;
-
-        return result;
+    } else if (tempar < 12 && (luz > 700 && luz < 1500)) {
+        return 3;
     }
+}
+# 50 "Estados.c"
+void Estado_Soleado() {
+    LATE0 = 0;
+    LATE1 = 0;
+    LATE2 = 0;
+    sprintf(Stemp, "%0.0fC", tempar);
+    LCD_String_xy(1, 0, Stemp);
+    LCD_Custom_Char(0, character2);
+    LCD_Command(0xc0);
+    LCD_Char(0);
+    PlayCancion();
+    return;
+}
+# 76 "Estados.c"
+void Estado_Nublado() {
+    LATE0 = 1;
+    LATE1 = 1;
+    LATE2 = 0;
+    sprintf(Stemp, "%0.0fC", tempar);
+    LCD_String_xy(1, 0, Stemp);
+    LCD_Custom_Char(0, character3);
+    LCD_Command(0xc0);
+    LCD_Char(0);
+    return;
+}
+# 101 "Estados.c"
+void Estado_Lluvioso() {
+    LATE0 = 1;
+    LATE1 = 1;
+    LATE2 = 1;
+    sprintf(Stemp, "%0.0fC", tempar);
+    LCD_String_xy(1, 0, Stemp);
+    LCD_Custom_Char(0, character1);
+    LCD_Command(0xc0);
+    LCD_Char(0);
+    return;
 }
