@@ -12,12 +12,12 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include "LCD_caracter.h"
-#define _XTAL_FREQ 4000000 
+
 
 void conf_CLK(void);
 void conf_IO(void);
 void conf_TA1(void);
-void desabilitar_Time();
+void desabilitar_Time(void);
 
 /**
  *  \brief     void conf_CLK (void)
@@ -181,7 +181,7 @@ void __interrupt() ISR ( void )
     }
 }
 
-void desabilitar_Time(){
+void desabilitar_Time(void){
 PIE1bits.TMR1IE = 0; // TA1 interrupt ON
 
     T1CONbits.TMR1ON = 0; // TA1 enabled

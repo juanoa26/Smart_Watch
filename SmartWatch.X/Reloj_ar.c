@@ -9,6 +9,21 @@
 #include "I2C_Master_File.h"
 #include <pic18f4550.h>
 
+/*********************************************************************
+ * Function:        char I2C_Read(char flag)
+ *
+ *
+ * Input:           flag: bandera utilizada para seguir leyendo o para salir
+ *
+ * Output:          buffer: dato recuperado
+ *
+ *
+ * Overview:        Lee la informacion del reloj y la retorna para cada variable
+ *                  que lo requiere
+ *
+ * Note:            None
+ ********************************************************************/
+
 char I2C_Read(char flag)                 /*read data from location and 
                                          *send ack or nack depending upon parameter*/
 {
@@ -26,6 +41,19 @@ char I2C_Read(char flag)                 /*read data from location and
         return(buffer);
 }
 
+/*********************************************************************
+ * Function:        void I2C_Init(void)
+ *
+ *
+ * Input:           None
+ *
+ * Output:          None
+ *
+ * Overview:        Inicializa los puertos y configura el reloj
+ *
+ * Note:            None
+ ********************************************************************/
+
 void I2C_Init(void)
 {
     TRISB0=1;							/*set up I2C lines by setting as input*/
@@ -39,12 +67,36 @@ void I2C_Init(void)
     SSPIF=0;
 }
 
+/*********************************************************************
+ * Function:        void I2C_Ready(void)
+ *
+ *
+ * Input:           None
+ *
+ * Output:          None
+ *
+ * Overview:        Se encarga de comprobar la operacion si se completa o no
+ *
+ * Note:            None
+ ********************************************************************/
 
-void I2C_Ready()
+void I2C_Ready(void)
 {
     while(!SSPIF);                  /* Wait for operation complete */
     SSPIF=0;                        /*clear SSPIF interrupt flag*/
 }
+
+/*********************************************************************
+ * Function:        void I2C_Start_Wait(char slave_write_address)
+ *
+ * Input:           slave_write_address: Direccion de escritura del esclavo
+ *
+ * Output:          None
+ *
+ * Overview:        Se encarga de escribir la informacion en el esclavo
+ *
+ * Note:            None
+ ********************************************************************/
 
 void I2C_Start_Wait(char slave_write_address)
 {
@@ -65,6 +117,20 @@ void I2C_Start_Wait(char slave_write_address)
   }
 }
 
+/*********************************************************************
+ * Function:        char I2C_Start(char slave_write_address)
+ *
+ * Input:           slave_write_address: Direccion de escritura del esclavo
+ *
+ * Output:          I2C_Write(slave_write_address): Retorna la direccion de erscritura
+ *                  del esclavo para comunicarse
+ *
+ * Overview:        Se encarga iniciar la comunicacion con el esclavo
+ *                  para poder escribir en el
+ *
+ * Note:            None
+ ********************************************************************/
+
 char I2C_Start(char slave_write_address)
 {   
     SSPCON2bits.SEN=1;              /*send start pulse*/
@@ -75,6 +141,20 @@ char I2C_Start(char slave_write_address)
     return (I2C_Write(slave_write_address));     /*write slave device address with write to communicate*/
      
 }
+
+/*********************************************************************
+ * Function:        char I2C_Repeated_Start(char slave_read_address)
+ *
+ * Input:           slave_read_address: Direccion de lectura del esclavo
+ *
+ * Output:          Numero: Bandera para determinar si se continua
+ *                  leyendo o no
+ *
+ * Overview:        Se encarga de determinar si se debe seguir leyendo
+ *                  la informacion o no
+ *
+ * Note:            None
+ ********************************************************************/
 
 char I2C_Repeated_Start(char slave_read_address)
 {
@@ -90,13 +170,40 @@ char I2C_Repeated_Start(char slave_read_address)
      return 2;
 }
 
-char I2C_Stop()
+/*********************************************************************
+ * Function:        char I2C_Stop(void)
+ *
+ * Input:           None
+ *
+ * Output:          Numero: Si se falla en deterner la comunicacion
+ *
+ * Overview:        Se encarga de deterner la comunicacion con el esclavo
+ *                  ya sea en modo lectura o escritura
+ *
+ * Note:            None
+ ********************************************************************/
+
+char I2C_Stop(void)
 {
     PEN = 1;                          /*stop communication*/
     while(PEN);                     /*wait for end of stop pulse*/
     if(!SSPSTATbits.P);             /*wait till stop bit is detected*/
     return 0;                       /*stop failed*/        
 }
+
+/*********************************************************************
+ * Function:        char I2C_Write(unsigned char data)
+ *
+ * Input:          data: El dato a escribir en el SSPBUF
+ *
+ * Output:          Numero: Bandera para determinar si la escritura
+ *                  fue correcta o no
+ *
+ * Overview:        Se encarga de escrinir la informacion en el registro 
+ *                  SSPBUF
+ *
+ * Note:            None
+ ********************************************************************/
 
 char I2C_Write(unsigned char data)
 {
@@ -108,14 +215,39 @@ char I2C_Write(unsigned char data)
         return 2;
 }
 
-void I2C_Ack()
+/*********************************************************************
+ * Function:        void I2C_Ack(void)
+ *
+ * Input:           None
+ *
+ * Output:          None
+ *
+ * Overview:        Se encarga de reconocer los datos que se enviaran
+ *
+ * Note:            None
+ ********************************************************************/
+
+void I2C_Ack(void)
 {
     ACKDT=0;					/*acknowledge data 1:NACK,0:ACK */
 	ACKEN=1;					/*enable ACK to send*/	          
     while(ACKEN);
 }
 
-void I2C_Nack()
+/*********************************************************************
+ * Function:        void I2C_NAck(void)
+ *
+ * Input:           None
+ *
+ * Output:          None
+ *
+ * Overview:        Se encarga de reconocer los datos que se enviaran y determinar
+ *                  que no se quieren enviar mas datos
+ *
+ * Note:            None
+ ********************************************************************/
+
+void I2C_Nack(void)
 {
     ACKDT=1;					/*acknowledge data 1:NACK,0:ACK*/
 	ACKEN=1;					/*enable ACK to send*/	          

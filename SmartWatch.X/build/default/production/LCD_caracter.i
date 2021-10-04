@@ -5765,37 +5765,23 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 #pragma config EBTRB = OFF
 # 15 "./LCD_caracter.h" 2
 # 26 "./LCD_caracter.h"
-void MSdelay(unsigned int );
-void LCD_Init();
+void LCD_MSdelay(unsigned int );
+void LCD_Init(void);
 void LCD_Command(unsigned char );
 void LCD_Char(unsigned char x);
 void LCD_String(const char *);
 void LCD_String_xy(char, char , const char *);
-void LCD_Clear();
+void LCD_Clear(void);
 void LCD_Custom_Char ( unsigned char , unsigned char *);
 # 5 "LCD_caracter.c" 2
 
 
 
 
-
-
-
-
-unsigned char character1[ 8 ] = { 0x0e , 0x1f , 0x1f , 0x0e , 0x00 , 0x0a , 0x0a , 0x00 };
-unsigned char character2[ 8 ] = { 0x15 , 0x0e , 0x11 , 0x11 , 0x0e , 0x15 , 0x00 , 0x00 };
-unsigned char character3[ 8 ] = { 0x00 , 0x00 , 0x0e , 0x1f , 0x0e , 0x00 , 0x00 , 0x00 };
-
-
-
-
-
-
-
-void LCD_Init()
+void LCD_Init(void)
 {
     TRISD = 0;
-    MSdelay(15);
+    LCD_MSdelay(15);
     LCD_Command(0x02);
 
     LCD_Command(0x28);
@@ -5812,12 +5798,12 @@ void LCD_Command(unsigned char cmd )
  LATD1 = 1;
  __nop();
  LATD1 = 0;
- MSdelay(1);
+ LCD_MSdelay(1);
     LATD = (LATD & 0x0f) | (cmd<<4);
  LATD1 = 1;
  __nop();
  LATD1 = 0;
- MSdelay(3);
+ LCD_MSdelay(3);
 }
 
 
@@ -5828,12 +5814,12 @@ void LCD_Char(unsigned char dat)
  LATD1 = 1;
  __nop();
  LATD1 = 0;
- MSdelay(1);
+ LCD_MSdelay(1);
     LATD = (LATD & 0x0f) | (dat<<4);
  LATD1 = 1;
  __nop();
  LATD1 = 0;
- MSdelay(3);
+ LCD_MSdelay(3);
 }
 void LCD_String(const char *msg)
 {
@@ -5862,10 +5848,10 @@ void LCD_String_xy(char row,char pos,const char *msg)
     LCD_String(msg);
 
 }
-void LCD_Clear()
+void LCD_Clear(void)
 {
     LCD_Command(0x01);
-    MSdelay(3);
+    LCD_MSdelay(3);
 }
 
 void LCD_Custom_Char ( unsigned char loc, unsigned char *msg)
@@ -5880,7 +5866,7 @@ void LCD_Custom_Char ( unsigned char loc, unsigned char *msg)
     }
 }
 
-void MSdelay(unsigned int val)
+void LCD_MSdelay(unsigned int val)
 {
  unsigned int i,j;
  for(i=0;i<val;i++)

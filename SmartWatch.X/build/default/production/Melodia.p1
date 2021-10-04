@@ -1,67 +1,9 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"17 Melodia2.c
-[; ;Melodia2.c: 17: void conf_CLK(void);
-[v _conf_CLK `(v ~T0 @X0 0 ef ]
-"18
-[; ;Melodia2.c: 18: void conf_IO(void);
-[v _conf_IO `(v ~T0 @X0 0 ef ]
-"19
-[; ;Melodia2.c: 19: void conf_TA1(void);
-[v _conf_TA1 `(v ~T0 @X0 0 ef ]
-"8588 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 8588:     struct {
-[s S355 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S355 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
-"8598
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 8598:     struct {
-[s S356 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S356 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
-"8608
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 8608:     struct {
-[s S357 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S357 . . GIEL GIEH ]
-"8587
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 8587: typedef union {
-[u S354 `S355 1 `S356 1 `S357 1 ]
-[n S354 . . . . ]
-"8614
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 8614: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
-[v _INTCONbits `VS354 ~T0 @X0 0 e@4082 ]
-"7992
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 7992:     struct {
-[s S339 :2 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
-[n S339 . SCS IOFS OSTS IRCF IDLEN ]
-"7999
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 7999:     struct {
-[s S340 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S340 . SCS0 SCS1 FLTS . IRCF0 IRCF1 IRCF2 ]
-"7991
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 7991: typedef union {
-[u S338 `S339 1 `S340 1 ]
-[n S338 . . . ]
-"8009
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 8009: extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0xFD3)));
-[v _OSCCONbits `VS338 ~T0 @X0 0 e@4051 ]
-"6587
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6587:     struct {
-[s S264 :4 `uc 1 :2 `uc 1 ]
-[n S264 . PCFG VCFG ]
-"6591
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6591:     struct {
-[s S265 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S265 . PCFG0 PCFG1 PCFG2 PCFG3 VCFG0 VCFG1 ]
-"6599
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6599:     struct {
-[s S266 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S266 . . CHSN3 VCFG01 VCFG11 ]
-"6586
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6586: typedef union {
-[u S263 `S264 1 `S265 1 `S266 1 ]
-[n S263 . . . . ]
-"6606
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6606: extern volatile ADCON1bits_t ADCON1bits __attribute__((address(0xFC1)));
-[v _ADCON1bits `VS263 ~T0 @X0 0 e@4033 ]
-"3858
+[v F3152 `(v ~T0 @X0 1 tf1`ul ]
+"203 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\pic18.h
+[v __delay `JF3152 ~T0 @X0 0 e ]
+[p i __delay ]
+"3858 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3858:     struct {
 [s S149 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S149 . TRISC0 TRISC1 TRISC2 . TRISC6 TRISC7 ]
@@ -91,70 +33,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3208
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3208: extern volatile LATCbits_t LATCbits __attribute__((address(0xF8B)));
 [v _LATCbits `VS127 ~T0 @X0 0 e@3979 ]
-"7421
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 7421:     struct {
-[s S312 :2 `uc 1 :1 `uc 1 ]
-[n S312 . . NOT_T1SYNC ]
-"7425
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 7425:     struct {
-[s S313 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S313 . TMR1ON TMR1CS nT1SYNC T1OSCEN T1CKPS T1RUN RD16 ]
-"7434
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 7434:     struct {
-[s S314 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S314 . . T1SYNC . T1CKPS0 T1CKPS1 ]
-"7441
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 7441:     struct {
-[s S315 :3 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
-[n S315 . . SOSCEN . T1RD16 ]
-"7420
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 7420: typedef union {
-[u S311 `S312 1 `S313 1 `S314 1 `S315 1 ]
-[n S311 . . . . . ]
-"7448
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 7448: extern volatile T1CONbits_t T1CONbits __attribute__((address(0xFCD)));
-[v _T1CONbits `VS311 ~T0 @X0 0 e@4045 ]
-"7532
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 7532: extern volatile unsigned char TMR1H __attribute__((address(0xFCF)));
-[v _TMR1H `Vuc ~T0 @X0 0 e@4047 ]
-"7525
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 7525: extern volatile unsigned char TMR1L __attribute__((address(0xFCE)));
-[v _TMR1L `Vuc ~T0 @X0 0 e@4046 ]
-"4474
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 4474:     struct {
-[s S173 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S173 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF SPPIF ]
-"4484
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 4484:     struct {
-[s S174 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S174 . . TX1IF RC1IF . PSPIF ]
-"4473
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 4473: typedef union {
-[u S172 `S173 1 `S174 1 ]
-[n S172 . . . ]
-"4492
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 4492: extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
-[v _PIR1bits `VS172 ~T0 @X0 0 e@3998 ]
-"4390
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 4390:     struct {
-[s S170 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S170 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE SPPIE ]
-"4400
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 4400:     struct {
-[s S171 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S171 . . TX1IE RC1IE . PSPIE ]
-"4389
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 4389: typedef union {
-[u S169 `S170 1 `S171 1 ]
-[n S169 . . . ]
-"4408
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 4408: extern volatile PIE1bits_t PIE1bits __attribute__((address(0xF9D)));
-[v _PIE1bits `VS169 ~T0 @X0 0 e@3997 ]
-[t ~ __interrupt . k ]
-[t T36 __interrupt ]
-"20 Melodia2.c
-[; ;Melodia2.c: 20: void desabilitar_Time();
-[v _desabilitar_Time `(v ~T0 @X0 0 e? ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -817,217 +695,192 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3  =  OFF       ]
 "65
 [p x EBTRB  =  OFF       ]
-"34 Melodia2.c
-[; ;Melodia2.c: 34: uint8_t volatile var3seg = 0;
-[v _var3seg `Vuc ~T0 @X0 1 e ]
-[i _var3seg
--> -> 0 `i `uc
+"32 Melodia.c
+[; ;Melodia.c: 32: int FreqNota[12]={
+[v _FreqNota `i ~T0 @X0 -> 12 `i e ]
+[i _FreqNota
+:U ..
+-> 15289 `i
+-> 14430 `i
+-> 13620 `i
+-> 12856 `i
+-> 12134 `i
+-> 11453 `i
+-> 10810 `i
+-> 10204 `i
+-> 9631 `i
+-> 9090 `i
+-> 8580 `i
+-> 8099 `i
+..
 ]
-"35
-[; ;Melodia2.c: 35:     uint8_t volatile var3beep = 0;
-[v _var3beep `Vuc ~T0 @X0 1 e ]
-[i _var3beep
--> -> 0 `i `uc
-]
-"37
-[; ;Melodia2.c: 37: void PlayCancion( void ) {
+"54
+[; ;Melodia.c: 54: void delay_us(int nota){
+[v _delay_us `(v ~T0 @X0 1 ef1`i ]
+{
+[e :U _delay_us ]
+[v _nota `i ~T0 @X0 1 r1 ]
+[f ]
+"55
+[; ;Melodia.c: 55:     for(int i=0; i<=nota;i++ ){
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $U 373  ]
+[e :U 370 ]
+{
+"56
+[; ;Melodia.c: 56:         _delay((unsigned long)((1)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"57
+[; ;Melodia.c: 57:     }
+}
+[e ++ _i -> 1 `i ]
+[e :U 373 ]
+[e $ <= _i _nota 370  ]
+[e :U 371 ]
+}
+"58
+[; ;Melodia.c: 58: }
+[e :UE 369 ]
+}
+"61
+[; ;Melodia.c: 61: void play(int nota, int octava, int duracion){
+[v _play `(v ~T0 @X0 1 ef3`i`i`i ]
+{
+[e :U _play ]
+[v _nota `i ~T0 @X0 1 r1 ]
+[v _octava `i ~T0 @X0 1 r2 ]
+[v _duracion `i ~T0 @X0 1 r3 ]
+[f ]
+"62
+[; ;Melodia.c: 62:      int fn;
+[v _fn `i ~T0 @X0 1 a ]
+"63
+[; ;Melodia.c: 63:      int mS_Transcurridos=0;
+[v _mS_Transcurridos `i ~T0 @X0 1 a ]
+[e = _mS_Transcurridos -> 0 `i ]
+"64
+[; ;Melodia.c: 64:      int CiclosL=0;
+[v _CiclosL `i ~T0 @X0 1 a ]
+[e = _CiclosL -> 0 `i ]
+"66
+[; ;Melodia.c: 66:      fn=FreqNota[nota];
+[e = _fn *U + &U _FreqNota * -> -> _nota `ui `ux -> -> # *U &U _FreqNota `ui `ux ]
+"68
+[; ;Melodia.c: 68:      fn>>=(octava);
+[e =>> _fn _octava ]
+"71
+[; ;Melodia.c: 71:     do{
+[e :U 377 ]
+{
+"73
+[; ;Melodia.c: 73:         TRISCbits . TRISC1 = 0;
+[e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
+"74
+[; ;Melodia.c: 74:         LATCbits . LATC1 = 1 ;
+[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
+"75
+[; ;Melodia.c: 75:         delay_us(fn);;
+[e ( _delay_us (1 _fn ]
+"76
+[; ;Melodia.c: 76:         CiclosL+=(fn);
+[e =+ _CiclosL _fn ]
+"78
+[; ;Melodia.c: 78:         LATCbits . LATC1 = 0 ;
+[e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
+"79
+[; ;Melodia.c: 79:          delay_us(fn);
+[e ( _delay_us (1 _fn ]
+"80
+[; ;Melodia.c: 80:         CiclosL+=(fn);
+[e =+ _CiclosL _fn ]
+"81
+[; ;Melodia.c: 81:         CiclosL+=25;
+[e =+ _CiclosL -> 25 `i ]
+"83
+[; ;Melodia.c: 83:         while(CiclosL>999){
+[e $U 378  ]
+[e :U 379 ]
+{
+"85
+[; ;Melodia.c: 85:            CiclosL-=1000;
+[e =- _CiclosL -> 1000 `i ]
+"86
+[; ;Melodia.c: 86:            mS_Transcurridos++;
+[e ++ _mS_Transcurridos -> 1 `i ]
+"87
+[; ;Melodia.c: 87:            CiclosL+=25;
+[e =+ _CiclosL -> 25 `i ]
+"88
+[; ;Melodia.c: 88:         }
+}
+[e :U 378 ]
+"83
+[; ;Melodia.c: 83:         while(CiclosL>999){
+[e $ > _CiclosL -> 999 `i 379  ]
+[e :U 380 ]
+"89
+[; ;Melodia.c: 89:      }while (duracion>mS_Transcurridos);
+}
+[e $ > _duracion _mS_Transcurridos 377  ]
+[e :U 376 ]
+"94
+[; ;Melodia.c: 94: }
+[e :UE 374 ]
+}
+"96
+[; ;Melodia.c: 96: void PlayCancion(){
 [v _PlayCancion `(v ~T0 @X0 1 ef ]
 {
 [e :U _PlayCancion ]
 [f ]
-"42
-[; ;Melodia2.c: 42:     conf_CLK ();
-[e ( _conf_CLK ..  ]
-"43
-[; ;Melodia2.c: 43:     conf_IO ();
-[e ( _conf_IO ..  ]
-"44
-[; ;Melodia2.c: 44:     conf_TA1 ();
-[e ( _conf_TA1 ..  ]
-"47
-[; ;Melodia2.c: 47:     INTCONbits.PEIE = 0;
-[e = . . _INTCONbits 1 6 -> -> 0 `i `uc ]
-"48
-[; ;Melodia2.c: 48:     (INTCONbits.GIE = 1);
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"76
-[; ;Melodia2.c: 76: }
-[e :UE 369 ]
-}
-"78
-[; ;Melodia2.c: 78: void conf_CLK(void) {
-[v _conf_CLK `(v ~T0 @X0 1 ef ]
-{
-[e :U _conf_CLK ]
-[f ]
-"79
-[; ;Melodia2.c: 79:     OSCCONbits.IRCF0 = 1;
-[e = . . _OSCCONbits 1 4 -> -> 1 `i `uc ]
-"80
-[; ;Melodia2.c: 80:     OSCCONbits.IRCF1 = 1;
-[e = . . _OSCCONbits 1 5 -> -> 1 `i `uc ]
-"81
-[; ;Melodia2.c: 81:     OSCCONbits.IRCF2 = 1;
-[e = . . _OSCCONbits 1 6 -> -> 1 `i `uc ]
-"83
-[; ;Melodia2.c: 83:     OSCCONbits.SCS = 0b10;
-[e = . . _OSCCONbits 0 0 -> -> 2 `i `uc ]
-"85
-[; ;Melodia2.c: 85:     OSCCONbits.IDLEN = 1;
-[e = . . _OSCCONbits 0 4 -> -> 1 `i `uc ]
-"90
-[; ;Melodia2.c: 90: }
-[e :UE 370 ]
-}
+"99
+[; ;Melodia.c: 99:         play (4 ,4,150);
+[e ( _play (3 , , -> 4 `i -> 4 `i -> 150 `i ]
+"100
+[; ;Melodia.c: 100:         _delay((unsigned long)((50)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"101
+[; ;Melodia.c: 101:         play (4 ,4,150);
+[e ( _play (3 , , -> 4 `i -> 4 `i -> 150 `i ]
 "102
-[; ;Melodia2.c: 102: void conf_IO(void) {
-[v _conf_IO `(v ~T0 @X0 1 ef ]
-{
-[e :U _conf_IO ]
-[f ]
+[; ;Melodia.c: 102:         _delay((unsigned long)((150)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 150 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "103
-[; ;Melodia2.c: 103:     ADCON1bits.PCFG = 0b1111;
-[e = . . _ADCON1bits 0 0 -> -> 15 `i `uc ]
-"105
-[; ;Melodia2.c: 105:     TRISCbits.RC1 = 0;
-[e = . . _TRISCbits 1 1 -> -> 0 `i `uc ]
+[; ;Melodia.c: 103:         play (4 ,4,150);
+[e ( _play (3 , , -> 4 `i -> 4 `i -> 150 `i ]
+"104
+[; ;Melodia.c: 104:         _delay((unsigned long)((200)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"106
+[; ;Melodia.c: 106:         play (0 ,4,125);
+[e ( _play (3 , , -> 0 `i -> 4 `i -> 125 `i ]
 "107
-[; ;Melodia2.c: 107:     LATCbits.LC1 = 0;
-[e = . . _LATCbits 1 1 -> -> 0 `i `uc ]
+[; ;Melodia.c: 107:         _delay((unsigned long)((50)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "108
-[; ;Melodia2.c: 108: }
-[e :UE 371 ]
-}
-"137
-[; ;Melodia2.c: 137: void conf_TA1(void) {
-[v _conf_TA1 `(v ~T0 @X0 1 ef ]
-{
-[e :U _conf_TA1 ]
-[f ]
-"138
-[; ;Melodia2.c: 138:     T1CONbits.T1CKPS0 = 1;
-[e = . . _T1CONbits 2 3 -> -> 1 `i `uc ]
-"139
-[; ;Melodia2.c: 139:     T1CONbits.T1CKPS1 = 1;
-[e = . . _T1CONbits 2 4 -> -> 1 `i `uc ]
-"141
-[; ;Melodia2.c: 141:     TMR1H = 0xCF;
-[e = _TMR1H -> -> 207 `i `uc ]
-"142
-[; ;Melodia2.c: 142:     TMR1L = 0x2C;
-[e = _TMR1L -> -> 44 `i `uc ]
-"144
-[; ;Melodia2.c: 144:     PIR1bits.TMR1IF = 0;
-[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
-"145
-[; ;Melodia2.c: 145:     PIE1bits.TMR1IE = 1;
-[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
-"147
-[; ;Melodia2.c: 147:     T1CONbits.TMR1ON = 1;
-[e = . . _T1CONbits 1 0 -> -> 1 `i `uc ]
-"148
-[; ;Melodia2.c: 148: }
-[e :UE 372 ]
-}
-[v $root$_ISR `(v ~T0 @X0 0 e ]
-"150
-[; ;Melodia2.c: 150: void __attribute__((picinterrupt(("")))) ISR ( void )
-[v _ISR `(v ~T36 @X0 1 ef ]
-"151
-[; ;Melodia2.c: 151: {
-{
-[e :U _ISR ]
-[f ]
-"152
-[; ;Melodia2.c: 152:     if ( PIR1bits.TMR1IF == 1 )
-[e $ ! == -> . . _PIR1bits 0 0 `i -> 1 `i 374  ]
-"153
-[; ;Melodia2.c: 153:     {
-{
-"154
-[; ;Melodia2.c: 154:         LATCbits.LC1 = ~LATCbits.LC1;
-[e = . . _LATCbits 1 1 -> ~ -> . . _LATCbits 1 1 `i `uc ]
-"155
-[; ;Melodia2.c: 155:         if ( var3seg == 60 && var3beep < 6 )
-[e $ ! && == -> _var3seg `i -> 60 `i < -> _var3beep `i -> 6 `i 375  ]
-"156
-[; ;Melodia2.c: 156:         {
-{
-"159
-[; ;Melodia2.c: 159:             var3beep++;
-[e ++ _var3beep -> -> 1 `i `Vuc ]
-"161
-[; ;Melodia2.c: 161:         }
-}
-[e $U 376  ]
-"162
-[; ;Melodia2.c: 162:         else
-[e :U 375 ]
-"163
-[; ;Melodia2.c: 163:         {
-{
-"164
-[; ;Melodia2.c: 164:             if ( var3beep > 5 )
-[e $ ! > -> _var3beep `i -> 5 `i 377  ]
-"165
-[; ;Melodia2.c: 165:             {
-{
-"167
-[; ;Melodia2.c: 167:                 var3beep = 0;
-[e = _var3beep -> -> 0 `i `uc ]
-"168
-[; ;Melodia2.c: 168:                 var3seg = 0;
-[e = _var3seg -> -> 0 `i `uc ]
-"169
-[; ;Melodia2.c: 169:                 desabilitar_Time();
-[e ( _desabilitar_Time ..  ]
-"170
-[; ;Melodia2.c: 170:             }
-}
-[e :U 377 ]
-"172
-[; ;Melodia2.c: 172:             var3seg++;
-[e ++ _var3seg -> -> 1 `i `Vuc ]
-"173
-[; ;Melodia2.c: 173:         }
-}
-[e :U 376 ]
-"177
-[; ;Melodia2.c: 177:         TMR1H = 0xCF;
-[e = _TMR1H -> -> 207 `i `uc ]
-"178
-[; ;Melodia2.c: 178:         TMR1L = 0x2C;
-[e = _TMR1L -> -> 44 `i `uc ]
-"180
-[; ;Melodia2.c: 180:         PIR1bits.TMR1IF = 0;
-[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
-"181
-[; ;Melodia2.c: 181:     }
-}
-[e :U 374 ]
-"182
-[; ;Melodia2.c: 182: }
-[e :UE 373 ]
-}
-"184
-[; ;Melodia2.c: 184: void desabilitar_Time(){
-[v _desabilitar_Time `(v ~T0 @X0 1 ef ]
-{
-[e :U _desabilitar_Time ]
-[f ]
-"185
-[; ;Melodia2.c: 185: PIE1bits.TMR1IE = 0;
-[e = . . _PIE1bits 0 0 -> -> 0 `i `uc ]
-"187
-[; ;Melodia2.c: 187:     T1CONbits.TMR1ON = 0;
-[e = . . _T1CONbits 1 0 -> -> 0 `i `uc ]
-"189
-[; ;Melodia2.c: 189:      INTCONbits.PEIE = 0;
-[e = . . _INTCONbits 1 6 -> -> 0 `i `uc ]
-"190
-[; ;Melodia2.c: 190:     (INTCONbits.GIE = 0);
-[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
-"191
-[; ;Melodia2.c: 191: }
-[e :UE 378 ]
+[; ;Melodia.c: 108:         play (4 ,4,125);
+[e ( _play (3 , , -> 4 `i -> 4 `i -> 125 `i ]
+"109
+[; ;Melodia.c: 109:         _delay((unsigned long)((150)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 150 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"110
+[; ;Melodia.c: 110:         play (7 ,4,200);
+[e ( _play (3 , , -> 7 `i -> 4 `i -> 200 `i ]
+"111
+[; ;Melodia.c: 111:         _delay((unsigned long)((400)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 400 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"112
+[; ;Melodia.c: 112:         play (7 ,3,350);
+[e ( _play (3 , , -> 7 `i -> 3 `i -> 350 `i ]
+"113
+[; ;Melodia.c: 113:         _delay((unsigned long)((300)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"115
+[; ;Melodia.c: 115:         return;
+[e $UE 381  ]
+"116
+[; ;Melodia.c: 116: }
+[e :UE 381 ]
 }

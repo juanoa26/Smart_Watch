@@ -65,14 +65,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 7193: extern volatile unsigned char SSPBUF __attribute__((address(0xFC9)));
 [v _SSPBUF `Vuc ~T0 @X0 0 e@4041 ]
 "21 ./I2C_Master_File.h
-[; ;./I2C_Master_File.h: 21: void I2C_Ack();
-[v _I2C_Ack `(v ~T0 @X0 0 e? ]
+[; ;./I2C_Master_File.h: 21: void I2C_Ack(void);
+[v _I2C_Ack `(v ~T0 @X0 0 ef ]
 "22
-[; ;./I2C_Master_File.h: 22: void I2C_Nack();
-[v _I2C_Nack `(v ~T0 @X0 0 e? ]
+[; ;./I2C_Master_File.h: 22: void I2C_Nack(void);
+[v _I2C_Nack `(v ~T0 @X0 0 ef ]
 "13
-[; ;./I2C_Master_File.h: 13: void I2C_Ready();
-[v _I2C_Ready `(v ~T0 @X0 0 e? ]
+[; ;./I2C_Master_File.h: 13: void I2C_Ready(void);
+[v _I2C_Ready `(v ~T0 @X0 0 ef ]
 "10902 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 10902: extern volatile __bit TRISB0 __attribute__((address(0x7C98)));
 [v _TRISB0 `Vb ~T0 @X0 0 e@31896 ]
@@ -115,8 +115,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 8916: extern volatile __bit ACKSTAT __attribute__((address(0x7E2E)));
 [v _ACKSTAT `Vb ~T0 @X0 0 e@32302 ]
 "19 ./I2C_Master_File.h
-[; ;./I2C_Master_File.h: 19: char I2C_Stop();
-[v _I2C_Stop `(uc ~T0 @X0 0 e? ]
+[; ;./I2C_Master_File.h: 19: char I2C_Stop(void);
+[v _I2C_Stop `(uc ~T0 @X0 0 ef ]
 "10515 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 10515: extern volatile __bit RSEN __attribute__((address(0x7E29)));
 [v _RSEN `Vb ~T0 @X0 0 e@32297 ]
@@ -639,404 +639,404 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"12 Reloj_ar.c
-[; ;Reloj_ar.c: 12: char I2C_Read(char flag)
+"27 Reloj_ar.c
+[; ;Reloj_ar.c: 27: char I2C_Read(char flag)
 [v _I2C_Read `(uc ~T0 @X0 1 ef1`uc ]
-"14
-[; ;Reloj_ar.c: 14: {
+"29
+[; ;Reloj_ar.c: 29: {
 {
 [e :U _I2C_Read ]
-"12
-[; ;Reloj_ar.c: 12: char I2C_Read(char flag)
+"27
+[; ;Reloj_ar.c: 27: char I2C_Read(char flag)
 [v _flag `uc ~T0 @X0 1 r1 ]
-"14
-[; ;Reloj_ar.c: 14: {
+"29
+[; ;Reloj_ar.c: 29: {
 [f ]
-"15
-[; ;Reloj_ar.c: 15:         char buffer;
+"30
+[; ;Reloj_ar.c: 30:         char buffer;
 [v _buffer `uc ~T0 @X0 1 a ]
-"16
-[; ;Reloj_ar.c: 16:         RCEN = 1;
+"31
+[; ;Reloj_ar.c: 31:         RCEN = 1;
 [e = _RCEN -> -> 1 `i `b ]
-"17
-[; ;Reloj_ar.c: 17:         while(!SSPSTATbits.BF);
+"32
+[; ;Reloj_ar.c: 32:         while(!SSPSTATbits.BF);
 [e $U 368  ]
 [e :U 369 ]
 [e :U 368 ]
 [e $ ! != -> . . _SSPSTATbits 2 0 `i -> 0 `i 369  ]
 [e :U 370 ]
-"19
-[; ;Reloj_ar.c: 19:         buffer = SSPBUF;
+"34
+[; ;Reloj_ar.c: 34:         buffer = SSPBUF;
 [e = _buffer -> _SSPBUF `uc ]
-"21
-[; ;Reloj_ar.c: 21:         if(flag==0)
+"36
+[; ;Reloj_ar.c: 36:         if(flag==0)
 [e $ ! == -> _flag `i -> 0 `i 371  ]
-"22
-[; ;Reloj_ar.c: 22:             I2C_Ack();
+"37
+[; ;Reloj_ar.c: 37:             I2C_Ack();
 [e ( _I2C_Ack ..  ]
 [e $U 372  ]
-"23
-[; ;Reloj_ar.c: 23:         else
+"38
+[; ;Reloj_ar.c: 38:         else
 [e :U 371 ]
-"24
-[; ;Reloj_ar.c: 24:             I2C_Nack();
+"39
+[; ;Reloj_ar.c: 39:             I2C_Nack();
 [e ( _I2C_Nack ..  ]
 [e :U 372 ]
-"25
-[; ;Reloj_ar.c: 25:         I2C_Ready();
+"40
+[; ;Reloj_ar.c: 40:         I2C_Ready();
 [e ( _I2C_Ready ..  ]
-"26
-[; ;Reloj_ar.c: 26:         return(buffer);
+"41
+[; ;Reloj_ar.c: 41:         return(buffer);
 [e ) _buffer ]
 [e $UE 367  ]
-"27
-[; ;Reloj_ar.c: 27: }
+"42
+[; ;Reloj_ar.c: 42: }
 [e :UE 367 ]
 }
-"29
-[; ;Reloj_ar.c: 29: void I2C_Init(void)
+"57
+[; ;Reloj_ar.c: 57: void I2C_Init(void)
 [v _I2C_Init `(v ~T0 @X0 1 ef ]
-"30
-[; ;Reloj_ar.c: 30: {
+"58
+[; ;Reloj_ar.c: 58: {
 {
 [e :U _I2C_Init ]
 [f ]
-"31
-[; ;Reloj_ar.c: 31:     TRISB0=1;
+"59
+[; ;Reloj_ar.c: 59:     TRISB0=1;
 [e = _TRISB0 -> -> 1 `i `b ]
-"32
-[; ;Reloj_ar.c: 32:  TRISB1=1;
+"60
+[; ;Reloj_ar.c: 60:  TRISB1=1;
 [e = _TRISB1 -> -> 1 `i `b ]
-"33
-[; ;Reloj_ar.c: 33:  SSPSTAT=80;
+"61
+[; ;Reloj_ar.c: 61:  SSPSTAT=80;
 [e = _SSPSTAT -> -> 80 `i `uc ]
-"34
-[; ;Reloj_ar.c: 34:     SSPCON1=0x28;
+"62
+[; ;Reloj_ar.c: 62:     SSPCON1=0x28;
 [e = _SSPCON1 -> -> 40 `i `uc ]
-"36
-[; ;Reloj_ar.c: 36:  SSPCON2=0;
+"64
+[; ;Reloj_ar.c: 64:  SSPCON2=0;
 [e = _SSPCON2 -> -> 0 `i `uc ]
-"37
-[; ;Reloj_ar.c: 37:     SSPADD=((8000000/(4*100000))-1);
+"65
+[; ;Reloj_ar.c: 65:     SSPADD=((8000000/(4*100000))-1);
 [e = _SSPADD -> - / -> 8000000 `l * -> -> 4 `i `l -> 100000 `l -> -> 1 `i `l `uc ]
-"38
-[; ;Reloj_ar.c: 38:     SSPIE=1;
+"66
+[; ;Reloj_ar.c: 66:     SSPIE=1;
 [e = _SSPIE -> -> 1 `i `b ]
-"39
-[; ;Reloj_ar.c: 39:     SSPIF=0;
+"67
+[; ;Reloj_ar.c: 67:     SSPIF=0;
 [e = _SSPIF -> -> 0 `i `b ]
-"40
-[; ;Reloj_ar.c: 40: }
+"68
+[; ;Reloj_ar.c: 68: }
 [e :UE 373 ]
 }
-"43
-[; ;Reloj_ar.c: 43: void I2C_Ready()
+"83
+[; ;Reloj_ar.c: 83: void I2C_Ready(void)
 [v _I2C_Ready `(v ~T0 @X0 1 ef ]
-"44
-[; ;Reloj_ar.c: 44: {
+"84
+[; ;Reloj_ar.c: 84: {
 {
 [e :U _I2C_Ready ]
 [f ]
-"45
-[; ;Reloj_ar.c: 45:     while(!SSPIF);
+"85
+[; ;Reloj_ar.c: 85:     while(!SSPIF);
 [e $U 375  ]
 [e :U 376 ]
 [e :U 375 ]
 [e $ ! _SSPIF 376  ]
 [e :U 377 ]
-"46
-[; ;Reloj_ar.c: 46:     SSPIF=0;
+"86
+[; ;Reloj_ar.c: 86:     SSPIF=0;
 [e = _SSPIF -> -> 0 `i `b ]
-"47
-[; ;Reloj_ar.c: 47: }
+"87
+[; ;Reloj_ar.c: 87: }
 [e :UE 374 ]
 }
-"49
-[; ;Reloj_ar.c: 49: void I2C_Start_Wait(char slave_write_address)
+"101
+[; ;Reloj_ar.c: 101: void I2C_Start_Wait(char slave_write_address)
 [v _I2C_Start_Wait `(v ~T0 @X0 1 ef1`uc ]
-"50
-[; ;Reloj_ar.c: 50: {
+"102
+[; ;Reloj_ar.c: 102: {
 {
 [e :U _I2C_Start_Wait ]
-"49
-[; ;Reloj_ar.c: 49: void I2C_Start_Wait(char slave_write_address)
+"101
+[; ;Reloj_ar.c: 101: void I2C_Start_Wait(char slave_write_address)
 [v _slave_write_address `uc ~T0 @X0 1 r1 ]
-"50
-[; ;Reloj_ar.c: 50: {
+"102
+[; ;Reloj_ar.c: 102: {
 [f ]
-"51
-[; ;Reloj_ar.c: 51:   while(1)
+"103
+[; ;Reloj_ar.c: 103:   while(1)
 [e :U 380 ]
-"52
-[; ;Reloj_ar.c: 52:   {
+"104
+[; ;Reloj_ar.c: 104:   {
 {
-"53
-[; ;Reloj_ar.c: 53:     SSPCON2bits.SEN=1;
+"105
+[; ;Reloj_ar.c: 105:     SSPCON2bits.SEN=1;
 [e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
-"54
-[; ;Reloj_ar.c: 54:     while(SSPCON2bits.SEN);
+"106
+[; ;Reloj_ar.c: 106:     while(SSPCON2bits.SEN);
 [e $U 382  ]
 [e :U 383 ]
 [e :U 382 ]
 [e $ != -> . . _SSPCON2bits 0 0 `i -> 0 `i 383  ]
 [e :U 384 ]
-"55
-[; ;Reloj_ar.c: 55:     SSPIF=0;
+"107
+[; ;Reloj_ar.c: 107:     SSPIF=0;
 [e = _SSPIF -> -> 0 `i `b ]
-"56
-[; ;Reloj_ar.c: 56:  if(!SSPSTATbits.S)
+"108
+[; ;Reloj_ar.c: 108:  if(!SSPSTATbits.S)
 [e $ ! ! != -> . . _SSPSTATbits 2 3 `i -> 0 `i 385  ]
-"57
-[; ;Reloj_ar.c: 57:         continue;
+"109
+[; ;Reloj_ar.c: 109:         continue;
 [e $U 379  ]
 [e :U 385 ]
-"58
-[; ;Reloj_ar.c: 58:     I2C_Write(slave_write_address);
+"110
+[; ;Reloj_ar.c: 110:     I2C_Write(slave_write_address);
 [e ( _I2C_Write (1 -> _slave_write_address `uc ]
-"59
-[; ;Reloj_ar.c: 59:     if(ACKSTAT)
+"111
+[; ;Reloj_ar.c: 111:     if(ACKSTAT)
 [e $ ! _ACKSTAT 386  ]
-"60
-[; ;Reloj_ar.c: 60:     {
+"112
+[; ;Reloj_ar.c: 112:     {
 {
-"61
-[; ;Reloj_ar.c: 61:         I2C_Stop();
+"113
+[; ;Reloj_ar.c: 113:         I2C_Stop();
 [e ( _I2C_Stop ..  ]
-"62
-[; ;Reloj_ar.c: 62:         continue;
+"114
+[; ;Reloj_ar.c: 114:         continue;
 [e $U 379  ]
-"63
-[; ;Reloj_ar.c: 63:     }
+"115
+[; ;Reloj_ar.c: 115:     }
 }
 [e :U 386 ]
-"64
-[; ;Reloj_ar.c: 64:     break;
+"116
+[; ;Reloj_ar.c: 116:     break;
 [e $U 381  ]
-"65
-[; ;Reloj_ar.c: 65:   }
+"117
+[; ;Reloj_ar.c: 117:   }
 }
 [e :U 379 ]
 [e $U 380  ]
 [e :U 381 ]
-"66
-[; ;Reloj_ar.c: 66: }
+"118
+[; ;Reloj_ar.c: 118: }
 [e :UE 378 ]
 }
-"68
-[; ;Reloj_ar.c: 68: char I2C_Start(char slave_write_address)
+"134
+[; ;Reloj_ar.c: 134: char I2C_Start(char slave_write_address)
 [v _I2C_Start `(uc ~T0 @X0 1 ef1`uc ]
-"69
-[; ;Reloj_ar.c: 69: {
+"135
+[; ;Reloj_ar.c: 135: {
 {
 [e :U _I2C_Start ]
-"68
-[; ;Reloj_ar.c: 68: char I2C_Start(char slave_write_address)
+"134
+[; ;Reloj_ar.c: 134: char I2C_Start(char slave_write_address)
 [v _slave_write_address `uc ~T0 @X0 1 r1 ]
-"69
-[; ;Reloj_ar.c: 69: {
+"135
+[; ;Reloj_ar.c: 135: {
 [f ]
-"70
-[; ;Reloj_ar.c: 70:     SSPCON2bits.SEN=1;
+"136
+[; ;Reloj_ar.c: 136:     SSPCON2bits.SEN=1;
 [e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
-"71
-[; ;Reloj_ar.c: 71:     while(SSPCON2bits.SEN);
+"137
+[; ;Reloj_ar.c: 137:     while(SSPCON2bits.SEN);
 [e $U 388  ]
 [e :U 389 ]
 [e :U 388 ]
 [e $ != -> . . _SSPCON2bits 0 0 `i -> 0 `i 389  ]
 [e :U 390 ]
-"72
-[; ;Reloj_ar.c: 72:  SSPIF=0;
+"138
+[; ;Reloj_ar.c: 138:  SSPIF=0;
 [e = _SSPIF -> -> 0 `i `b ]
-"73
-[; ;Reloj_ar.c: 73:     if(!SSPSTATbits.S)
+"139
+[; ;Reloj_ar.c: 139:     if(!SSPSTATbits.S)
 [e $ ! ! != -> . . _SSPSTATbits 2 3 `i -> 0 `i 391  ]
-"74
-[; ;Reloj_ar.c: 74:     return 0;
+"140
+[; ;Reloj_ar.c: 140:     return 0;
 [e ) -> -> 0 `i `uc ]
 [e $UE 387  ]
 [e :U 391 ]
-"75
-[; ;Reloj_ar.c: 75:     return (I2C_Write(slave_write_address));
+"141
+[; ;Reloj_ar.c: 141:     return (I2C_Write(slave_write_address));
 [e ) ( _I2C_Write (1 -> _slave_write_address `uc ]
 [e $UE 387  ]
-"77
-[; ;Reloj_ar.c: 77: }
+"143
+[; ;Reloj_ar.c: 143: }
 [e :UE 387 ]
 }
-"79
-[; ;Reloj_ar.c: 79: char I2C_Repeated_Start(char slave_read_address)
+"159
+[; ;Reloj_ar.c: 159: char I2C_Repeated_Start(char slave_read_address)
 [v _I2C_Repeated_Start `(uc ~T0 @X0 1 ef1`uc ]
-"80
-[; ;Reloj_ar.c: 80: {
+"160
+[; ;Reloj_ar.c: 160: {
 {
 [e :U _I2C_Repeated_Start ]
-"79
-[; ;Reloj_ar.c: 79: char I2C_Repeated_Start(char slave_read_address)
+"159
+[; ;Reloj_ar.c: 159: char I2C_Repeated_Start(char slave_read_address)
 [v _slave_read_address `uc ~T0 @X0 1 r1 ]
-"80
-[; ;Reloj_ar.c: 80: {
+"160
+[; ;Reloj_ar.c: 160: {
 [f ]
-"81
-[; ;Reloj_ar.c: 81:     RSEN = 1;
+"161
+[; ;Reloj_ar.c: 161:     RSEN = 1;
 [e = _RSEN -> -> 1 `i `b ]
-"82
-[; ;Reloj_ar.c: 82:     while(RSEN);
+"162
+[; ;Reloj_ar.c: 162:     while(RSEN);
 [e $U 393  ]
 [e :U 394 ]
 [e :U 393 ]
 [e $ _RSEN 394  ]
 [e :U 395 ]
-"83
-[; ;Reloj_ar.c: 83:     SSPIF = 0;
+"163
+[; ;Reloj_ar.c: 163:     SSPIF = 0;
 [e = _SSPIF -> -> 0 `i `b ]
-"84
-[; ;Reloj_ar.c: 84:  if(!SSPSTATbits.S)
+"164
+[; ;Reloj_ar.c: 164:  if(!SSPSTATbits.S)
 [e $ ! ! != -> . . _SSPSTATbits 2 3 `i -> 0 `i 396  ]
-"85
-[; ;Reloj_ar.c: 85:     return 0;
+"165
+[; ;Reloj_ar.c: 165:     return 0;
 [e ) -> -> 0 `i `uc ]
 [e $UE 392  ]
 [e :U 396 ]
-"86
-[; ;Reloj_ar.c: 86:     I2C_Write(slave_read_address);
+"166
+[; ;Reloj_ar.c: 166:     I2C_Write(slave_read_address);
 [e ( _I2C_Write (1 -> _slave_read_address `uc ]
-"87
-[; ;Reloj_ar.c: 87:     if (ACKSTAT)
+"167
+[; ;Reloj_ar.c: 167:     if (ACKSTAT)
 [e $ ! _ACKSTAT 397  ]
-"88
-[; ;Reloj_ar.c: 88:      return 1;
+"168
+[; ;Reloj_ar.c: 168:      return 1;
 [e ) -> -> 1 `i `uc ]
 [e $UE 392  ]
 [e $U 398  ]
-"89
-[; ;Reloj_ar.c: 89:     else
+"169
+[; ;Reloj_ar.c: 169:     else
 [e :U 397 ]
-"90
-[; ;Reloj_ar.c: 90:      return 2;
+"170
+[; ;Reloj_ar.c: 170:      return 2;
 [e ) -> -> 2 `i `uc ]
 [e $UE 392  ]
 [e :U 398 ]
-"91
-[; ;Reloj_ar.c: 91: }
+"171
+[; ;Reloj_ar.c: 171: }
 [e :UE 392 ]
 }
-"93
-[; ;Reloj_ar.c: 93: char I2C_Stop()
+"186
+[; ;Reloj_ar.c: 186: char I2C_Stop(void)
 [v _I2C_Stop `(uc ~T0 @X0 1 ef ]
-"94
-[; ;Reloj_ar.c: 94: {
+"187
+[; ;Reloj_ar.c: 187: {
 {
 [e :U _I2C_Stop ]
 [f ]
-"95
-[; ;Reloj_ar.c: 95:     PEN = 1;
+"188
+[; ;Reloj_ar.c: 188:     PEN = 1;
 [e = _PEN -> -> 1 `i `b ]
-"96
-[; ;Reloj_ar.c: 96:     while(PEN);
+"189
+[; ;Reloj_ar.c: 189:     while(PEN);
 [e $U 400  ]
 [e :U 401 ]
 [e :U 400 ]
 [e $ _PEN 401  ]
 [e :U 402 ]
-"97
-[; ;Reloj_ar.c: 97:     if(!SSPSTATbits.P);
+"190
+[; ;Reloj_ar.c: 190:     if(!SSPSTATbits.P);
 [e $ ! ! != -> . . _SSPSTATbits 2 4 `i -> 0 `i 403  ]
 [e :U 403 ]
-"98
-[; ;Reloj_ar.c: 98:     return 0;
+"191
+[; ;Reloj_ar.c: 191:     return 0;
 [e ) -> -> 0 `i `uc ]
 [e $UE 399  ]
-"99
-[; ;Reloj_ar.c: 99: }
+"192
+[; ;Reloj_ar.c: 192: }
 [e :UE 399 ]
 }
-"101
-[; ;Reloj_ar.c: 101: char I2C_Write(unsigned char data)
+"208
+[; ;Reloj_ar.c: 208: char I2C_Write(unsigned char data)
 [v _I2C_Write `(uc ~T0 @X0 1 ef1`uc ]
-"102
-[; ;Reloj_ar.c: 102: {
+"209
+[; ;Reloj_ar.c: 209: {
 {
 [e :U _I2C_Write ]
-"101
-[; ;Reloj_ar.c: 101: char I2C_Write(unsigned char data)
+"208
+[; ;Reloj_ar.c: 208: char I2C_Write(unsigned char data)
 [v _data `uc ~T0 @X0 1 r1 ]
-"102
-[; ;Reloj_ar.c: 102: {
+"209
+[; ;Reloj_ar.c: 209: {
 [f ]
-"103
-[; ;Reloj_ar.c: 103:       SSPBUF = data;
+"210
+[; ;Reloj_ar.c: 210:       SSPBUF = data;
 [e = _SSPBUF _data ]
-"104
-[; ;Reloj_ar.c: 104:       I2C_Ready();
+"211
+[; ;Reloj_ar.c: 211:       I2C_Ready();
 [e ( _I2C_Ready ..  ]
-"105
-[; ;Reloj_ar.c: 105:       if (ACKSTAT)
+"212
+[; ;Reloj_ar.c: 212:       if (ACKSTAT)
 [e $ ! _ACKSTAT 405  ]
-"106
-[; ;Reloj_ar.c: 106:         return 1;
+"213
+[; ;Reloj_ar.c: 213:         return 1;
 [e ) -> -> 1 `i `uc ]
 [e $UE 404  ]
 [e $U 406  ]
-"107
-[; ;Reloj_ar.c: 107:       else
+"214
+[; ;Reloj_ar.c: 214:       else
 [e :U 405 ]
-"108
-[; ;Reloj_ar.c: 108:         return 2;
+"215
+[; ;Reloj_ar.c: 215:         return 2;
 [e ) -> -> 2 `i `uc ]
 [e $UE 404  ]
 [e :U 406 ]
-"109
-[; ;Reloj_ar.c: 109: }
+"216
+[; ;Reloj_ar.c: 216: }
 [e :UE 404 ]
 }
-"111
-[; ;Reloj_ar.c: 111: void I2C_Ack()
+"230
+[; ;Reloj_ar.c: 230: void I2C_Ack(void)
 [v _I2C_Ack `(v ~T0 @X0 1 ef ]
-"112
-[; ;Reloj_ar.c: 112: {
+"231
+[; ;Reloj_ar.c: 231: {
 {
 [e :U _I2C_Ack ]
 [f ]
-"113
-[; ;Reloj_ar.c: 113:     ACKDT=0;
+"232
+[; ;Reloj_ar.c: 232:     ACKDT=0;
 [e = _ACKDT -> -> 0 `i `b ]
-"114
-[; ;Reloj_ar.c: 114:  ACKEN=1;
+"233
+[; ;Reloj_ar.c: 233:  ACKEN=1;
 [e = _ACKEN -> -> 1 `i `b ]
-"115
-[; ;Reloj_ar.c: 115:     while(ACKEN);
+"234
+[; ;Reloj_ar.c: 234:     while(ACKEN);
 [e $U 408  ]
 [e :U 409 ]
 [e :U 408 ]
 [e $ _ACKEN 409  ]
 [e :U 410 ]
-"116
-[; ;Reloj_ar.c: 116: }
+"235
+[; ;Reloj_ar.c: 235: }
 [e :UE 407 ]
 }
-"118
-[; ;Reloj_ar.c: 118: void I2C_Nack()
+"250
+[; ;Reloj_ar.c: 250: void I2C_Nack(void)
 [v _I2C_Nack `(v ~T0 @X0 1 ef ]
-"119
-[; ;Reloj_ar.c: 119: {
+"251
+[; ;Reloj_ar.c: 251: {
 {
 [e :U _I2C_Nack ]
 [f ]
-"120
-[; ;Reloj_ar.c: 120:     ACKDT=1;
+"252
+[; ;Reloj_ar.c: 252:     ACKDT=1;
 [e = _ACKDT -> -> 1 `i `b ]
-"121
-[; ;Reloj_ar.c: 121:  ACKEN=1;
+"253
+[; ;Reloj_ar.c: 253:  ACKEN=1;
 [e = _ACKEN -> -> 1 `i `b ]
-"122
-[; ;Reloj_ar.c: 122:     while(ACKEN);
+"254
+[; ;Reloj_ar.c: 254:     while(ACKEN);
 [e $U 412  ]
 [e :U 413 ]
 [e :U 412 ]
 [e $ _ACKEN 413  ]
 [e :U 414 ]
-"123
-[; ;Reloj_ar.c: 123: }
+"255
+[; ;Reloj_ar.c: 255: }
 [e :UE 411 ]
 }

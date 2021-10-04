@@ -736,40 +736,40 @@ Version 4.0 HI-TECH Software Intermediate Code
 "30
 [; ;Temperatura.c: 30:     ADCON0bits.ADON = 1;
 [e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-"44
-[; ;Temperatura.c: 44:     while (1) {
+"32
+[; ;Temperatura.c: 32:       while (1) {
 [e :U 371 ]
 {
-"45
-[; ;Temperatura.c: 45:         ADCON0bits.GO_DONE = 1;
+"33
+[; ;Temperatura.c: 33:         ADCON0bits.GO_DONE = 1;
 [e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
-"46
-[; ;Temperatura.c: 46:         while (ADCON0bits.GO_DONE);
+"34
+[; ;Temperatura.c: 34:         while (ADCON0bits.GO_DONE);
 [e $U 373  ]
 [e :U 374 ]
 [e :U 373 ]
 [e $ != -> . . _ADCON0bits 2 1 `i -> 0 `i 374  ]
 [e :U 375 ]
-"47
-[; ;Temperatura.c: 47:         result = ADRESH;
+"35
+[; ;Temperatura.c: 35:         result = ADRESH;
 [e = _result -> _ADRESH `us ]
-"48
-[; ;Temperatura.c: 48:         result = (result << 8) + ADRESL;
+"36
+[; ;Temperatura.c: 36:         result = (result << 8) + ADRESL;
 [e = _result -> + << -> _result `ui -> 8 `i -> _ADRESL `ui `us ]
-"49
-[; ;Temperatura.c: 49:         result = ((result*500.0)/1023.0)-49.5;
+"37
+[; ;Temperatura.c: 37:         result = ((result*500.0)/1023.0)-49.5;
 [e = _result -> - / * -> -> _result `ui `d .500.0 .1023.0 .49.5 `us ]
-"51
-[; ;Temperatura.c: 51:         return result;
+"39
+[; ;Temperatura.c: 39:         return result;
 [e ) _result ]
 [e $UE 369  ]
-"52
-[; ;Temperatura.c: 52:     }
+"40
+[; ;Temperatura.c: 40:     }
 }
 [e :U 370 ]
 [e $U 371  ]
 [e :U 372 ]
-"53
-[; ;Temperatura.c: 53: }
+"41
+[; ;Temperatura.c: 41: }
 [e :UE 369 ]
 }

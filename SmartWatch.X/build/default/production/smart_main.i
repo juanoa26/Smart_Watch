@@ -5764,30 +5764,30 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 #pragma config EBTRB = OFF
 # 15 "./LCD_caracter.h" 2
 # 26 "./LCD_caracter.h"
-void MSdelay(unsigned int );
-void LCD_Init();
+void LCD_MSdelay(unsigned int );
+void LCD_Init(void);
 void LCD_Command(unsigned char );
 void LCD_Char(unsigned char x);
 void LCD_String(const char *);
 void LCD_String_xy(char, char , const char *);
-void LCD_Clear();
+void LCD_Clear(void);
 void LCD_Custom_Char ( unsigned char , unsigned char *);
 # 4 "smart_main.c" 2
 
 # 1 "./I2C_Master_File.h" 1
 # 13 "./I2C_Master_File.h"
-void I2C_Ready();
+void I2C_Ready(void);
 void I2C_Init(void);
 char I2C_Start(char);
 void I2C_Start_Wait(char);
 
 char I2C_Repeated_Start(char);
-char I2C_Stop();
+char I2C_Stop(void);
 char I2C_Write(unsigned char);
-void I2C_Ack();
-void I2C_Nack();
+void I2C_Ack(void);
+void I2C_Nack(void);
 char I2C_Read(char flag);
-void RTC_Calendario();
+void RTC_Calendario(void);
 # 5 "smart_main.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 1 3
@@ -6019,7 +6019,7 @@ typedef uint32_t uint_fast32_t;
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
 # 8 "smart_main.c" 2
-# 25 "smart_main.c"
+# 27 "smart_main.c"
 float tempar;
 float luz;
 char Stemp[20];
@@ -6028,13 +6028,13 @@ char Sluz[20];
 char i;
 uint16_t ReadADC(void);
 uint16_t ReadLUZ(void);
-void PlayCancion();
+void PlayCancion(void);
 
 
 unsigned char character1[ 8 ] = {0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00};
 unsigned char character2[ 8 ] = {0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00};
 unsigned char character3[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00};
-
+# 55 "smart_main.c"
 void main() {
     OSCCON = 0x72;
     TRISE = 0x00;
@@ -6042,14 +6042,13 @@ void main() {
 
     I2C_Init();
     LCD_Init();
-    LCD_String_xy(1, 0, " Buenos Dias ");
     LCD_Clear();
 
     while (1) {
         tempar = ReadADC();
         luz = ReadLUZ();
         RTC_Calendario();
-        MSdelay(10);
+        LCD_MSdelay(10);
 
         if (tempar > 15 && (luz > 0 && luz < 400)) {
             LATE0 = 0;
@@ -6062,7 +6061,7 @@ void main() {
             LCD_Char(0);
             PlayCancion();
         }
-        if ((tempar >= 12 && tempar <= 15)&&(luz > 400 && luz < 700)) {
+        else if ((tempar >= 12 && tempar <= 15)&&(luz > 400 && luz < 700)) {
             LATE0 = 1;
             LATE1 = 1;
             LATE2 = 0;
@@ -6073,7 +6072,7 @@ void main() {
             LCD_Char(0);
 
         }
-        if (tempar < 12 && (luz > 700 && luz < 1500)) {
+        else if(tempar < 12 && (luz > 700 && luz < 1500)) {
             LATE0 = 1;
             LATE1 = 1;
             LATE2 = 1;
@@ -6082,10 +6081,8 @@ void main() {
             LCD_Custom_Char(0, character1);
             LCD_Command(0xc0);
             LCD_Char(0);
-
-
         }
-        MSdelay(3000);
+        LCD_MSdelay(3000);
         LCD_Clear();
     };
 

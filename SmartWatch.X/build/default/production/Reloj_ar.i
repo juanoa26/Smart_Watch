@@ -5645,22 +5645,20 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 
 
 
-void I2C_Ready();
+void I2C_Ready(void);
 void I2C_Init(void);
 char I2C_Start(char);
 void I2C_Start_Wait(char);
 
 char I2C_Repeated_Start(char);
-char I2C_Stop();
+char I2C_Stop(void);
 char I2C_Write(unsigned char);
-void I2C_Ack();
-void I2C_Nack();
+void I2C_Ack(void);
+void I2C_Nack(void);
 char I2C_Read(char flag);
-void RTC_Calendario();
+void RTC_Calendario(void);
 # 9 "Reloj_ar.c" 2
-
-
-
+# 27 "Reloj_ar.c"
 char I2C_Read(char flag)
 
 {
@@ -5677,7 +5675,7 @@ char I2C_Read(char flag)
         I2C_Ready();
         return(buffer);
 }
-
+# 57 "Reloj_ar.c"
 void I2C_Init(void)
 {
     TRISB0=1;
@@ -5690,14 +5688,13 @@ void I2C_Init(void)
     SSPIE=1;
     SSPIF=0;
 }
-
-
-void I2C_Ready()
+# 83 "Reloj_ar.c"
+void I2C_Ready(void)
 {
     while(!SSPIF);
     SSPIF=0;
 }
-
+# 101 "Reloj_ar.c"
 void I2C_Start_Wait(char slave_write_address)
 {
   while(1)
@@ -5716,7 +5713,7 @@ void I2C_Start_Wait(char slave_write_address)
     break;
   }
 }
-
+# 134 "Reloj_ar.c"
 char I2C_Start(char slave_write_address)
 {
     SSPCON2bits.SEN=1;
@@ -5727,7 +5724,7 @@ char I2C_Start(char slave_write_address)
     return (I2C_Write(slave_write_address));
 
 }
-
+# 159 "Reloj_ar.c"
 char I2C_Repeated_Start(char slave_read_address)
 {
     RSEN = 1;
@@ -5741,15 +5738,15 @@ char I2C_Repeated_Start(char slave_read_address)
     else
      return 2;
 }
-
-char I2C_Stop()
+# 186 "Reloj_ar.c"
+char I2C_Stop(void)
 {
     PEN = 1;
     while(PEN);
     if(!SSPSTATbits.P);
     return 0;
 }
-
+# 208 "Reloj_ar.c"
 char I2C_Write(unsigned char data)
 {
       SSPBUF = data;
@@ -5759,15 +5756,15 @@ char I2C_Write(unsigned char data)
       else
         return 2;
 }
-
-void I2C_Ack()
+# 230 "Reloj_ar.c"
+void I2C_Ack(void)
 {
     ACKDT=0;
  ACKEN=1;
     while(ACKEN);
 }
-
-void I2C_Nack()
+# 250 "Reloj_ar.c"
+void I2C_Nack(void)
 {
     ACKDT=1;
  ACKEN=1;

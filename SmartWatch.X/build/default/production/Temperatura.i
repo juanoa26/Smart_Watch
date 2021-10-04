@@ -5948,8 +5948,8 @@ uint16_t ReadADC(void) {
     ADCON2bits.ADCS = 0b001;
     ADCON2bits.ADFM = 1;
     ADCON0bits.ADON = 1;
-# 44 "Temperatura.c"
-    while (1) {
+
+      while (1) {
         ADCON0bits.GO_DONE = 1;
         while (ADCON0bits.GO_DONE);
         result = ADRESH;

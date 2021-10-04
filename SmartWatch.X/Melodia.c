@@ -48,7 +48,14 @@ int FreqNota[12]={  // retardos entre estado alto
 
 void Play(int nota,int octava,int duracion);
 void PlayCancion();
+void delay_us(int nota);
 
+
+void delay_us(int nota){
+    for(int i=0; i<=nota;i++ ){
+        __delay_us(1);
+    }
+}
 
 
 void play(int nota, int octava, int duracion){
@@ -63,13 +70,13 @@ void play(int nota, int octava, int duracion){
    
     do{
         
-        TRISDbits . TRISD2 =  0;   // Genera la frecuancia
-        LATDbits . LATD2 =  1 ;
-        MSdelay(fn);;           // con los retardos mientras
+        TRISCbits . TRISC1 =  0;   // Genera la frecuancia
+        LATCbits . LATC1 =  1 ;
+        delay_us(fn);;           // con los retardos mientras
         CiclosL+=(fn);          // aumenta el contador de
                             // ciclos transcurridos
-        LATDbits . LATD2 =  0 ;    // en dos partes para repartir el
-         MSdelay(fn);           // trabajo entre estado alto y bajo.
+        LATCbits . LATC1 =  0 ;    // en dos partes para repartir el
+         delay_us(fn);           // trabajo entre estado alto y bajo.
         CiclosL+=(fn);          //
         CiclosL+=25;            // Compensador.
        
@@ -90,373 +97,20 @@ void PlayCancion(){
 
    
         play (nMI   ,4,150);
-        MSdelay (50);
+        __delay_ms (50);
         play (nMI   ,4,150);
-        MSdelay (150);
+        __delay_ms (150);
         play (nMI   ,4,150);
-        MSdelay (200);
+        __delay_ms (200);
 
         play (nDO   ,4,125);
-        MSdelay (50);
+        __delay_ms (50);
         play (nMI   ,4,125);
-        MSdelay (150);
+        __delay_ms (150);
         play (nSOL   ,4,200);
-        MSdelay (400);
+        __delay_ms (400);
         play (nSOL   ,3,350);
-        MSdelay (300);
+        __delay_ms (300);
         
-        for(int i=0;i<2;i++){
-        play (nDO   ,4,200);
-        MSdelay (200);
-        play (nSOL   ,3,150);
-        MSdelay (200);
-        play (nMI   ,3,200);
-        MSdelay (150);
-        play (nLA   ,3,200);
-        MSdelay (150);
-        play (nSI   ,3,150);
-        MSdelay (50);
-        play (nLA_   ,3,100);
-        MSdelay (40);
-        play (nLA   ,3,100);
-        MSdelay (60);
-        play (nSOL   ,3,120);
-        MSdelay (100);
-        
-        play (nMI   ,4,110);
-        MSdelay (100);
-        play (nSOL   ,4,110);
-        MSdelay (110);
-        play (nLA   ,4,150);
-        MSdelay (100);
-        play (nFA   ,4,110);
-        MSdelay (100);
-        play (nSOL   ,4,110);
-        MSdelay (150);
-        play (nMI   ,4,110);
-        MSdelay (100);
-        play (nDO   ,4,110);
-        MSdelay (50);
-        play (nRE   ,4,125);
-        MSdelay (50);
-        play (nSI   ,3,125);
-        MSdelay (200);
-        }
-        
-        for(int i=0;i<2;i++){
-        MSdelay (100);
-        play (nSOL   ,4,150);
-        MSdelay (120);
-        play (nFA_   ,4,125);
-        MSdelay (50);
-        play (nFA   ,4,125);
-        MSdelay (50);
-        play (nRE_   ,4,125);
-        MSdelay (100);
-        play (nMI   ,4,150);
-        MSdelay (100);
-        
-        play (nSOL_   ,3,125);
-        MSdelay (100);
-        play (nLA   ,3,125);
-        MSdelay (100);
-        play (nDO   ,4,150);
-        MSdelay (150);
-        
-        play (nLA   ,3,125);
-        MSdelay (100);
-        play (nDO   ,4,125);
-        MSdelay (100);
-        play (nRE   ,4,150);
-        MSdelay (150);
-        
-        play (nSOL   ,4,150);
-        MSdelay (120);
-        play (nFA_   ,4,125);
-        MSdelay (50);
-        play (nFA   ,4,125);
-        MSdelay (50);
-        play (nRE_   ,4,125);
-        MSdelay (100);
-        play (nMI   ,4,150);
-        MSdelay (100);
-        
-        play (nDO   ,5,200);
-        MSdelay (50);
-        play (nDO   ,5,150);
-        MSdelay (50);
-        play (nDO   ,5,150);
-        MSdelay (300);
-        
-        play (nSOL   ,4,150);
-        MSdelay (120);
-        play (nFA_   ,4,125);
-        MSdelay (50);
-        play (nFA   ,4,125);
-        MSdelay (50);
-        play (nRE_   ,4,125);
-        MSdelay (100);
-        play (nMI   ,4,150);
-        MSdelay (100);
-        
-        play (nSOL_   ,3,125);
-        MSdelay (100);
-        play (nLA   ,3,125);
-        MSdelay (100);
-        play (nDO   ,4,150);
-        MSdelay (150);
-        
-        play (nLA   ,3,125);
-        MSdelay (100);
-        play (nDO   ,4,125);
-        MSdelay (100);
-        play (nRE   ,4,150);
-        MSdelay (200);
-        
-        play (nRE_   ,4,200);
-        MSdelay (150);
-        play (nRE   ,4,200);
-        MSdelay (150);
-        play (nDO   ,4,200);
-        MSdelay (250);
-        }
-        
-        play (nDO   ,4,130);
-        MSdelay (50);
-        play (nDO   ,4,130);
-        MSdelay (100);
-        play (nDO   ,4,200);
-        MSdelay (130);
-        play (nDO   ,4,150);
-        MSdelay (100);
-        play (nRE   ,4,130);
-        MSdelay (50);
-        play (nMI   ,4,150);
-        MSdelay (50);
-        play (nDO   ,4,125);
-        MSdelay (50);
-        play (nLA   ,3,125);
-        MSdelay (100);
-        play (nSOL   ,3,200);
-        MSdelay (200);
-        play (nDO   ,4,130);
-        MSdelay (50);
-        
-        play (nDO   ,4,130);
-        MSdelay (100);
-        play (nDO   ,4,200);
-        MSdelay (100);
-        play (nDO   ,4,125);
-        MSdelay (100);
-        play (nRE   ,4,125);
-        MSdelay (100);
-        play (nMI   ,4,200);
-        MSdelay (400);
-
-        play (nDO   ,4,130);
-        MSdelay (50);
-        play (nDO   ,4,130);
-        MSdelay (100);
-        play (nDO   ,4,200);
-        MSdelay (130);
-        play (nDO   ,4,150);
-        MSdelay (100);
-        play (nRE   ,4,130);
-        MSdelay (50);
-        play (nMI   ,4,150);
-        MSdelay (50);
-        play (nDO   ,4,125);
-        MSdelay (50);
-        play (nLA   ,3,125);
-        MSdelay (100);
-        play (nSOL   ,3,200);
-        MSdelay (200);
-        
-        play (nMI   ,4,150);
-        MSdelay (50);
-        play (nMI   ,4,150);
-        MSdelay (150);
-        play (nMI   ,4,150);
-        MSdelay (200);
-        play (nDO   ,4,125);
-        MSdelay (50);
-        play (nMI   ,4,125);
-        MSdelay (150);
-        play (nSOL   ,4,200);
-        MSdelay (400);
-        
-        for(int i=0;i<2;i++){
-        play (nDO   ,4,200);
-        MSdelay (200);
-        play (nSOL   ,3,150);
-        MSdelay (200);
-        play (nMI   ,3,200);
-        MSdelay (150);
-        play (nLA   ,3,200);
-        MSdelay (150);
-        play (nSI   ,3,150);
-        MSdelay (50);
-        play (nLA_   ,3,100);
-        MSdelay (40);
-        play (nLA   ,3,100);
-        MSdelay (60);
-        play (nSOL   ,3,120);
-        MSdelay (100);
-        
-        play (nMI   ,4,110);
-        MSdelay (100);
-        play (nSOL   ,4,110);
-        MSdelay (110);
-        play (nLA   ,4,150);
-        MSdelay (100);
-        play (nFA   ,4,110);
-        MSdelay (100);
-        play (nSOL   ,4,110);
-        MSdelay (150);
-        play (nMI   ,4,110);
-        MSdelay (100);
-        play (nDO   ,4,110);
-        MSdelay (50);
-        play (nRE   ,4,125);
-        MSdelay (50);
-        play (nSI   ,3,125);
-        MSdelay (200);
-        }
-        
-        play (nMI   ,4,125);
-        MSdelay (50);
-        play (nDO   ,4,125);
-        MSdelay (70);
-        play (nSOL   ,3,230);
-        MSdelay (150);
-        play (nSOL_   ,3,150);
-        MSdelay (150);
-        play (nLA   ,3,125);
-        MSdelay (50);
-        play (nFA   ,4,125);
-        MSdelay (50);
-        play (nFA   ,4,125);
-        MSdelay (50);
-        play (nLA   ,3,200);
-        MSdelay (100);
-        play (nSI   ,3,220);
-        MSdelay (100);
-        play (nLA   ,4,150);
-        MSdelay (100);
-        play (nLA   ,4,150);
-        MSdelay (100);
-        play (nLA   ,4,150);
-        MSdelay (50);
-        play (nSOL   ,4,125);
-        MSdelay (50);
-        play (nFA   ,4,150);
-        MSdelay (100);
-        play (nMI   ,4,200);
-        MSdelay (100);
-        play (nDO   ,4,150);
-        MSdelay (100);
-        play (nLA   ,3,125);
-        MSdelay (65);
-        play (nSOL   ,3,200);
-        MSdelay (200);
-        
-        
-        play (nMI   ,4,125);
-        MSdelay (50);
-        play (nDO   ,4,125);
-        MSdelay (70);
-        play (nSOL   ,3,230);
-        MSdelay (150);
-        play (nSOL_   ,3,150);
-        MSdelay (150);
-        play (nLA   ,3,125);
-        MSdelay (50);
-        play (nFA   ,4,125);
-        MSdelay (50);
-        play (nFA   ,4,125);
-        MSdelay (50);
-        play (nLA   ,3,200);
-        MSdelay (100);
-        play (nSI   ,3,220);
-        MSdelay (100);
-        play (nFA   ,4,150);
-        MSdelay (100);
-        play (nFA   ,4,150);
-        MSdelay (100);
-        play (nFA   ,4,150);
-        MSdelay (50);
-        play (nMI   ,4,150);
-        MSdelay (100);
-        play (nRE   ,4,125);
-        MSdelay (65);
-        play (nDO   ,4,200);
-        MSdelay (200);
-        
-        
-        play (nDO   ,4,130);
-        MSdelay (50);
-        play (nDO   ,4,130);
-        MSdelay (100);
-        play (nDO   ,4,200);
-        MSdelay (130);
-        play (nDO   ,4,150);
-        MSdelay (100);
-        play (nRE   ,4,130);
-        MSdelay (50);
-        play (nMI   ,4,150);
-        MSdelay (50);
-        play (nDO   ,4,125);
-        MSdelay (50);
-        play (nLA   ,3,125);
-        MSdelay (100);
-        play (nSOL   ,3,200);
-        MSdelay (200);
-        play (nDO   ,4,130);
-        MSdelay (50);
-        
-        play (nDO   ,4,130);
-        MSdelay (100);
-        play (nDO   ,4,200);
-        MSdelay (100);
-        play (nDO   ,4,125);
-        MSdelay (100);
-        play (nRE   ,4,125);
-        MSdelay (100);
-        play (nMI   ,4,200);
-        MSdelay (400);
-
-        play (nDO   ,4,130);
-        MSdelay (50);
-        play (nDO   ,4,130);
-        MSdelay (100);
-        play (nDO   ,4,200);
-        MSdelay (130);
-        play (nDO   ,4,150);
-        MSdelay (100);
-        play (nRE   ,4,130);
-        MSdelay (50);
-        play (nMI   ,4,150);
-        MSdelay (50);
-        play (nDO   ,4,125);
-        MSdelay (50);
-        play (nLA   ,3,125);
-        MSdelay (100);
-        play (nSOL   ,3,200);
-        MSdelay (200);
-        
-        play (nMI   ,4,150);
-        MSdelay (50);
-        play (nMI   ,4,150);
-        MSdelay (150);
-        play (nMI   ,4,150);
-        MSdelay (200);
-        play (nDO   ,4,125);
-        MSdelay (50);
-        play (nMI   ,4,125);
-        MSdelay (150);
-        play (nSOL   ,4,200);
-        MSdelay (400);
-        
-        
-    
+        return;
 }

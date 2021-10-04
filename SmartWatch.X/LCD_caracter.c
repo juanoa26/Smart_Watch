@@ -4,26 +4,12 @@
 #include "config.h"
 #include "LCD_caracter.h"
 
-/*********************Definition of Ports********************************/
-
-
-
-
-
-unsigned  char  character1[ 8 ] = { 0x0e ,  0x1f ,  0x1f ,  0x0e ,  0x00 ,  0x0a ,  0x0a ,  0x00 };  /*  Value for Pi  */ 
-unsigned  char  character2[ 8 ] = { 0x15 ,  0x0e ,  0x11 ,  0x11 ,  0x0e ,  0x15 ,  0x00 ,  0x00 };  /*  Value for Diode  */ 
-unsigned  char  character3[ 8 ] = { 0x00 ,  0x00 ,  0x0e ,  0x1f ,  0x0e ,  0x00 ,  0x00 ,  0x00 };  /*  Value for Transistor  */ 
-
-
-
-
-
 /****************************Functions********************************/
 
-void LCD_Init()
+void LCD_Init(void)
 {
     LCD_Port = 0;       /*PORT as Output Port*/
-    MSdelay(15);        /*15ms,16x2 LCD Power on delay*/
+    LCD_MSdelay(15);        /*15ms,16x2 LCD Power on delay*/
     LCD_Command(0x02);  /*send for initialization of LCD 
                           for nibble (4-bit) mode */
     LCD_Command(0x28);  /*use 2 line and 
@@ -40,12 +26,12 @@ void LCD_Command(unsigned char cmd )
 	EN = 1;  /*High-to-low pulse on Enable pin to latch data*/ 
 	NOP();
 	EN = 0;
-	MSdelay(1);
+	LCD_MSdelay(1);
     ldata = (ldata & 0x0f) | (cmd<<4);  /*Send lower nibble of command to PORT */
 	EN = 1;
 	NOP();
 	EN = 0;
-	MSdelay(3);
+	LCD_MSdelay(3);
 }
 
 
@@ -56,12 +42,12 @@ void LCD_Char(unsigned char dat)
 	EN = 1;  /*High-to-low pulse on Enable pin to latch data*/
 	NOP();
 	EN = 0;
-	MSdelay(1);
+	LCD_MSdelay(1);
     ldata = (ldata & 0x0f) | (dat<<4);  /*Send lower nibble of data to PORT*/
 	EN = 1;  /*High-to-low pulse on Enable pin to latch data*/
 	NOP();
 	EN = 0;
-	MSdelay(3);
+	LCD_MSdelay(3);
 }
 void LCD_String(const char *msg)
 {
@@ -90,10 +76,10 @@ void LCD_String_xy(char row,char pos,const char *msg)
     LCD_String(msg);
 
 }
-void LCD_Clear()
+void LCD_Clear(void)
 {
    	LCD_Command(0x01);  /*clear display screen*/
-    MSdelay(3);
+    LCD_MSdelay(3);
 }
 
 void  LCD_Custom_Char ( unsigned  char  loc, unsigned  char  *msg) 
@@ -108,7 +94,7 @@ void  LCD_Custom_Char ( unsigned  char  loc, unsigned  char  *msg)
     }    
 }
 
-void MSdelay(unsigned int val)
+void LCD_MSdelay(unsigned int val)
 {
  unsigned int i,j;
  for(i=0;i<val;i++)

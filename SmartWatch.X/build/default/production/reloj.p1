@@ -12,8 +12,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./I2C_Master_File.h: 23: char I2C_Read(char flag);
 [v _I2C_Read `(uc ~T0 @X0 0 ef1`uc ]
 "19
-[; ;./I2C_Master_File.h: 19: char I2C_Stop();
-[v _I2C_Stop `(uc ~T0 @X0 0 e? ]
+[; ;./I2C_Master_File.h: 19: char I2C_Stop(void);
+[v _I2C_Stop `(uc ~T0 @X0 0 ef ]
 "7986 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 7986: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
 [v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
@@ -21,14 +21,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./I2C_Master_File.h: 14: void I2C_Init(void);
 [v _I2C_Init `(v ~T0 @X0 0 ef ]
 "27 ./LCD_caracter.h
-[; ;./LCD_caracter.h: 27: void LCD_Init();
-[v _LCD_Init `(v ~T0 @X0 0 e? ]
+[; ;./LCD_caracter.h: 27: void LCD_Init(void);
+[v _LCD_Init `(v ~T0 @X0 0 ef ]
 "32
-[; ;./LCD_caracter.h: 32: void LCD_Clear();
-[v _LCD_Clear `(v ~T0 @X0 0 e? ]
+[; ;./LCD_caracter.h: 32: void LCD_Clear(void);
+[v _LCD_Clear `(v ~T0 @X0 0 ef ]
 "26
-[; ;./LCD_caracter.h: 26: void MSdelay(unsigned int );
-[v _MSdelay `(v ~T0 @X0 0 ef1`ui ]
+[; ;./LCD_caracter.h: 26: void LCD_MSdelay(unsigned int );
+[v _LCD_MSdelay `(v ~T0 @X0 0 ef1`ui ]
 "31
 [; ;./LCD_caracter.h: 31: void LCD_String_xy(char, char , const char *);
 [v _LCD_String_xy `(v ~T0 @X0 0 ef3`uc`uc`*Cuc ]
@@ -787,7 +787,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 370 ]
 }
 "85
-[; ;reloj.c: 85: void RTC_Calendario()
+[; ;reloj.c: 85: void RTC_Calendario(void)
 [v _RTC_Calendario `(v ~T0 @X0 1 ef ]
 "86
 [; ;reloj.c: 86: {
@@ -841,8 +841,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;reloj.c: 97:     LCD_Clear();
 [e ( _LCD_Clear ..  ]
 "98
-[; ;reloj.c: 98:     MSdelay(10);
-[e ( _MSdelay (1 -> -> 10 `i `ui ]
+[; ;reloj.c: 98:     LCD_MSdelay(10);
+[e ( _LCD_MSdelay (1 -> -> 10 `i `ui ]
 "99
 [; ;reloj.c: 99:     while(1)
 [e :U 373 ]
@@ -1066,6 +1066,9 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> -> 115 `ui `i 387
  388 ]
 [e :U 379 ]
+"174
+[; ;reloj.c: 174:         return;
+[e $UE 371  ]
 "175
 [; ;reloj.c: 175:     }
 }

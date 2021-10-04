@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=smart_main.c LCD_caracter.c Temperatura.c Sensor_luz.c Melodia2.c reloj.c Reloj_ar.c
+SOURCEFILES_QUOTED_IF_SPACED=smart_main.c LCD_caracter.c Temperatura.c Sensor_luz.c Melodia.c reloj.c Reloj_ar.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/smart_main.p1 ${OBJECTDIR}/LCD_caracter.p1 ${OBJECTDIR}/Temperatura.p1 ${OBJECTDIR}/Sensor_luz.p1 ${OBJECTDIR}/Melodia2.p1 ${OBJECTDIR}/reloj.p1 ${OBJECTDIR}/Reloj_ar.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/smart_main.p1.d ${OBJECTDIR}/LCD_caracter.p1.d ${OBJECTDIR}/Temperatura.p1.d ${OBJECTDIR}/Sensor_luz.p1.d ${OBJECTDIR}/Melodia2.p1.d ${OBJECTDIR}/reloj.p1.d ${OBJECTDIR}/Reloj_ar.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/smart_main.p1 ${OBJECTDIR}/LCD_caracter.p1 ${OBJECTDIR}/Temperatura.p1 ${OBJECTDIR}/Sensor_luz.p1 ${OBJECTDIR}/Melodia.p1 ${OBJECTDIR}/reloj.p1 ${OBJECTDIR}/Reloj_ar.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/smart_main.p1.d ${OBJECTDIR}/LCD_caracter.p1.d ${OBJECTDIR}/Temperatura.p1.d ${OBJECTDIR}/Sensor_luz.p1.d ${OBJECTDIR}/Melodia.p1.d ${OBJECTDIR}/reloj.p1.d ${OBJECTDIR}/Reloj_ar.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/smart_main.p1 ${OBJECTDIR}/LCD_caracter.p1 ${OBJECTDIR}/Temperatura.p1 ${OBJECTDIR}/Sensor_luz.p1 ${OBJECTDIR}/Melodia2.p1 ${OBJECTDIR}/reloj.p1 ${OBJECTDIR}/Reloj_ar.p1
+OBJECTFILES=${OBJECTDIR}/smart_main.p1 ${OBJECTDIR}/LCD_caracter.p1 ${OBJECTDIR}/Temperatura.p1 ${OBJECTDIR}/Sensor_luz.p1 ${OBJECTDIR}/Melodia.p1 ${OBJECTDIR}/reloj.p1 ${OBJECTDIR}/Reloj_ar.p1
 
 # Source Files
-SOURCEFILES=smart_main.c LCD_caracter.c Temperatura.c Sensor_luz.c Melodia2.c reloj.c Reloj_ar.c
+SOURCEFILES=smart_main.c LCD_caracter.c Temperatura.c Sensor_luz.c Melodia.c reloj.c Reloj_ar.c
 
 
 
@@ -126,13 +126,13 @@ ${OBJECTDIR}/Sensor_luz.p1: Sensor_luz.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/Sensor_luz.d ${OBJECTDIR}/Sensor_luz.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/Sensor_luz.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/Melodia2.p1: Melodia2.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/Melodia.p1: Melodia.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Melodia2.p1.d 
-	@${RM} ${OBJECTDIR}/Melodia2.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Melodia2.p1 Melodia2.c 
-	@-${MV} ${OBJECTDIR}/Melodia2.d ${OBJECTDIR}/Melodia2.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/Melodia2.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	@${RM} ${OBJECTDIR}/Melodia.p1.d 
+	@${RM} ${OBJECTDIR}/Melodia.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Melodia.p1 Melodia.c 
+	@-${MV} ${OBJECTDIR}/Melodia.d ${OBJECTDIR}/Melodia.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Melodia.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/reloj.p1: reloj.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -183,13 +183,13 @@ ${OBJECTDIR}/Sensor_luz.p1: Sensor_luz.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/Sensor_luz.d ${OBJECTDIR}/Sensor_luz.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/Sensor_luz.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/Melodia2.p1: Melodia2.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/Melodia.p1: Melodia.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/Melodia2.p1.d 
-	@${RM} ${OBJECTDIR}/Melodia2.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Melodia2.p1 Melodia2.c 
-	@-${MV} ${OBJECTDIR}/Melodia2.d ${OBJECTDIR}/Melodia2.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/Melodia2.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	@${RM} ${OBJECTDIR}/Melodia.p1.d 
+	@${RM} ${OBJECTDIR}/Melodia.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/Melodia.p1 Melodia.c 
+	@-${MV} ${OBJECTDIR}/Melodia.d ${OBJECTDIR}/Melodia.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/Melodia.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/reloj.p1: reloj.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 

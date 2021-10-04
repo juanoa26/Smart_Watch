@@ -5913,31 +5913,31 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 #pragma config EBTRB = OFF
 # 15 "./LCD_caracter.h" 2
 # 26 "./LCD_caracter.h"
-void MSdelay(unsigned int );
-void LCD_Init();
+void LCD_MSdelay(unsigned int );
+void LCD_Init(void);
 void LCD_Command(unsigned char );
 void LCD_Char(unsigned char x);
 void LCD_String(const char *);
 void LCD_String_xy(char, char , const char *);
-void LCD_Clear();
+void LCD_Clear(void);
 void LCD_Custom_Char ( unsigned char , unsigned char *);
 # 9 "reloj.c" 2
 
 
 # 1 "./I2C_Master_File.h" 1
 # 13 "./I2C_Master_File.h"
-void I2C_Ready();
+void I2C_Ready(void);
 void I2C_Init(void);
 char I2C_Start(char);
 void I2C_Start_Wait(char);
 
 char I2C_Repeated_Start(char);
-char I2C_Stop();
+char I2C_Stop(void);
 char I2C_Write(unsigned char);
-void I2C_Ack();
-void I2C_Nack();
+void I2C_Ack(void);
+void I2C_Nack(void);
 char I2C_Read(char flag);
-void RTC_Calendario();
+void RTC_Calendario(void);
 # 11 "reloj.c" 2
 
 
@@ -5970,7 +5970,7 @@ void RTC_Read_Calendar(char read_calendar_address)
     I2C_Stop();
 }
 # 85 "reloj.c"
-void RTC_Calendario()
+void RTC_Calendario(void)
 {
 
     char secs[10],mins[10],hours[10];
@@ -5983,7 +5983,7 @@ void RTC_Calendario()
     I2C_Init();
     LCD_Init();
     LCD_Clear();
-    MSdelay(10);
+    LCD_MSdelay(10);
     while(1)
     {
         RTC_Read_Clock(0);
@@ -6059,6 +6059,6 @@ void RTC_Calendario()
                         break;
 
         }
-
+        return;
     }
 }

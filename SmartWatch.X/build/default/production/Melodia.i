@@ -1,4 +1,4 @@
-# 1 "Melodia2.c"
+# 1 "Melodia.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,9 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "Melodia2.c" 2
-
-
+# 1 "Melodia.c" 2
 
 
 
@@ -5469,7 +5467,7 @@ extern volatile __bit nW __attribute__((address(0x7E3A)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
-# 9 "Melodia2.c" 2
+# 7 "Melodia.c" 2
 
 # 1 "./config.h" 1
 
@@ -5703,7 +5701,7 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 2 3
 # 70 "./config.h" 2
-# 10 "Melodia2.c" 2
+# 8 "Melodia.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 3
@@ -5843,7 +5841,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 11 "Melodia2.c" 2
+# 9 "Melodia.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
@@ -5930,10 +5928,10 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
-# 12 "Melodia2.c" 2
+# 10 "Melodia.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
-# 13 "Melodia2.c" 2
+# 11 "Melodia.c" 2
 
 # 1 "./LCD_caracter.h" 1
 # 15 "./LCD_caracter.h"
@@ -6005,115 +6003,98 @@ typedef uint32_t uint_fast32_t;
 #pragma config EBTRB = OFF
 # 15 "./LCD_caracter.h" 2
 # 26 "./LCD_caracter.h"
-void MSdelay(unsigned int );
-void LCD_Init();
+void LCD_MSdelay(unsigned int );
+void LCD_Init(void);
 void LCD_Command(unsigned char );
 void LCD_Char(unsigned char x);
 void LCD_String(const char *);
 void LCD_String_xy(char, char , const char *);
-void LCD_Clear();
+void LCD_Clear(void);
 void LCD_Custom_Char ( unsigned char , unsigned char *);
-# 14 "Melodia2.c" 2
+# 12 "Melodia.c" 2
+# 32 "Melodia.c"
+int FreqNota[12]={
+
+15289,
+14430,
+13620,
+12856,
+12134,
+11453,
+10810,
+10204,
+9631,
+9090,
+8580,
+8099
+};
 
 
-
-void conf_CLK(void);
-void conf_IO(void);
-void conf_TA1(void);
-void desabilitar_Time();
-# 34 "Melodia2.c"
-uint8_t volatile var3seg = 0;
-    uint8_t volatile var3beep = 0;
-
-void PlayCancion( void ) {
+void Play(int nota,int octava,int duracion);
+void PlayCancion();
+void delay_us(int nota);
 
 
-
-
-    conf_CLK ();
-    conf_IO ();
-    conf_TA1 ();
-
-
-    INTCONbits.PEIE = 0;
-    (INTCONbits.GIE = 1);
-# 76 "Melodia2.c"
-}
-
-void conf_CLK(void) {
-    OSCCONbits.IRCF0 = 1;
-    OSCCONbits.IRCF1 = 1;
-    OSCCONbits.IRCF2 = 1;
-
-    OSCCONbits.SCS = 0b10;
-
-    OSCCONbits.IDLEN = 1;
-
-
-
-
-}
-# 102 "Melodia2.c"
-void conf_IO(void) {
-    ADCON1bits.PCFG = 0b1111;
-
-    TRISCbits.RC1 = 0;
-
-    LATCbits.LC1 = 0;
-}
-# 137 "Melodia2.c"
-void conf_TA1(void) {
-    T1CONbits.T1CKPS0 = 1;
-    T1CONbits.T1CKPS1 = 1;
-
-    TMR1H = 0xCF;
-    TMR1L = 0x2C;
-
-    PIR1bits.TMR1IF = 0;
-    PIE1bits.TMR1IE = 1;
-
-    T1CONbits.TMR1ON = 1;
-}
-
-void __attribute__((picinterrupt(("")))) ISR ( void )
-{
-    if ( PIR1bits.TMR1IF == 1 )
-    {
-        LATCbits.LC1 = ~LATCbits.LC1;
-        if ( var3seg == 60 && var3beep < 6 )
-        {
-
-
-            var3beep++;
-
-        }
-        else
-        {
-            if ( var3beep > 5 )
-            {
-
-                var3beep = 0;
-                var3seg = 0;
-                desabilitar_Time();
-            }
-
-            var3seg++;
-        }
-
-
-
-        TMR1H = 0xCF;
-        TMR1L = 0x2C;
-
-        PIR1bits.TMR1IF = 0;
+void delay_us(int nota){
+    for(int i=0; i<=nota;i++ ){
+        _delay((unsigned long)((1)*(8000000/4000000.0)));
     }
 }
 
-void desabilitar_Time(){
-PIE1bits.TMR1IE = 0;
 
-    T1CONbits.TMR1ON = 0;
+void play(int nota, int octava, int duracion){
+     int fn;
+     int mS_Transcurridos=0;
+     int CiclosL=0;
 
-     INTCONbits.PEIE = 0;
-    (INTCONbits.GIE = 0);
+     fn=FreqNota[nota];
+
+     fn>>=(octava);
+
+
+    do{
+
+        TRISCbits . TRISC1 = 0;
+        LATCbits . LATC1 = 1 ;
+        delay_us(fn);;
+        CiclosL+=(fn);
+
+        LATCbits . LATC1 = 0 ;
+         delay_us(fn);
+        CiclosL+=(fn);
+        CiclosL+=25;
+
+        while(CiclosL>999){
+
+           CiclosL-=1000;
+           mS_Transcurridos++;
+           CiclosL+=25;
+        }
+     }while (duracion>mS_Transcurridos);
+
+
+
+
+}
+
+void PlayCancion(){
+
+
+        play (4 ,4,150);
+        _delay((unsigned long)((50)*(8000000/4000.0)));
+        play (4 ,4,150);
+        _delay((unsigned long)((150)*(8000000/4000.0)));
+        play (4 ,4,150);
+        _delay((unsigned long)((200)*(8000000/4000.0)));
+
+        play (0 ,4,125);
+        _delay((unsigned long)((50)*(8000000/4000.0)));
+        play (4 ,4,125);
+        _delay((unsigned long)((150)*(8000000/4000.0)));
+        play (7 ,4,200);
+        _delay((unsigned long)((400)*(8000000/4000.0)));
+        play (7 ,3,350);
+        _delay((unsigned long)((300)*(8000000/4000.0)));
+
+        return;
 }

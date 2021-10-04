@@ -67,7 +67,7 @@ void RTC_Read_Calendar(char read_calendar_address)
 }
 
 /*********************************************************************
- * Function:        RTC_Calendario()
+ * Function:        void RTC_Calendario()
  *
  *
  * Input:           None
@@ -82,7 +82,7 @@ void RTC_Read_Calendar(char read_calendar_address)
  * Note:            None
  ********************************************************************/
 
-void RTC_Calendario()
+void RTC_Calendario(void)
 {
     
     char secs[10],mins[10],hours[10];
@@ -95,7 +95,7 @@ void RTC_Calendario()
     I2C_Init();                     /*initialize I2C protocol*/
     LCD_Init();                     /*initialize LCD16x2*/    
     LCD_Clear();
-    MSdelay(10);
+    LCD_MSdelay(10);
     while(1)
     { 
         RTC_Read_Clock(0);              /*gives second,minute and hour*/
@@ -171,6 +171,6 @@ void RTC_Calendario()
                         break;
                         
         }
-        
+        return;
     }    
 }

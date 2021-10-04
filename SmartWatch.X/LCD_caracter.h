@@ -17,19 +17,19 @@
 #define _XTAL_FREQ 8000000
 /*********************Definition of Ports********************************/
 
-#define RS LATD0  /*PIN 0 of PORTB is assigned for register select Pin of LCD*/
-#define EN LATD1  /*PIN 1 of PORTB is assigned for enable Pin of LCD */
-#define ldata LATD  /*PORTB(PB4-PB7) is assigned for LCD Data Output*/ 
-#define LCD_Port TRISD  /*define macros for PORTB Direction Register*/
+#define RS LATD0  /*PIN 0 of PORTD is assigned for register select Pin of LCD*/
+#define EN LATD1  /*PIN 1 of PORTD is assigned for enable Pin of LCD */
+#define ldata LATD  /*PORTD(PD4-PD7) is assigned for LCD Data Output*/ 
+#define LCD_Port TRISD  /*define macros for PORTD Direction Register*/
 /*********************Proto-Type Declaration*****************************/
 
-void MSdelay(unsigned int );        /*Generate delay in ms*/
-void LCD_Init();                    /*Initialize LCD*/
+void LCD_MSdelay(unsigned int );        /*Generate delay in ms*/
+void LCD_Init(void);                    /*Initialize LCD*/
 void LCD_Command(unsigned char );   /*Send command to LCD*/
 void LCD_Char(unsigned char x);     /*Send data to LCD*/
 void LCD_String(const char *);      /*Display data string on LCD*/
 void LCD_String_xy(char, char , const char *);
-void LCD_Clear();                   /*Clear LCD Screen*/
+void LCD_Clear(void);                   /*Clear LCD Screen*/
 void  LCD_Custom_Char ( unsigned  char , unsigned  char *); 
 #endif	/* XC_HEADER_TEMPLATE_H */
 

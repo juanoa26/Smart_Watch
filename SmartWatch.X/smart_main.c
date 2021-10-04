@@ -7,7 +7,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-
+/* Definition of ports, outputs and inputs */
 
 //#define _User_
 #ifdef _User_
@@ -22,6 +22,8 @@
 #define ON 1
 #define OFF 0
 
+/* Definition of variables, emoticons and functions */
+
 float tempar;
 float luz;
 char Stemp[20];
@@ -30,28 +32,40 @@ char Sluz[20];
 char i;
 uint16_t ReadADC(void);
 uint16_t ReadLUZ(void);
-void PlayCancion();
+void PlayCancion(void);
 
 
 unsigned char character1[ 8 ] = {0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00}; /*  Value for Rainy day  */
 unsigned char character2[ 8 ] = {0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00}; /*  Value for Sunny day  */
 unsigned char character3[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00}; /*  Value for Cloudy day  */
 
+/*********************************************************************
+ * Function:        void main()
+ *
+ * Input:           None
+ *
+ * Output:          None
+ *
+ * Overview:        Funcion pricipal que se encarga del funcionamiento
+ *                  del programa
+ *
+ * Note:            None
+ ********************************************************************/
+
 void main() {
     OSCCON = 0x72; /* Use internal oscillator of 8MHz Frequency */
     TRISE = 0x00; /* Set direction of PORTB as OUTPUT to which LED is connected */
 
 
-    I2C_Init();
+    I2C_Init();/*Initialize the I2C protocol*/
     LCD_Init(); /*Initialize LCD to 5*8 matrix in 4-bit mode*/
-    LCD_String_xy(1, 0, " Buenos Dias "); /* Display string for respective symbol */
     LCD_Clear();
 
     while (1) {
         tempar = ReadADC();
         luz = ReadLUZ();
         RTC_Calendario();
-        MSdelay(10);
+        LCD_MSdelay(10);
 
         if (tempar > 15 && (luz > 0 && luz < 400)) {
             LED_GREEN = OFF;
@@ -64,7 +78,7 @@ void main() {
             LCD_Char(0);
             PlayCancion();
         }
-        if ((tempar >= 12 && tempar <= 15)&&(luz > 400 && luz < 700)) {
+        else if ((tempar >= 12 && tempar <= 15)&&(luz > 400 && luz < 700)) {
             LED_GREEN = ON;
             LED_GREEN1 = ON;
             LED_GREEN2 = OFF;
@@ -75,7 +89,7 @@ void main() {
             LCD_Char(0);
             
         }
-        if (tempar < 12 && (luz > 700 && luz < 1500)) {
+        else if(tempar < 12 && (luz > 700 && luz < 1500)) {
             LED_GREEN = ON;
             LED_GREEN1 = ON;
             LED_GREEN2 = ON;
@@ -84,10 +98,8 @@ void main() {
             LCD_Custom_Char(0, character1); /* Write custom character to CGRAM 0x00 memory location */
             LCD_Command(0xc0);
             LCD_Char(0);
-
-            //Calendario();
         }
-        MSdelay(3000);
+        LCD_MSdelay(3000);
         LCD_Clear();
     };
 

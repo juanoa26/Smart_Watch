@@ -156,7 +156,7 @@
         <property key="program-the-device-with-default-config-words" value="true"/>
         <property key="remove-unused-sections" value="true"/>
       </HI-TECH-LINK>
-      <item path="Melodia.c" ex="true" overriding="false">
+      <item path="Melodia.c" ex="false" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
@@ -166,7 +166,7 @@
         <XC8-config-global>
         </XC8-config-global>
       </item>
-      <item path="Melodia2.c" ex="false" overriding="false">
+      <item path="Melodia2.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>
