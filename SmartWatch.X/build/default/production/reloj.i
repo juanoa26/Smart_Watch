@@ -6011,14 +6011,7 @@ typedef uint32_t uint_fast32_t;
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
 # 17 "./Funciones.h" 2
-
-
-
-
-
-
-
-
+# 26 "./Funciones.h"
 float tempar;
 float luz;
 char Stemp[20];
@@ -6032,11 +6025,10 @@ unsigned char character3[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00}
 
 uint16_t ReadADC(void);
 uint16_t ReadLUZ(void);
-void PlayCancion(void);
 int Estados(void);
-void Estado_Soleado(void);
-void Estado_Nublado(void);
-void Estado_Lluvioso(void);
+void Sunny_State(void);
+void Cloudy_State(void);
+void Rainy_State(void);
 # 7 "reloj.c" 2
 
 # 1 "./I2C_Master_File.h" 1
@@ -6061,7 +6053,7 @@ void RTC_Calendario(void);
 
 int sec,min,hour;
 int Day,Date,Month,Year;
-# 31 "reloj.c"
+# 28 "reloj.c"
 void RTC_Read_Clock(char read_clock_address)
 {
     I2C_Start(0xD0);
@@ -6072,7 +6064,7 @@ void RTC_Read_Clock(char read_clock_address)
     hour= I2C_Read(1);
 
 }
-# 54 "reloj.c"
+# 51 "reloj.c"
 void RTC_Read_Calendar(char read_calendar_address)
 {
     I2C_Start(0xD0);
@@ -6084,7 +6076,7 @@ void RTC_Read_Calendar(char read_calendar_address)
     Year = I2C_Read(1);
     I2C_Stop();
 }
-# 82 "reloj.c"
+# 79 "reloj.c"
 void RTC_Calendario(void)
 {
 

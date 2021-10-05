@@ -8,6 +8,12 @@
 # 2 "<built-in>" 2
 # 1 "smart_main.c" 2
 
+
+
+
+
+
+
 # 1 "./LCD_caracter.h" 1
 # 12 "./LCD_caracter.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 1 3
@@ -5706,7 +5712,7 @@ void LCD_String(const char *);
 void LCD_String_xy(char, char , const char *);
 void LCD_Clear(void);
 void LCD_Custom_Char ( unsigned char , unsigned char *);
-# 2 "smart_main.c" 2
+# 8 "smart_main.c" 2
 
 # 1 "./I2C_Master_File.h" 1
 # 13 "./I2C_Master_File.h"
@@ -5722,7 +5728,7 @@ void I2C_Ack(void);
 void I2C_Nack(void);
 char I2C_Read(char flag);
 void RTC_Calendario(void);
-# 3 "smart_main.c" 2
+# 9 "smart_main.c" 2
 
 # 1 "./Funciones.h" 1
 # 13 "./Funciones.h"
@@ -6024,14 +6030,7 @@ typedef uint32_t uint_fast32_t;
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
 # 17 "./Funciones.h" 2
-
-
-
-
-
-
-
-
+# 26 "./Funciones.h"
 float tempar;
 float luz;
 char Stemp[20];
@@ -6045,13 +6044,12 @@ unsigned char character3[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00}
 
 uint16_t ReadADC(void);
 uint16_t ReadLUZ(void);
-void PlayCancion(void);
 int Estados(void);
-void Estado_Soleado(void);
-void Estado_Nublado(void);
-void Estado_Lluvioso(void);
-# 4 "smart_main.c" 2
-# 19 "smart_main.c"
+void Sunny_State(void);
+void Cloudy_State(void);
+void Rainy_State(void);
+# 10 "smart_main.c" 2
+# 25 "smart_main.c"
 void main() {
     OSCCON = 0x72;
     TRISE = 0x00;
@@ -6059,22 +6057,21 @@ void main() {
 
     I2C_Init();
     LCD_Init();
-    LCD_Clear();
 
     while (1) {
         RTC_Calendario();
         int caso = Estados();
         switch(caso){
             case 1:
-                Estado_Soleado();
+                Sunny_State();
                 break;
 
             case 2:
-                Estado_Nublado();
+                Cloudy_State();
                 break;
 
             case 3:
-                Estado_Lluvioso();
+                Rainy_State();
                 break;
 
             default:

@@ -1,3 +1,9 @@
+/* 
+ * File:   smart_main.c
+ * Author: Arlex Fabian Galindez-Geraldina Ivonne Carlosama-Juan Sebastian Osorio
+ *
+ * Created on 4 de octubre de 2021, 10:59 AM
+ */
 
 #include "LCD_caracter.h"
 #include "I2C_Master_File.h"
@@ -23,22 +29,21 @@ void main() {
 
     I2C_Init();/*Initialize the I2C protocol*/
     LCD_Init(); /*Initialize LCD to 5*8 matrix in 4-bit mode*/
-    LCD_Clear();
 
     while (1) {
         RTC_Calendario();
         int caso = Estados();
         switch(caso){
             case 1:
-                Estado_Soleado();
+                Sunny_State();
                 break;
              
             case 2:
-                Estado_Nublado();
+                Cloudy_State();
                 break;
                 
             case 3:
-                Estado_Lluvioso();
+                Rainy_State();
                 break;
             
             default:

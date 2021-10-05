@@ -12,9 +12,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "27 ./LCD_caracter.h
 [; ;./LCD_caracter.h: 27: void LCD_Init(void);
 [v _LCD_Init `(v ~T0 @X0 0 ef ]
-"32
-[; ;./LCD_caracter.h: 32: void LCD_Clear(void);
-[v _LCD_Clear `(v ~T0 @X0 0 ef ]
 "24 ./I2C_Master_File.h
 [; ;./I2C_Master_File.h: 24: void RTC_Calendario(void);
 [v _RTC_Calendario `(v ~T0 @X0 0 ef ]
@@ -22,17 +19,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./Funciones.h: 39: int Estados(void);
 [v _Estados `(i ~T0 @X0 0 ef ]
 "40
-[; ;./Funciones.h: 40: void Estado_Soleado(void);
-[v _Estado_Soleado `(v ~T0 @X0 0 ef ]
+[; ;./Funciones.h: 40: void Sunny_State(void);
+[v _Sunny_State `(v ~T0 @X0 0 ef ]
 "41
-[; ;./Funciones.h: 41: void Estado_Nublado(void);
-[v _Estado_Nublado `(v ~T0 @X0 0 ef ]
+[; ;./Funciones.h: 41: void Cloudy_State(void);
+[v _Cloudy_State `(v ~T0 @X0 0 ef ]
 "42
-[; ;./Funciones.h: 42: void Estado_Lluvioso(void);
-[v _Estado_Lluvioso `(v ~T0 @X0 0 ef ]
+[; ;./Funciones.h: 42: void Rainy_State(void);
+[v _Rainy_State `(v ~T0 @X0 0 ef ]
 "26 ./LCD_caracter.h
 [; ;./LCD_caracter.h: 26: void LCD_MSdelay(unsigned int );
 [v _LCD_MSdelay `(v ~T0 @X0 0 ef1`ui ]
+"32
+[; ;./LCD_caracter.h: 32: void LCD_Clear(void);
+[v _LCD_Clear `(v ~T0 @X0 0 ef ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -695,26 +695,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3  =  OFF       ]
 "65
 [p x EBTRB  =  OFF       ]
-"25 ./Funciones.h
-[; ;./Funciones.h: 25: float tempar;
+"26 ./Funciones.h
+[; ;./Funciones.h: 26: float tempar;
 [v _tempar `f ~T0 @X0 1 e ]
-"26
-[; ;./Funciones.h: 26: float luz;
-[v _luz `f ~T0 @X0 1 e ]
 "27
-[; ;./Funciones.h: 27: char Stemp[20];
-[v _Stemp `uc ~T0 @X0 -> 20 `i e ]
+[; ;./Funciones.h: 27: float luz;
+[v _luz `f ~T0 @X0 1 e ]
 "28
-[; ;./Funciones.h: 28: char Sluz[20];
-[v _Sluz `uc ~T0 @X0 -> 20 `i e ]
+[; ;./Funciones.h: 28: char Stemp[20];
+[v _Stemp `uc ~T0 @X0 -> 20 `i e ]
 "29
-[; ;./Funciones.h: 29: uint16_t result;
-[v _result `us ~T0 @X0 1 e ]
+[; ;./Funciones.h: 29: char Sluz[20];
+[v _Sluz `uc ~T0 @X0 -> 20 `i e ]
 "30
-[; ;./Funciones.h: 30: char i;
+[; ;./Funciones.h: 30: uint16_t result;
+[v _result `us ~T0 @X0 1 e ]
+"31
+[; ;./Funciones.h: 31: char i;
 [v _i `uc ~T0 @X0 1 e ]
-"32
-[; ;./Funciones.h: 32: unsigned char character1[ 8 ] = {0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00};
+"33
+[; ;./Funciones.h: 33: unsigned char character1[ 8 ] = {0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00};
 [v _character1 `uc ~T0 @X0 -> 8 `i e ]
 [i _character1
 :U ..
@@ -728,8 +728,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"33
-[; ;./Funciones.h: 33: unsigned char character2[ 8 ] = {0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00};
+"34
+[; ;./Funciones.h: 34: unsigned char character2[ 8 ] = {0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00};
 [v _character2 `uc ~T0 @X0 -> 8 `i e ]
 [i _character2
 :U ..
@@ -743,8 +743,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"34
-[; ;./Funciones.h: 34: unsigned char character3[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00};
+"35
+[; ;./Funciones.h: 35: unsigned char character3[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00};
 [v _character3 `uc ~T0 @X0 -> 8 `i e ]
 [i _character3
 :U ..
@@ -759,77 +759,74 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"19 smart_main.c
-[; ;smart_main.c: 19: void main() {
+"25 smart_main.c
+[; ;smart_main.c: 25: void main() {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"20
-[; ;smart_main.c: 20:     OSCCON = 0x72;
-[e = _OSCCON -> -> 114 `i `uc ]
-"21
-[; ;smart_main.c: 21:     TRISE = 0x00;
-[e = _TRISE -> -> 0 `i `uc ]
-"24
-[; ;smart_main.c: 24:     I2C_Init();
-[e ( _I2C_Init ..  ]
-"25
-[; ;smart_main.c: 25:     LCD_Init();
-[e ( _LCD_Init ..  ]
 "26
-[; ;smart_main.c: 26:     LCD_Clear();
-[e ( _LCD_Clear ..  ]
-"28
-[; ;smart_main.c: 28:     while (1) {
+[; ;smart_main.c: 26:     OSCCON = 0x72;
+[e = _OSCCON -> -> 114 `i `uc ]
+"27
+[; ;smart_main.c: 27:     TRISE = 0x00;
+[e = _TRISE -> -> 0 `i `uc ]
+"30
+[; ;smart_main.c: 30:     I2C_Init();
+[e ( _I2C_Init ..  ]
+"31
+[; ;smart_main.c: 31:     LCD_Init();
+[e ( _LCD_Init ..  ]
+"33
+[; ;smart_main.c: 33:     while (1) {
 [e :U 371 ]
 {
-"29
-[; ;smart_main.c: 29:         RTC_Calendario();
+"34
+[; ;smart_main.c: 34:         RTC_Calendario();
 [e ( _RTC_Calendario ..  ]
-"30
-[; ;smart_main.c: 30:         int caso = Estados();
+"35
+[; ;smart_main.c: 35:         int caso = Estados();
 [v _caso `i ~T0 @X0 1 a ]
 [e = _caso ( _Estados ..  ]
-"31
-[; ;smart_main.c: 31:         switch(caso){
+"36
+[; ;smart_main.c: 36:         switch(caso){
 [e $U 374  ]
 {
-"32
-[; ;smart_main.c: 32:             case 1:
-[e :U 375 ]
-"33
-[; ;smart_main.c: 33:                 Estado_Soleado();
-[e ( _Estado_Soleado ..  ]
-"34
-[; ;smart_main.c: 34:                 break;
-[e $U 373  ]
-"36
-[; ;smart_main.c: 36:             case 2:
-[e :U 376 ]
 "37
-[; ;smart_main.c: 37:                 Estado_Nublado();
-[e ( _Estado_Nublado ..  ]
+[; ;smart_main.c: 37:             case 1:
+[e :U 375 ]
 "38
-[; ;smart_main.c: 38:                 break;
+[; ;smart_main.c: 38:                 Sunny_State();
+[e ( _Sunny_State ..  ]
+"39
+[; ;smart_main.c: 39:                 break;
 [e $U 373  ]
-"40
-[; ;smart_main.c: 40:             case 3:
-[e :U 377 ]
 "41
-[; ;smart_main.c: 41:                 Estado_Lluvioso();
-[e ( _Estado_Lluvioso ..  ]
+[; ;smart_main.c: 41:             case 2:
+[e :U 376 ]
 "42
-[; ;smart_main.c: 42:                 break;
+[; ;smart_main.c: 42:                 Cloudy_State();
+[e ( _Cloudy_State ..  ]
+"43
+[; ;smart_main.c: 43:                 break;
 [e $U 373  ]
-"44
-[; ;smart_main.c: 44:             default:
-[e :U 378 ]
 "45
-[; ;smart_main.c: 45:                 break;
-[e $U 373  ]
+[; ;smart_main.c: 45:             case 3:
+[e :U 377 ]
+"46
+[; ;smart_main.c: 46:                 Rainy_State();
+[e ( _Rainy_State ..  ]
 "47
-[; ;smart_main.c: 47:         }
+[; ;smart_main.c: 47:                 break;
+[e $U 373  ]
+"49
+[; ;smart_main.c: 49:             default:
+[e :U 378 ]
+"50
+[; ;smart_main.c: 50:                 break;
+[e $U 373  ]
+"52
+[; ;smart_main.c: 52:         }
 }
 [e $U 373  ]
 [e :U 374 ]
@@ -838,19 +835,19 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 3 `i 377
  378 ]
 [e :U 373 ]
-"48
-[; ;smart_main.c: 48:         LCD_MSdelay(3000);
+"53
+[; ;smart_main.c: 53:         LCD_MSdelay(3000);
 [e ( _LCD_MSdelay (1 -> -> 3000 `i `ui ]
-"49
-[; ;smart_main.c: 49:         LCD_Clear();
+"54
+[; ;smart_main.c: 54:         LCD_Clear();
 [e ( _LCD_Clear ..  ]
-"50
-[; ;smart_main.c: 50:     };
+"55
+[; ;smart_main.c: 55:     };
 }
 [e :U 370 ]
 [e $U 371  ]
 [e :U 372 ]
-"52
-[; ;smart_main.c: 52: }
+"57
+[; ;smart_main.c: 57: }
 [e :UE 369 ]
 }

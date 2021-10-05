@@ -1,7 +1,8 @@
 /* 
- * File:   
- * Author: 
- * Comments:
+ * File:  Melodia.h 
+ * Author: Arlex Fabian Galindez-Geraldina Ivonne Carlosama-Juan Sebastian Osorio
+ * Comments: Liberia que contiene las especificaciones de las notas musicales 
+ *            y la declaracion de las funciones
  * Revision history: 
  */
 

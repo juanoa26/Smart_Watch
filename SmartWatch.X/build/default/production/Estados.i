@@ -6012,14 +6012,7 @@ typedef uint32_t uint_fast32_t;
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
 # 17 "./Funciones.h" 2
-
-
-
-
-
-
-
-
+# 26 "./Funciones.h"
 float tempar;
 float luz;
 char Stemp[20];
@@ -6033,13 +6026,35 @@ unsigned char character3[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00}
 
 uint16_t ReadADC(void);
 uint16_t ReadLUZ(void);
-void PlayCancion(void);
 int Estados(void);
-void Estado_Soleado(void);
-void Estado_Nublado(void);
-void Estado_Lluvioso(void);
+void Sunny_State(void);
+void Cloudy_State(void);
+void Rainy_State(void);
 # 8 "Estados.c" 2
-# 23 "Estados.c"
+
+# 1 "./Melodia.h" 1
+# 22 "./Melodia.h"
+int FreqNota[12]={
+
+15289,
+14430,
+13620,
+12856,
+12134,
+11453,
+10810,
+10204,
+9631,
+9090,
+8580,
+8099
+};
+
+void Play(int nota,int octava,int duracion);
+void PlayCancion();
+void delay_us(int nota);
+# 9 "Estados.c" 2
+# 24 "Estados.c"
 int Estados() {
     tempar = ReadADC();
     luz = ReadLUZ();
@@ -6053,8 +6068,8 @@ int Estados() {
         return 3;
     }
 }
-# 50 "Estados.c"
-void Estado_Soleado() {
+# 51 "Estados.c"
+void Sunny_State() {
     LATE0 = 0;
     LATE1 = 0;
     LATE2 = 0;
@@ -6066,8 +6081,8 @@ void Estado_Soleado() {
     PlayCancion();
     return;
 }
-# 76 "Estados.c"
-void Estado_Nublado() {
+# 77 "Estados.c"
+void Cloudy_State() {
     LATE0 = 1;
     LATE1 = 1;
     LATE2 = 0;
@@ -6078,8 +6093,8 @@ void Estado_Nublado() {
     LCD_Char(0);
     return;
 }
-# 101 "Estados.c"
-void Estado_Lluvioso() {
+# 102 "Estados.c"
+void Rainy_State() {
     LATE0 = 1;
     LATE1 = 1;
     LATE2 = 1;

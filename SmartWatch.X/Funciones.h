@@ -1,10 +1,10 @@
 /* 
- * File:   
- * Author: 
- * Comments:
+ * File:  Funciones.h 
+ * Author: Arlex Fabian Galindez-Geraldina Ivonne Carlosama-Juan Sebastian Osorio
+ * Comments: Liberia que contiene las especificaciones de las variables utilizadas en Temperatura.c,
+ *          Sensor_luz.c, asi como la declaracion de funciones, leds y los emoticones que se mostraran
  * Revision history: 
  */
-
 // This is a guard condition so that contents of this file are not included
 // more than once.  
 
@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
+
 
 #define LED_GREEN LATE0
 #define LED_GREEN1 LATE1
@@ -35,9 +36,8 @@ unsigned char character3[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00}
 
 uint16_t ReadADC(void);
 uint16_t ReadLUZ(void);
-void PlayCancion(void);
 int Estados(void);
-void Estado_Soleado(void);
-void Estado_Nublado(void);
-void Estado_Lluvioso(void);
+void Sunny_State(void);
+void Cloudy_State(void);
+void Rainy_State(void);
 

@@ -6011,14 +6011,7 @@ typedef uint32_t uint_fast32_t;
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
 # 17 "./Funciones.h" 2
-
-
-
-
-
-
-
-
+# 26 "./Funciones.h"
 float tempar;
 float luz;
 char Stemp[20];
@@ -6032,16 +6025,15 @@ unsigned char character3[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00}
 
 uint16_t ReadADC(void);
 uint16_t ReadLUZ(void);
-void PlayCancion(void);
 int Estados(void);
-void Estado_Soleado(void);
-void Estado_Nublado(void);
-void Estado_Lluvioso(void);
+void Sunny_State(void);
+void Cloudy_State(void);
+void Rainy_State(void);
 # 7 "Melodia.c" 2
 
 
 # 1 "./Melodia.h" 1
-# 21 "./Melodia.h"
+# 22 "./Melodia.h"
 int FreqNota[12]={
 
 15289,
@@ -6058,20 +6050,17 @@ int FreqNota[12]={
 8099
 };
 
-
 void Play(int nota,int octava,int duracion);
 void PlayCancion();
 void delay_us(int nota);
 # 9 "Melodia.c" 2
-
-
+# 24 "Melodia.c"
 void delay_us(int nota){
     for(int i=0; i<=nota;i++ ){
         _delay((unsigned long)((1)*(8000000/4000000.0)));
     }
 }
-
-
+# 46 "Melodia.c"
 void play(int nota, int octava, int duracion){
      int fn;
      int mS_Transcurridos=0;
@@ -6106,7 +6095,7 @@ void play(int nota, int octava, int duracion){
 
 
 }
-
+# 93 "Melodia.c"
 void PlayCancion(){
 
 

@@ -1,11 +1,12 @@
 /* 
  * File:   Estados.c
- * Author: User
+ * Author: Arlex Fabian Galindez-Geraldina Ivonne Carlosama-Juan Sebastian Osorio
  *
  * Created on 4 de octubre de 2021, 10:59 AM
  */
 
 #include "Funciones.h"
+#include "Melodia.h"
 
 /*********************************************************************
  * Function:        int Estados()
@@ -35,7 +36,7 @@ int Estados() {
 }
 
 /*********************************************************************
- * Function:        void Estado_Soleado()
+ * Function:        void Sunny_State()
  *
  * Input:           None
  *
@@ -47,7 +48,7 @@ int Estados() {
  * Note:            None
  ********************************************************************/
 
-void Estado_Soleado() {
+void Sunny_State() {
     LED_GREEN = OFF;
     LED_GREEN1 = OFF;
     LED_GREEN2 = OFF;
@@ -61,7 +62,7 @@ void Estado_Soleado() {
 }
 
 /*********************************************************************
- * Function:        void Estado_Nublado()
+ * Function:        void Cloudy_State()
  *
  * Input:           None
  *
@@ -73,7 +74,7 @@ void Estado_Soleado() {
  * Note:            None
  ********************************************************************/
 
-void Estado_Nublado() {
+void Cloudy_State() {
     LED_GREEN = ON;
     LED_GREEN1 = ON;
     LED_GREEN2 = OFF;
@@ -86,7 +87,7 @@ void Estado_Nublado() {
 }
 
 /*********************************************************************
- * Function:        void Estado_Lluvioso()
+ * Function:        void Rainy_State()
  *
  * Input:           None
  *
@@ -98,7 +99,7 @@ void Estado_Nublado() {
  * Note:            None
  ********************************************************************/
 
-void Estado_Lluvioso() {
+void Rainy_State() {
     LED_GREEN = ON;
     LED_GREEN1 = ON;
     LED_GREEN2 = ON;

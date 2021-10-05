@@ -1,9 +1,9 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"36 ./Funciones.h
-[; ;./Funciones.h: 36: uint16_t ReadADC(void);
+"37 ./Funciones.h
+[; ;./Funciones.h: 37: uint16_t ReadADC(void);
 [v _ReadADC `(us ~T0 @X0 0 ef ]
-"37
-[; ;./Funciones.h: 37: uint16_t ReadLUZ(void);
+"38
+[; ;./Funciones.h: 38: uint16_t ReadLUZ(void);
 [v _ReadLUZ `(us ~T0 @X0 0 ef ]
 "10011 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 10011: extern volatile __bit LATE0 __attribute__((address(0x7C68)));
@@ -28,9 +28,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "29
 [; ;./LCD_caracter.h: 29: void LCD_Char(unsigned char x);
 [v _LCD_Char `(v ~T0 @X0 0 ef1`uc ]
-"38 ./Funciones.h
-[; ;./Funciones.h: 38: void PlayCancion(void);
-[v _PlayCancion `(v ~T0 @X0 0 ef ]
+"39 ./Melodia.h
+[; ;./Melodia.h: 39: void PlayCancion();
+[v _PlayCancion `(v ~T0 @X0 0 e? ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -693,26 +693,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3  =  OFF       ]
 "65
 [p x EBTRB  =  OFF       ]
-"25 ./Funciones.h
-[; ;./Funciones.h: 25: float tempar;
+"26 ./Funciones.h
+[; ;./Funciones.h: 26: float tempar;
 [v _tempar `f ~T0 @X0 1 e ]
-"26
-[; ;./Funciones.h: 26: float luz;
-[v _luz `f ~T0 @X0 1 e ]
 "27
-[; ;./Funciones.h: 27: char Stemp[20];
-[v _Stemp `uc ~T0 @X0 -> 20 `i e ]
+[; ;./Funciones.h: 27: float luz;
+[v _luz `f ~T0 @X0 1 e ]
 "28
-[; ;./Funciones.h: 28: char Sluz[20];
-[v _Sluz `uc ~T0 @X0 -> 20 `i e ]
+[; ;./Funciones.h: 28: char Stemp[20];
+[v _Stemp `uc ~T0 @X0 -> 20 `i e ]
 "29
-[; ;./Funciones.h: 29: uint16_t result;
-[v _result `us ~T0 @X0 1 e ]
+[; ;./Funciones.h: 29: char Sluz[20];
+[v _Sluz `uc ~T0 @X0 -> 20 `i e ]
 "30
-[; ;./Funciones.h: 30: char i;
+[; ;./Funciones.h: 30: uint16_t result;
+[v _result `us ~T0 @X0 1 e ]
+"31
+[; ;./Funciones.h: 31: char i;
 [v _i `uc ~T0 @X0 1 e ]
-"32
-[; ;./Funciones.h: 32: unsigned char character1[ 8 ] = {0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00};
+"33
+[; ;./Funciones.h: 33: unsigned char character1[ 8 ] = {0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00};
 [v _character1 `uc ~T0 @X0 -> 8 `i e ]
 [i _character1
 :U ..
@@ -726,8 +726,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"33
-[; ;./Funciones.h: 33: unsigned char character2[ 8 ] = {0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00};
+"34
+[; ;./Funciones.h: 34: unsigned char character2[ 8 ] = {0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00};
 [v _character2 `uc ~T0 @X0 -> 8 `i e ]
 [i _character2
 :U ..
@@ -741,8 +741,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"34
-[; ;./Funciones.h: 34: unsigned char character3[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00};
+"35
+[; ;./Funciones.h: 35: unsigned char character3[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00};
 [v _character3 `uc ~T0 @X0 -> 8 `i e ]
 [i _character3
 :U ..
@@ -756,170 +756,189 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"23 Estados.c
-[; ;Estados.c: 23: int Estados() {
+"22 ./Melodia.h
+[; ;./Melodia.h: 22: int FreqNota[12]={
+[v _FreqNota `i ~T0 @X0 -> 12 `i e ]
+[i _FreqNota
+:U ..
+-> 15289 `i
+-> 14430 `i
+-> 13620 `i
+-> 12856 `i
+-> 12134 `i
+-> 11453 `i
+-> 10810 `i
+-> 10204 `i
+-> 9631 `i
+-> 9090 `i
+-> 8580 `i
+-> 8099 `i
+..
+]
+"24 Estados.c
+[; ;Estados.c: 24: int Estados() {
 [v _Estados `(i ~T0 @X0 1 ef ]
 {
 [e :U _Estados ]
 [f ]
-"24
-[; ;Estados.c: 24:     tempar = ReadADC();
-[e = _tempar -> ( _ReadADC ..  `f ]
 "25
-[; ;Estados.c: 25:     luz = ReadLUZ();
+[; ;Estados.c: 25:     tempar = ReadADC();
+[e = _tempar -> ( _ReadADC ..  `f ]
+"26
+[; ;Estados.c: 26:     luz = ReadLUZ();
 [e = _luz -> ( _ReadLUZ ..  `f ]
-"27
-[; ;Estados.c: 27:     if (tempar > 15 && (luz > 0 && luz < 400)) {
+"28
+[; ;Estados.c: 28:     if (tempar > 15 && (luz > 0 && luz < 400)) {
 [e $ ! && > _tempar -> -> 15 `i `f && > _luz -> -> 0 `i `f < _luz -> -> 400 `i `f 370  ]
 {
-"28
-[; ;Estados.c: 28:         return 1;
+"29
+[; ;Estados.c: 29:         return 1;
 [e ) -> 1 `i ]
 [e $UE 369  ]
-"29
-[; ;Estados.c: 29:     } else if ((tempar >= 12 && tempar <= 15)&&(luz > 400 && luz < 700)) {
+"30
+[; ;Estados.c: 30:     } else if ((tempar >= 12 && tempar <= 15)&&(luz > 400 && luz < 700)) {
 }
 [e $U 371  ]
 [e :U 370 ]
 [e $ ! && && >= _tempar -> -> 12 `i `f <= _tempar -> -> 15 `i `f && > _luz -> -> 400 `i `f < _luz -> -> 700 `i `f 372  ]
 {
-"30
-[; ;Estados.c: 30:         return 2;
+"31
+[; ;Estados.c: 31:         return 2;
 [e ) -> 2 `i ]
 [e $UE 369  ]
-"32
-[; ;Estados.c: 32:     } else if (tempar < 12 && (luz > 700 && luz < 1500)) {
+"33
+[; ;Estados.c: 33:     } else if (tempar < 12 && (luz > 700 && luz < 1500)) {
 }
 [e $U 373  ]
 [e :U 372 ]
 [e $ ! && < _tempar -> -> 12 `i `f && > _luz -> -> 700 `i `f < _luz -> -> 1500 `i `f 374  ]
 {
-"33
-[; ;Estados.c: 33:         return 3;
+"34
+[; ;Estados.c: 34:         return 3;
 [e ) -> 3 `i ]
 [e $UE 369  ]
-"34
-[; ;Estados.c: 34:     }
+"35
+[; ;Estados.c: 35:     }
 }
 [e :U 374 ]
 [e :U 373 ]
 [e :U 371 ]
-"35
-[; ;Estados.c: 35: }
+"36
+[; ;Estados.c: 36: }
 [e :UE 369 ]
 }
-"50
-[; ;Estados.c: 50: void Estado_Soleado() {
-[v _Estado_Soleado `(v ~T0 @X0 1 ef ]
-{
-[e :U _Estado_Soleado ]
-[f ]
 "51
-[; ;Estados.c: 51:     LATE0 = 0;
-[e = _LATE0 -> -> 0 `i `b ]
+[; ;Estados.c: 51: void Sunny_State() {
+[v _Sunny_State `(v ~T0 @X0 1 ef ]
+{
+[e :U _Sunny_State ]
+[f ]
 "52
-[; ;Estados.c: 52:     LATE1 = 0;
-[e = _LATE1 -> -> 0 `i `b ]
+[; ;Estados.c: 52:     LATE0 = 0;
+[e = _LATE0 -> -> 0 `i `b ]
 "53
-[; ;Estados.c: 53:     LATE2 = 0;
-[e = _LATE2 -> -> 0 `i `b ]
+[; ;Estados.c: 53:     LATE1 = 0;
+[e = _LATE1 -> -> 0 `i `b ]
 "54
-[; ;Estados.c: 54:     sprintf(Stemp, "%0.0fC", tempar);
-[e ( _sprintf (1 , (. , &U _Stemp :s 1C -> _tempar `d ]
+[; ;Estados.c: 54:     LATE2 = 0;
+[e = _LATE2 -> -> 0 `i `b ]
 "55
-[; ;Estados.c: 55:     LCD_String_xy(1, 0, Stemp);
-[e ( _LCD_String_xy (3 , , -> -> 1 `i `uc -> -> 0 `i `uc -> &U _Stemp `*Cuc ]
+[; ;Estados.c: 55:     sprintf(Stemp, "%0.0fC", tempar);
+[e ( _sprintf (1 , (. , &U _Stemp :s 1C -> _tempar `d ]
 "56
-[; ;Estados.c: 56:     LCD_Custom_Char(0, character2);
-[e ( _LCD_Custom_Char (2 , -> -> 0 `i `uc &U _character2 ]
+[; ;Estados.c: 56:     LCD_String_xy(1, 0, Stemp);
+[e ( _LCD_String_xy (3 , , -> -> 1 `i `uc -> -> 0 `i `uc -> &U _Stemp `*Cuc ]
 "57
-[; ;Estados.c: 57:     LCD_Command(0xc0);
-[e ( _LCD_Command (1 -> -> 192 `i `uc ]
+[; ;Estados.c: 57:     LCD_Custom_Char(0, character2);
+[e ( _LCD_Custom_Char (2 , -> -> 0 `i `uc &U _character2 ]
 "58
-[; ;Estados.c: 58:     LCD_Char(0);
-[e ( _LCD_Char (1 -> -> 0 `i `uc ]
+[; ;Estados.c: 58:     LCD_Command(0xc0);
+[e ( _LCD_Command (1 -> -> 192 `i `uc ]
 "59
-[; ;Estados.c: 59:     PlayCancion();
-[e ( _PlayCancion ..  ]
+[; ;Estados.c: 59:     LCD_Char(0);
+[e ( _LCD_Char (1 -> -> 0 `i `uc ]
 "60
-[; ;Estados.c: 60:     return;
-[e $UE 375  ]
+[; ;Estados.c: 60:     PlayCancion();
+[e ( _PlayCancion ..  ]
 "61
-[; ;Estados.c: 61: }
+[; ;Estados.c: 61:     return;
+[e $UE 375  ]
+"62
+[; ;Estados.c: 62: }
 [e :UE 375 ]
 }
-"76
-[; ;Estados.c: 76: void Estado_Nublado() {
-[v _Estado_Nublado `(v ~T0 @X0 1 ef ]
-{
-[e :U _Estado_Nublado ]
-[f ]
 "77
-[; ;Estados.c: 77:     LATE0 = 1;
-[e = _LATE0 -> -> 1 `i `b ]
+[; ;Estados.c: 77: void Cloudy_State() {
+[v _Cloudy_State `(v ~T0 @X0 1 ef ]
+{
+[e :U _Cloudy_State ]
+[f ]
 "78
-[; ;Estados.c: 78:     LATE1 = 1;
-[e = _LATE1 -> -> 1 `i `b ]
+[; ;Estados.c: 78:     LATE0 = 1;
+[e = _LATE0 -> -> 1 `i `b ]
 "79
-[; ;Estados.c: 79:     LATE2 = 0;
-[e = _LATE2 -> -> 0 `i `b ]
+[; ;Estados.c: 79:     LATE1 = 1;
+[e = _LATE1 -> -> 1 `i `b ]
 "80
-[; ;Estados.c: 80:     sprintf(Stemp, "%0.0fC", tempar);
-[e ( _sprintf (1 , (. , &U _Stemp :s 2C -> _tempar `d ]
+[; ;Estados.c: 80:     LATE2 = 0;
+[e = _LATE2 -> -> 0 `i `b ]
 "81
-[; ;Estados.c: 81:     LCD_String_xy(1, 0, Stemp);
-[e ( _LCD_String_xy (3 , , -> -> 1 `i `uc -> -> 0 `i `uc -> &U _Stemp `*Cuc ]
+[; ;Estados.c: 81:     sprintf(Stemp, "%0.0fC", tempar);
+[e ( _sprintf (1 , (. , &U _Stemp :s 2C -> _tempar `d ]
 "82
-[; ;Estados.c: 82:     LCD_Custom_Char(0, character3);
-[e ( _LCD_Custom_Char (2 , -> -> 0 `i `uc &U _character3 ]
+[; ;Estados.c: 82:     LCD_String_xy(1, 0, Stemp);
+[e ( _LCD_String_xy (3 , , -> -> 1 `i `uc -> -> 0 `i `uc -> &U _Stemp `*Cuc ]
 "83
-[; ;Estados.c: 83:     LCD_Command(0xc0);
-[e ( _LCD_Command (1 -> -> 192 `i `uc ]
+[; ;Estados.c: 83:     LCD_Custom_Char(0, character3);
+[e ( _LCD_Custom_Char (2 , -> -> 0 `i `uc &U _character3 ]
 "84
-[; ;Estados.c: 84:     LCD_Char(0);
-[e ( _LCD_Char (1 -> -> 0 `i `uc ]
+[; ;Estados.c: 84:     LCD_Command(0xc0);
+[e ( _LCD_Command (1 -> -> 192 `i `uc ]
 "85
-[; ;Estados.c: 85:     return;
-[e $UE 376  ]
+[; ;Estados.c: 85:     LCD_Char(0);
+[e ( _LCD_Char (1 -> -> 0 `i `uc ]
 "86
-[; ;Estados.c: 86: }
+[; ;Estados.c: 86:     return;
+[e $UE 376  ]
+"87
+[; ;Estados.c: 87: }
 [e :UE 376 ]
 }
-"101
-[; ;Estados.c: 101: void Estado_Lluvioso() {
-[v _Estado_Lluvioso `(v ~T0 @X0 1 ef ]
-{
-[e :U _Estado_Lluvioso ]
-[f ]
 "102
-[; ;Estados.c: 102:     LATE0 = 1;
-[e = _LATE0 -> -> 1 `i `b ]
+[; ;Estados.c: 102: void Rainy_State() {
+[v _Rainy_State `(v ~T0 @X0 1 ef ]
+{
+[e :U _Rainy_State ]
+[f ]
 "103
-[; ;Estados.c: 103:     LATE1 = 1;
-[e = _LATE1 -> -> 1 `i `b ]
+[; ;Estados.c: 103:     LATE0 = 1;
+[e = _LATE0 -> -> 1 `i `b ]
 "104
-[; ;Estados.c: 104:     LATE2 = 1;
-[e = _LATE2 -> -> 1 `i `b ]
+[; ;Estados.c: 104:     LATE1 = 1;
+[e = _LATE1 -> -> 1 `i `b ]
 "105
-[; ;Estados.c: 105:     sprintf(Stemp, "%0.0fC", tempar);
-[e ( _sprintf (1 , (. , &U _Stemp :s 3C -> _tempar `d ]
+[; ;Estados.c: 105:     LATE2 = 1;
+[e = _LATE2 -> -> 1 `i `b ]
 "106
-[; ;Estados.c: 106:     LCD_String_xy(1, 0, Stemp);
-[e ( _LCD_String_xy (3 , , -> -> 1 `i `uc -> -> 0 `i `uc -> &U _Stemp `*Cuc ]
+[; ;Estados.c: 106:     sprintf(Stemp, "%0.0fC", tempar);
+[e ( _sprintf (1 , (. , &U _Stemp :s 3C -> _tempar `d ]
 "107
-[; ;Estados.c: 107:     LCD_Custom_Char(0, character1);
-[e ( _LCD_Custom_Char (2 , -> -> 0 `i `uc &U _character1 ]
+[; ;Estados.c: 107:     LCD_String_xy(1, 0, Stemp);
+[e ( _LCD_String_xy (3 , , -> -> 1 `i `uc -> -> 0 `i `uc -> &U _Stemp `*Cuc ]
 "108
-[; ;Estados.c: 108:     LCD_Command(0xc0);
-[e ( _LCD_Command (1 -> -> 192 `i `uc ]
+[; ;Estados.c: 108:     LCD_Custom_Char(0, character1);
+[e ( _LCD_Custom_Char (2 , -> -> 0 `i `uc &U _character1 ]
 "109
-[; ;Estados.c: 109:     LCD_Char(0);
-[e ( _LCD_Char (1 -> -> 0 `i `uc ]
+[; ;Estados.c: 109:     LCD_Command(0xc0);
+[e ( _LCD_Command (1 -> -> 192 `i `uc ]
 "110
-[; ;Estados.c: 110:     return;
-[e $UE 377  ]
+[; ;Estados.c: 110:     LCD_Char(0);
+[e ( _LCD_Char (1 -> -> 0 `i `uc ]
 "111
-[; ;Estados.c: 111: }
+[; ;Estados.c: 111:     return;
+[e $UE 377  ]
+"112
+[; ;Estados.c: 112: }
 [e :UE 377 ]
 }
 [p f _sprintf 8462340 ]
