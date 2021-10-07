@@ -36,5 +36,5 @@ int FreqNota[12]={  // retardos entre estado alto
 };
 
 void Play(int nota,int octava,int duracion);
-void PlayCancion();
+void PlayCancion(void);
 void delay_us(int nota);

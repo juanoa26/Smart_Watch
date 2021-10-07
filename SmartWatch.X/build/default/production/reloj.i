@@ -6018,6 +6018,7 @@ char Stemp[20];
 char Sluz[20];
 uint16_t result;
 char i;
+char data_in;
 
 unsigned char character1[ 8 ] = {0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00};
 unsigned char character2[ 8 ] = {0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00};
@@ -6029,6 +6030,7 @@ int Estados(void);
 void Sunny_State(void);
 void Cloudy_State(void);
 void Rainy_State(void);
+void Alarm_Status(void);
 # 7 "reloj.c" 2
 
 # 1 "./I2C_Master_File.h" 1

@@ -6019,6 +6019,7 @@ char Stemp[20];
 char Sluz[20];
 uint16_t result;
 char i;
+char data_in;
 
 unsigned char character1[ 8 ] = {0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00};
 unsigned char character2[ 8 ] = {0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00};
@@ -6030,6 +6031,7 @@ int Estados(void);
 void Sunny_State(void);
 void Cloudy_State(void);
 void Rainy_State(void);
+void Alarm_Status(void);
 # 8 "Estados.c" 2
 
 # 1 "./Melodia.h" 1
@@ -6051,13 +6053,22 @@ int FreqNota[12]={
 };
 
 void Play(int nota,int octava,int duracion);
-void PlayCancion();
+void PlayCancion(void);
 void delay_us(int nota);
 # 9 "Estados.c" 2
-# 24 "Estados.c"
+
+# 1 "./Usart.h" 1
+# 31 "./Usart.h"
+void USART_Init(long);
+void USART_TransmitChar(char);
+void USART_SendString(const char *);
+char USART_ReceiveChar(void);
+# 10 "Estados.c" 2
+# 25 "Estados.c"
 int Estados() {
     tempar = ReadADC();
     luz = ReadLUZ();
+
 
     if (tempar > 15 && (luz > 0 && luz < 400)) {
         return 1;
@@ -6067,8 +6078,11 @@ int Estados() {
     } else if (tempar < 12 && (luz > 700 && luz < 1500)) {
         return 3;
     }
+    if(data_in =='1'){
+        return 4;
+    }
 }
-# 51 "Estados.c"
+# 56 "Estados.c"
 void Sunny_State() {
     LATE0 = 0;
     LATE1 = 0;
@@ -6078,10 +6092,10 @@ void Sunny_State() {
     LCD_Custom_Char(0, character2);
     LCD_Command(0xc0);
     LCD_Char(0);
-    PlayCancion();
+
     return;
 }
-# 77 "Estados.c"
+# 82 "Estados.c"
 void Cloudy_State() {
     LATE0 = 1;
     LATE1 = 1;
@@ -6093,7 +6107,7 @@ void Cloudy_State() {
     LCD_Char(0);
     return;
 }
-# 102 "Estados.c"
+# 107 "Estados.c"
 void Rainy_State() {
     LATE0 = 1;
     LATE1 = 1;
@@ -6103,5 +6117,12 @@ void Rainy_State() {
     LCD_Custom_Char(0, character1);
     LCD_Command(0xc0);
     LCD_Char(0);
+    return;
+}
+# 130 "Estados.c"
+void Alarm_Status(void) {
+
+    USART_SendString("Buenos Dias");
+    PlayCancion();
     return;
 }

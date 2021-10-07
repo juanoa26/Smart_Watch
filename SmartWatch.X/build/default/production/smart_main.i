@@ -6037,6 +6037,7 @@ char Stemp[20];
 char Sluz[20];
 uint16_t result;
 char i;
+char data_in;
 
 unsigned char character1[ 8 ] = {0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00};
 unsigned char character2[ 8 ] = {0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00};
@@ -6048,20 +6049,30 @@ int Estados(void);
 void Sunny_State(void);
 void Cloudy_State(void);
 void Rainy_State(void);
+void Alarm_Status(void);
 # 10 "smart_main.c" 2
-# 25 "smart_main.c"
+
+# 1 "./Usart.h" 1
+# 31 "./Usart.h"
+void USART_Init(long);
+void USART_TransmitChar(char);
+void USART_SendString(const char *);
+char USART_ReceiveChar(void);
+# 11 "smart_main.c" 2
+# 26 "smart_main.c"
 void main() {
     OSCCON = 0x72;
     TRISE = 0x00;
 
 
     I2C_Init();
+    USART_Init(9600);
     LCD_Init();
 
     while (1) {
         RTC_Calendario();
         int caso = Estados();
-        switch(caso){
+        switch (caso) {
             case 1:
                 Sunny_State();
                 break;
@@ -6072,6 +6083,10 @@ void main() {
 
             case 3:
                 Rainy_State();
+                break;
+
+            case 4:
+                Alarm_Status();
                 break;
 
             default:

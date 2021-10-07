@@ -3,6 +3,12 @@
 [d edition pro ]
 [d chip 18F4550 ]
 [d frameptr 4065 ]
+"37 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Bluetooth.c
+[v _USART_Init USART_Init `(v  1 e 1 0 ]
+"59
+[v _USART_TransmitChar USART_TransmitChar `(v  1 e 1 0 ]
+"93
+[v _USART_SendString USART_SendString `(v  1 e 1 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\__fpclassifyf.c
 [v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\atoi.c
@@ -85,14 +91,16 @@
 [v ___omul __omul `(uo  1 e 8 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"24 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Estados.c
+"25 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Estados.c
 [v _Estados Estados `(i  1 e 2 0 ]
-"51
+"56
 [v _Sunny_State Sunny_State `(v  1 e 1 0 ]
-"77
+"82
 [v _Cloudy_State Cloudy_State `(v  1 e 1 0 ]
-"102
+"107
 [v _Rainy_State Rainy_State `(v  1 e 1 0 ]
+"130
+[v _Alarm_Status Alarm_Status `(v  1 e 1 0 ]
 "23 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\LCD_caracter.c
 [v _LCD_Init LCD_Init `(v  1 e 1 0 ]
 "48
@@ -141,7 +149,7 @@
 [v _I2C_Nack I2C_Nack `(v  1 e 1 0 ]
 "21 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Sensor_luz.c
 [v _ReadLUZ ReadLUZ `(us  1 e 2 0 ]
-"25 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\smart_main.c
+"26 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\smart_main.c
 [v _main main `(v  1 e 1 0 ]
 "22 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Temperatura.c
 [v _ReadADC ReadADC `(us  1 e 2 0 ]
@@ -153,15 +161,15 @@
 [v _Stemp Stemp `[20]uc  1 e 20 0 ]
 "30
 [v _result result `us  1 e 2 0 ]
-"33
-[v _character1 character1 `[8]uc  1 e 8 0 ]
 "34
-[v _character2 character2 `[8]uc  1 e 8 0 ]
+[v _character1 character1 `[8]uc  1 e 8 0 ]
 "35
+[v _character2 character2 `[8]uc  1 e 8 0 ]
+"36
 [v _character3 character3 `[8]uc  1 e 8 0 ]
 "22 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X/Melodia.h
 [v _FreqNota FreqNota `[12]i  1 e 24 0 ]
-[s S467 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S480 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
@@ -169,20 +177,20 @@
 `uc 1 LATC7 1 0 :1:7 
 ]
 "3208 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
-[s S474 . 1 `uc 1 LC0 1 0 :1:0 
+[s S487 . 1 `uc 1 LC0 1 0 :1:0 
 `uc 1 LC1 1 0 :1:1 
 `uc 1 LC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 LC6 1 0 :1:6 
 `uc 1 LC7 1 0 :1:7 
 ]
-[u S481 . 1 `S467 1 . 1 0 `S474 1 . 1 0 ]
-[v _LATCbits LATCbits `VES481  1 e 1 @3979 ]
+[u S494 . 1 `S480 1 . 1 0 `S487 1 . 1 0 ]
+[v _LATCbits LATCbits `VES494  1 e 1 @3979 ]
 "3263
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
 "3427
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
-[s S435 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S448 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
@@ -190,91 +198,101 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "3875
-[s S442 . 1 `uc 1 RC0 1 0 :1:0 
+[s S455 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-[u S449 . 1 `S435 1 . 1 0 `S442 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES449  1 e 1 @3988 ]
+[u S462 . 1 `S448 1 . 1 0 `S455 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES462  1 e 1 @3988 ]
 "4001
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "4223
 [v _TRISE TRISE `VEuc  1 e 1 @3990 ]
-[s S261 . 1 `uc 1 ADCS 1 0 :3:0 
+"4936
+[v _RCSTA RCSTA `VEuc  1 e 1 @4011 ]
+"5146
+[v _TXSTA TXSTA `VEuc  1 e 1 @4012 ]
+"5402
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
+"5414
+[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
+"5426
+[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
+[s S272 . 1 `uc 1 ADCS 1 0 :3:0 
 `uc 1 ACQT 1 0 :3:3 
 `uc 1 . 1 0 :1:6 
 `uc 1 ADFM 1 0 :1:7 
 ]
 "6531
-[s S266 . 1 `uc 1 ADCS0 1 0 :1:0 
+[s S277 . 1 `uc 1 ADCS0 1 0 :1:0 
 `uc 1 ADCS1 1 0 :1:1 
 `uc 1 ADCS2 1 0 :1:2 
 `uc 1 ACQT0 1 0 :1:3 
 `uc 1 ACQT1 1 0 :1:4 
 `uc 1 ACQT2 1 0 :1:5 
 ]
-[u S273 . 1 `S261 1 . 1 0 `S266 1 . 1 0 ]
-[v _ADCON2bits ADCON2bits `VES273  1 e 1 @4032 ]
-[s S158 . 1 `uc 1 PCFG 1 0 :4:0 
+[u S284 . 1 `S272 1 . 1 0 `S277 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES284  1 e 1 @4032 ]
+[s S169 . 1 `uc 1 PCFG 1 0 :4:0 
 `uc 1 VCFG 1 0 :2:4 
 ]
 "6606
-[s S161 . 1 `uc 1 PCFG0 1 0 :1:0 
+[s S172 . 1 `uc 1 PCFG0 1 0 :1:0 
 `uc 1 PCFG1 1 0 :1:1 
 `uc 1 PCFG2 1 0 :1:2 
 `uc 1 PCFG3 1 0 :1:3 
 `uc 1 VCFG0 1 0 :1:4 
 `uc 1 VCFG1 1 0 :1:5 
 ]
-[s S168 . 1 `uc 1 . 1 0 :3:0 
+[s S179 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CHSN3 1 0 :1:3 
 `uc 1 VCFG01 1 0 :1:4 
 `uc 1 VCFG11 1 0 :1:5 
 ]
-[u S173 . 1 `S158 1 . 1 0 `S161 1 . 1 0 `S168 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES173  1 e 1 @4033 ]
-[s S193 . 1 `uc 1 . 1 0 :1:0 
+[u S184 . 1 `S169 1 . 1 0 `S172 1 . 1 0 `S179 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES184  1 e 1 @4033 ]
+[s S204 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_NOT_DONE 1 0 :1:1 
 ]
 "6710
-[s S196 . 1 `uc 1 ADON 1 0 :1:0 
+[s S207 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 ]
-[s S200 . 1 `uc 1 . 1 0 :1:0 
+[s S211 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
 `uc 1 CHS2 1 0 :1:4 
 `uc 1 CHS3 1 0 :1:5 
 ]
-[s S207 . 1 `uc 1 . 1 0 :1:0 
+[s S218 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 DONE 1 0 :1:1 
 ]
-[s S210 . 1 `uc 1 . 1 0 :1:0 
+[s S221 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[s S213 . 1 `uc 1 . 1 0 :1:0 
+[s S224 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_DONE 1 0 :1:1 
 ]
-[s S216 . 1 `uc 1 . 1 0 :1:0 
+[s S227 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S219 . 1 `uc 1 . 1 0 :1:0 
+[s S230 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GODONE 1 0 :1:1 
 ]
-[u S222 . 1 `S193 1 . 1 0 `S196 1 . 1 0 `S200 1 . 1 0 `S207 1 . 1 0 `S210 1 . 1 0 `S213 1 . 1 0 `S216 1 . 1 0 `S219 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES222  1 e 1 @4034 ]
+[u S233 . 1 `S204 1 . 1 0 `S207 1 . 1 0 `S211 1 . 1 0 `S218 1 . 1 0 `S221 1 . 1 0 `S224 1 . 1 0 `S227 1 . 1 0 `S230 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES233  1 e 1 @4034 ]
 "6792
 [v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
 "6799
 [v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
 "6806
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @4037 ]
-[s S786 . 1 `uc 1 SEN 1 0 :1:0 
+[s S801 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -284,20 +302,20 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "6823
-[u S795 . 1 `S786 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES795  1 e 1 @4037 ]
+[u S810 . 1 `S801 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES810  1 e 1 @4037 ]
 "6868
 [v _SSPCON1 SSPCON1 `VEuc  1 e 1 @4038 ]
 "6938
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @4039 ]
-[s S624 . 1 `uc 1 . 1 0 :2:0 
+[s S639 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_NOT_W 1 0 :1:2 
 ]
 "7021
-[s S627 . 1 `uc 1 . 1 0 :5:0 
+[s S642 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 D_NOT_A 1 0 :1:5 
 ]
-[s S630 . 1 `uc 1 BF 1 0 :1:0 
+[s S645 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -306,70 +324,70 @@
 `uc 1 CKE 1 0 :1:6 
 `uc 1 SMP 1 0 :1:7 
 ]
-[s S639 . 1 `uc 1 . 1 0 :2:0 
+[s S654 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S644 . 1 `uc 1 . 1 0 :2:0 
+[s S659 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DAT 1 0 :1:5 
 ]
-[s S650 . 1 `uc 1 . 1 0 :2:0 
+[s S665 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S655 . 1 `uc 1 . 1 0 :2:0 
+[s S670 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_WRITE 1 0 :1:2 
 ]
-[s S658 . 1 `uc 1 . 1 0 :5:0 
+[s S673 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_ADDRESS 1 0 :1:5 
 ]
-[s S661 . 1 `uc 1 . 1 0 :2:0 
+[s S676 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S666 . 1 `uc 1 . 1 0 :2:0 
+[s S681 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[s S671 . 1 `uc 1 . 1 0 :2:0 
+[s S686 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D 1 0 :1:5 
 ]
-[s S676 . 1 `uc 1 . 1 0 :2:0 
+[s S691 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
 `uc 1 START 1 0 :1:3 
 `uc 1 STOP 1 0 :1:4 
 `uc 1 DA 1 0 :1:5 
 ]
-[s S682 . 1 `uc 1 . 1 0 :2:0 
+[s S697 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 NOT_A 1 0 :1:5 
 ]
-[u S687 . 1 `S624 1 . 1 0 `S627 1 . 1 0 `S630 1 . 1 0 `S639 1 . 1 0 `S644 1 . 1 0 `S650 1 . 1 0 `S655 1 . 1 0 `S658 1 . 1 0 `S661 1 . 1 0 `S666 1 . 1 0 `S671 1 . 1 0 `S676 1 . 1 0 `S682 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES687  1 e 1 @4039 ]
+[u S702 . 1 `S639 1 . 1 0 `S642 1 . 1 0 `S645 1 . 1 0 `S654 1 . 1 0 `S659 1 . 1 0 `S665 1 . 1 0 `S670 1 . 1 0 `S673 1 . 1 0 `S676 1 . 1 0 `S681 1 . 1 0 `S686 1 . 1 0 `S691 1 . 1 0 `S697 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES702  1 e 1 @4039 ]
 "7186
 [v _SSPADD SSPADD `VEuc  1 e 1 @4040 ]
 "7193
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @4041 ]
 "7986
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
-[s S126 . 1 `uc 1 SCS 1 0 :2:0 
+[s S137 . 1 `uc 1 SCS 1 0 :2:0 
 `uc 1 IOFS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 `uc 1 IDLEN 1 0 :1:7 
 ]
 "8009
-[s S132 . 1 `uc 1 SCS0 1 0 :1:0 
+[s S143 . 1 `uc 1 SCS0 1 0 :1:0 
 `uc 1 SCS1 1 0 :1:1 
 `uc 1 FLTS 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -377,8 +395,8 @@
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S140 . 1 `S126 1 . 1 0 `S132 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES140  1 e 1 @4051 ]
+[u S151 . 1 `S137 1 . 1 0 `S143 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES151  1 e 1 @4051 ]
 "8910
 [v _ACKDT ACKDT `VEb  1 e 0 @32301 ]
 "8913
@@ -399,6 +417,8 @@
 [v _PEN PEN `VEb  1 e 0 @32298 ]
 "10434
 [v _RCEN RCEN `VEb  1 e 0 @32299 ]
+"10443
+[v _RCIF RCIF `VEb  1 e 0 @31989 ]
 "10515
 [v _RSEN RSEN `VEb  1 e 0 @32297 ]
 "10641
@@ -409,6 +429,12 @@
 [v _TRISB0 TRISB0 `VEb  1 e 0 @31896 ]
 "10905
 [v _TRISB1 TRISB1 `VEb  1 e 0 @31897 ]
+"10935
+[v _TRISC6 TRISC6 `VEb  1 e 0 @31910 ]
+"10938
+[v _TRISC7 TRISC7 `VEb  1 e 0 @31911 ]
+"11043
+[v _TXIF TXIF `VEb  1 e 0 @31988 ]
 "55 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
 [v _flags flags `i  1 s 2 flags ]
 [v _prec prec `i  1 s 2 prec ]
@@ -426,51 +452,31 @@
 [v _Date Date `i  1 e 2 0 ]
 [v _Month Month `i  1 e 2 0 ]
 [v _Year Year `i  1 e 2 0 ]
-"25 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\smart_main.c
+"26 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\smart_main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"35
+"37
 [v main@caso caso `i  1 a 2 128 ]
-"57
+"63
 } 0
-"51 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Estados.c
+"37 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Bluetooth.c
+[v _USART_Init USART_Init `(v  1 e 1 0 ]
+{
+"38
+[v USART_Init@temp temp `f  1 a 4 4 ]
+"37
+[v USART_Init@baud_rate baud_rate `l  1 p 4 0 ]
+"46
+} 0
+"56 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Estados.c
 [v _Sunny_State Sunny_State `(v  1 e 1 0 ]
 {
-"62
+"67
 } 0
-"93 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Melodia.c
-[v _PlayCancion PlayCancion `(v  1 e 1 0 ]
-{
-"113
-} 0
-"46
-[v _play play `(v  1 e 1 0 ]
-{
-"47
-[v play@fn fn `i  1 a 2 16 ]
-"49
-[v play@CiclosL CiclosL `i  1 a 2 14 ]
-"48
-[v play@mS_Transcurridos mS_Transcurridos `i  1 a 2 12 ]
-"46
-[v play@nota nota `i  1 p 2 5 ]
-[v play@octava octava `i  1 p 2 7 ]
-[v play@duracion duracion `i  1 p 2 9 ]
-"79
-} 0
-"24
-[v _delay_us delay_us `(v  1 e 1 0 ]
-{
-"25
-[v delay_us@i i `i  1 a 2 3 ]
-"24
-[v delay_us@nota nota `i  1 p 2 0 ]
-"28
-} 0
-"102 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Estados.c
+"107
 [v _Rainy_State Rainy_State `(v  1 e 1 0 ]
 {
-"112
+"117
 } 0
 "79 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\reloj.c
 [v _RTC_Calendario RTC_Calendario `(v  1 e 1 0 ]
@@ -487,7 +493,7 @@
 [v RTC_Calendario@days days `[7]uc  1 a 7 0 ]
 "85
 [v RTC_Calendario@AM_PM AM_PM `uc  1 a 1 67 ]
-[v RTC_Calendario@F3578 F3578 `[7]uc  1 s 7 F3578 ]
+[v RTC_Calendario@F3580 F3580 `[7]uc  1 s 7 F3580 ]
 "170
 } 0
 "28
@@ -582,10 +588,10 @@
 {
 "68
 } 0
-"24 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Estados.c
+"25 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Estados.c
 [v _Estados Estados `(i  1 e 2 0 ]
 {
-"36
+"41
 } 0
 "21 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Sensor_luz.c
 [v _ReadLUZ ReadLUZ `(us  1 e 2 0 ]
@@ -614,17 +620,17 @@
 [v ___xxtofl@sign sign `uc  1 a 1 12 ]
 "44
 } 0
-"77 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Estados.c
+"82 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Estados.c
 [v _Cloudy_State Cloudy_State `(v  1 e 1 0 ]
 {
-"87
+"92
 } 0
 "9 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[s S1315 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[s S1366 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
 "13
-[v sprintf@f f `S1315  1 a 6 118 ]
+[v sprintf@f f `S1366  1 a 6 118 ]
 "12
 [v sprintf@ap ap `[1]*.39v  1 a 2 116 ]
 "9
@@ -637,9 +643,9 @@
 {
 "1393
 [v vfprintf@cfmt cfmt `*.25uc  1 a 2 106 ]
-[s S1341 _IO_FILE 0 ]
+[s S1392 _IO_FILE 0 ]
 "1390
-[v vfprintf@fp fp `*.39S1341  1 p 2 100 ]
+[v vfprintf@fp fp `*.39S1392  1 p 2 100 ]
 [v vfprintf@fmt fmt `*.25Cuc  1 p 2 102 ]
 [v vfprintf@ap ap `*.39*.39v  1 p 2 104 ]
 "1404
@@ -657,9 +663,9 @@
 [v vfpfcnvrt@done done `i  1 a 2 86 ]
 "694
 [v vfpfcnvrt@c c `uc  1 a 1 99 ]
-[s S1341 _IO_FILE 0 ]
+[s S1392 _IO_FILE 0 ]
 "692
-[v vfpfcnvrt@fp fp `*.39S1341  1 p 2 68 ]
+[v vfpfcnvrt@fp fp `*.39S1392  1 p 2 68 ]
 [v vfpfcnvrt@fmt fmt `*.39*.25uc  1 p 2 70 ]
 [v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 72 ]
 "1387
@@ -674,9 +680,9 @@
 [v xtoa@i i `i  1 a 2 62 ]
 [v xtoa@w w `i  1 a 2 52 ]
 [v xtoa@p p `i  1 a 2 50 ]
-[s S1341 _IO_FILE 0 ]
+[s S1392 _IO_FILE 0 ]
 "645
-[v xtoa@fp fp `*.39S1341  1 p 2 27 ]
+[v xtoa@fp fp `*.39S1392  1 p 2 27 ]
 [v xtoa@d d `uo  1 p 8 29 ]
 [v xtoa@x x `uc  1 p 1 37 ]
 "687
@@ -735,9 +741,9 @@
 "334
 [v efgtoa@mode mode `uc  1 a 1 45 ]
 [v efgtoa@nmode nmode `uc  1 a 1 44 ]
-[s S1341 _IO_FILE 0 ]
+[s S1392 _IO_FILE 0 ]
 "332
-[v efgtoa@fp fp `*.39S1341  1 p 2 0 ]
+[v efgtoa@fp fp `*.39S1392  1 p 2 0 ]
 [v efgtoa@f f `d  1 p 4 2 ]
 [v efgtoa@c c `uc  1 p 1 6 ]
 "525
@@ -772,9 +778,9 @@
 "74
 [v pad@w w `i  1 a 2 25 ]
 [v pad@i i `i  1 a 2 23 ]
-[s S1341 _IO_FILE 0 ]
+[s S1392 _IO_FILE 0 ]
 "72
-[v pad@fp fp `*.39S1341  1 p 2 16 ]
+[v pad@fp fp `*.39S1392  1 p 2 16 ]
 [v pad@buf buf `*.39uc  1 p 2 18 ]
 [v pad@p p `i  1 p 2 20 ]
 "95
@@ -797,16 +803,16 @@
 [v fputs@c c `uc  1 a 1 13 ]
 "8
 [v fputs@s s `*.39Cuc  1 p 2 9 ]
-[s S1315 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputs@fp fp `*.39S1315  1 p 2 11 ]
+[s S1366 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputs@fp fp `*.39S1366  1 p 2 11 ]
 "19
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 0 ]
-[s S1315 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
-[v fputc@fp fp `*.39S1315  1 p 2 2 ]
+[s S1366 _IO_FILE 6 `*.39uc 1 buffer 2 0 `i 1 count 2 2 `i 1 limit 2 4 ]
+[v fputc@fp fp `*.39S1366  1 p 2 2 ]
 "24
 } 0
 "7 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\putch.c
@@ -817,9 +823,9 @@
 "3 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\floorf.c
 [v _floorf floorf `(f  1 e 4 0 ]
 {
-[u S1504 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1555 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "5
-[v floorf@u u `S1504  1 a 4 84 ]
+[v floorf@u u `S1555  1 a 4 84 ]
 "7
 [v floorf@m m `ul  1 a 4 78 ]
 "6
@@ -827,21 +833,21 @@
 "3
 [v floorf@x x `f  1 p 4 68 ]
 "4
-[v floorf@F527 F527 `S1504  1 s 4 F527 ]
+[v floorf@F527 F527 `S1555  1 s 4 F527 ]
 "27
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\__fpclassifyf.c
 [v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
 {
-[u S1504 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1555 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "6
-[v ___fpclassifyf@u u `S1504  1 a 4 10 ]
+[v ___fpclassifyf@u u `S1555  1 a 4 10 ]
 "7
 [v ___fpclassifyf@e e `i  1 a 2 8 ]
 "4
 [v ___fpclassifyf@x x `f  1 p 4 0 ]
 "5
-[v ___fpclassifyf@F465 F465 `S1504  1 s 4 F465 ]
+[v ___fpclassifyf@F465 F465 `S1555  1 s 4 F465 ]
 "11
 } 0
 "43 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\fltol.c
@@ -886,17 +892,17 @@
 "8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1180 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1231 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1185 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S1188 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1180 1 fAsBytes 4 0 `S1185 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1188  1 a 4 37 ]
+[s S1236 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1239 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1231 1 fAsBytes 4 0 `S1236 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1239  1 a 4 37 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 31 ]
-[s S1256 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1307 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1259 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1256 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1259  1 a 2 41 ]
+[u S1310 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1307 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1310  1 a 2 41 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 36 ]
 "11
@@ -1057,4 +1063,52 @@
 "199
 [v LCD_MSdelay@val val `ui  1 p 2 0 ]
 "204
+} 0
+"130 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Estados.c
+[v _Alarm_Status Alarm_Status `(v  1 e 1 0 ]
+{
+"135
+} 0
+"93 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Bluetooth.c
+[v _USART_SendString USART_SendString `(v  1 e 1 0 ]
+{
+[v USART_SendString@out out `*.25Cuc  1 p 2 1 ]
+"98
+} 0
+"59
+[v _USART_TransmitChar USART_TransmitChar `(v  1 e 1 0 ]
+{
+[v USART_TransmitChar@out out `uc  1 a 1 wreg ]
+[v USART_TransmitChar@out out `uc  1 a 1 wreg ]
+[v USART_TransmitChar@out out `uc  1 a 1 0 ]
+"63
+} 0
+"93 D:\Clases 2021\Arquitectura Computacional\Github\Smart_Watch\SmartWatch.X\Melodia.c
+[v _PlayCancion PlayCancion `(v  1 e 1 0 ]
+{
+"113
+} 0
+"46
+[v _play play `(v  1 e 1 0 ]
+{
+"47
+[v play@fn fn `i  1 a 2 16 ]
+"49
+[v play@CiclosL CiclosL `i  1 a 2 14 ]
+"48
+[v play@mS_Transcurridos mS_Transcurridos `i  1 a 2 12 ]
+"46
+[v play@nota nota `i  1 p 2 5 ]
+[v play@octava octava `i  1 p 2 7 ]
+[v play@duracion duracion `i  1 p 2 9 ]
+"79
+} 0
+"24
+[v _delay_us delay_us `(v  1 e 1 0 ]
+{
+"25
+[v delay_us@i i `i  1 a 2 3 ]
+"24
+[v delay_us@nota nota `i  1 p 2 0 ]
+"28
 } 0

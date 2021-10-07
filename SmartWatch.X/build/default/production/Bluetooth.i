@@ -1,4 +1,4 @@
-# 1 "LCD_caracter.c"
+# 1 "Bluetooth.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,12 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "LCD_caracter.c" 2
-
-
-
-
-
+# 1 "Bluetooth.c" 2
+# 18 "Bluetooth.c"
 # 1 "./Funciones.h" 1
 # 11 "./Funciones.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\\pic\\include\\xc.h" 1 3
@@ -6030,100 +6026,42 @@ void Sunny_State(void);
 void Cloudy_State(void);
 void Rainy_State(void);
 void Alarm_Status(void);
-# 6 "LCD_caracter.c" 2
-# 23 "LCD_caracter.c"
-void LCD_Init(void)
-{
-    TRISD = 0;
-    LCD_MSdelay(15);
-    LCD_Command(0x02);
+# 18 "Bluetooth.c" 2
 
-    LCD_Command(0x28);
+# 1 "./Usart.h" 1
+# 31 "./Usart.h"
+void USART_Init(long);
+void USART_TransmitChar(char);
+void USART_SendString(const char *);
+char USART_ReceiveChar(void);
+# 19 "Bluetooth.c" 2
+# 37 "Bluetooth.c"
+void USART_Init(long baud_rate) {
+    float temp;
+    TRISC6 = 0;
+    TRISC7 = 1;
+    temp = (((float)(8000000/64)/(float)baud_rate)-1);
+    SPBRG = (int) temp;
+    TXSTA = 0x20;
+    RCSTA = 0x90;
+    return;
+}
+# 59 "Bluetooth.c"
+void USART_TransmitChar(char out) {
+    while (TXIF == 0);
+    TXREG = out;
 
- LCD_Command(0x01);
-    LCD_Command(0x0c);
- LCD_Command(0x06);
 }
-# 48 "LCD_caracter.c"
-void LCD_Command(unsigned char cmd )
-{
- LATD = (LATD & 0x0f) |(0xF0 & cmd);
- LATD0 = 0;
- LATD1 = 1;
- __nop();
- LATD1 = 0;
- LCD_MSdelay(1);
-    LATD = (LATD & 0x0f) | (cmd<<4);
- LATD1 = 1;
- __nop();
- LATD1 = 0;
- LCD_MSdelay(3);
+# 76 "Bluetooth.c"
+char USART_ReceiveChar() {
+
+    while (RCIF == 0);
+    return (RCREG);
 }
-# 75 "LCD_caracter.c"
-void LCD_Char(unsigned char dat)
-{
- LATD = (LATD & 0x0f) | (0xF0 & dat);
- LATD0 = 1;
- LATD1 = 1;
- __nop();
- LATD1 = 0;
- LCD_MSdelay(1);
-    LATD = (LATD & 0x0f) | (dat<<4);
- LATD1 = 1;
- __nop();
- LATD1 = 0;
- LCD_MSdelay(3);
-}
-# 101 "LCD_caracter.c"
-void LCD_String(const char *msg)
-{
- while((*msg)!=0)
- {
-   LCD_Char(*msg);
-   msg++;
+# 93 "Bluetooth.c"
+void USART_SendString(const char *out) {
+    while (*out != '\0') {
+        USART_TransmitChar(*out);
+        out++;
     }
 }
-# 124 "LCD_caracter.c"
-void LCD_String_xy(char row,char pos,const char *msg)
-{
-    char location=0;
-    if(row<=1)
-    {
-        location=(0x80) | ((pos) & 0x0f);
-        LCD_Command(location);
-    }
-    else
-    {
-        location=(0xC0) | ((pos) & 0x0f);
-        LCD_Command(location);
-    }
-
-
-    LCD_String(msg);
-
-}
-# 155 "LCD_caracter.c"
-void LCD_Clear(void)
-{
-    LCD_Command(0x01);
-    LCD_MSdelay(3);
-}
-# 174 "LCD_caracter.c"
-void LCD_Custom_Char ( unsigned char loc, unsigned char *msg)
-{
-    unsigned char i;
-    if (loc< 8 )
-    {
-     LCD_Command ( 0x40 +(loc* 8 ));
-       for (i= 0 ;i< 8 ;i++)
-           LCD_Char (msg[i]);
-
-    }
-}
-# 199 "LCD_caracter.c"
-void LCD_MSdelay(unsigned int val)
-{
- unsigned int i,j;
- for(i=0;i<val;i++)
-     for(j=0;j<165;j++);
- }

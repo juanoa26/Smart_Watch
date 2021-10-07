@@ -7,6 +7,7 @@
 
 #include "Funciones.h"
 #include "Melodia.h"
+#include "Usart.h"
 
 /*********************************************************************
  * Function:        int Estados()
@@ -25,6 +26,7 @@ int Estados() {
     tempar = ReadADC();
     luz = ReadLUZ();
 
+    //data_in = USART_ReceiveChar();
     if (tempar > 15 && (luz > 0 && luz < 400)) {
         return 1;
     } else if ((tempar >= 12 && tempar <= 15)&&(luz > 400 && luz < 700)) {
@@ -32,6 +34,9 @@ int Estados() {
 
     } else if (tempar < 12 && (luz > 700 && luz < 1500)) {
         return 3;
+    }
+    if(data_in =='1'){
+        return 4;
     }
 }
 
@@ -57,7 +62,7 @@ void Sunny_State() {
     LCD_Custom_Char(0, character2); /* Write custom character to CGRAM 0x00 memory location */
     LCD_Command(0xc0);
     LCD_Char(0);
-    PlayCancion();
+    
     return;
 }
 
@@ -108,5 +113,23 @@ void Rainy_State() {
     LCD_Custom_Char(0, character1); /* Write custom character to CGRAM 0x00 memory location */
     LCD_Command(0xc0);
     LCD_Char(0);
+    return;
+}
+
+/*********************************************************************
+ * Function:        void Alarm_Status(void)
+ *
+ * Input:           None
+ *
+ * Output:          None
+ *
+ * Overview:        Se encarga de hacer sonar la alarma e imprimir un mensaje de buenos dias
+ *
+ * Note:            None
+ ********************************************************************/
+void Alarm_Status(void) {
+    
+    USART_SendString("Buenos Dias");
+    PlayCancion();
     return;
 }

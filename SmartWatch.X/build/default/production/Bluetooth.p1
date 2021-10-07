@@ -1,38 +1,31 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F3152 `(v ~T0 @X0 1 tf1`ul ]
-"203 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\pic18.h
-[v __delay `JF3152 ~T0 @X0 0 e ]
-[p i __delay ]
-"3858 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3858:     struct {
-[s S154 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S154 . TRISC0 TRISC1 TRISC2 . TRISC6 TRISC7 ]
-"3866
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3866:     struct {
-[s S155 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S155 . RC0 RC1 RC2 . RC6 RC7 ]
-"3857
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3857: typedef union {
-[u S153 `S154 1 `S155 1 ]
-[n S153 . . . ]
-"3875
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3875: extern volatile TRISCbits_t TRISCbits __attribute__((address(0xF94)));
-[v _TRISCbits `VS153 ~T0 @X0 0 e@3988 ]
-"3191
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3191:     struct {
-[s S133 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S133 . LATC0 LATC1 LATC2 . LATC6 LATC7 ]
-"3199
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3199:     struct {
-[s S134 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S134 . LC0 LC1 LC2 . LC6 LC7 ]
-"3190
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3190: typedef union {
-[u S132 `S133 1 `S134 1 ]
-[n S132 . . . ]
-"3208
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 3208: extern volatile LATCbits_t LATCbits __attribute__((address(0xF8B)));
-[v _LATCbits `VS132 ~T0 @X0 0 e@3979 ]
+"10935 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 10935: extern volatile __bit TRISC6 __attribute__((address(0x7CA6)));
+[v _TRISC6 `Vb ~T0 @X0 0 e@31910 ]
+"10938
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 10938: extern volatile __bit TRISC7 __attribute__((address(0x7CA7)));
+[v _TRISC7 `Vb ~T0 @X0 0 e@31911 ]
+"5426
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 5426: extern volatile unsigned char SPBRG __attribute__((address(0xFAF)));
+[v _SPBRG `Vuc ~T0 @X0 0 e@4015 ]
+"5146
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 5146: extern volatile unsigned char TXSTA __attribute__((address(0xFAC)));
+[v _TXSTA `Vuc ~T0 @X0 0 e@4012 ]
+"4936
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 4936: extern volatile unsigned char RCSTA __attribute__((address(0xFAB)));
+[v _RCSTA `Vuc ~T0 @X0 0 e@4011 ]
+"11043
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 11043: extern volatile __bit TXIF __attribute__((address(0x7CF4)));
+[v _TXIF `Vb ~T0 @X0 0 e@31988 ]
+"5402
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 5402: extern volatile unsigned char TXREG __attribute__((address(0xFAD)));
+[v _TXREG `Vuc ~T0 @X0 0 e@4013 ]
+"10443
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 10443: extern volatile __bit RCIF __attribute__((address(0x7CF5)));
+[v _RCIF `Vb ~T0 @X0 0 e@31989 ]
+"5414
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 5414: extern volatile unsigned char RCREG __attribute__((address(0xFAE)));
+[v _RCREG `Vuc ~T0 @X0 0 e@4014 ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -761,192 +754,110 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"22 ./Melodia.h
-[; ;./Melodia.h: 22: int FreqNota[12]={
-[v _FreqNota `i ~T0 @X0 -> 12 `i e ]
-[i _FreqNota
-:U ..
--> 15289 `i
--> 14430 `i
--> 13620 `i
--> 12856 `i
--> 12134 `i
--> 11453 `i
--> 10810 `i
--> 10204 `i
--> 9631 `i
--> 9090 `i
--> 8580 `i
--> 8099 `i
-..
-]
-"24 Melodia.c
-[; ;Melodia.c: 24: void delay_us(int nota){
-[v _delay_us `(v ~T0 @X0 1 ef1`i ]
+"37 Bluetooth.c
+[; ;Bluetooth.c: 37: void USART_Init(long baud_rate) {
+[v _USART_Init `(v ~T0 @X0 1 ef1`l ]
 {
-[e :U _delay_us ]
-[v _nota `i ~T0 @X0 1 r1 ]
+[e :U _USART_Init ]
+[v _baud_rate `l ~T0 @X0 1 r1 ]
 [f ]
-"25
-[; ;Melodia.c: 25:     for(int i=0; i<=nota;i++ ){
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $U 373  ]
-[e :U 370 ]
-{
-"26
-[; ;Melodia.c: 26:         _delay((unsigned long)((1)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-"27
-[; ;Melodia.c: 27:     }
-}
-[e ++ _i -> 1 `i ]
-[e :U 373 ]
-[e $ <= _i _nota 370  ]
-[e :U 371 ]
-}
-"28
-[; ;Melodia.c: 28: }
+"38
+[; ;Bluetooth.c: 38:     float temp;
+[v _temp `f ~T0 @X0 1 a ]
+"39
+[; ;Bluetooth.c: 39:     TRISC6 = 0;
+[e = _TRISC6 -> -> 0 `i `b ]
+"40
+[; ;Bluetooth.c: 40:     TRISC7 = 1;
+[e = _TRISC7 -> -> 1 `i `b ]
+"41
+[; ;Bluetooth.c: 41:     temp = (((float)(8000000/64)/(float)baud_rate)-1);
+[e = _temp - / -> / -> 8000000 `l -> -> 64 `i `l `f -> _baud_rate `f -> -> 1 `i `f ]
+"42
+[; ;Bluetooth.c: 42:     SPBRG = (int) temp;
+[e = _SPBRG -> -> _temp `i `uc ]
+"43
+[; ;Bluetooth.c: 43:     TXSTA = 0x20;
+[e = _TXSTA -> -> 32 `i `uc ]
+"44
+[; ;Bluetooth.c: 44:     RCSTA = 0x90;
+[e = _RCSTA -> -> 144 `i `uc ]
+"45
+[; ;Bluetooth.c: 45:     return;
+[e $UE 369  ]
+"46
+[; ;Bluetooth.c: 46: }
 [e :UE 369 ]
 }
-"46
-[; ;Melodia.c: 46: void play(int nota, int octava, int duracion){
-[v _play `(v ~T0 @X0 1 ef3`i`i`i ]
-{
-[e :U _play ]
-[v _nota `i ~T0 @X0 1 r1 ]
-[v _octava `i ~T0 @X0 1 r2 ]
-[v _duracion `i ~T0 @X0 1 r3 ]
-[f ]
-"47
-[; ;Melodia.c: 47:      int fn;
-[v _fn `i ~T0 @X0 1 a ]
-"48
-[; ;Melodia.c: 48:      int mS_Transcurridos=0;
-[v _mS_Transcurridos `i ~T0 @X0 1 a ]
-[e = _mS_Transcurridos -> 0 `i ]
-"49
-[; ;Melodia.c: 49:      int CiclosL=0;
-[v _CiclosL `i ~T0 @X0 1 a ]
-[e = _CiclosL -> 0 `i ]
-"51
-[; ;Melodia.c: 51:      fn=FreqNota[nota];
-[e = _fn *U + &U _FreqNota * -> -> _nota `ui `ux -> -> # *U &U _FreqNota `ui `ux ]
-"53
-[; ;Melodia.c: 53:      fn>>=(octava);
-[e =>> _fn _octava ]
-"56
-[; ;Melodia.c: 56:     do{
-[e :U 377 ]
-{
-"58
-[; ;Melodia.c: 58:         TRISCbits . TRISC1 = 0;
-[e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
 "59
-[; ;Melodia.c: 59:         LATCbits . LATC1 = 1 ;
-[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
-"60
-[; ;Melodia.c: 60:         delay_us(fn);;
-[e ( _delay_us (1 _fn ]
-"61
-[; ;Melodia.c: 61:         CiclosL+=(fn);
-[e =+ _CiclosL _fn ]
-"63
-[; ;Melodia.c: 63:         LATCbits . LATC1 = 0 ;
-[e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
-"64
-[; ;Melodia.c: 64:          delay_us(fn);
-[e ( _delay_us (1 _fn ]
-"65
-[; ;Melodia.c: 65:         CiclosL+=(fn);
-[e =+ _CiclosL _fn ]
-"66
-[; ;Melodia.c: 66:         CiclosL+=25;
-[e =+ _CiclosL -> 25 `i ]
-"68
-[; ;Melodia.c: 68:         while(CiclosL>999){
-[e $U 378  ]
-[e :U 379 ]
+[; ;Bluetooth.c: 59: void USART_TransmitChar(char out) {
+[v _USART_TransmitChar `(v ~T0 @X0 1 ef1`uc ]
 {
-"70
-[; ;Melodia.c: 70:            CiclosL-=1000;
-[e =- _CiclosL -> 1000 `i ]
-"71
-[; ;Melodia.c: 71:            mS_Transcurridos++;
-[e ++ _mS_Transcurridos -> 1 `i ]
-"72
-[; ;Melodia.c: 72:            CiclosL+=25;
-[e =+ _CiclosL -> 25 `i ]
-"73
-[; ;Melodia.c: 73:         }
+[e :U _USART_TransmitChar ]
+[v _out `uc ~T0 @X0 1 r1 ]
+[f ]
+"60
+[; ;Bluetooth.c: 60:     while (TXIF == 0);
+[e $U 371  ]
+[e :U 372 ]
+[e :U 371 ]
+[e $ == -> _TXIF `i -> 0 `i 372  ]
+[e :U 373 ]
+"61
+[; ;Bluetooth.c: 61:     TXREG = out;
+[e = _TXREG -> _out `uc ]
+"63
+[; ;Bluetooth.c: 63: }
+[e :UE 370 ]
 }
-[e :U 378 ]
-"68
-[; ;Melodia.c: 68:         while(CiclosL>999){
-[e $ > _CiclosL -> 999 `i 379  ]
-[e :U 380 ]
-"74
-[; ;Melodia.c: 74:      }while (duracion>mS_Transcurridos);
-}
-[e $ > _duracion _mS_Transcurridos 377  ]
+"76
+[; ;Bluetooth.c: 76: char USART_ReceiveChar() {
+[v _USART_ReceiveChar `(uc ~T0 @X0 1 ef ]
+{
+[e :U _USART_ReceiveChar ]
+[f ]
+"78
+[; ;Bluetooth.c: 78:     while (RCIF == 0);
+[e $U 375  ]
 [e :U 376 ]
+[e :U 375 ]
+[e $ == -> _RCIF `i -> 0 `i 376  ]
+[e :U 377 ]
 "79
-[; ;Melodia.c: 79: }
+[; ;Bluetooth.c: 79:     return (RCREG);
+[e ) -> _RCREG `uc ]
+[e $UE 374  ]
+"80
+[; ;Bluetooth.c: 80: }
 [e :UE 374 ]
 }
 "93
-[; ;Melodia.c: 93: void PlayCancion(){
-[v _PlayCancion `(v ~T0 @X0 1 ef ]
+[; ;Bluetooth.c: 93: void USART_SendString(const char *out) {
+[v _USART_SendString `(v ~T0 @X0 1 ef1`*Cuc ]
 {
-[e :U _PlayCancion ]
+[e :U _USART_SendString ]
+[v _out `*Cuc ~T0 @X0 1 r1 ]
 [f ]
+"94
+[; ;Bluetooth.c: 94:     while (*out != '\0') {
+[e $U 379  ]
+[e :U 380 ]
+{
+"95
+[; ;Bluetooth.c: 95:         USART_TransmitChar(*out);
+[e ( _USART_TransmitChar (1 *U _out ]
 "96
-[; ;Melodia.c: 96:         play (4 ,4,150);
-[e ( _play (3 , , -> 4 `i -> 4 `i -> 150 `i ]
+[; ;Bluetooth.c: 96:         out++;
+[e ++ _out * -> -> 1 `i `x -> -> # *U _out `i `x ]
 "97
-[; ;Melodia.c: 97:         _delay((unsigned long)((50)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;Bluetooth.c: 97:     }
+}
+[e :U 379 ]
+"94
+[; ;Bluetooth.c: 94:     while (*out != '\0') {
+[e $ != -> *U _out `ui -> 0 `ui 380  ]
+[e :U 381 ]
 "98
-[; ;Melodia.c: 98:         play (4 ,4,150);
-[e ( _play (3 , , -> 4 `i -> 4 `i -> 150 `i ]
-"99
-[; ;Melodia.c: 99:         _delay((unsigned long)((150)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 150 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"100
-[; ;Melodia.c: 100:         play (4 ,4,150);
-[e ( _play (3 , , -> 4 `i -> 4 `i -> 150 `i ]
-"101
-[; ;Melodia.c: 101:         _delay((unsigned long)((200)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"103
-[; ;Melodia.c: 103:         play (0 ,4,125);
-[e ( _play (3 , , -> 0 `i -> 4 `i -> 125 `i ]
-"104
-[; ;Melodia.c: 104:         _delay((unsigned long)((50)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"105
-[; ;Melodia.c: 105:         play (4 ,4,125);
-[e ( _play (3 , , -> 4 `i -> 4 `i -> 125 `i ]
-"106
-[; ;Melodia.c: 106:         _delay((unsigned long)((150)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 150 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"107
-[; ;Melodia.c: 107:         play (7 ,4,200);
-[e ( _play (3 , , -> 7 `i -> 4 `i -> 200 `i ]
-"108
-[; ;Melodia.c: 108:         _delay((unsigned long)((400)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 400 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"109
-[; ;Melodia.c: 109:         play (7 ,3,350);
-[e ( _play (3 , , -> 7 `i -> 3 `i -> 350 `i ]
-"110
-[; ;Melodia.c: 110:         _delay((unsigned long)((300)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"112
-[; ;Melodia.c: 112:         return;
-[e $UE 381  ]
-"113
-[; ;Melodia.c: 113: }
-[e :UE 381 ]
+[; ;Bluetooth.c: 98: }
+[e :UE 378 ]
 }
