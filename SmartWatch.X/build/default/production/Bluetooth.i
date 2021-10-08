@@ -6029,7 +6029,7 @@ void Alarm_Status(void);
 # 18 "Bluetooth.c" 2
 
 # 1 "./Usart.h" 1
-# 31 "./Usart.h"
+# 11 "./Usart.h"
 void USART_Init(long);
 void USART_TransmitChar(char);
 void USART_SendString(const char *);

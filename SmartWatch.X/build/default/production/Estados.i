@@ -6058,7 +6058,7 @@ void delay_us(int nota);
 # 9 "Estados.c" 2
 
 # 1 "./Usart.h" 1
-# 31 "./Usart.h"
+# 11 "./Usart.h"
 void USART_Init(long);
 void USART_TransmitChar(char);
 void USART_SendString(const char *);

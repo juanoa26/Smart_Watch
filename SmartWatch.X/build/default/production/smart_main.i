@@ -5715,7 +5715,7 @@ void LCD_Custom_Char ( unsigned char , unsigned char *);
 # 8 "smart_main.c" 2
 
 # 1 "./I2C_Master_File.h" 1
-# 13 "./I2C_Master_File.h"
+# 16 "./I2C_Master_File.h"
 void I2C_Ready(void);
 void I2C_Init(void);
 char I2C_Start(char);
@@ -6053,7 +6053,7 @@ void Alarm_Status(void);
 # 10 "smart_main.c" 2
 
 # 1 "./Usart.h" 1
-# 31 "./Usart.h"
+# 11 "./Usart.h"
 void USART_Init(long);
 void USART_TransmitChar(char);
 void USART_SendString(const char *);

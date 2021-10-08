@@ -23,7 +23,6 @@
       <itemPath>Temperatura.c</itemPath>
       <itemPath>Sensor_luz.c</itemPath>
       <itemPath>Melodia.c</itemPath>
-      <itemPath>Melodia2.c</itemPath>
       <itemPath>reloj.c</itemPath>
       <itemPath>Reloj_ar.c</itemPath>
       <itemPath>Estados.c</itemPath>
@@ -162,16 +161,6 @@
         <property key="remove-unused-sections" value="true"/>
       </HI-TECH-LINK>
       <item path="Melodia.c" ex="false" overriding="false">
-        <HI-TECH-COMP>
-        </HI-TECH-COMP>
-        <HI-TECH-LINK>
-        </HI-TECH-LINK>
-        <XC8-CO>
-        </XC8-CO>
-        <XC8-config-global>
-        </XC8-config-global>
-      </item>
-      <item path="Melodia2.c" ex="true" overriding="false">
         <HI-TECH-COMP>
         </HI-TECH-COMP>
         <HI-TECH-LINK>

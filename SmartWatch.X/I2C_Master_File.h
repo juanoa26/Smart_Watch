@@ -1,5 +1,8 @@
-// This is a guard condition so that contents of this file are not included
-// more than once.  
+/*
+ * PIC18F4550 LCD16x2 Header File
+ * http://www.electronicwings.com
+ */ 
+
 #ifndef I2C_Master_H
 #define	I2C_Master_H
 

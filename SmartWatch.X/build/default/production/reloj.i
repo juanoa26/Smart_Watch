@@ -6034,7 +6034,7 @@ void Alarm_Status(void);
 # 7 "reloj.c" 2
 
 # 1 "./I2C_Master_File.h" 1
-# 13 "./I2C_Master_File.h"
+# 16 "./I2C_Master_File.h"
 void I2C_Ready(void);
 void I2C_Init(void);
 char I2C_Start(char);

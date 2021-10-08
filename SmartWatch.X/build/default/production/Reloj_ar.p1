@@ -64,14 +64,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7193
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 7193: extern volatile unsigned char SSPBUF __attribute__((address(0xFC9)));
 [v _SSPBUF `Vuc ~T0 @X0 0 e@4041 ]
-"21 ./I2C_Master_File.h
-[; ;./I2C_Master_File.h: 21: void I2C_Ack(void);
+"24 ./I2C_Master_File.h
+[; ;./I2C_Master_File.h: 24: void I2C_Ack(void);
 [v _I2C_Ack `(v ~T0 @X0 0 ef ]
-"22
-[; ;./I2C_Master_File.h: 22: void I2C_Nack(void);
+"25
+[; ;./I2C_Master_File.h: 25: void I2C_Nack(void);
 [v _I2C_Nack `(v ~T0 @X0 0 ef ]
-"13
-[; ;./I2C_Master_File.h: 13: void I2C_Ready(void);
+"16
+[; ;./I2C_Master_File.h: 16: void I2C_Ready(void);
 [v _I2C_Ready `(v ~T0 @X0 0 ef ]
 "10902 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 10902: extern volatile __bit TRISB0 __attribute__((address(0x7C98)));
@@ -108,14 +108,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6823
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 6823: extern volatile SSPCON2bits_t SSPCON2bits __attribute__((address(0xFC5)));
 [v _SSPCON2bits `VS281 ~T0 @X0 0 e@4037 ]
-"20 ./I2C_Master_File.h
-[; ;./I2C_Master_File.h: 20: char I2C_Write(unsigned char);
+"23 ./I2C_Master_File.h
+[; ;./I2C_Master_File.h: 23: char I2C_Write(unsigned char);
 [v _I2C_Write `(uc ~T0 @X0 0 ef1`uc ]
 "8916 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 8916: extern volatile __bit ACKSTAT __attribute__((address(0x7E2E)));
 [v _ACKSTAT `Vb ~T0 @X0 0 e@32302 ]
-"19 ./I2C_Master_File.h
-[; ;./I2C_Master_File.h: 19: char I2C_Stop(void);
+"22 ./I2C_Master_File.h
+[; ;./I2C_Master_File.h: 22: char I2C_Stop(void);
 [v _I2C_Stop `(uc ~T0 @X0 0 ef ]
 "10515 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26/xc8\pic\include\proc\pic18f4550.h: 10515: extern volatile __bit RSEN __attribute__((address(0x7E29)));
