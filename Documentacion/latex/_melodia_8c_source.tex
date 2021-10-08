@@ -1,0 +1,119 @@
+\hypertarget{_melodia_8c_source}{}\doxysection{Melodia.\+c}
+\label{_melodia_8c_source}\index{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/Melodia.c@{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/Melodia.c}}
+\mbox{\hyperlink{_melodia_8c}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00001}00001 \textcolor{comment}{//  4.3.4. Creación de melodías}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00002}00002 \textcolor{comment}{//  Autores: Jesús María Corres, Carlos Ruiz Zamarreño y Cándido Bariáin}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00003}00003 \textcolor{comment}{//  Pamplona, Agosto 2016}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00005}00005 \textcolor{comment}{// ARCHIVOS DE DEFINICIONES}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00007}00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_funciones_8h}{Funciones.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_l_c_d__caracter_8h}{LCD\_caracter.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00009}00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_melodia_8h}{Melodia.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00011}00011 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00012}00012 \textcolor{comment}{ * Function:        void delay\_us(int nota)}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00013}00013 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00014}00014 \textcolor{comment}{ * Input:           int nota: Entero que determina la duracion del retardo}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00015}00015 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00016}00016 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00017}00017 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00018}00018 \textcolor{comment}{ * Overview:        Determina la duracion del retardo en funcion del }}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00019}00019 \textcolor{comment}{ *                  entero recibido}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00020}00020 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00021}00021 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00022}00022 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00024}\mbox{\hyperlink{_melodia_8c_aab5b211913c7d611879e493a201852b5}{00024}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_melodia_8c_aab5b211913c7d611879e493a201852b5}{delay\_us}}(\textcolor{keywordtype}{int} nota)\{}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00025}00025     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{_funciones_8h_a160bbe832b2c6af8edb49d371aef2388}{i}}=0; \mbox{\hyperlink{_funciones_8h_a160bbe832b2c6af8edb49d371aef2388}{i}}<=nota;\mbox{\hyperlink{_funciones_8h_a160bbe832b2c6af8edb49d371aef2388}{i}}++ )\{}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00026}00026         \_\_delay\_us(1);}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00027}00027     \}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00028}00028 \}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00030}00030 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00031}00031 \textcolor{comment}{ * Function:        void play(int nota, int octava, int duracion)}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00032}00032 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00033}00033 \textcolor{comment}{ * Input:           int nota: Entero que determina la duracion del retardo}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00034}00034 \textcolor{comment}{ *                  int octava: Entero para determinar la nota a tocar}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00035}00035 \textcolor{comment}{ *                  int duracion: El tiempo que se tocara la nota determinada}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00036}00036 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00037}00037 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00038}00038 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00039}00039 \textcolor{comment}{ * Overview:        Se encarga de configurar el parlante donde sonara la melodia}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00040}00040 \textcolor{comment}{ *                  ademas de determinar la frecuencia y duracion de la misma}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00041}00041 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00042}00042 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00043}00043 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00046}\mbox{\hyperlink{_melodia_8c_acc8861a95831be108172d73076b67338}{00046}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_melodia_8c_acc8861a95831be108172d73076b67338}{play}}(\textcolor{keywordtype}{int} nota, \textcolor{keywordtype}{int} octava, \textcolor{keywordtype}{int} duracion)\{}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00047}00047      \textcolor{keywordtype}{int} fn;}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00048}00048      \textcolor{keywordtype}{int} mS\_Transcurridos=0;}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00049}00049      \textcolor{keywordtype}{int} CiclosL=0;}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00050}00050     }
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00051}00051      fn=\mbox{\hyperlink{_melodia_8h_a884b23915e8d917ad460ad8821e21405}{FreqNota}}[nota];         \textcolor{comment}{// Define los retardos para generar}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00052}00052                                 \textcolor{comment}{// la frecuencia de cada nota}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00053}00053      fn>>=(octava);             \textcolor{comment}{// Adapta la frecuencia}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00054}00054                             \textcolor{comment}{// a la octava actual}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00055}00055    }
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00056}00056     \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00057}00057         }
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00058}00058         TRISCbits . TRISC1 =  0;   \textcolor{comment}{// Genera la frecuancia}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00059}00059         LATCbits . LATC1 =  1 ;}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00060}00060         \mbox{\hyperlink{_melodia_8c_aab5b211913c7d611879e493a201852b5}{delay\_us}}(fn);;           \textcolor{comment}{// con los retardos mientras}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00061}00061         CiclosL+=(fn);          \textcolor{comment}{// aumenta el contador de}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00062}00062                             \textcolor{comment}{// ciclos transcurridos}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00063}00063         LATCbits . LATC1 =  0 ;    \textcolor{comment}{// en dos partes para repartir el}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00064}00064          \mbox{\hyperlink{_melodia_8c_aab5b211913c7d611879e493a201852b5}{delay\_us}}(fn);           \textcolor{comment}{// trabajo entre estado alto y bajo.}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00065}00065         CiclosL+=(fn);          \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00066}00066         CiclosL+=25;            \textcolor{comment}{// Compensador.}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00067}00067        }
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00068}00068         \textcolor{keywordflow}{while}(CiclosL>999)\{     \textcolor{comment}{// Se queda en el bucle mientras}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00069}00069                                 \textcolor{comment}{// CiclosL sea menor a 1000 (1 mS)}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00070}00070            CiclosL-\/=1000;       \textcolor{comment}{// Le resta 1000 a CiclosL}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00071}00071            mS\_Transcurridos++;  \textcolor{comment}{// y le suma 1 a mS\_Transcurridos.}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00072}00072            CiclosL+=25;         \textcolor{comment}{// Compensador.}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00073}00073         \}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00074}00074      \}\textcolor{keywordflow}{while} (duracion>mS\_Transcurridos); \textcolor{comment}{// Repite el bucle hasta}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00075}00075                                          \textcolor{comment}{// que haya pasado el}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00076}00076                                          \textcolor{comment}{// tiempo indicado.}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00077}00077     }
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00078}00078   }
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00079}00079 \}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00081}00081 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00082}00082 \textcolor{comment}{ * Function:        void PlayCancion(}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00083}00083 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00084}00084 \textcolor{comment}{ * Input:           None}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00085}00085 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00086}00086 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00087}00087 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00088}00088 \textcolor{comment}{ * Overview:        Contiene la melodia que se va a tocar}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00089}00089 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00090}00090 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00091}00091 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00093}\mbox{\hyperlink{_melodia_8c_a8491551dd0c1c5ca953d1415f2524d51}{00093}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_melodia_8c_a8491551dd0c1c5ca953d1415f2524d51}{PlayCancion}}()\{}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00095}00095    }
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00096}00096         \mbox{\hyperlink{_melodia_8c_acc8861a95831be108172d73076b67338}{play}} (\mbox{\hyperlink{_melodia_8h_aefc42598f489fa01f1efa7e76b6c7261}{nMI}}   ,4,150);}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00097}00097         \_\_delay\_ms (50);}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00098}00098         \mbox{\hyperlink{_melodia_8c_acc8861a95831be108172d73076b67338}{play}} (\mbox{\hyperlink{_melodia_8h_aefc42598f489fa01f1efa7e76b6c7261}{nMI}}   ,4,150);}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00099}00099         \_\_delay\_ms (150);}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00100}00100         \mbox{\hyperlink{_melodia_8c_acc8861a95831be108172d73076b67338}{play}} (\mbox{\hyperlink{_melodia_8h_aefc42598f489fa01f1efa7e76b6c7261}{nMI}}   ,4,150);}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00101}00101         \_\_delay\_ms (200);}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00103}00103         \mbox{\hyperlink{_melodia_8c_acc8861a95831be108172d73076b67338}{play}} (\mbox{\hyperlink{_melodia_8h_afb3908ae0bcc166c7f8f2bc17b4b80da}{nDO}}   ,4,125);}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00104}00104         \_\_delay\_ms (50);}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00105}00105         \mbox{\hyperlink{_melodia_8c_acc8861a95831be108172d73076b67338}{play}} (\mbox{\hyperlink{_melodia_8h_aefc42598f489fa01f1efa7e76b6c7261}{nMI}}   ,4,125);}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00106}00106         \_\_delay\_ms (150);}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00107}00107         \mbox{\hyperlink{_melodia_8c_acc8861a95831be108172d73076b67338}{play}} (\mbox{\hyperlink{_melodia_8h_a2d59a062c56c0a657d12f072e0f25fb2}{nSOL}}   ,4,200);}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00108}00108         \_\_delay\_ms (400);}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00109}00109         \mbox{\hyperlink{_melodia_8c_acc8861a95831be108172d73076b67338}{play}} (\mbox{\hyperlink{_melodia_8h_a2d59a062c56c0a657d12f072e0f25fb2}{nSOL}}   ,3,350);}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00110}00110         \_\_delay\_ms (300);}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00111}00111         }
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00112}00112         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_melodia_8c_source_l00113}00113 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,37 @@
+\hypertarget{_i2_c___master___file_8h_source}{}\doxysection{I2\+C\+\_\+\+Master\+\_\+\+File.\+h}
+\label{_i2_c___master___file_8h_source}\index{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/I2C\_Master\_File.h@{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/I2C\_Master\_File.h}}
+\mbox{\hyperlink{_i2_c___master___file_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00001}00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00002}00002 \textcolor{comment}{ * PIC18F4550 LCD16x2 Header File}}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00003}00003 \textcolor{comment}{ * http://www.electronicwings.com}}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00004}00004 \textcolor{comment}{ */} }
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00006}00006 \textcolor{preprocessor}{\#ifndef I2C\_Master\_H}}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00007}00007 \textcolor{preprocessor}{\#define I2C\_Master\_H}}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <xc.h>} \textcolor{comment}{// include processor files -\/ each processor file is guarded.  }}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00011}\mbox{\hyperlink{_i2_c___master___file_8h_a3aee3beceffb391d6aa3012c48f0a35b}{00011}} \textcolor{preprocessor}{\#define F\_OSC 8000000                       }\textcolor{comment}{/* define F\_OSC for finding bit rate }}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00012}\mbox{\hyperlink{_i2_c___master___file_8h_ae604a867b14d500ceccdee38d17edf84}{00012}} \textcolor{comment}{                                               here oscillator frequency is 8 MHz so define as 800000 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00013}\mbox{\hyperlink{_i2_c___master___file_8h_a17468d10f0c67a4ee7b38aab09d9e096}{00013}} \textcolor{preprocessor}{\#define I2C\_CLOCK 100000                    }\textcolor{comment}{/* I2C clock frequency is 100 kHz*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00014}00014 \textcolor{preprocessor}{\#define BITRATE ((F\_OSC/(4*I2C\_CLOCK))-\/1)  }\textcolor{comment}{/* find bit rate to assign this value to SSPADD register*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00016}00016 \textcolor{keywordtype}{void} \mbox{\hyperlink{_i2_c___master___file_8h_a32604c6594874020996a591d1c44a36b}{I2C\_Ready}}(\textcolor{keywordtype}{void});                           \textcolor{comment}{/* check and wait weather I2C is ready or not */}}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00017}00017 \textcolor{keywordtype}{void} \mbox{\hyperlink{_i2_c___master___file_8h_a84df9a5887b8b8230cfe85d18e53900e}{I2C\_Init}}(\textcolor{keywordtype}{void});                            \textcolor{comment}{/* initialize I2C register configuration*/}}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00018}00018 \textcolor{keywordtype}{char} \mbox{\hyperlink{_i2_c___master___file_8h_a6fb40f6f2bfd9d3e1dd2ea13784dcad9}{I2C\_Start}}(\textcolor{keywordtype}{char});                       \textcolor{comment}{/* send start pulse along with slave device address */}}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00019}00019 \textcolor{keywordtype}{void} \mbox{\hyperlink{_i2_c___master___file_8h_adffc05a44d65341315d4e2c2da1ec87d}{I2C\_Start\_Wait}}(\textcolor{keywordtype}{char});                  \textcolor{comment}{/* send start pulse along with slave device address }}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00020}00020 \textcolor{comment}{                                             * and wait if not work */}}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00021}00021 \textcolor{keywordtype}{char} \mbox{\hyperlink{_i2_c___master___file_8h_a2709cf403f0c24fe87e0e55850ae85d8}{I2C\_Repeated\_Start}}(\textcolor{keywordtype}{char});              \textcolor{comment}{/* send repeated start pulse along with device write address*/}}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00022}00022 \textcolor{keywordtype}{char} \mbox{\hyperlink{_i2_c___master___file_8h_a8c642a2d729a9cf462643092a54c2fc4}{I2C\_Stop}}(\textcolor{keywordtype}{void});                            \textcolor{comment}{/* send stop pulse*/}}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00023}00023 \textcolor{keywordtype}{char} \mbox{\hyperlink{_i2_c___master___file_8h_ab64f1e627a5b012a18549321a26ecc9e}{I2C\_Write}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char});              \textcolor{comment}{/* transmit/write data/address to slave device */}}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00024}00024 \textcolor{keywordtype}{void} \mbox{\hyperlink{_i2_c___master___file_8h_aecd9f094a397ce4ca002fe6ca1513634}{I2C\_Ack}}(\textcolor{keywordtype}{void});                             \textcolor{comment}{/* send acknowledge from master for another read */}}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00025}00025 \textcolor{keywordtype}{void} \mbox{\hyperlink{_i2_c___master___file_8h_a4fd80a89587fb0f5cc8b743c841f4a42}{I2C\_Nack}}(\textcolor{keywordtype}{void});                            \textcolor{comment}{/* send negative acknowledge from master for stop reading */}}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00026}00026 \textcolor{keywordtype}{char} \mbox{\hyperlink{_i2_c___master___file_8h_ae659adbd3c6a366248a65a5a06ccaddf}{I2C\_Read}}(\textcolor{keywordtype}{char} flag);                   \textcolor{comment}{/* read data from slave devices*/}}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00027}00027 \textcolor{keywordtype}{void} \mbox{\hyperlink{_i2_c___master___file_8h_a4a67d4bb2679cbcf9361dce21fb7b61a}{RTC\_Calendario}}(\textcolor{keywordtype}{void});                      \textcolor{comment}{/* call the clock, calendar functions and display the data*/}}
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_i2_c___master___file_8h_source_l00031}00031 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* I2C\_Master\_H */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

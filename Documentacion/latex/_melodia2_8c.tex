@@ -1,0 +1,189 @@
+\hypertarget{_melodia2_8c}{}\doxysection{Referencia del Archivo D\+:/\+Clases 2021/\+Arquitectura Computacional/\+Github/\+Smart\+\_\+\+Watch/\+Smart\+Watch.X/\+Melodia2.c}
+\label{_melodia2_8c}\index{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/Melodia2.c@{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/Melodia2.c}}
+{\ttfamily \#include $<$pic18f4550.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}LCD\+\_\+caracter.\+h\char`\"{}}\newline
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_melodia2_8c_a18e94699a8997269e7c49971c005d870}{conf\+\_\+\+CLK}} (void)
+\item 
+void \mbox{\hyperlink{_melodia2_8c_a4dbe4dc1bda619d00ebbc9f430d56c7d}{conf\+\_\+\+IO}} (void)
+\begin{DoxyCompactList}\small\item\em void conf\+\_\+\+IO (void) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_melodia2_8c_a0d8da984541e03ea0c04e6ff08709db2}{conf\+\_\+\+TA1}} (void)
+\begin{DoxyCompactList}\small\item\em void conf\+\_\+\+TA1 (void) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_melodia2_8c_af64840480adcf58c332ac63db58634ef}{desabilitar\+\_\+\+Time}} (void)
+\item 
+void \mbox{\hyperlink{_melodia2_8c_aecd01d231468dc5cdcf9659b0b019e4f}{Play\+Cancion}} (void)
+\item 
+void \mbox{\hyperlink{_melodia2_8c_acd3fec81d10a06ac3c4360fe52a7427f}{\+\_\+\+\_\+interrupt}} () ISR(void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t volatile \mbox{\hyperlink{_melodia2_8c_acac1a554efac3d61b3f9b2b6f393f836}{var3seg}} = 0
+\begin{DoxyCompactList}\small\item\em void conf\+\_\+\+CLK (void) \end{DoxyCompactList}\item 
+uint8\+\_\+t volatile \mbox{\hyperlink{_melodia2_8c_a75fc6160df83444867e3320628defb71}{var3beep}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{_melodia2_8c_acd3fec81d10a06ac3c4360fe52a7427f}\label{_melodia2_8c_acd3fec81d10a06ac3c4360fe52a7427f}} 
+\index{Melodia2.c@{Melodia2.c}!\_\_interrupt@{\_\_interrupt}}
+\index{\_\_interrupt@{\_\_interrupt}!Melodia2.c@{Melodia2.c}}
+\doxysubsubsection{\texorpdfstring{\_\_interrupt()}{\_\_interrupt()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+interrupt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_melodia2_8c_source_l00150}{150}} del archivo \mbox{\hyperlink{_melodia2_8c_source}{Melodia2.\+c}}.
+
+\mbox{\Hypertarget{_melodia2_8c_a18e94699a8997269e7c49971c005d870}\label{_melodia2_8c_a18e94699a8997269e7c49971c005d870}} 
+\index{Melodia2.c@{Melodia2.c}!conf\_CLK@{conf\_CLK}}
+\index{conf\_CLK@{conf\_CLK}!Melodia2.c@{Melodia2.c}}
+\doxysubsubsection{\texorpdfstring{conf\_CLK()}{conf\_CLK()}}
+{\footnotesize\ttfamily void conf\+\_\+\+CLK (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_melodia2_8c_source_l00078}{78}} del archivo \mbox{\hyperlink{_melodia2_8c_source}{Melodia2.\+c}}.
+
+\mbox{\Hypertarget{_melodia2_8c_a4dbe4dc1bda619d00ebbc9f430d56c7d}\label{_melodia2_8c_a4dbe4dc1bda619d00ebbc9f430d56c7d}} 
+\index{Melodia2.c@{Melodia2.c}!conf\_IO@{conf\_IO}}
+\index{conf\_IO@{conf\_IO}!Melodia2.c@{Melodia2.c}}
+\doxysubsubsection{\texorpdfstring{conf\_IO()}{conf\_IO()}}
+{\footnotesize\ttfamily void conf\+\_\+\+IO (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+void conf\+\_\+\+IO (void) 
+
+Configura los pines del MCU a usar en este proyecto.
+\begin{DoxyItemize}
+\item Puerto D\+: Buzzer.
+\end{DoxyItemize}
+
+RD2\+: Salida. ( Serie Resistor 220 Ohms con Base Transistor NPN )
+
+\begin{DoxyAuthor}{Autor}
+Manuel Caballero 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+13/3/2015 
+\end{DoxyDate}
+
+
+Definición en la línea \mbox{\hyperlink{_melodia2_8c_source_l00102}{102}} del archivo \mbox{\hyperlink{_melodia2_8c_source}{Melodia2.\+c}}.
+
+\mbox{\Hypertarget{_melodia2_8c_a0d8da984541e03ea0c04e6ff08709db2}\label{_melodia2_8c_a0d8da984541e03ea0c04e6ff08709db2}} 
+\index{Melodia2.c@{Melodia2.c}!conf\_TA1@{conf\_TA1}}
+\index{conf\_TA1@{conf\_TA1}!Melodia2.c@{Melodia2.c}}
+\doxysubsubsection{\texorpdfstring{conf\_TA1()}{conf\_TA1()}}
+{\footnotesize\ttfamily void conf\+\_\+\+TA1 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+void conf\+\_\+\+TA1 (void) 
+
+Configura el Timer1 como 16-\/bit timer. \begin{DoxyVerb}       El Timer1 será el encargado de ejecutar las acciones requeridas:
+
+            1. Cuenta de 3 segundos.
+            2. Tres Beep por el Buzzer.
+
+       Se realizará todo el proceso cada, aproximadamente 3 segundos.
+
+     Teniendo en cuenta la expresión del Timer1:
+
+            Interrupt_Timer1 = ( 1/( f_OSC/4 ) )·( 65536 - TMR1 )·Prescaler
+
+      Tenemos que:
+
+            50 ms = ( 1/( 8MHz/4 ) )·( 65536 - TMR1 )·8
+
+            TMR1 = 65536 - 12500 = 53036 ( 0xCF2C )
+\end{DoxyVerb}
+
+
+\begin{DoxyPrecond}{Precondición}
+El reloj debe ser 8 MHz. 
+\end{DoxyPrecond}
+\begin{DoxyAuthor}{Autor}
+Manuel Caballero 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+14/3/2015 
+\end{DoxyDate}
+
+
+Definición en la línea \mbox{\hyperlink{_melodia2_8c_source_l00137}{137}} del archivo \mbox{\hyperlink{_melodia2_8c_source}{Melodia2.\+c}}.
+
+\mbox{\Hypertarget{_melodia2_8c_af64840480adcf58c332ac63db58634ef}\label{_melodia2_8c_af64840480adcf58c332ac63db58634ef}} 
+\index{Melodia2.c@{Melodia2.c}!desabilitar\_Time@{desabilitar\_Time}}
+\index{desabilitar\_Time@{desabilitar\_Time}!Melodia2.c@{Melodia2.c}}
+\doxysubsubsection{\texorpdfstring{desabilitar\_Time()}{desabilitar\_Time()}}
+{\footnotesize\ttfamily void desabilitar\+\_\+\+Time (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_melodia2_8c_source_l00184}{184}} del archivo \mbox{\hyperlink{_melodia2_8c_source}{Melodia2.\+c}}.
+
+\mbox{\Hypertarget{_melodia2_8c_aecd01d231468dc5cdcf9659b0b019e4f}\label{_melodia2_8c_aecd01d231468dc5cdcf9659b0b019e4f}} 
+\index{Melodia2.c@{Melodia2.c}!PlayCancion@{PlayCancion}}
+\index{PlayCancion@{PlayCancion}!Melodia2.c@{Melodia2.c}}
+\doxysubsubsection{\texorpdfstring{PlayCancion()}{PlayCancion()}}
+{\footnotesize\ttfamily void Play\+Cancion (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_melodia2_8c_source_l00037}{37}} del archivo \mbox{\hyperlink{_melodia2_8c_source}{Melodia2.\+c}}.
+
+
+
+\doxysubsection{Documentación de las variables}
+\mbox{\Hypertarget{_melodia2_8c_a75fc6160df83444867e3320628defb71}\label{_melodia2_8c_a75fc6160df83444867e3320628defb71}} 
+\index{Melodia2.c@{Melodia2.c}!var3beep@{var3beep}}
+\index{var3beep@{var3beep}!Melodia2.c@{Melodia2.c}}
+\doxysubsubsection{\texorpdfstring{var3beep}{var3beep}}
+{\footnotesize\ttfamily uint8\+\_\+t volatile var3beep = 0}
+
+Variable contador que junto al Timer1 nos permite realizar tres Beep 
+
+Definición en la línea \mbox{\hyperlink{_melodia2_8c_source_l00035}{35}} del archivo \mbox{\hyperlink{_melodia2_8c_source}{Melodia2.\+c}}.
+
+\mbox{\Hypertarget{_melodia2_8c_acac1a554efac3d61b3f9b2b6f393f836}\label{_melodia2_8c_acac1a554efac3d61b3f9b2b6f393f836}} 
+\index{Melodia2.c@{Melodia2.c}!var3seg@{var3seg}}
+\index{var3seg@{var3seg}!Melodia2.c@{Melodia2.c}}
+\doxysubsubsection{\texorpdfstring{var3seg}{var3seg}}
+{\footnotesize\ttfamily uint8\+\_\+t volatile var3seg = 0}
+
+
+
+void conf\+\_\+\+CLK (void) 
+
+Configura los relojes disponibles
+\begin{DoxyItemize}
+\item Reloj Principal\+: INTERNO 8 MHz.
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Autor}
+Manuel Caballero 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versión}
+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Fecha}
+17/3/2015 Variable contador que junto al Timer1 nos permite contabilizar 3 s 
+\end{DoxyDate}
+
+
+Definición en la línea \mbox{\hyperlink{_melodia2_8c_source_l00034}{34}} del archivo \mbox{\hyperlink{_melodia2_8c_source}{Melodia2.\+c}}.
+

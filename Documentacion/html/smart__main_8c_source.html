@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SmartWatch: Fichero Fuente D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/smart_main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SmartWatch<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Reloj encargado de hacer sonar una alarma y prender suces dependiendo den nivel de ilumininacion presente</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7b2c782f146b47dc9968b6eee9ba20f6.html">SmartWatch.X</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">smart_main.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="smart__main_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* </span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * File:   smart_main.c</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Author: Arlex Fabian Galindez-Geraldina Ivonne Carlosama-Juan Sebastian Osorio</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Created on 4 de octubre de 2021, 10:59 AM</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_l_c_d__caracter_8h.html">LCD_caracter.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_i2_c___master___file_8h.html">I2C_Master_File.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_funciones_8h.html">Funciones.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_usart_8h.html">Usart.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/*********************************************************************</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * Function:        void main()</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * Input:           None</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * Output:          None</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * Overview:        Funcion pricipal que se encarga del funcionamiento</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *                  del programa</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * Note:            None</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> ********************************************************************/</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="smart__main_8c.html#acdef7a1fd863a6d3770c1268cb06add3">   26</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="smart__main_8c.html#acdef7a1fd863a6d3770c1268cb06add3">main</a>() {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    OSCCON = 0x72; <span class="comment">/* Use internal oscillator of 8MHz Frequency */</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    TRISE = 0x00; <span class="comment">/* Set direction of PORTB as OUTPUT to which LED is connected */</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_function" href="_i2_c___master___file_8h.html#a84df9a5887b8b8230cfe85d18e53900e">I2C_Init</a>(); <span class="comment">/*Initialize the I2C protocol*/</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_function" href="_bluetooth_8c.html#afb4b88e1987584afc1fa235f899852c3">USART_Init</a>(9600); <span class="comment">/* initialize USART operation with 9600 baud rate */</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_function" href="_l_c_d__caracter_8c.html#aa53c9d40f3aa552a9974cd55ac510cb3">LCD_Init</a>(); <span class="comment">/*Initialize LCD to 5*8 matrix in 4-bit mode*/</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">while</span> (1) {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_function" href="_i2_c___master___file_8h.html#a4a67d4bb2679cbcf9361dce21fb7b61a">RTC_Calendario</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">int</span> caso = <a class="code hl_function" href="_estados_8c.html#a081d772a85ba5c76e5c5dec6d30ff6db">Estados</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">switch</span> (caso) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                <a class="code hl_function" href="_estados_8c.html#a1dd75174d69d3b13fe0453bf80164361">Sunny_State</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                <a class="code hl_function" href="_estados_8c.html#aa82b2fd93674b5714ea32b117a601413">Cloudy_State</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                <a class="code hl_function" href="_estados_8c.html#acef58d0cc9be73df7c16f50e8fb9e534">Rainy_State</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <a class="code hl_function" href="_estados_8c.html#aa8fb3329093dbace8c2b5699b3bcae19">Alarm_Status</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <a class="code hl_function" href="_l_c_d__caracter_8c.html#ac4e08e9c48cd802f4ab493b5c4546f6f">LCD_MSdelay</a>(3000);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_function" href="_l_c_d__caracter_8c.html#ae60d0b62d7eb3fa31266c095d7b3c245">LCD_Clear</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    };</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="ttc" id="a_bluetooth_8c_html_afb4b88e1987584afc1fa235f899852c3"><div class="ttname"><a href="_bluetooth_8c.html#afb4b88e1987584afc1fa235f899852c3">USART_Init</a></div><div class="ttdeci">void USART_Init(long baud_rate)</div><div class="ttdef"><b>Definition:</b> <a href="_bluetooth_8c_source.html#l00037">Bluetooth.c:37</a></div></div>
+<div class="ttc" id="a_estados_8c_html_a081d772a85ba5c76e5c5dec6d30ff6db"><div class="ttname"><a href="_estados_8c.html#a081d772a85ba5c76e5c5dec6d30ff6db">Estados</a></div><div class="ttdeci">int Estados()</div><div class="ttdef"><b>Definition:</b> <a href="_estados_8c_source.html#l00025">Estados.c:25</a></div></div>
+<div class="ttc" id="a_estados_8c_html_a1dd75174d69d3b13fe0453bf80164361"><div class="ttname"><a href="_estados_8c.html#a1dd75174d69d3b13fe0453bf80164361">Sunny_State</a></div><div class="ttdeci">void Sunny_State()</div><div class="ttdef"><b>Definition:</b> <a href="_estados_8c_source.html#l00056">Estados.c:56</a></div></div>
+<div class="ttc" id="a_estados_8c_html_aa82b2fd93674b5714ea32b117a601413"><div class="ttname"><a href="_estados_8c.html#aa82b2fd93674b5714ea32b117a601413">Cloudy_State</a></div><div class="ttdeci">void Cloudy_State()</div><div class="ttdef"><b>Definition:</b> <a href="_estados_8c_source.html#l00082">Estados.c:82</a></div></div>
+<div class="ttc" id="a_estados_8c_html_aa8fb3329093dbace8c2b5699b3bcae19"><div class="ttname"><a href="_estados_8c.html#aa8fb3329093dbace8c2b5699b3bcae19">Alarm_Status</a></div><div class="ttdeci">void Alarm_Status(void)</div><div class="ttdef"><b>Definition:</b> <a href="_estados_8c_source.html#l00130">Estados.c:130</a></div></div>
+<div class="ttc" id="a_estados_8c_html_acef58d0cc9be73df7c16f50e8fb9e534"><div class="ttname"><a href="_estados_8c.html#acef58d0cc9be73df7c16f50e8fb9e534">Rainy_State</a></div><div class="ttdeci">void Rainy_State()</div><div class="ttdef"><b>Definition:</b> <a href="_estados_8c_source.html#l00107">Estados.c:107</a></div></div>
+<div class="ttc" id="a_funciones_8h_html"><div class="ttname"><a href="_funciones_8h.html">Funciones.h</a></div></div>
+<div class="ttc" id="a_i2_c___master___file_8h_html"><div class="ttname"><a href="_i2_c___master___file_8h.html">I2C_Master_File.h</a></div></div>
+<div class="ttc" id="a_i2_c___master___file_8h_html_a4a67d4bb2679cbcf9361dce21fb7b61a"><div class="ttname"><a href="_i2_c___master___file_8h.html#a4a67d4bb2679cbcf9361dce21fb7b61a">RTC_Calendario</a></div><div class="ttdeci">void RTC_Calendario(void)</div><div class="ttdef"><b>Definition:</b> <a href="reloj_8c_source.html#l00079">reloj.c:79</a></div></div>
+<div class="ttc" id="a_i2_c___master___file_8h_html_a84df9a5887b8b8230cfe85d18e53900e"><div class="ttname"><a href="_i2_c___master___file_8h.html#a84df9a5887b8b8230cfe85d18e53900e">I2C_Init</a></div><div class="ttdeci">void I2C_Init(void)</div><div class="ttdef"><b>Definition:</b> <a href="_reloj__ar_8c_source.html#l00057">Reloj_ar.c:57</a></div></div>
+<div class="ttc" id="a_l_c_d__caracter_8c_html_aa53c9d40f3aa552a9974cd55ac510cb3"><div class="ttname"><a href="_l_c_d__caracter_8c.html#aa53c9d40f3aa552a9974cd55ac510cb3">LCD_Init</a></div><div class="ttdeci">void LCD_Init(void)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d__caracter_8c_source.html#l00023">LCD_caracter.c:23</a></div></div>
+<div class="ttc" id="a_l_c_d__caracter_8c_html_ac4e08e9c48cd802f4ab493b5c4546f6f"><div class="ttname"><a href="_l_c_d__caracter_8c.html#ac4e08e9c48cd802f4ab493b5c4546f6f">LCD_MSdelay</a></div><div class="ttdeci">void LCD_MSdelay(unsigned int val)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d__caracter_8c_source.html#l00199">LCD_caracter.c:199</a></div></div>
+<div class="ttc" id="a_l_c_d__caracter_8c_html_ae60d0b62d7eb3fa31266c095d7b3c245"><div class="ttname"><a href="_l_c_d__caracter_8c.html#ae60d0b62d7eb3fa31266c095d7b3c245">LCD_Clear</a></div><div class="ttdeci">void LCD_Clear(void)</div><div class="ttdef"><b>Definition:</b> <a href="_l_c_d__caracter_8c_source.html#l00155">LCD_caracter.c:155</a></div></div>
+<div class="ttc" id="a_l_c_d__caracter_8h_html"><div class="ttname"><a href="_l_c_d__caracter_8h.html">LCD_caracter.h</a></div></div>
+<div class="ttc" id="a_usart_8h_html"><div class="ttname"><a href="_usart_8h.html">Usart.h</a></div></div>
+<div class="ttc" id="asmart__main_8c_html_acdef7a1fd863a6d3770c1268cb06add3"><div class="ttname"><a href="smart__main_8c.html#acdef7a1fd863a6d3770c1268cb06add3">main</a></div><div class="ttdeci">void main()</div><div class="ttdef"><b>Definition:</b> <a href="smart__main_8c_source.html#l00026">smart_main.c:26</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

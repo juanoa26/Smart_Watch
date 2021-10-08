@@ -1,0 +1,210 @@
+\hypertarget{_l_c_d__caracter_8c_source}{}\doxysection{LCD\+\_\+caracter.\+c}
+\label{_l_c_d__caracter_8c_source}\index{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/LCD\_caracter.c@{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/LCD\_caracter.c}}
+\mbox{\hyperlink{_l_c_d__caracter_8c}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00001}00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00002}00002 \textcolor{comment}{ * PIC18F4550 I2C Source File}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00003}00003 \textcolor{comment}{ * http://www.electronicwings.com}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00004}00004 \textcolor{comment}{ */} }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_funciones_8h}{Funciones.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00007}00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_l_c_d__caracter_8h}{LCD\_caracter.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00009}00009 \textcolor{comment}{/****************************Functions********************************/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00011}00011 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00012}00012 \textcolor{comment}{ * Function:        void LCD\_Init(void)}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00013}00013 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00014}00014 \textcolor{comment}{ * Input:           None}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00015}00015 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00016}00016 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00017}00017 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00018}00018 \textcolor{comment}{ * Overview:        Inicializa la configuracion de la pantalla LCD}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00019}00019 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00020}00020 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00021}00021 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00023}\mbox{\hyperlink{_l_c_d__caracter_8c_aa53c9d40f3aa552a9974cd55ac510cb3}{00023}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d__caracter_8c_aa53c9d40f3aa552a9974cd55ac510cb3}{LCD\_Init}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00024}00024 \{}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00025}00025     \mbox{\hyperlink{_l_c_d__caracter_8h_aa1454638c60ba2bfd8885e763b6e637b}{LCD\_Port}} = 0;       \textcolor{comment}{/*PORT as Output Port*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00026}00026     \mbox{\hyperlink{_l_c_d__caracter_8c_ac4e08e9c48cd802f4ab493b5c4546f6f}{LCD\_MSdelay}}(15);        \textcolor{comment}{/*15ms,16x2 LCD Power on delay*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00027}00027     \mbox{\hyperlink{_l_c_d__caracter_8c_a5deccc9bde4056e7354d6e4a02b24a41}{LCD\_Command}}(0x02);  \textcolor{comment}{/*send for initialization of LCD }}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00028}00028 \textcolor{comment}{                          for nibble (4-\/bit) mode */}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00029}00029     \mbox{\hyperlink{_l_c_d__caracter_8c_a5deccc9bde4056e7354d6e4a02b24a41}{LCD\_Command}}(0x28);  \textcolor{comment}{/*use 2 line and }}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00030}00030 \textcolor{comment}{                          initialize 5*8 matrix in (4-\/bit mode)*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00031}00031     \mbox{\hyperlink{_l_c_d__caracter_8c_a5deccc9bde4056e7354d6e4a02b24a41}{LCD\_Command}}(0x01);  \textcolor{comment}{/*clear display screen*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00032}00032     \mbox{\hyperlink{_l_c_d__caracter_8c_a5deccc9bde4056e7354d6e4a02b24a41}{LCD\_Command}}(0x0c);  \textcolor{comment}{/*display on cursor off*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00033}00033     \mbox{\hyperlink{_l_c_d__caracter_8c_a5deccc9bde4056e7354d6e4a02b24a41}{LCD\_Command}}(0x06);  \textcolor{comment}{/*increment cursor (shift cursor to right)*/}    }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00034}00034 \}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00036}00036 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00037}00037 \textcolor{comment}{ * Function:        void LCD\_Command(unsigned char cmd )}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00038}00038 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00039}00039 \textcolor{comment}{ * Input:           unsigned char cmd: Resibe la fila en donde se imprimira la informacion}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00040}00040 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00041}00041 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00042}00042 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00043}00043 \textcolor{comment}{ * Overview:        Con la direccion recibida determina en donde se mostrara la informacion}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00044}00044 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00045}00045 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00046}00046 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00048}\mbox{\hyperlink{_l_c_d__caracter_8c_a5deccc9bde4056e7354d6e4a02b24a41}{00048}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d__caracter_8c_a5deccc9bde4056e7354d6e4a02b24a41}{LCD\_Command}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} cmd )}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00049}00049 \{}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00050}00050     \mbox{\hyperlink{_l_c_d__caracter_8h_a9ab6954b25558526556ab556c4be540b}{ldata}} = (\mbox{\hyperlink{_l_c_d__caracter_8h_a9ab6954b25558526556ab556c4be540b}{ldata}} \& 0x0f) |(0xF0 \& cmd);  \textcolor{comment}{/*Send higher nibble of command first to PORT*/} }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00051}00051     \mbox{\hyperlink{_l_c_d__caracter_8h_af8903d8eea3868940c60af887473b152}{RS}} = 0;  \textcolor{comment}{/*Command Register is selected i.e.RS=0*/} }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00052}00052     \mbox{\hyperlink{_l_c_d__caracter_8h_a22e6626f2c98ed902f8ded47f6438c05}{EN}} = 1;  \textcolor{comment}{/*High-\/to-\/low pulse on Enable pin to latch data*/} }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00053}00053     NOP();}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00054}00054     \mbox{\hyperlink{_l_c_d__caracter_8h_a22e6626f2c98ed902f8ded47f6438c05}{EN}} = 0;}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00055}00055     \mbox{\hyperlink{_l_c_d__caracter_8c_ac4e08e9c48cd802f4ab493b5c4546f6f}{LCD\_MSdelay}}(1);}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00056}00056     \mbox{\hyperlink{_l_c_d__caracter_8h_a9ab6954b25558526556ab556c4be540b}{ldata}} = (\mbox{\hyperlink{_l_c_d__caracter_8h_a9ab6954b25558526556ab556c4be540b}{ldata}} \& 0x0f) | (cmd<<4);  \textcolor{comment}{/*Send lower nibble of command to PORT */}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00057}00057     \mbox{\hyperlink{_l_c_d__caracter_8h_a22e6626f2c98ed902f8ded47f6438c05}{EN}} = 1;}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00058}00058     NOP();}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00059}00059     \mbox{\hyperlink{_l_c_d__caracter_8h_a22e6626f2c98ed902f8ded47f6438c05}{EN}} = 0;}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00060}00060     \mbox{\hyperlink{_l_c_d__caracter_8c_ac4e08e9c48cd802f4ab493b5c4546f6f}{LCD\_MSdelay}}(3);}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00061}00061 \}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00063}00063 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00064}00064 \textcolor{comment}{ * Function:        void LCD\_Char(unsigned char dat)}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00065}00065 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00066}00066 \textcolor{comment}{ * Input:           unsigned char dat: Resibe los datos que se enviaran al LCD}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00067}00067 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00068}00068 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00069}00069 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00070}00070 \textcolor{comment}{ * Overview:        Trasmite la informacion recibida al LCD}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00071}00071 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00072}00072 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00073}00073 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00075}\mbox{\hyperlink{_l_c_d__caracter_8c_a4d327799821093ffa93c41ec634b0ca6}{00075}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d__caracter_8c_a4d327799821093ffa93c41ec634b0ca6}{LCD\_Char}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} dat)}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00076}00076 \{}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00077}00077     \mbox{\hyperlink{_l_c_d__caracter_8h_a9ab6954b25558526556ab556c4be540b}{ldata}} = (\mbox{\hyperlink{_l_c_d__caracter_8h_a9ab6954b25558526556ab556c4be540b}{ldata}} \& 0x0f) | (0xF0 \& dat);  \textcolor{comment}{/*Send higher nibble of data first to PORT*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00078}00078     \mbox{\hyperlink{_l_c_d__caracter_8h_af8903d8eea3868940c60af887473b152}{RS}} = 1;  \textcolor{comment}{/*Data Register is selected*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00079}00079     \mbox{\hyperlink{_l_c_d__caracter_8h_a22e6626f2c98ed902f8ded47f6438c05}{EN}} = 1;  \textcolor{comment}{/*High-\/to-\/low pulse on Enable pin to latch data*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00080}00080     NOP();}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00081}00081     \mbox{\hyperlink{_l_c_d__caracter_8h_a22e6626f2c98ed902f8ded47f6438c05}{EN}} = 0;}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00082}00082     \mbox{\hyperlink{_l_c_d__caracter_8c_ac4e08e9c48cd802f4ab493b5c4546f6f}{LCD\_MSdelay}}(1);}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00083}00083     \mbox{\hyperlink{_l_c_d__caracter_8h_a9ab6954b25558526556ab556c4be540b}{ldata}} = (\mbox{\hyperlink{_l_c_d__caracter_8h_a9ab6954b25558526556ab556c4be540b}{ldata}} \& 0x0f) | (dat<<4);  \textcolor{comment}{/*Send lower nibble of data to PORT*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00084}00084     \mbox{\hyperlink{_l_c_d__caracter_8h_a22e6626f2c98ed902f8ded47f6438c05}{EN}} = 1;  \textcolor{comment}{/*High-\/to-\/low pulse on Enable pin to latch data*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00085}00085     NOP();}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00086}00086     \mbox{\hyperlink{_l_c_d__caracter_8h_a22e6626f2c98ed902f8ded47f6438c05}{EN}} = 0;}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00087}00087     \mbox{\hyperlink{_l_c_d__caracter_8c_ac4e08e9c48cd802f4ab493b5c4546f6f}{LCD\_MSdelay}}(3);}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00088}00088 \}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00089}00089 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00090}00090 \textcolor{comment}{ * Function:        void LCD\_String(const char *msg)}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00091}00091 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00092}00092 \textcolor{comment}{ * Input:           const char *msg: Lleva la informacion}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00093}00093 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00094}00094 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00095}00095 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00096}00096 \textcolor{comment}{ * Overview:        Muestra la informacion en el LCD}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00097}00097 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00098}00098 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00099}00099 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00101}\mbox{\hyperlink{_l_c_d__caracter_8c_ae82669e730dd8cd249730db12f4de7c4}{00101}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d__caracter_8c_ae82669e730dd8cd249730db12f4de7c4}{LCD\_String}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *msg)}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00102}00102 \{}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00103}00103     \textcolor{keywordflow}{while}((*msg)!=0)}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00104}00104     \{       }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00105}00105       \mbox{\hyperlink{_l_c_d__caracter_8c_a4d327799821093ffa93c41ec634b0ca6}{LCD\_Char}}(*msg);}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00106}00106       msg++;    }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00107}00107     \}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00108}00108 \}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00110}00110 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00111}00111 \textcolor{comment}{ * Function:        void LCD\_String\_xy(char row,char pos,const char *msg)}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00112}00112 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00113}00113 \textcolor{comment}{ * Input:           char row: Determina la Fila}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00114}00114 \textcolor{comment}{ *                  char pos: Determina la posicion}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00115}00115 \textcolor{comment}{ *                  const char *msg: Lleva la informacion a imprimir}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00116}00116 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00117}00117 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00118}00118 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00119}00119 \textcolor{comment}{ * Overview:        Muestra la informacion en el LCD}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00120}00120 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00121}00121 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00122}00122 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00124}\mbox{\hyperlink{_l_c_d__caracter_8c_ac164102b5548d181e0865cca65dffd73}{00124}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d__caracter_8c_ac164102b5548d181e0865cca65dffd73}{LCD\_String\_xy}}(\textcolor{keywordtype}{char} row,\textcolor{keywordtype}{char} pos,\textcolor{keyword}{const} \textcolor{keywordtype}{char} *msg)}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00125}00125 \{}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00126}00126     \textcolor{keywordtype}{char} location=0;}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00127}00127     \textcolor{keywordflow}{if}(row<=1)}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00128}00128     \{}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00129}00129         location=(0x80) | ((pos) \& 0x0f);  \textcolor{comment}{/*Print message on 1st row and desired location*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00130}00130         \mbox{\hyperlink{_l_c_d__caracter_8c_a5deccc9bde4056e7354d6e4a02b24a41}{LCD\_Command}}(location);}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00131}00131     \}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00132}00132     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00133}00133     \{}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00134}00134         location=(0xC0) | ((pos) \& 0x0f);  \textcolor{comment}{/*Print message on 2nd row and desired location*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00135}00135         \mbox{\hyperlink{_l_c_d__caracter_8c_a5deccc9bde4056e7354d6e4a02b24a41}{LCD\_Command}}(location);    }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00136}00136     \}  }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00137}00137     }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00139}00139     \mbox{\hyperlink{_l_c_d__caracter_8c_ae82669e730dd8cd249730db12f4de7c4}{LCD\_String}}(msg);}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00141}00141 \}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00143}00143 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00144}00144 \textcolor{comment}{ * Function:       void LCD\_Clear(void)}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00145}00145 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00146}00146 \textcolor{comment}{ * Input:           None}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00147}00147 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00148}00148 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00149}00149 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00150}00150 \textcolor{comment}{ * Overview:        Limpia la pantalla LCD}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00151}00151 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00152}00152 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00153}00153 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00154}00154 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00155}\mbox{\hyperlink{_l_c_d__caracter_8c_ae60d0b62d7eb3fa31266c095d7b3c245}{00155}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d__caracter_8c_ae60d0b62d7eb3fa31266c095d7b3c245}{LCD\_Clear}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00156}00156 \{}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00157}00157     \mbox{\hyperlink{_l_c_d__caracter_8c_a5deccc9bde4056e7354d6e4a02b24a41}{LCD\_Command}}(0x01);  \textcolor{comment}{/*clear display screen*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00158}00158     \mbox{\hyperlink{_l_c_d__caracter_8c_ac4e08e9c48cd802f4ab493b5c4546f6f}{LCD\_MSdelay}}(3);}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00159}00159 \}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00160}00160 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00161}00161 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00162}00162 \textcolor{comment}{ * Function:       void  LCD\_Custom\_Char ( unsigned  char  loc, unsigned  char  *msg) }}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00163}00163 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00164}00164 \textcolor{comment}{ * Input:           unsigned  char  loc: Determina la posicion}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00165}00165 \textcolor{comment}{ *                  unsigned  char  *msg: Lleva la informacion}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00166}00166 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00167}00167 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00168}00168 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00169}00169 \textcolor{comment}{ * Overview:        Determina el tamaño de ventana en donde se mostrara la informacion}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00170}00170 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00171}00171 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00172}00172 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00173}00173 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00174}\mbox{\hyperlink{_l_c_d__caracter_8c_a6e5c72963efdd48dd7fc0b77c58c1ee2}{00174}} \textcolor{keywordtype}{void}  \mbox{\hyperlink{_l_c_d__caracter_8c_a6e5c72963efdd48dd7fc0b77c58c1ee2}{LCD\_Custom\_Char}} ( \textcolor{keywordtype}{unsigned}  \textcolor{keywordtype}{char}  loc, \textcolor{keywordtype}{unsigned}  \textcolor{keywordtype}{char}  *msg) }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00175}00175 \{ }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00176}00176     \textcolor{keywordtype}{unsigned}  \textcolor{keywordtype}{char}  \mbox{\hyperlink{_funciones_8h_a160bbe832b2c6af8edb49d371aef2388}{i}}; }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00177}00177     \textcolor{keywordflow}{if} (loc< 8 ) }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00178}00178     \{ }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00179}00179      \mbox{\hyperlink{_l_c_d__caracter_8c_a5deccc9bde4056e7354d6e4a02b24a41}{LCD\_Command}} ( 0x40 +(loc* 8 ));      \textcolor{comment}{/*  Command 0x40 and onwards forces the device to point CGRAM address  */} }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00180}00180        \textcolor{keywordflow}{for} (\mbox{\hyperlink{_funciones_8h_a160bbe832b2c6af8edb49d371aef2388}{i}}= 0 ;\mbox{\hyperlink{_funciones_8h_a160bbe832b2c6af8edb49d371aef2388}{i}}< 8 ;\mbox{\hyperlink{_funciones_8h_a160bbe832b2c6af8edb49d371aef2388}{i}}++)              \textcolor{comment}{/*  Write 8 byte for generation of 1 character  */} }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00181}00181            \mbox{\hyperlink{_l_c_d__caracter_8c_a4d327799821093ffa93c41ec634b0ca6}{LCD\_Char}} (msg[\mbox{\hyperlink{_funciones_8h_a160bbe832b2c6af8edb49d371aef2388}{i}}]); }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00182}00182         }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00183}00183     \}    }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00184}00184 \}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00185}00185 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00186}00186 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00187}00187 \textcolor{comment}{ * Function:       void LCD\_MSdelay(unsigned int val)}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00188}00188 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00189}00189 \textcolor{comment}{ * Input:           unsigned int val: Determina el tiempo del retardo}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00190}00190 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00191}00191 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00192}00192 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00193}00193 \textcolor{comment}{ * Overview:        Se encarga del tiempo que se mostrara la infprmacion }}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00194}00194 \textcolor{comment}{ *                  en el LCD}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00195}00195 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00196}00196 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00197}00197 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00198}00198 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00199}\mbox{\hyperlink{_l_c_d__caracter_8c_ac4e08e9c48cd802f4ab493b5c4546f6f}{00199}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d__caracter_8c_ac4e08e9c48cd802f4ab493b5c4546f6f}{LCD\_MSdelay}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} val)}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00200}00200 \{}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00201}00201  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{_funciones_8h_a160bbe832b2c6af8edb49d371aef2388}{i}},j;}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00202}00202  \textcolor{keywordflow}{for}(\mbox{\hyperlink{_funciones_8h_a160bbe832b2c6af8edb49d371aef2388}{i}}=0;\mbox{\hyperlink{_funciones_8h_a160bbe832b2c6af8edb49d371aef2388}{i}}<val;\mbox{\hyperlink{_funciones_8h_a160bbe832b2c6af8edb49d371aef2388}{i}}++)}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00203}00203      \textcolor{keywordflow}{for}(j=0;j<165;j++);  \textcolor{comment}{/*This count Provide delay of 1 ms for 8MHz Frequency */}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8c_source_l00204}00204  \}}
+
+\end{DoxyCode}

@@ -1,0 +1,76 @@
+\hypertarget{config_8h_source}{}\doxysection{config.\+h}
+\label{config_8h_source}\index{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/config.h@{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/config.h}}
+\mbox{\hyperlink{config_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00001}00001 \textcolor{comment}{// PIC18F4550 Configuration Bit Settings}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00003}00003 \textcolor{comment}{// 'C' source line config statements}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00005}00005 \textcolor{comment}{// CONFIG1L}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00006}00006 \textcolor{preprocessor}{\#pragma config PLLDIV = 1       }\textcolor{comment}{// PLL Prescaler Selection bits (No prescale (4 MHz oscillator input drives PLL directly))}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00007}00007 \textcolor{preprocessor}{\#pragma config CPUDIV = OSC1\_PLL2}\textcolor{comment}{// System Clock Postscaler Selection bits ([Primary Oscillator Src: /1][96 MHz PLL Src: /2])}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00008}00008 \textcolor{preprocessor}{\#pragma config USBDIV = 1       }\textcolor{comment}{// USB Clock Selection bit (used in Full-\/Speed USB mode only; UCFG:FSEN = 1) (USB clock source comes directly from the primary oscillator block with no postscale)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00010}00010 \textcolor{comment}{// CONFIG1H}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00011}00011 \textcolor{preprocessor}{\#pragma config FOSC = INTOSC\_EC        }\textcolor{comment}{// Oscillator Selection bits (HS oscillator (HS))}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00012}00012 \textcolor{preprocessor}{\#pragma config FCMEN = OFF      }\textcolor{comment}{// Fail-\/Safe Clock Monitor Enable bit (Fail-\/Safe Clock Monitor disabled)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00013}00013 \textcolor{preprocessor}{\#pragma config IESO = OFF       }\textcolor{comment}{// Internal/External Oscillator Switchover bit (Oscillator Switchover mode disabled)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00015}00015 \textcolor{comment}{// CONFIG2L}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00016}00016 \textcolor{preprocessor}{\#pragma config PWRT = ON        }\textcolor{comment}{// Power-\/up Timer Enable bit (PWRT enabled)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00017}00017 \textcolor{preprocessor}{\#pragma config BOR = OFF        }\textcolor{comment}{// Brown-\/out Reset Enable bits (Brown-\/out Reset disabled in hardware and software)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00018}00018 \textcolor{preprocessor}{\#pragma config BORV = 3         }\textcolor{comment}{// Brown-\/out Reset Voltage bits (Minimum setting 2.05V)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00019}00019 \textcolor{preprocessor}{\#pragma config VREGEN = OFF     }\textcolor{comment}{// USB Voltage Regulator Enable bit (USB voltage regulator disabled)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00021}00021 \textcolor{comment}{// CONFIG2H}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00022}00022 \textcolor{preprocessor}{\#pragma config WDT = OFF        }\textcolor{comment}{// Watchdog Timer Enable bit (WDT disabled (control is placed on the SWDTEN bit))}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00023}00023 \textcolor{preprocessor}{\#pragma config WDTPS = 32768    }\textcolor{comment}{// Watchdog Timer Postscale Select bits (1:32768)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00025}00025 \textcolor{comment}{// CONFIG3H}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00026}00026 \textcolor{preprocessor}{\#pragma config CCP2MX = ON      }\textcolor{comment}{// CCP2 MUX bit (CCP2 input/output is multiplexed with RC1)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00027}00027 \textcolor{preprocessor}{\#pragma config PBADEN = OFF      }\textcolor{comment}{// PORTB A/D Enable bit (PORTB<4:0> pins are configured as analog input channels on Reset)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00028}00028 \textcolor{preprocessor}{\#pragma config LPT1OSC = OFF    }\textcolor{comment}{// Low-\/Power Timer 1 Oscillator Enable bit (Timer1 configured for higher power operation)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00029}00029 \textcolor{preprocessor}{\#pragma config MCLRE = ON       }\textcolor{comment}{// MCLR Pin Enable bit (MCLR pin enabled; RE3 input pin disabled)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00031}00031 \textcolor{comment}{// CONFIG4L}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00032}00032 \textcolor{preprocessor}{\#pragma config STVREN = OFF     }\textcolor{comment}{// Stack Full/Underflow Reset Enable bit (Stack full/underflow will not cause Reset)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00033}00033 \textcolor{preprocessor}{\#pragma config LVP = OFF        }\textcolor{comment}{// Single-\/Supply ICSP Enable bit (Single-\/Supply ICSP disabled)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00034}00034 \textcolor{preprocessor}{\#pragma config ICPRT = OFF      }\textcolor{comment}{// Dedicated In-\/Circuit Debug/Programming Port (ICPORT) Enable bit (ICPORT disabled)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00035}00035 \textcolor{preprocessor}{\#pragma config XINST = OFF      }\textcolor{comment}{// Extended Instruction Set Enable bit (Instruction set extension and Indexed Addressing mode disabled (Legacy mode))}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00037}00037 \textcolor{comment}{// CONFIG5L}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00038}00038 \textcolor{preprocessor}{\#pragma config CP0 = OFF        }\textcolor{comment}{// Code Protection bit (Block 0 (000800-\/001FFFh) is not code-\/protected)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00039}00039 \textcolor{preprocessor}{\#pragma config CP1 = OFF        }\textcolor{comment}{// Code Protection bit (Block 1 (002000-\/003FFFh) is not code-\/protected)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00040}00040 \textcolor{preprocessor}{\#pragma config CP2 = OFF        }\textcolor{comment}{// Code Protection bit (Block 2 (004000-\/005FFFh) is not code-\/protected)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00041}00041 \textcolor{preprocessor}{\#pragma config CP3 = OFF        }\textcolor{comment}{// Code Protection bit (Block 3 (006000-\/007FFFh) is not code-\/protected)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00043}00043 \textcolor{comment}{// CONFIG5H}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00044}00044 \textcolor{preprocessor}{\#pragma config CPB = OFF        }\textcolor{comment}{// Boot Block Code Protection bit (Boot block (000000-\/0007FFh) is not code-\/protected)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00045}00045 \textcolor{preprocessor}{\#pragma config CPD = OFF        }\textcolor{comment}{// Data EEPROM Code Protection bit (Data EEPROM is not code-\/protected)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00047}00047 \textcolor{comment}{// CONFIG6L}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00048}00048 \textcolor{preprocessor}{\#pragma config WRT0 = OFF       }\textcolor{comment}{// Write Protection bit (Block 0 (000800-\/001FFFh) is not write-\/protected)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00049}00049 \textcolor{preprocessor}{\#pragma config WRT1 = OFF       }\textcolor{comment}{// Write Protection bit (Block 1 (002000-\/003FFFh) is not write-\/protected)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00050}00050 \textcolor{preprocessor}{\#pragma config WRT2 = OFF       }\textcolor{comment}{// Write Protection bit (Block 2 (004000-\/005FFFh) is not write-\/protected)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00051}00051 \textcolor{preprocessor}{\#pragma config WRT3 = OFF       }\textcolor{comment}{// Write Protection bit (Block 3 (006000-\/007FFFh) is not write-\/protected)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00053}00053 \textcolor{comment}{// CONFIG6H}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00054}00054 \textcolor{preprocessor}{\#pragma config WRTC = OFF       }\textcolor{comment}{// Configuration Register Write Protection bit (Configuration registers (300000-\/3000FFh) are not write-\/protected)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00055}00055 \textcolor{preprocessor}{\#pragma config WRTB = OFF       }\textcolor{comment}{// Boot Block Write Protection bit (Boot block (000000-\/0007FFh) is not write-\/protected)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00056}00056 \textcolor{preprocessor}{\#pragma config WRTD = OFF       }\textcolor{comment}{// Data EEPROM Write Protection bit (Data EEPROM is not write-\/protected)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00058}00058 \textcolor{comment}{// CONFIG7L}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00059}00059 \textcolor{preprocessor}{\#pragma config EBTR0 = OFF      }\textcolor{comment}{// Table Read Protection bit (Block 0 (000800-\/001FFFh) is not protected from table reads executed in other blocks)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00060}00060 \textcolor{preprocessor}{\#pragma config EBTR1 = OFF      }\textcolor{comment}{// Table Read Protection bit (Block 1 (002000-\/003FFFh) is not protected from table reads executed in other blocks)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00061}00061 \textcolor{preprocessor}{\#pragma config EBTR2 = OFF      }\textcolor{comment}{// Table Read Protection bit (Block 2 (004000-\/005FFFh) is not protected from table reads executed in other blocks)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00062}00062 \textcolor{preprocessor}{\#pragma config EBTR3 = OFF      }\textcolor{comment}{// Table Read Protection bit (Block 3 (006000-\/007FFFh) is not protected from table reads executed in other blocks)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00064}00064 \textcolor{comment}{// CONFIG7H}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00065}00065 \textcolor{preprocessor}{\#pragma config EBTRB = OFF      }\textcolor{comment}{// Boot Block Table Read Protection bit (Boot block (000000-\/0007FFh) is not protected from table reads executed in other blocks)}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00067}00067 \textcolor{comment}{// \#pragma config statements should precede project file includes.}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00068}00068 \textcolor{comment}{// Use project enums instead of \#define for ON and OFF.}}
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{config_8h_source_l00070}00070 \textcolor{preprocessor}{\#include <xc.h>}}
+
+\end{DoxyCode}

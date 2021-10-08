@@ -1,0 +1,117 @@
+\hypertarget{_bluetooth_8c}{}\doxysection{Referencia del Archivo D\+:/\+Clases 2021/\+Arquitectura Computacional/\+Github/\+Smart\+\_\+\+Watch/\+Smart\+Watch.X/\+Bluetooth.c}
+\label{_bluetooth_8c}\index{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/Bluetooth.c@{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/Bluetooth.c}}
+
+
+Example bluetooth HC-\/05.  
+
+
+{\ttfamily \#include \char`\"{}Funciones.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Usart.\+h\char`\"{}}\newline
+\doxysubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_bluetooth_8c_a43bafb28b29491ec7f871319b5a3b2f8}{F\+\_\+\+CPU}}~8000000/64
+\item 
+\#define \mbox{\hyperlink{_bluetooth_8c_acea008bd2e51bf8d1466e20b35ff2742}{Baud\+\_\+value}}~(((float)(\mbox{\hyperlink{_bluetooth_8c_a43bafb28b29491ec7f871319b5a3b2f8}{F\+\_\+\+CPU}})/(float)baud\+\_\+rate)-\/1)
+\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_bluetooth_8c_afb4b88e1987584afc1fa235f899852c3}{USART\+\_\+\+Init}} (long baud\+\_\+rate)
+\item 
+void \mbox{\hyperlink{_bluetooth_8c_a96cc1393d248457f33a434ea6bc41bcc}{USART\+\_\+\+Transmit\+Char}} (char out)
+\item 
+char \mbox{\hyperlink{_bluetooth_8c_ac68cc29e75e5cd9147d5e3501dd56de1}{USART\+\_\+\+Receive\+Char}} ()
+\item 
+void \mbox{\hyperlink{_bluetooth_8c_ae1e70f3887da174491e3ac3ec22573e9}{USART\+\_\+\+Send\+String}} (const char $\ast$out)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Example bluetooth HC-\/05. 
+
+\begin{DoxyDate}{Fecha}
+2020-\/11-\/23 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Autor}
+Fulvio Vivas \href{mailto:fulvio.vivas@unicauca.edu.co}{\texttt{ fulvio.\+vivas@unicauca.\+edu.\+co}} 
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Copyright}
+Information contained herein is proprietary to and constitutes valuable confidential trade secrets of unicauca, and is subject to restrictions on use and disclosure. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+Copyright (c) unicauca 2020. All rights reserved. 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+The copyright notices above do not evidence any actual or intended publication of this material. 
+\end{DoxyParagraph}
+
+
+Definición en el archivo \mbox{\hyperlink{_bluetooth_8c_source}{Bluetooth.\+c}}.
+
+
+
+\doxysubsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\mbox{\Hypertarget{_bluetooth_8c_acea008bd2e51bf8d1466e20b35ff2742}\label{_bluetooth_8c_acea008bd2e51bf8d1466e20b35ff2742}} 
+\index{Bluetooth.c@{Bluetooth.c}!Baud\_value@{Baud\_value}}
+\index{Baud\_value@{Baud\_value}!Bluetooth.c@{Bluetooth.c}}
+\doxysubsubsection{\texorpdfstring{Baud\_value}{Baud\_value}}
+{\footnotesize\ttfamily \#define Baud\+\_\+value~(((float)(\mbox{\hyperlink{_bluetooth_8c_a43bafb28b29491ec7f871319b5a3b2f8}{F\+\_\+\+CPU}})/(float)baud\+\_\+rate)-\/1)}
+
+
+
+Definición en la línea \mbox{\hyperlink{_bluetooth_8c_source_l00023}{23}} del archivo \mbox{\hyperlink{_bluetooth_8c_source}{Bluetooth.\+c}}.
+
+\mbox{\Hypertarget{_bluetooth_8c_a43bafb28b29491ec7f871319b5a3b2f8}\label{_bluetooth_8c_a43bafb28b29491ec7f871319b5a3b2f8}} 
+\index{Bluetooth.c@{Bluetooth.c}!F\_CPU@{F\_CPU}}
+\index{F\_CPU@{F\_CPU}!Bluetooth.c@{Bluetooth.c}}
+\doxysubsubsection{\texorpdfstring{F\_CPU}{F\_CPU}}
+{\footnotesize\ttfamily \#define F\+\_\+\+CPU~8000000/64}
+
+
+
+Definición en la línea \mbox{\hyperlink{_bluetooth_8c_source_l00021}{21}} del archivo \mbox{\hyperlink{_bluetooth_8c_source}{Bluetooth.\+c}}.
+
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{_bluetooth_8c_afb4b88e1987584afc1fa235f899852c3}\label{_bluetooth_8c_afb4b88e1987584afc1fa235f899852c3}} 
+\index{Bluetooth.c@{Bluetooth.c}!USART\_Init@{USART\_Init}}
+\index{USART\_Init@{USART\_Init}!Bluetooth.c@{Bluetooth.c}}
+\doxysubsubsection{\texorpdfstring{USART\_Init()}{USART\_Init()}}
+{\footnotesize\ttfamily void USART\+\_\+\+Init (\begin{DoxyParamCaption}\item[{long}]{baud\+\_\+rate }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_bluetooth_8c_source_l00037}{37}} del archivo \mbox{\hyperlink{_bluetooth_8c_source}{Bluetooth.\+c}}.
+
+\mbox{\Hypertarget{_bluetooth_8c_ac68cc29e75e5cd9147d5e3501dd56de1}\label{_bluetooth_8c_ac68cc29e75e5cd9147d5e3501dd56de1}} 
+\index{Bluetooth.c@{Bluetooth.c}!USART\_ReceiveChar@{USART\_ReceiveChar}}
+\index{USART\_ReceiveChar@{USART\_ReceiveChar}!Bluetooth.c@{Bluetooth.c}}
+\doxysubsubsection{\texorpdfstring{USART\_ReceiveChar()}{USART\_ReceiveChar()}}
+{\footnotesize\ttfamily char USART\+\_\+\+Receive\+Char (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_bluetooth_8c_source_l00076}{76}} del archivo \mbox{\hyperlink{_bluetooth_8c_source}{Bluetooth.\+c}}.
+
+\mbox{\Hypertarget{_bluetooth_8c_ae1e70f3887da174491e3ac3ec22573e9}\label{_bluetooth_8c_ae1e70f3887da174491e3ac3ec22573e9}} 
+\index{Bluetooth.c@{Bluetooth.c}!USART\_SendString@{USART\_SendString}}
+\index{USART\_SendString@{USART\_SendString}!Bluetooth.c@{Bluetooth.c}}
+\doxysubsubsection{\texorpdfstring{USART\_SendString()}{USART\_SendString()}}
+{\footnotesize\ttfamily void USART\+\_\+\+Send\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{out }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_bluetooth_8c_source_l00093}{93}} del archivo \mbox{\hyperlink{_bluetooth_8c_source}{Bluetooth.\+c}}.
+
+\mbox{\Hypertarget{_bluetooth_8c_a96cc1393d248457f33a434ea6bc41bcc}\label{_bluetooth_8c_a96cc1393d248457f33a434ea6bc41bcc}} 
+\index{Bluetooth.c@{Bluetooth.c}!USART\_TransmitChar@{USART\_TransmitChar}}
+\index{USART\_TransmitChar@{USART\_TransmitChar}!Bluetooth.c@{Bluetooth.c}}
+\doxysubsubsection{\texorpdfstring{USART\_TransmitChar()}{USART\_TransmitChar()}}
+{\footnotesize\ttfamily void USART\+\_\+\+Transmit\+Char (\begin{DoxyParamCaption}\item[{char}]{out }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_bluetooth_8c_source_l00059}{59}} del archivo \mbox{\hyperlink{_bluetooth_8c_source}{Bluetooth.\+c}}.
+

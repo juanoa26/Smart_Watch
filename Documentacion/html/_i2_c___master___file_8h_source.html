@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SmartWatch: Fichero Fuente D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/I2C_Master_File.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SmartWatch<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Reloj encargado de hacer sonar una alarma y prender suces dependiendo den nivel de ilumininacion presente</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7b2c782f146b47dc9968b6eee9ba20f6.html">SmartWatch.X</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">I2C_Master_File.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_i2_c___master___file_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * PIC18F4550 LCD16x2 Header File</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * http://www.electronicwings.com</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> */</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef I2C_Master_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define I2C_Master_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;xc.h&gt;</span> <span class="comment">// include processor files - each processor file is guarded.  </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="_i2_c___master___file_8h.html#a3aee3beceffb391d6aa3012c48f0a35b">   11</a></span><span class="preprocessor">#define F_OSC 8000000                       </span><span class="comment">/* define F_OSC for finding bit rate </span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="_i2_c___master___file_8h.html#ae604a867b14d500ceccdee38d17edf84">   12</a></span><span class="comment">                                               here oscillator frequency is 8 MHz so define as 800000 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="_i2_c___master___file_8h.html#a17468d10f0c67a4ee7b38aab09d9e096">   13</a></span><span class="preprocessor">#define I2C_CLOCK 100000                    </span><span class="comment">/* I2C clock frequency is 100 kHz*/</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define BITRATE ((F_OSC/(4*I2C_CLOCK))-1)  </span><span class="comment">/* find bit rate to assign this value to SSPADD register*/</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keywordtype">void</span> <a class="code hl_function" href="_i2_c___master___file_8h.html#a32604c6594874020996a591d1c44a36b">I2C_Ready</a>(<span class="keywordtype">void</span>);                           <span class="comment">/* check and wait weather I2C is ready or not */</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">void</span> <a class="code hl_function" href="_i2_c___master___file_8h.html#a84df9a5887b8b8230cfe85d18e53900e">I2C_Init</a>(<span class="keywordtype">void</span>);                            <span class="comment">/* initialize I2C register configuration*/</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">char</span> <a class="code hl_function" href="_i2_c___master___file_8h.html#a6fb40f6f2bfd9d3e1dd2ea13784dcad9">I2C_Start</a>(<span class="keywordtype">char</span>);                       <span class="comment">/* send start pulse along with slave device address */</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">void</span> <a class="code hl_function" href="_i2_c___master___file_8h.html#adffc05a44d65341315d4e2c2da1ec87d">I2C_Start_Wait</a>(<span class="keywordtype">char</span>);                  <span class="comment">/* send start pulse along with slave device address </span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">                                             * and wait if not work */</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">char</span> <a class="code hl_function" href="_i2_c___master___file_8h.html#a2709cf403f0c24fe87e0e55850ae85d8">I2C_Repeated_Start</a>(<span class="keywordtype">char</span>);              <span class="comment">/* send repeated start pulse along with device write address*/</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">char</span> <a class="code hl_function" href="_i2_c___master___file_8h.html#a8c642a2d729a9cf462643092a54c2fc4">I2C_Stop</a>(<span class="keywordtype">void</span>);                            <span class="comment">/* send stop pulse*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">char</span> <a class="code hl_function" href="_i2_c___master___file_8h.html#ab64f1e627a5b012a18549321a26ecc9e">I2C_Write</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>);              <span class="comment">/* transmit/write data/address to slave device */</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> <a class="code hl_function" href="_i2_c___master___file_8h.html#aecd9f094a397ce4ca002fe6ca1513634">I2C_Ack</a>(<span class="keywordtype">void</span>);                             <span class="comment">/* send acknowledge from master for another read */</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">void</span> <a class="code hl_function" href="_i2_c___master___file_8h.html#a4fd80a89587fb0f5cc8b743c841f4a42">I2C_Nack</a>(<span class="keywordtype">void</span>);                            <span class="comment">/* send negative acknowledge from master for stop reading */</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">char</span> <a class="code hl_function" href="_i2_c___master___file_8h.html#ae659adbd3c6a366248a65a5a06ccaddf">I2C_Read</a>(<span class="keywordtype">char</span> flag);                   <span class="comment">/* read data from slave devices*/</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">void</span> <a class="code hl_function" href="_i2_c___master___file_8h.html#a4a67d4bb2679cbcf9361dce21fb7b61a">RTC_Calendario</a>(<span class="keywordtype">void</span>);                      <span class="comment">/* call the clock, calendar functions and display the data*/</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#endif  </span><span class="comment">/* I2C_Master_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="a_i2_c___master___file_8h_html_a2709cf403f0c24fe87e0e55850ae85d8"><div class="ttname"><a href="_i2_c___master___file_8h.html#a2709cf403f0c24fe87e0e55850ae85d8">I2C_Repeated_Start</a></div><div class="ttdeci">char I2C_Repeated_Start(char)</div><div class="ttdef"><b>Definition:</b> <a href="_reloj__ar_8c_source.html#l00159">Reloj_ar.c:159</a></div></div>
+<div class="ttc" id="a_i2_c___master___file_8h_html_a32604c6594874020996a591d1c44a36b"><div class="ttname"><a href="_i2_c___master___file_8h.html#a32604c6594874020996a591d1c44a36b">I2C_Ready</a></div><div class="ttdeci">void I2C_Ready(void)</div><div class="ttdef"><b>Definition:</b> <a href="_reloj__ar_8c_source.html#l00083">Reloj_ar.c:83</a></div></div>
+<div class="ttc" id="a_i2_c___master___file_8h_html_a4a67d4bb2679cbcf9361dce21fb7b61a"><div class="ttname"><a href="_i2_c___master___file_8h.html#a4a67d4bb2679cbcf9361dce21fb7b61a">RTC_Calendario</a></div><div class="ttdeci">void RTC_Calendario(void)</div><div class="ttdef"><b>Definition:</b> <a href="reloj_8c_source.html#l00079">reloj.c:79</a></div></div>
+<div class="ttc" id="a_i2_c___master___file_8h_html_a4fd80a89587fb0f5cc8b743c841f4a42"><div class="ttname"><a href="_i2_c___master___file_8h.html#a4fd80a89587fb0f5cc8b743c841f4a42">I2C_Nack</a></div><div class="ttdeci">void I2C_Nack(void)</div><div class="ttdef"><b>Definition:</b> <a href="_reloj__ar_8c_source.html#l00250">Reloj_ar.c:250</a></div></div>
+<div class="ttc" id="a_i2_c___master___file_8h_html_a6fb40f6f2bfd9d3e1dd2ea13784dcad9"><div class="ttname"><a href="_i2_c___master___file_8h.html#a6fb40f6f2bfd9d3e1dd2ea13784dcad9">I2C_Start</a></div><div class="ttdeci">char I2C_Start(char)</div><div class="ttdef"><b>Definition:</b> <a href="_reloj__ar_8c_source.html#l00134">Reloj_ar.c:134</a></div></div>
+<div class="ttc" id="a_i2_c___master___file_8h_html_a84df9a5887b8b8230cfe85d18e53900e"><div class="ttname"><a href="_i2_c___master___file_8h.html#a84df9a5887b8b8230cfe85d18e53900e">I2C_Init</a></div><div class="ttdeci">void I2C_Init(void)</div><div class="ttdef"><b>Definition:</b> <a href="_reloj__ar_8c_source.html#l00057">Reloj_ar.c:57</a></div></div>
+<div class="ttc" id="a_i2_c___master___file_8h_html_a8c642a2d729a9cf462643092a54c2fc4"><div class="ttname"><a href="_i2_c___master___file_8h.html#a8c642a2d729a9cf462643092a54c2fc4">I2C_Stop</a></div><div class="ttdeci">char I2C_Stop(void)</div><div class="ttdef"><b>Definition:</b> <a href="_reloj__ar_8c_source.html#l00186">Reloj_ar.c:186</a></div></div>
+<div class="ttc" id="a_i2_c___master___file_8h_html_ab64f1e627a5b012a18549321a26ecc9e"><div class="ttname"><a href="_i2_c___master___file_8h.html#ab64f1e627a5b012a18549321a26ecc9e">I2C_Write</a></div><div class="ttdeci">char I2C_Write(unsigned char)</div><div class="ttdef"><b>Definition:</b> <a href="_reloj__ar_8c_source.html#l00208">Reloj_ar.c:208</a></div></div>
+<div class="ttc" id="a_i2_c___master___file_8h_html_adffc05a44d65341315d4e2c2da1ec87d"><div class="ttname"><a href="_i2_c___master___file_8h.html#adffc05a44d65341315d4e2c2da1ec87d">I2C_Start_Wait</a></div><div class="ttdeci">void I2C_Start_Wait(char)</div><div class="ttdef"><b>Definition:</b> <a href="_reloj__ar_8c_source.html#l00101">Reloj_ar.c:101</a></div></div>
+<div class="ttc" id="a_i2_c___master___file_8h_html_ae659adbd3c6a366248a65a5a06ccaddf"><div class="ttname"><a href="_i2_c___master___file_8h.html#ae659adbd3c6a366248a65a5a06ccaddf">I2C_Read</a></div><div class="ttdeci">char I2C_Read(char flag)</div><div class="ttdef"><b>Definition:</b> <a href="_reloj__ar_8c_source.html#l00027">Reloj_ar.c:27</a></div></div>
+<div class="ttc" id="a_i2_c___master___file_8h_html_aecd9f094a397ce4ca002fe6ca1513634"><div class="ttname"><a href="_i2_c___master___file_8h.html#aecd9f094a397ce4ca002fe6ca1513634">I2C_Ack</a></div><div class="ttdeci">void I2C_Ack(void)</div><div class="ttdef"><b>Definition:</b> <a href="_reloj__ar_8c_source.html#l00230">Reloj_ar.c:230</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

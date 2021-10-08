@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SmartWatch: Referencia del Archivo D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/reloj.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SmartWatch<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Reloj encargado de hacer sonar una alarma y prender suces dependiendo den nivel de ilumininacion presente</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7b2c782f146b47dc9968b6eee9ba20f6.html">SmartWatch.X</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del Archivo reloj.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_funciones_8h_source.html">Funciones.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i2_c___master___file_8h_source.html">I2C_Master_File.h</a>&quot;</code><br />
+</div>
+<p><a href="reloj_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a8612827752029385a17f0708a4444d07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reloj_8c.html#a8612827752029385a17f0708a4444d07">device_id_write</a>&#160;&#160;&#160;0xD0</td></tr>
+<tr class="separator:a8612827752029385a17f0708a4444d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b98cab8220d3618e2ae6a97690f27df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reloj_8c.html#a9b98cab8220d3618e2ae6a97690f27df">device_id_read</a>&#160;&#160;&#160;0xD1</td></tr>
+<tr class="separator:a9b98cab8220d3618e2ae6a97690f27df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a25802d09146b657ce5a7317d991dc1b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reloj_8c.html#a25802d09146b657ce5a7317d991dc1b7">RTC_Read_Clock</a> (char read_clock_address)</td></tr>
+<tr class="separator:a25802d09146b657ce5a7317d991dc1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a25eb43def7a911c034b9b737fc44e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reloj_8c.html#a3a25eb43def7a911c034b9b737fc44e3">RTC_Read_Calendar</a> (char read_calendar_address)</td></tr>
+<tr class="separator:a3a25eb43def7a911c034b9b737fc44e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a67d4bb2679cbcf9361dce21fb7b61a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reloj_8c.html#a4a67d4bb2679cbcf9361dce21fb7b61a">RTC_Calendario</a> (void)</td></tr>
+<tr class="separator:a4a67d4bb2679cbcf9361dce21fb7b61a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a90c2ace84e5523d06b7162ea5928acc1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reloj_8c.html#a90c2ace84e5523d06b7162ea5928acc1">sec</a></td></tr>
+<tr class="separator:a90c2ace84e5523d06b7162ea5928acc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e202b201e6255d975cd6d3aff1f5a4d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reloj_8c.html#a3e202b201e6255d975cd6d3aff1f5a4d">min</a></td></tr>
+<tr class="separator:a3e202b201e6255d975cd6d3aff1f5a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15df9ba285cfd842f284025f904edc9c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reloj_8c.html#a15df9ba285cfd842f284025f904edc9c">hour</a></td></tr>
+<tr class="separator:a15df9ba285cfd842f284025f904edc9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f67164de537e3ec2b47e3204ddd3400"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reloj_8c.html#a8f67164de537e3ec2b47e3204ddd3400">Day</a></td></tr>
+<tr class="separator:a8f67164de537e3ec2b47e3204ddd3400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fda9b1a478471ec7a785df4109f17d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reloj_8c.html#a6fda9b1a478471ec7a785df4109f17d6">Date</a></td></tr>
+<tr class="separator:a6fda9b1a478471ec7a785df4109f17d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a530b376ec91a278ac98531d3ea17f148"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reloj_8c.html#a530b376ec91a278ac98531d3ea17f148">Month</a></td></tr>
+<tr class="separator:a530b376ec91a278ac98531d3ea17f148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42e645110404fbf4f10235789577fa32"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="reloj_8c.html#a42e645110404fbf4f10235789577fa32">Year</a></td></tr>
+<tr class="separator:a42e645110404fbf4f10235789577fa32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de los 'defines'</h2>
+<a id="a9b98cab8220d3618e2ae6a97690f27df" name="a9b98cab8220d3618e2ae6a97690f27df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b98cab8220d3618e2ae6a97690f27df">&#9670;&nbsp;</a></span>device_id_read</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define device_id_read&#160;&#160;&#160;0xD1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="reloj_8c_source.html#l00011">11</a> del archivo <a class="el" href="reloj_8c_source.html">reloj.c</a>.</p>
+
+</div>
+</div>
+<a id="a8612827752029385a17f0708a4444d07" name="a8612827752029385a17f0708a4444d07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8612827752029385a17f0708a4444d07">&#9670;&nbsp;</a></span>device_id_write</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define device_id_write&#160;&#160;&#160;0xD0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="reloj_8c_source.html#l00010">10</a> del archivo <a class="el" href="reloj_8c_source.html">reloj.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="a4a67d4bb2679cbcf9361dce21fb7b61a" name="a4a67d4bb2679cbcf9361dce21fb7b61a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a67d4bb2679cbcf9361dce21fb7b61a">&#9670;&nbsp;</a></span>RTC_Calendario()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTC_Calendario </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="reloj_8c_source.html#l00079">79</a> del archivo <a class="el" href="reloj_8c_source.html">reloj.c</a>.</p>
+
+</div>
+</div>
+<a id="a3a25eb43def7a911c034b9b737fc44e3" name="a3a25eb43def7a911c034b9b737fc44e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a25eb43def7a911c034b9b737fc44e3">&#9670;&nbsp;</a></span>RTC_Read_Calendar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTC_Read_Calendar </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>read_calendar_address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="reloj_8c_source.html#l00051">51</a> del archivo <a class="el" href="reloj_8c_source.html">reloj.c</a>.</p>
+
+</div>
+</div>
+<a id="a25802d09146b657ce5a7317d991dc1b7" name="a25802d09146b657ce5a7317d991dc1b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25802d09146b657ce5a7317d991dc1b7">&#9670;&nbsp;</a></span>RTC_Read_Clock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RTC_Read_Clock </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>read_clock_address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="reloj_8c_source.html#l00028">28</a> del archivo <a class="el" href="reloj_8c_source.html">reloj.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las variables</h2>
+<a id="a6fda9b1a478471ec7a785df4109f17d6" name="a6fda9b1a478471ec7a785df4109f17d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fda9b1a478471ec7a785df4109f17d6">&#9670;&nbsp;</a></span>Date</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Date</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="reloj_8c_source.html#l00014">14</a> del archivo <a class="el" href="reloj_8c_source.html">reloj.c</a>.</p>
+
+</div>
+</div>
+<a id="a8f67164de537e3ec2b47e3204ddd3400" name="a8f67164de537e3ec2b47e3204ddd3400"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f67164de537e3ec2b47e3204ddd3400">&#9670;&nbsp;</a></span>Day</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Day</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="reloj_8c_source.html#l00014">14</a> del archivo <a class="el" href="reloj_8c_source.html">reloj.c</a>.</p>
+
+</div>
+</div>
+<a id="a15df9ba285cfd842f284025f904edc9c" name="a15df9ba285cfd842f284025f904edc9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15df9ba285cfd842f284025f904edc9c">&#9670;&nbsp;</a></span>hour</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int hour</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="reloj_8c_source.html#l00013">13</a> del archivo <a class="el" href="reloj_8c_source.html">reloj.c</a>.</p>
+
+</div>
+</div>
+<a id="a3e202b201e6255d975cd6d3aff1f5a4d" name="a3e202b201e6255d975cd6d3aff1f5a4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e202b201e6255d975cd6d3aff1f5a4d">&#9670;&nbsp;</a></span>min</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int min</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="reloj_8c_source.html#l00013">13</a> del archivo <a class="el" href="reloj_8c_source.html">reloj.c</a>.</p>
+
+</div>
+</div>
+<a id="a530b376ec91a278ac98531d3ea17f148" name="a530b376ec91a278ac98531d3ea17f148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a530b376ec91a278ac98531d3ea17f148">&#9670;&nbsp;</a></span>Month</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Month</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="reloj_8c_source.html#l00014">14</a> del archivo <a class="el" href="reloj_8c_source.html">reloj.c</a>.</p>
+
+</div>
+</div>
+<a id="a90c2ace84e5523d06b7162ea5928acc1" name="a90c2ace84e5523d06b7162ea5928acc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90c2ace84e5523d06b7162ea5928acc1">&#9670;&nbsp;</a></span>sec</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sec</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="reloj_8c_source.html#l00013">13</a> del archivo <a class="el" href="reloj_8c_source.html">reloj.c</a>.</p>
+
+</div>
+</div>
+<a id="a42e645110404fbf4f10235789577fa32" name="a42e645110404fbf4f10235789577fa32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42e645110404fbf4f10235789577fa32">&#9670;&nbsp;</a></span>Year</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Year</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="reloj_8c_source.html#l00014">14</a> del archivo <a class="el" href="reloj_8c_source.html">reloj.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

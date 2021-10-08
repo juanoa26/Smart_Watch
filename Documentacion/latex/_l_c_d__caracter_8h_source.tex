@@ -1,0 +1,41 @@
+\hypertarget{_l_c_d__caracter_8h_source}{}\doxysection{LCD\+\_\+caracter.\+h}
+\label{_l_c_d__caracter_8h_source}\index{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/LCD\_caracter.h@{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/LCD\_caracter.h}}
+\mbox{\hyperlink{_l_c_d__caracter_8h}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00001}00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00002}00002 \textcolor{comment}{ * PIC18F4550 LCD16x2 Header File}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00003}00003 \textcolor{comment}{ * http://www.electronicwings.com}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00004}00004 \textcolor{comment}{ */} }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00007}00007 \textcolor{comment}{// This is a guard condition so that contents of this file are not included}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00008}00008 \textcolor{comment}{// more than once.  }}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00009}00009 \textcolor{preprocessor}{\#ifndef XC\_HEADER\_TEMPLATE\_H}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00010}00010 \textcolor{preprocessor}{\#define XC\_HEADER\_TEMPLATE\_H}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00012}00012 \textcolor{preprocessor}{\#include <xc.h>} \textcolor{comment}{// include processor files -\/ each processor file is guarded.  }}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <pic18f4550.h>}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00015}00015 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{config_8h}{config.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00017}\mbox{\hyperlink{_l_c_d__caracter_8h_a024148e99a7143db044a48216664d03d}{00017}} \textcolor{preprocessor}{\#define \_XTAL\_FREQ 8000000}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00018}00018 \textcolor{comment}{/*********************Definition of Ports********************************/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00020}\mbox{\hyperlink{_l_c_d__caracter_8h_af8903d8eea3868940c60af887473b152}{00020}} \textcolor{preprocessor}{\#define RS LATD0  }\textcolor{comment}{/*PIN 0 of PORTD is assigned for register select Pin of LCD*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00021}\mbox{\hyperlink{_l_c_d__caracter_8h_a22e6626f2c98ed902f8ded47f6438c05}{00021}} \textcolor{preprocessor}{\#define EN LATD1  }\textcolor{comment}{/*PIN 1 of PORTD is assigned for enable Pin of LCD */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00022}\mbox{\hyperlink{_l_c_d__caracter_8h_a9ab6954b25558526556ab556c4be540b}{00022}} \textcolor{preprocessor}{\#define ldata LATD  }\textcolor{comment}{/*PORTD(PD4-\/PD7) is assigned for LCD Data Output*/}\textcolor{preprocessor}{ }}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00023}\mbox{\hyperlink{_l_c_d__caracter_8h_aa1454638c60ba2bfd8885e763b6e637b}{00023}} \textcolor{preprocessor}{\#define LCD\_Port TRISD  }\textcolor{comment}{/*define macros for PORTD Direction Register*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00024}00024 \textcolor{comment}{/*********************Proto-\/Type Declaration*****************************/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00026}00026 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d__caracter_8h_af3f584e77ba91ec162cf5e58136d90af}{LCD\_MSdelay}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} );        \textcolor{comment}{/*Generate delay in ms*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00027}00027 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d__caracter_8h_aa53c9d40f3aa552a9974cd55ac510cb3}{LCD\_Init}}(\textcolor{keywordtype}{void});                    \textcolor{comment}{/*Initialize LCD*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00028}00028 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d__caracter_8h_a28735c052c54fa576f8f6f8bca963fe4}{LCD\_Command}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} );   \textcolor{comment}{/*Send command to LCD*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00029}00029 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d__caracter_8h_aabb29c7a1ecbadd623142601b109caff}{LCD\_Char}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} x);     \textcolor{comment}{/*Send data to LCD*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00030}00030 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d__caracter_8h_a22f0a1e06eef47597408d0b782fa49f6}{LCD\_String}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *);      \textcolor{comment}{/*Display data string on LCD*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00031}00031 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d__caracter_8h_afedff6ea961e4641984f319129e3a1d4}{LCD\_String\_xy}}(\textcolor{keywordtype}{char}, \textcolor{keywordtype}{char} , \textcolor{keyword}{const} \textcolor{keywordtype}{char} *);\textcolor{comment}{/*Display data string on LCD*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00032}00032 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d__caracter_8h_ae60d0b62d7eb3fa31266c095d7b3c245}{LCD\_Clear}}(\textcolor{keywordtype}{void});                   \textcolor{comment}{/*Clear LCD Screen*/}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00033}00033 \textcolor{keywordtype}{void}  \mbox{\hyperlink{_l_c_d__caracter_8h_ac66f26197fce908f497e4cea7a9f38f3}{LCD\_Custom\_Char}} ( \textcolor{keywordtype}{unsigned}  \textcolor{keywordtype}{char} , \textcolor{keywordtype}{unsigned}  \textcolor{keywordtype}{char} *); }
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00034}00034 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* XC\_HEADER\_TEMPLATE\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{_l_c_d__caracter_8h_source_l00035}00035 }
+
+\end{DoxyCode}

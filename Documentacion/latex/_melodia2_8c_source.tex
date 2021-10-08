@@ -1,0 +1,147 @@
+\hypertarget{_melodia2_8c_source}{}\doxysection{Melodia2.\+c}
+\label{_melodia2_8c_source}\index{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/Melodia2.c@{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/Melodia2.c}}
+\mbox{\hyperlink{_melodia2_8c}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00001}00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00002}00002 \textcolor{comment}{ * File:   Melodia2.c}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00003}00003 \textcolor{comment}{ * Author: User}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00005}00005 \textcolor{comment}{ * Created on 22 de septiembre de 2021, 09:28 AM}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00006}00006 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00009}00009 \textcolor{preprocessor}{\#include <pic18f4550.h>}  \textcolor{comment}{/*Header file PIC18f4550 definitions*/}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00010}00010 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{config_8h}{config.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00011}00011 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00012}00012 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00013}00013 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00014}00014 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_l_c_d__caracter_8h}{LCD\_caracter.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00017}00017 \textcolor{keywordtype}{void} \mbox{\hyperlink{_melodia2_8c_a18e94699a8997269e7c49971c005d870}{conf\_CLK}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00018}00018 \textcolor{keywordtype}{void} \mbox{\hyperlink{_melodia2_8c_a4dbe4dc1bda619d00ebbc9f430d56c7d}{conf\_IO}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00019}00019 \textcolor{keywordtype}{void} \mbox{\hyperlink{_melodia2_8c_a0d8da984541e03ea0c04e6ff08709db2}{conf\_TA1}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00020}00020 \textcolor{keywordtype}{void} \mbox{\hyperlink{_melodia2_8c_af64840480adcf58c332ac63db58634ef}{desabilitar\_Time}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00034}\mbox{\hyperlink{_melodia2_8c_acac1a554efac3d61b3f9b2b6f393f836}{00034}} uint8\_t \textcolor{keyword}{volatile} \mbox{\hyperlink{_melodia2_8c_acac1a554efac3d61b3f9b2b6f393f836}{var3seg}}     =   0;  }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00035}\mbox{\hyperlink{_melodia2_8c_a75fc6160df83444867e3320628defb71}{00035}}     uint8\_t \textcolor{keyword}{volatile} \mbox{\hyperlink{_melodia2_8c_a75fc6160df83444867e3320628defb71}{var3beep}}    =   0;  }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00037}\mbox{\hyperlink{_melodia2_8c_aecd01d231468dc5cdcf9659b0b019e4f}{00037}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_melodia2_8c_aecd01d231468dc5cdcf9659b0b019e4f}{PlayCancion}}( \textcolor{keywordtype}{void} ) \{}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00039}00039     }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00042}00042     \mbox{\hyperlink{_melodia2_8c_a18e94699a8997269e7c49971c005d870}{conf\_CLK}}    ();     \textcolor{comment}{// Configura Relojes}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00043}00043     \mbox{\hyperlink{_melodia2_8c_a4dbe4dc1bda619d00ebbc9f430d56c7d}{conf\_IO}}     ();     \textcolor{comment}{// Configura I/O}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00044}00044     \mbox{\hyperlink{_melodia2_8c_a0d8da984541e03ea0c04e6ff08709db2}{conf\_TA1}}    ();     \textcolor{comment}{// Configura Timer1}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00046}00046     }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00047}00047     INTCONbits.PEIE     =   0;      \textcolor{comment}{// Peripheral Interrupt Enable}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00048}00048     ei  ();                         \textcolor{comment}{// enable interrupts}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00050}00050 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00051}00051 \textcolor{comment}{    do\{}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00052}00052 \textcolor{comment}{        SLEEP();                    // uC modo IDLE}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00053}00053 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00054}00054 \textcolor{comment}{        if ( var3seg == 60 \&\& var3beep < 6 )}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00055}00055 \textcolor{comment}{        \{}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00056}00056 \textcolor{comment}{        // Tres Beep cada 3 segundos}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00057}00057 \textcolor{comment}{            LATDbits.LD2       =   \string~LATDbits.LD2;}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00058}00058 \textcolor{comment}{            var3beep++;}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00059}00059 \textcolor{comment}{            return;}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00060}00060 \textcolor{comment}{        \}}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00061}00061 \textcolor{comment}{        else}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00062}00062 \textcolor{comment}{        \{}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00063}00063 \textcolor{comment}{            if ( var3beep > 5 )}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00064}00064 \textcolor{comment}{            \{}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00065}00065 \textcolor{comment}{            // Reset variables ( vuelta a empezar! )}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00066}00066 \textcolor{comment}{                var3beep    =   0;}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00067}00067 \textcolor{comment}{                var3seg     =   0;}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00068}00068 \textcolor{comment}{                return;}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00069}00069 \textcolor{comment}{            \}}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00070}00070 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00071}00071 \textcolor{comment}{            var3seg++;}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00072}00072 \textcolor{comment}{        \}}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00073}00073 \textcolor{comment}{    \} while ( 1 );}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00074}00074 \textcolor{comment}{    desabilitar\_Time();}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00075}00075 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00076}00076 \}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00078}\mbox{\hyperlink{_melodia2_8c_a18e94699a8997269e7c49971c005d870}{00078}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_melodia2_8c_a18e94699a8997269e7c49971c005d870}{conf\_CLK}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00079}00079     OSCCONbits.IRCF0 = 1; \textcolor{comment}{// Internal clock...}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00080}00080     OSCCONbits.IRCF1 = 1;}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00081}00081     OSCCONbits.IRCF2 = 1; \textcolor{comment}{//...8 MHz.}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00083}00083     OSCCONbits.SCS = 0b10; \textcolor{comment}{// Internal oscillator}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00085}00085     OSCCONbits.IDLEN = 1; \textcolor{comment}{// SLEEP() == Idle mode}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00088}00088     \textcolor{comment}{//OSCCONbits.IOFS     =   1;      // Frequency is stable}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00089}00089     \textcolor{comment}{//OSCCONbits.OSTS     =   1;      // Device is running from the primary system clock}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00090}00090 \}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00102}\mbox{\hyperlink{_melodia2_8c_a4dbe4dc1bda619d00ebbc9f430d56c7d}{00102}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_melodia2_8c_a4dbe4dc1bda619d00ebbc9f430d56c7d}{conf\_IO}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00103}00103     ADCON1bits.PCFG = 0b1111; \textcolor{comment}{// All Port Digital}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00105}00105     TRISCbits.RC1 = 0; \textcolor{comment}{// RD2 OUTPUT}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00107}00107     LATCbits.LC1 = 0; \textcolor{comment}{// reset pin}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00108}00108 \}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00137}\mbox{\hyperlink{_melodia2_8c_a0d8da984541e03ea0c04e6ff08709db2}{00137}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_melodia2_8c_a0d8da984541e03ea0c04e6ff08709db2}{conf\_TA1}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00138}00138     T1CONbits.T1CKPS0 = 1; \textcolor{comment}{// 1:8 Prescale value}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00139}00139     T1CONbits.T1CKPS1 = 1; \textcolor{comment}{// 1:8 Prescale value}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00141}00141     TMR1H = 0xCF;}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00142}00142     TMR1L = 0x2C;}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00143}00143 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00144}00144     PIR1bits.TMR1IF = 0; \textcolor{comment}{// Reset flag}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00145}00145     PIE1bits.TMR1IE = 1; \textcolor{comment}{// TA1 interrupt ON}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00146}00146 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00147}00147     T1CONbits.TMR1ON = 1; \textcolor{comment}{// TA1 enabled}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00148}00148 \}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00149}00149 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00150}\mbox{\hyperlink{_melodia2_8c_acd3fec81d10a06ac3c4360fe52a7427f}{00150}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_melodia2_8c_acd3fec81d10a06ac3c4360fe52a7427f}{\_\_interrupt}}() ISR ( \textcolor{keywordtype}{void} )}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00151}00151 \{}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00152}00152     \textcolor{keywordflow}{if} ( PIR1bits.TMR1IF == 1 )                 \textcolor{comment}{// Timer1 Interrupt}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00153}00153     \{}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00154}00154         LATCbits.LC1       =   \string~LATCbits.LC1;}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00155}00155         \textcolor{keywordflow}{if} ( \mbox{\hyperlink{_melodia2_8c_acac1a554efac3d61b3f9b2b6f393f836}{var3seg}} == 60 \&\& \mbox{\hyperlink{_melodia2_8c_a75fc6160df83444867e3320628defb71}{var3beep}} < 6 )}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00156}00156         \{}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00157}00157         \textcolor{comment}{// Tres Beep cada 3 segundos}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00158}00158             }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00159}00159             \mbox{\hyperlink{_melodia2_8c_a75fc6160df83444867e3320628defb71}{var3beep}}++;}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00160}00160             }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00161}00161         \}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00162}00162         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00163}00163         \{}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00164}00164             \textcolor{keywordflow}{if} ( \mbox{\hyperlink{_melodia2_8c_a75fc6160df83444867e3320628defb71}{var3beep}} > 5 )}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00165}00165             \{}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00166}00166             \textcolor{comment}{// Reset variables ( vuelta a empezar! )}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00167}00167                 \mbox{\hyperlink{_melodia2_8c_a75fc6160df83444867e3320628defb71}{var3beep}}    =   0;}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00168}00168                 \mbox{\hyperlink{_melodia2_8c_acac1a554efac3d61b3f9b2b6f393f836}{var3seg}}     =   0;}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00169}00169                 \mbox{\hyperlink{_melodia2_8c_af64840480adcf58c332ac63db58634ef}{desabilitar\_Time}}(); }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00170}00170             \}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00171}00171 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00172}00172             \mbox{\hyperlink{_melodia2_8c_acac1a554efac3d61b3f9b2b6f393f836}{var3seg}}++;}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00173}00173         \}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00174}00174     }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00175}00175                 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00176}00176 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00177}00177         TMR1H               =   0xCF;}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00178}00178         TMR1L               =   0x2C;}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00179}00179         }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00180}00180         PIR1bits.TMR1IF     =   0; }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00181}00181     \}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00182}00182 \}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00183}00183 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00184}\mbox{\hyperlink{_melodia2_8c_af64840480adcf58c332ac63db58634ef}{00184}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_melodia2_8c_af64840480adcf58c332ac63db58634ef}{desabilitar\_Time}}(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00185}00185 PIE1bits.TMR1IE = 0; \textcolor{comment}{// TA1 interrupt ON}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00186}00186 }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00187}00187     T1CONbits.TMR1ON = 0; \textcolor{comment}{// TA1 enabled}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00188}00188     }
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00189}00189      INTCONbits.PEIE     =   0;      \textcolor{comment}{// Peripheral Interrupt Enable}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00190}00190     di  ();                         \textcolor{comment}{// enable interrupts}}
+\DoxyCodeLine{\Hypertarget{_melodia2_8c_source_l00191}00191 \}}
+
+\end{DoxyCode}

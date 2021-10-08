@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SmartWatch: Fichero Fuente D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Melodia2.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SmartWatch<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Reloj encargado de hacer sonar una alarma y prender suces dependiendo den nivel de ilumininacion presente</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7b2c782f146b47dc9968b6eee9ba20f6.html">SmartWatch.X</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Melodia2.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_melodia2_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * File:   Melodia2.c</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Author: User</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Created on 22 de septiembre de 2021, 09:28 AM</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;pic18f4550.h&gt;</span>  <span class="comment">/*Header file PIC18f4550 definitions*/</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="config_8h.html">config.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_l_c_d__caracter_8h.html">LCD_caracter.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">void</span> <a class="code hl_function" href="_melodia2_8c.html#a18e94699a8997269e7c49971c005d870">conf_CLK</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">void</span> <a class="code hl_function" href="_melodia2_8c.html#a4dbe4dc1bda619d00ebbc9f430d56c7d">conf_IO</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">void</span> <a class="code hl_function" href="_melodia2_8c.html#a0d8da984541e03ea0c04e6ff08709db2">conf_TA1</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">void</span> <a class="code hl_function" href="_melodia2_8c.html#af64840480adcf58c332ac63db58634ef">desabilitar_Time</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="_melodia2_8c.html#acac1a554efac3d61b3f9b2b6f393f836">   34</a></span>uint8_t <span class="keyword">volatile</span> <a class="code hl_variable" href="_melodia2_8c.html#acac1a554efac3d61b3f9b2b6f393f836">var3seg</a>     =   0;  </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="_melodia2_8c.html#a75fc6160df83444867e3320628defb71">   35</a></span>    uint8_t <span class="keyword">volatile</span> <a class="code hl_variable" href="_melodia2_8c.html#a75fc6160df83444867e3320628defb71">var3beep</a>    =   0;  </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="_melodia2_8c.html#aecd01d231468dc5cdcf9659b0b019e4f">   37</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_melodia2_8c.html#aecd01d231468dc5cdcf9659b0b019e4f">PlayCancion</a>( <span class="keywordtype">void</span> ) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_function" href="_melodia2_8c.html#a18e94699a8997269e7c49971c005d870">conf_CLK</a>    ();     <span class="comment">// Configura Relojes</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_function" href="_melodia2_8c.html#a4dbe4dc1bda619d00ebbc9f430d56c7d">conf_IO</a>     ();     <span class="comment">// Configura I/O</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_function" href="_melodia2_8c.html#a0d8da984541e03ea0c04e6ff08709db2">conf_TA1</a>    ();     <span class="comment">// Configura Timer1</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    INTCONbits.PEIE     =   0;      <span class="comment">// Peripheral Interrupt Enable</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    ei  ();                         <span class="comment">// enable interrupts</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">    do{</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">        SLEEP();                    // uC modo IDLE</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment"></span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">        if ( var3seg == 60 &amp;&amp; var3beep &lt; 6 )</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">        {</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">        // Tres Beep cada 3 segundos</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">            LATDbits.LD2       =   ~LATDbits.LD2;</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">            var3beep++;</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">            return;</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">        }</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">        else</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">        {</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">            if ( var3beep &gt; 5 )</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">            {</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">            // Reset variables ( vuelta a empezar! )</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">                var3beep    =   0;</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">                var3seg     =   0;</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">                return;</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">            }</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment"></span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">            var3seg++;</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">        }</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">    } while ( 1 );</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">    desabilitar_Time();</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="_melodia2_8c.html#a18e94699a8997269e7c49971c005d870">   78</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_melodia2_8c.html#a18e94699a8997269e7c49971c005d870">conf_CLK</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    OSCCONbits.IRCF0 = 1; <span class="comment">// Internal clock...</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    OSCCONbits.IRCF1 = 1;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    OSCCONbits.IRCF2 = 1; <span class="comment">//...8 MHz.</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    OSCCONbits.SCS = 0b10; <span class="comment">// Internal oscillator</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    OSCCONbits.IDLEN = 1; <span class="comment">// SLEEP() == Idle mode</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">//OSCCONbits.IOFS     =   1;      // Frequency is stable</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="comment">//OSCCONbits.OSTS     =   1;      // Device is running from the primary system clock</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="_melodia2_8c.html#a4dbe4dc1bda619d00ebbc9f430d56c7d">  102</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_melodia2_8c.html#a4dbe4dc1bda619d00ebbc9f430d56c7d">conf_IO</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    ADCON1bits.PCFG = 0b1111; <span class="comment">// All Port Digital</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    TRISCbits.RC1 = 0; <span class="comment">// RD2 OUTPUT</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    LATCbits.LC1 = 0; <span class="comment">// reset pin</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>}</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="_melodia2_8c.html#a0d8da984541e03ea0c04e6ff08709db2">  137</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_melodia2_8c.html#a0d8da984541e03ea0c04e6ff08709db2">conf_TA1</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    T1CONbits.T1CKPS0 = 1; <span class="comment">// 1:8 Prescale value</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    T1CONbits.T1CKPS1 = 1; <span class="comment">// 1:8 Prescale value</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    TMR1H = 0xCF;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    TMR1L = 0x2C;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    PIR1bits.TMR1IF = 0; <span class="comment">// Reset flag</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    PIE1bits.TMR1IE = 1; <span class="comment">// TA1 interrupt ON</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    T1CONbits.TMR1ON = 1; <span class="comment">// TA1 enabled</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>}</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="_melodia2_8c.html#acd3fec81d10a06ac3c4360fe52a7427f">  150</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_melodia2_8c.html#acd3fec81d10a06ac3c4360fe52a7427f">__interrupt</a>() ISR ( <span class="keywordtype">void</span> )</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>{</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordflow">if</span> ( PIR1bits.TMR1IF == 1 )                 <span class="comment">// Timer1 Interrupt</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    {</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        LATCbits.LC1       =   ~LATCbits.LC1;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keywordflow">if</span> ( <a class="code hl_variable" href="_melodia2_8c.html#acac1a554efac3d61b3f9b2b6f393f836">var3seg</a> == 60 &amp;&amp; <a class="code hl_variable" href="_melodia2_8c.html#a75fc6160df83444867e3320628defb71">var3beep</a> &lt; 6 )</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="comment">// Tres Beep cada 3 segundos</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            <a class="code hl_variable" href="_melodia2_8c.html#a75fc6160df83444867e3320628defb71">var3beep</a>++;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        }</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            <span class="keywordflow">if</span> ( <a class="code hl_variable" href="_melodia2_8c.html#a75fc6160df83444867e3320628defb71">var3beep</a> &gt; 5 )</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            <span class="comment">// Reset variables ( vuelta a empezar! )</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                <a class="code hl_variable" href="_melodia2_8c.html#a75fc6160df83444867e3320628defb71">var3beep</a>    =   0;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                <a class="code hl_variable" href="_melodia2_8c.html#acac1a554efac3d61b3f9b2b6f393f836">var3seg</a>     =   0;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                <a class="code hl_function" href="_melodia2_8c.html#af64840480adcf58c332ac63db58634ef">desabilitar_Time</a>(); </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            }</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            <a class="code hl_variable" href="_melodia2_8c.html#acac1a554efac3d61b3f9b2b6f393f836">var3seg</a>++;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        }</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        TMR1H               =   0xCF;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        TMR1L               =   0x2C;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        PIR1bits.TMR1IF     =   0; </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>}</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="_melodia2_8c.html#af64840480adcf58c332ac63db58634ef">  184</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_melodia2_8c.html#af64840480adcf58c332ac63db58634ef">desabilitar_Time</a>(<span class="keywordtype">void</span>){</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>PIE1bits.TMR1IE = 0; <span class="comment">// TA1 interrupt ON</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    T1CONbits.TMR1ON = 0; <span class="comment">// TA1 enabled</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>     INTCONbits.PEIE     =   0;      <span class="comment">// Peripheral Interrupt Enable</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    di  ();                         <span class="comment">// enable interrupts</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>}</div>
+<div class="ttc" id="a_l_c_d__caracter_8h_html"><div class="ttname"><a href="_l_c_d__caracter_8h.html">LCD_caracter.h</a></div></div>
+<div class="ttc" id="a_melodia2_8c_html_a0d8da984541e03ea0c04e6ff08709db2"><div class="ttname"><a href="_melodia2_8c.html#a0d8da984541e03ea0c04e6ff08709db2">conf_TA1</a></div><div class="ttdeci">void conf_TA1(void)</div><div class="ttdoc">void conf_TA1 (void)</div><div class="ttdef"><b>Definition:</b> <a href="_melodia2_8c_source.html#l00137">Melodia2.c:137</a></div></div>
+<div class="ttc" id="a_melodia2_8c_html_a18e94699a8997269e7c49971c005d870"><div class="ttname"><a href="_melodia2_8c.html#a18e94699a8997269e7c49971c005d870">conf_CLK</a></div><div class="ttdeci">void conf_CLK(void)</div><div class="ttdef"><b>Definition:</b> <a href="_melodia2_8c_source.html#l00078">Melodia2.c:78</a></div></div>
+<div class="ttc" id="a_melodia2_8c_html_a4dbe4dc1bda619d00ebbc9f430d56c7d"><div class="ttname"><a href="_melodia2_8c.html#a4dbe4dc1bda619d00ebbc9f430d56c7d">conf_IO</a></div><div class="ttdeci">void conf_IO(void)</div><div class="ttdoc">void conf_IO (void)</div><div class="ttdef"><b>Definition:</b> <a href="_melodia2_8c_source.html#l00102">Melodia2.c:102</a></div></div>
+<div class="ttc" id="a_melodia2_8c_html_a75fc6160df83444867e3320628defb71"><div class="ttname"><a href="_melodia2_8c.html#a75fc6160df83444867e3320628defb71">var3beep</a></div><div class="ttdeci">uint8_t volatile var3beep</div><div class="ttdef"><b>Definition:</b> <a href="_melodia2_8c_source.html#l00035">Melodia2.c:35</a></div></div>
+<div class="ttc" id="a_melodia2_8c_html_acac1a554efac3d61b3f9b2b6f393f836"><div class="ttname"><a href="_melodia2_8c.html#acac1a554efac3d61b3f9b2b6f393f836">var3seg</a></div><div class="ttdeci">uint8_t volatile var3seg</div><div class="ttdoc">void conf_CLK (void)</div><div class="ttdef"><b>Definition:</b> <a href="_melodia2_8c_source.html#l00034">Melodia2.c:34</a></div></div>
+<div class="ttc" id="a_melodia2_8c_html_acd3fec81d10a06ac3c4360fe52a7427f"><div class="ttname"><a href="_melodia2_8c.html#acd3fec81d10a06ac3c4360fe52a7427f">__interrupt</a></div><div class="ttdeci">void __interrupt() ISR(void)</div><div class="ttdef"><b>Definition:</b> <a href="_melodia2_8c_source.html#l00150">Melodia2.c:150</a></div></div>
+<div class="ttc" id="a_melodia2_8c_html_aecd01d231468dc5cdcf9659b0b019e4f"><div class="ttname"><a href="_melodia2_8c.html#aecd01d231468dc5cdcf9659b0b019e4f">PlayCancion</a></div><div class="ttdeci">void PlayCancion(void)</div><div class="ttdef"><b>Definition:</b> <a href="_melodia2_8c_source.html#l00037">Melodia2.c:37</a></div></div>
+<div class="ttc" id="a_melodia2_8c_html_af64840480adcf58c332ac63db58634ef"><div class="ttname"><a href="_melodia2_8c.html#af64840480adcf58c332ac63db58634ef">desabilitar_Time</a></div><div class="ttdeci">void desabilitar_Time(void)</div><div class="ttdef"><b>Definition:</b> <a href="_melodia2_8c_source.html#l00184">Melodia2.c:184</a></div></div>
+<div class="ttc" id="aconfig_8h_html"><div class="ttname"><a href="config_8h.html">config.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

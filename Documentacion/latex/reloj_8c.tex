@@ -1,0 +1,166 @@
+\hypertarget{reloj_8c}{}\doxysection{Referencia del Archivo D\+:/\+Clases 2021/\+Arquitectura Computacional/\+Github/\+Smart\+\_\+\+Watch/\+Smart\+Watch.X/reloj.c}
+\label{reloj_8c}\index{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/reloj.c@{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/reloj.c}}
+{\ttfamily \#include \char`\"{}Funciones.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}I2\+C\+\_\+\+Master\+\_\+\+File.\+h\char`\"{}}\newline
+\doxysubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{reloj_8c_a8612827752029385a17f0708a4444d07}{device\+\_\+id\+\_\+write}}~0x\+D0
+\item 
+\#define \mbox{\hyperlink{reloj_8c_a9b98cab8220d3618e2ae6a97690f27df}{device\+\_\+id\+\_\+read}}~0x\+D1
+\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{reloj_8c_a25802d09146b657ce5a7317d991dc1b7}{RTC\+\_\+\+Read\+\_\+\+Clock}} (char read\+\_\+clock\+\_\+address)
+\item 
+void \mbox{\hyperlink{reloj_8c_a3a25eb43def7a911c034b9b737fc44e3}{RTC\+\_\+\+Read\+\_\+\+Calendar}} (char read\+\_\+calendar\+\_\+address)
+\item 
+void \mbox{\hyperlink{reloj_8c_a4a67d4bb2679cbcf9361dce21fb7b61a}{RTC\+\_\+\+Calendario}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{reloj_8c_a90c2ace84e5523d06b7162ea5928acc1}{sec}}
+\item 
+int \mbox{\hyperlink{reloj_8c_a3e202b201e6255d975cd6d3aff1f5a4d}{min}}
+\item 
+int \mbox{\hyperlink{reloj_8c_a15df9ba285cfd842f284025f904edc9c}{hour}}
+\item 
+int \mbox{\hyperlink{reloj_8c_a8f67164de537e3ec2b47e3204ddd3400}{Day}}
+\item 
+int \mbox{\hyperlink{reloj_8c_a6fda9b1a478471ec7a785df4109f17d6}{Date}}
+\item 
+int \mbox{\hyperlink{reloj_8c_a530b376ec91a278ac98531d3ea17f148}{Month}}
+\item 
+int \mbox{\hyperlink{reloj_8c_a42e645110404fbf4f10235789577fa32}{Year}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\mbox{\Hypertarget{reloj_8c_a9b98cab8220d3618e2ae6a97690f27df}\label{reloj_8c_a9b98cab8220d3618e2ae6a97690f27df}} 
+\index{reloj.c@{reloj.c}!device\_id\_read@{device\_id\_read}}
+\index{device\_id\_read@{device\_id\_read}!reloj.c@{reloj.c}}
+\doxysubsubsection{\texorpdfstring{device\_id\_read}{device\_id\_read}}
+{\footnotesize\ttfamily \#define device\+\_\+id\+\_\+read~0x\+D1}
+
+
+
+Definición en la línea \mbox{\hyperlink{reloj_8c_source_l00011}{11}} del archivo \mbox{\hyperlink{reloj_8c_source}{reloj.\+c}}.
+
+\mbox{\Hypertarget{reloj_8c_a8612827752029385a17f0708a4444d07}\label{reloj_8c_a8612827752029385a17f0708a4444d07}} 
+\index{reloj.c@{reloj.c}!device\_id\_write@{device\_id\_write}}
+\index{device\_id\_write@{device\_id\_write}!reloj.c@{reloj.c}}
+\doxysubsubsection{\texorpdfstring{device\_id\_write}{device\_id\_write}}
+{\footnotesize\ttfamily \#define device\+\_\+id\+\_\+write~0x\+D0}
+
+
+
+Definición en la línea \mbox{\hyperlink{reloj_8c_source_l00010}{10}} del archivo \mbox{\hyperlink{reloj_8c_source}{reloj.\+c}}.
+
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{reloj_8c_a4a67d4bb2679cbcf9361dce21fb7b61a}\label{reloj_8c_a4a67d4bb2679cbcf9361dce21fb7b61a}} 
+\index{reloj.c@{reloj.c}!RTC\_Calendario@{RTC\_Calendario}}
+\index{RTC\_Calendario@{RTC\_Calendario}!reloj.c@{reloj.c}}
+\doxysubsubsection{\texorpdfstring{RTC\_Calendario()}{RTC\_Calendario()}}
+{\footnotesize\ttfamily void RTC\+\_\+\+Calendario (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{reloj_8c_source_l00079}{79}} del archivo \mbox{\hyperlink{reloj_8c_source}{reloj.\+c}}.
+
+\mbox{\Hypertarget{reloj_8c_a3a25eb43def7a911c034b9b737fc44e3}\label{reloj_8c_a3a25eb43def7a911c034b9b737fc44e3}} 
+\index{reloj.c@{reloj.c}!RTC\_Read\_Calendar@{RTC\_Read\_Calendar}}
+\index{RTC\_Read\_Calendar@{RTC\_Read\_Calendar}!reloj.c@{reloj.c}}
+\doxysubsubsection{\texorpdfstring{RTC\_Read\_Calendar()}{RTC\_Read\_Calendar()}}
+{\footnotesize\ttfamily void RTC\+\_\+\+Read\+\_\+\+Calendar (\begin{DoxyParamCaption}\item[{char}]{read\+\_\+calendar\+\_\+address }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{reloj_8c_source_l00051}{51}} del archivo \mbox{\hyperlink{reloj_8c_source}{reloj.\+c}}.
+
+\mbox{\Hypertarget{reloj_8c_a25802d09146b657ce5a7317d991dc1b7}\label{reloj_8c_a25802d09146b657ce5a7317d991dc1b7}} 
+\index{reloj.c@{reloj.c}!RTC\_Read\_Clock@{RTC\_Read\_Clock}}
+\index{RTC\_Read\_Clock@{RTC\_Read\_Clock}!reloj.c@{reloj.c}}
+\doxysubsubsection{\texorpdfstring{RTC\_Read\_Clock()}{RTC\_Read\_Clock()}}
+{\footnotesize\ttfamily void RTC\+\_\+\+Read\+\_\+\+Clock (\begin{DoxyParamCaption}\item[{char}]{read\+\_\+clock\+\_\+address }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{reloj_8c_source_l00028}{28}} del archivo \mbox{\hyperlink{reloj_8c_source}{reloj.\+c}}.
+
+
+
+\doxysubsection{Documentación de las variables}
+\mbox{\Hypertarget{reloj_8c_a6fda9b1a478471ec7a785df4109f17d6}\label{reloj_8c_a6fda9b1a478471ec7a785df4109f17d6}} 
+\index{reloj.c@{reloj.c}!Date@{Date}}
+\index{Date@{Date}!reloj.c@{reloj.c}}
+\doxysubsubsection{\texorpdfstring{Date}{Date}}
+{\footnotesize\ttfamily int Date}
+
+
+
+Definición en la línea \mbox{\hyperlink{reloj_8c_source_l00014}{14}} del archivo \mbox{\hyperlink{reloj_8c_source}{reloj.\+c}}.
+
+\mbox{\Hypertarget{reloj_8c_a8f67164de537e3ec2b47e3204ddd3400}\label{reloj_8c_a8f67164de537e3ec2b47e3204ddd3400}} 
+\index{reloj.c@{reloj.c}!Day@{Day}}
+\index{Day@{Day}!reloj.c@{reloj.c}}
+\doxysubsubsection{\texorpdfstring{Day}{Day}}
+{\footnotesize\ttfamily int Day}
+
+
+
+Definición en la línea \mbox{\hyperlink{reloj_8c_source_l00014}{14}} del archivo \mbox{\hyperlink{reloj_8c_source}{reloj.\+c}}.
+
+\mbox{\Hypertarget{reloj_8c_a15df9ba285cfd842f284025f904edc9c}\label{reloj_8c_a15df9ba285cfd842f284025f904edc9c}} 
+\index{reloj.c@{reloj.c}!hour@{hour}}
+\index{hour@{hour}!reloj.c@{reloj.c}}
+\doxysubsubsection{\texorpdfstring{hour}{hour}}
+{\footnotesize\ttfamily int hour}
+
+
+
+Definición en la línea \mbox{\hyperlink{reloj_8c_source_l00013}{13}} del archivo \mbox{\hyperlink{reloj_8c_source}{reloj.\+c}}.
+
+\mbox{\Hypertarget{reloj_8c_a3e202b201e6255d975cd6d3aff1f5a4d}\label{reloj_8c_a3e202b201e6255d975cd6d3aff1f5a4d}} 
+\index{reloj.c@{reloj.c}!min@{min}}
+\index{min@{min}!reloj.c@{reloj.c}}
+\doxysubsubsection{\texorpdfstring{min}{min}}
+{\footnotesize\ttfamily int min}
+
+
+
+Definición en la línea \mbox{\hyperlink{reloj_8c_source_l00013}{13}} del archivo \mbox{\hyperlink{reloj_8c_source}{reloj.\+c}}.
+
+\mbox{\Hypertarget{reloj_8c_a530b376ec91a278ac98531d3ea17f148}\label{reloj_8c_a530b376ec91a278ac98531d3ea17f148}} 
+\index{reloj.c@{reloj.c}!Month@{Month}}
+\index{Month@{Month}!reloj.c@{reloj.c}}
+\doxysubsubsection{\texorpdfstring{Month}{Month}}
+{\footnotesize\ttfamily int Month}
+
+
+
+Definición en la línea \mbox{\hyperlink{reloj_8c_source_l00014}{14}} del archivo \mbox{\hyperlink{reloj_8c_source}{reloj.\+c}}.
+
+\mbox{\Hypertarget{reloj_8c_a90c2ace84e5523d06b7162ea5928acc1}\label{reloj_8c_a90c2ace84e5523d06b7162ea5928acc1}} 
+\index{reloj.c@{reloj.c}!sec@{sec}}
+\index{sec@{sec}!reloj.c@{reloj.c}}
+\doxysubsubsection{\texorpdfstring{sec}{sec}}
+{\footnotesize\ttfamily int sec}
+
+
+
+Definición en la línea \mbox{\hyperlink{reloj_8c_source_l00013}{13}} del archivo \mbox{\hyperlink{reloj_8c_source}{reloj.\+c}}.
+
+\mbox{\Hypertarget{reloj_8c_a42e645110404fbf4f10235789577fa32}\label{reloj_8c_a42e645110404fbf4f10235789577fa32}} 
+\index{reloj.c@{reloj.c}!Year@{Year}}
+\index{Year@{Year}!reloj.c@{reloj.c}}
+\doxysubsubsection{\texorpdfstring{Year}{Year}}
+{\footnotesize\ttfamily int Year}
+
+
+
+Definición en la línea \mbox{\hyperlink{reloj_8c_source_l00014}{14}} del archivo \mbox{\hyperlink{reloj_8c_source}{reloj.\+c}}.
+

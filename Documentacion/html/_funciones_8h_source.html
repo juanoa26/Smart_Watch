@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SmartWatch: Fichero Fuente D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Funciones.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SmartWatch<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Reloj encargado de hacer sonar una alarma y prender suces dependiendo den nivel de ilumininacion presente</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7b2c782f146b47dc9968b6eee9ba20f6.html">SmartWatch.X</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Funciones.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_funciones_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* </span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * File:  Funciones.h </span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Author: Arlex Fabian Galindez-Geraldina Ivonne Carlosama-Juan Sebastian Osorio</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Comments: Liberia que contiene las especificaciones de las variables utilizadas en Temperatura.c,</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *          Sensor_luz.c, asi como la declaracion de funciones, leds y los emoticones que se mostraran</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Revision history: </span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// This is a guard condition so that contents of this file are not included</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// more than once.  </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;xc.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;pic18f4550.h&gt;</span>  <span class="comment">/*Header file PIC18f4550 definitions*/</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="config_8h.html">config.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_l_c_d__caracter_8h.html">LCD_caracter.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="_funciones_8h.html#aca338dbd19d7940923334629f6e5f3b7">   20</a></span><span class="preprocessor">#define LED_GREEN LATE0</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="_funciones_8h.html#afc7538065c055feb629130ef7ce1bbd6">   21</a></span><span class="preprocessor">#define LED_GREEN1 LATE1</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="_funciones_8h.html#a6b0e03aa51516e668b51b434473a2f1a">   22</a></span><span class="preprocessor">#define LED_GREEN2 LATE2</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="_funciones_8h.html#ad76d1750a6cdeebd506bfcd6752554d2">   23</a></span><span class="preprocessor">#define ON 1</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="_funciones_8h.html#a29e413f6725b2ba32d165ffaa35b01e5">   24</a></span><span class="preprocessor">#define OFF 0</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="_funciones_8h.html#a39342d023c3c8b731ec9969c1da501b3">   26</a></span><span class="keywordtype">float</span> <a class="code hl_variable" href="_funciones_8h.html#a39342d023c3c8b731ec9969c1da501b3">tempar</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="_funciones_8h.html#aa22435b55a8b84bf16cf00696cefbad1">   27</a></span><span class="keywordtype">float</span> <a class="code hl_variable" href="_funciones_8h.html#aa22435b55a8b84bf16cf00696cefbad1">luz</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="_funciones_8h.html#a7ebb946df38a3648f7d2baa6ff6f05a9">   28</a></span><span class="keywordtype">char</span> <a class="code hl_variable" href="_funciones_8h.html#a7ebb946df38a3648f7d2baa6ff6f05a9">Stemp</a>[20];</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="_funciones_8h.html#a47323f0fa8cd39ab9803efec44b5fa3a">   29</a></span><span class="keywordtype">char</span> <a class="code hl_variable" href="_funciones_8h.html#a47323f0fa8cd39ab9803efec44b5fa3a">Sluz</a>[20];</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="_funciones_8h.html#abfd24350fd0f519cf2cc67a7827ab6fa">   30</a></span>uint16_t <a class="code hl_variable" href="_funciones_8h.html#abfd24350fd0f519cf2cc67a7827ab6fa">result</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="_funciones_8h.html#a160bbe832b2c6af8edb49d371aef2388">   31</a></span><span class="keywordtype">char</span> <a class="code hl_variable" href="_funciones_8h.html#a160bbe832b2c6af8edb49d371aef2388">i</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="_funciones_8h.html#a022d44290a5b59e97a335fd3813df345">   32</a></span><span class="keywordtype">char</span> <a class="code hl_variable" href="_funciones_8h.html#a022d44290a5b59e97a335fd3813df345">data_in</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="_funciones_8h.html#aa743fe5bf1870d778aee253442e1d9b0">   34</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="_funciones_8h.html#aa743fe5bf1870d778aee253442e1d9b0">character1</a>[ 8 ] = {0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00}; <span class="comment">/*  Value for Rainy day  */</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="_funciones_8h.html#a5a49a4fade8c6ce06a62a6779075f3ac">   35</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="_funciones_8h.html#a5a49a4fade8c6ce06a62a6779075f3ac">character2</a>[ 8 ] = {0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00}; <span class="comment">/*  Value for Sunny day  */</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="_funciones_8h.html#a274ffde827b969dfb2922f934129d718">   36</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="_funciones_8h.html#a274ffde827b969dfb2922f934129d718">character3</a>[ 8 ] = {0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00}; <span class="comment">/*  Value for Cloudy day  */</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>uint16_t <a class="code hl_function" href="_funciones_8h.html#ab85a6b14f71898d5cc3a3e0e49aeabf6">ReadADC</a>(<span class="keywordtype">void</span>);<span class="comment">/*Lee el sensor de Temperatura*/</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>uint16_t <a class="code hl_function" href="_funciones_8h.html#afb955c54b43d44528d96dafe21c10c12">ReadLUZ</a>(<span class="keywordtype">void</span>);<span class="comment">/*Lee el sensor de Luz*/</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">int</span> <a class="code hl_function" href="_funciones_8h.html#a525bf2d7a8e7e77b523784e6c5a90588">Estados</a>(<span class="keywordtype">void</span>);<span class="comment">/*Se encarga de determinar el estado al que se debe ir*/</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> <a class="code hl_function" href="_funciones_8h.html#a6b1674636f56965e21ad465b2c38c2e8">Sunny_State</a>(<span class="keywordtype">void</span>);<span class="comment">/*Estado para dias soleados*/</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> <a class="code hl_function" href="_funciones_8h.html#adaa816c9c970dc7b20553cd24b561104">Cloudy_State</a>(<span class="keywordtype">void</span>);<span class="comment">/*Estado para dias nublados*/</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span> <a class="code hl_function" href="_funciones_8h.html#ad7696b41581338d5faeb4dd3891a0ee9">Rainy_State</a>(<span class="keywordtype">void</span>);<span class="comment">/*Estado de dias lluviosos*/</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> <a class="code hl_function" href="_funciones_8h.html#aa8fb3329093dbace8c2b5699b3bcae19">Alarm_Status</a>(<span class="keywordtype">void</span>);<span class="comment">/*Estado para sonar la alarma*/</span></div>
+<div class="ttc" id="a_funciones_8h_html_a022d44290a5b59e97a335fd3813df345"><div class="ttname"><a href="_funciones_8h.html#a022d44290a5b59e97a335fd3813df345">data_in</a></div><div class="ttdeci">char data_in</div><div class="ttdef"><b>Definition:</b> <a href="_funciones_8h_source.html#l00032">Funciones.h:32</a></div></div>
+<div class="ttc" id="a_funciones_8h_html_a160bbe832b2c6af8edb49d371aef2388"><div class="ttname"><a href="_funciones_8h.html#a160bbe832b2c6af8edb49d371aef2388">i</a></div><div class="ttdeci">char i</div><div class="ttdef"><b>Definition:</b> <a href="_funciones_8h_source.html#l00031">Funciones.h:31</a></div></div>
+<div class="ttc" id="a_funciones_8h_html_a274ffde827b969dfb2922f934129d718"><div class="ttname"><a href="_funciones_8h.html#a274ffde827b969dfb2922f934129d718">character3</a></div><div class="ttdeci">unsigned char character3[8]</div><div class="ttdef"><b>Definition:</b> <a href="_funciones_8h_source.html#l00036">Funciones.h:36</a></div></div>
+<div class="ttc" id="a_funciones_8h_html_a39342d023c3c8b731ec9969c1da501b3"><div class="ttname"><a href="_funciones_8h.html#a39342d023c3c8b731ec9969c1da501b3">tempar</a></div><div class="ttdeci">float tempar</div><div class="ttdef"><b>Definition:</b> <a href="_funciones_8h_source.html#l00026">Funciones.h:26</a></div></div>
+<div class="ttc" id="a_funciones_8h_html_a47323f0fa8cd39ab9803efec44b5fa3a"><div class="ttname"><a href="_funciones_8h.html#a47323f0fa8cd39ab9803efec44b5fa3a">Sluz</a></div><div class="ttdeci">char Sluz[20]</div><div class="ttdef"><b>Definition:</b> <a href="_funciones_8h_source.html#l00029">Funciones.h:29</a></div></div>
+<div class="ttc" id="a_funciones_8h_html_a525bf2d7a8e7e77b523784e6c5a90588"><div class="ttname"><a href="_funciones_8h.html#a525bf2d7a8e7e77b523784e6c5a90588">Estados</a></div><div class="ttdeci">int Estados(void)</div><div class="ttdef"><b>Definition:</b> <a href="_estados_8c_source.html#l00025">Estados.c:25</a></div></div>
+<div class="ttc" id="a_funciones_8h_html_a5a49a4fade8c6ce06a62a6779075f3ac"><div class="ttname"><a href="_funciones_8h.html#a5a49a4fade8c6ce06a62a6779075f3ac">character2</a></div><div class="ttdeci">unsigned char character2[8]</div><div class="ttdef"><b>Definition:</b> <a href="_funciones_8h_source.html#l00035">Funciones.h:35</a></div></div>
+<div class="ttc" id="a_funciones_8h_html_a6b1674636f56965e21ad465b2c38c2e8"><div class="ttname"><a href="_funciones_8h.html#a6b1674636f56965e21ad465b2c38c2e8">Sunny_State</a></div><div class="ttdeci">void Sunny_State(void)</div><div class="ttdef"><b>Definition:</b> <a href="_estados_8c_source.html#l00056">Estados.c:56</a></div></div>
+<div class="ttc" id="a_funciones_8h_html_a7ebb946df38a3648f7d2baa6ff6f05a9"><div class="ttname"><a href="_funciones_8h.html#a7ebb946df38a3648f7d2baa6ff6f05a9">Stemp</a></div><div class="ttdeci">char Stemp[20]</div><div class="ttdef"><b>Definition:</b> <a href="_funciones_8h_source.html#l00028">Funciones.h:28</a></div></div>
+<div class="ttc" id="a_funciones_8h_html_aa22435b55a8b84bf16cf00696cefbad1"><div class="ttname"><a href="_funciones_8h.html#aa22435b55a8b84bf16cf00696cefbad1">luz</a></div><div class="ttdeci">float luz</div><div class="ttdef"><b>Definition:</b> <a href="_funciones_8h_source.html#l00027">Funciones.h:27</a></div></div>
+<div class="ttc" id="a_funciones_8h_html_aa743fe5bf1870d778aee253442e1d9b0"><div class="ttname"><a href="_funciones_8h.html#aa743fe5bf1870d778aee253442e1d9b0">character1</a></div><div class="ttdeci">unsigned char character1[8]</div><div class="ttdef"><b>Definition:</b> <a href="_funciones_8h_source.html#l00034">Funciones.h:34</a></div></div>
+<div class="ttc" id="a_funciones_8h_html_aa8fb3329093dbace8c2b5699b3bcae19"><div class="ttname"><a href="_funciones_8h.html#aa8fb3329093dbace8c2b5699b3bcae19">Alarm_Status</a></div><div class="ttdeci">void Alarm_Status(void)</div><div class="ttdef"><b>Definition:</b> <a href="_estados_8c_source.html#l00130">Estados.c:130</a></div></div>
+<div class="ttc" id="a_funciones_8h_html_ab85a6b14f71898d5cc3a3e0e49aeabf6"><div class="ttname"><a href="_funciones_8h.html#ab85a6b14f71898d5cc3a3e0e49aeabf6">ReadADC</a></div><div class="ttdeci">uint16_t ReadADC(void)</div><div class="ttdef"><b>Definition:</b> <a href="_temperatura_8c_source.html#l00022">Temperatura.c:22</a></div></div>
+<div class="ttc" id="a_funciones_8h_html_abfd24350fd0f519cf2cc67a7827ab6fa"><div class="ttname"><a href="_funciones_8h.html#abfd24350fd0f519cf2cc67a7827ab6fa">result</a></div><div class="ttdeci">uint16_t result</div><div class="ttdef"><b>Definition:</b> <a href="_funciones_8h_source.html#l00030">Funciones.h:30</a></div></div>
+<div class="ttc" id="a_funciones_8h_html_ad7696b41581338d5faeb4dd3891a0ee9"><div class="ttname"><a href="_funciones_8h.html#ad7696b41581338d5faeb4dd3891a0ee9">Rainy_State</a></div><div class="ttdeci">void Rainy_State(void)</div><div class="ttdef"><b>Definition:</b> <a href="_estados_8c_source.html#l00107">Estados.c:107</a></div></div>
+<div class="ttc" id="a_funciones_8h_html_adaa816c9c970dc7b20553cd24b561104"><div class="ttname"><a href="_funciones_8h.html#adaa816c9c970dc7b20553cd24b561104">Cloudy_State</a></div><div class="ttdeci">void Cloudy_State(void)</div><div class="ttdef"><b>Definition:</b> <a href="_estados_8c_source.html#l00082">Estados.c:82</a></div></div>
+<div class="ttc" id="a_funciones_8h_html_afb955c54b43d44528d96dafe21c10c12"><div class="ttname"><a href="_funciones_8h.html#afb955c54b43d44528d96dafe21c10c12">ReadLUZ</a></div><div class="ttdeci">uint16_t ReadLUZ(void)</div><div class="ttdef"><b>Definition:</b> <a href="_sensor__luz_8c_source.html#l00021">Sensor_luz.c:21</a></div></div>
+<div class="ttc" id="a_l_c_d__caracter_8h_html"><div class="ttname"><a href="_l_c_d__caracter_8h.html">LCD_caracter.h</a></div></div>
+<div class="ttc" id="aconfig_8h_html"><div class="ttname"><a href="config_8h.html">config.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+</small></address>
+</body>
+</html>

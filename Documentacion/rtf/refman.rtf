@@ -1,0 +1,4068 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\info 
+{\title {\comment SmartWatch  {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+1 \par
+}}SmartWatch}
+{\comment Generado por doxygen1.9.2.}
+{\creatim \yr2021\mo10\dy8\hr11\min42\sec55}
+}\pard\plain 
+\sectd\pgnlcrm
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\vertalc\qc\par\par\par\par\par\par\par
+\pard\plain \s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid 
+{\field\fldedit {\*\fldinst TITLE \\*MERGEFORMAT}{\fldrslt SmartWatch}}\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\par
+\par\par\par\par\par\par\par\par\par\par\par\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+{\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
+Versi\'F3n 1\par{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt Viernes, 8 de Octubre de 2021 }}\par
+\page\page\vertalt
+\pard\plain 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Tabla de contenidos\par
+\pard\plain \par
+{\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
+\pard\plain 
+\sect \sbkpage \pgndec \pgnrestart
+\sect \sectd \sbknone
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Indice de archivos\par \pard\plain 
+{\tc \v Indice de archivos}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Lista de archivos\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Lista de todos los archivos con descripciones breves:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/{\b Bluetooth.c} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Example bluetooth HC-05 })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAP \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/{\b config.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAW \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/{\b Estados.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAX \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/{\b Funciones.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABD \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/{\b I2C_Master_File.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/{\b LCD_caracter.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACP \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/{\b LCD_caracter.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACY \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/{\b Melodia.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADM \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/{\b Melodia.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADQ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/{\b reloj.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/{\b Reloj_ar.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEU \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/{\b Sensor_luz.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/{\b smart_main.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/{\b Temperatura.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFJ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/{\b Usart.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFL \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Documentaci\'F3n de archivos{\tc \v Documentaci\'F3n de archivos}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referencia del Archivo D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Bluetooth.c\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Bluetooth.c}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Bluetooth.c}
+{\bkmkstart AAAAAAAAAP}
+{\bkmkend AAAAAAAAAP}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Example bluetooth HC-05. }}\par
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "Funciones.h"}\par
+{\f2 #include "Usart.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+defines\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b F_CPU}\~ 8000000/64\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b Baud_value}\~ (((float)({\b F_CPU})/(float)baud_rate)-1)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funciones\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b USART_Init} (long baud_rate)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b USART_TransmitChar} (char out)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b USART_ReceiveChar} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b USART_SendString} (const char *out)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Descripci\'F3n detallada\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Example bluetooth HC-05. \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Fecha\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+2020-11-23 \par
+}}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Autor\par}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid {\s17 \sa60 \sb30
+Fulvio Vivas {\f2 fulvio.vivas@unicauca.edu.co} \par
+}}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Copyright\par
+}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid Information contained herein is proprietary to and constitutes valuable confidential trade secrets of unicauca, and is subject to restrictions on use and disclosure. \par
+}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+\par
+}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid Copyright (c) unicauca 2020. All rights reserved. \par
+}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+\par
+}\pard\plain \s81\li360\widctlpar\ql\adjustright \fs20\cgrid The copyright notices above do not evidence any actual or intended publication of this material. \par
+}}{
+Definici\'F3n en el archivo {\b Bluetooth.c}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de los 'defines'\par
+\pard\plain 
+{\xe \v Baud_value\:Bluetooth.c}
+{\xe \v Bluetooth.c\:Baud_value}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define Baud_value\~ (((float)({\b F_CPU})/(float)baud_rate)-1)}}
+\par
+{\bkmkstart AAAAAAAAAQ}
+{\bkmkend AAAAAAAAAQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 23} del archivo {\b Bluetooth.c}.}\par
+}
+{\xe \v F_CPU\:Bluetooth.c}
+{\xe \v Bluetooth.c\:F_CPU}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define F_CPU\~ 8000000/64}}
+\par
+{\bkmkstart AAAAAAAAAR}
+{\bkmkend AAAAAAAAAR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 21} del archivo {\b Bluetooth.c}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de las funciones\par
+\pard\plain 
+{\xe \v USART_Init\:Bluetooth.c}
+{\xe \v Bluetooth.c\:USART_Init}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void USART_Init (long  {\i baud_rate})}}
+\par
+{\bkmkstart AAAAAAAAAS}
+{\bkmkend AAAAAAAAAS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 37} del archivo {\b Bluetooth.c}.}\par
+}
+{\xe \v USART_ReceiveChar\:Bluetooth.c}
+{\xe \v Bluetooth.c\:USART_ReceiveChar}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char USART_ReceiveChar (void )}}
+\par
+{\bkmkstart AAAAAAAAAT}
+{\bkmkend AAAAAAAAAT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 76} del archivo {\b Bluetooth.c}.}\par
+}
+{\xe \v USART_SendString\:Bluetooth.c}
+{\xe \v Bluetooth.c\:USART_SendString}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void USART_SendString (const char *  {\i out})}}
+\par
+{\bkmkstart AAAAAAAAAU}
+{\bkmkend AAAAAAAAAU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 93} del archivo {\b Bluetooth.c}.}\par
+}
+{\xe \v USART_TransmitChar\:Bluetooth.c}
+{\xe \v Bluetooth.c\:USART_TransmitChar}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void USART_TransmitChar (char  {\i out})}}
+\par
+{\bkmkstart AAAAAAAAAV}
+{\bkmkend AAAAAAAAAV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 59} del archivo {\b Bluetooth.c}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Bluetooth.c\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Bluetooth.c}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Bluetooth.c}
+{\bkmkstart AAAAAAAAAA}
+{\bkmkend AAAAAAAAAA}
+Ir a la documentaci\'F3n de este archivo.{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 \par
+00018 {\cf21 #include "Funciones.h"}\par
+00019 {\cf21 #include "Usart.h"}\par
+00020 \par
+00021 {\cf21 #define F_CPU 8000000/64}\par
+00022 {\cf20 //#define Baud_value(baud_rate) (((float)(F_CPU)/(float)baud_rate)-1)}\par
+00023 {\cf21 #define Baud_value (((float)(F_CPU)/(float)baud_rate)-1)}\par
+00024 \par
+00025 \par
+00026 {\cf20 /*********************************************************************}\par
+00027 {\cf20  * Function:        void USART_Init(long baud_rate)}\par
+00028 {\cf20  *}\par
+00029 {\cf20  * Input:           long baud_rate: Valor de frecuencia}\par
+00030 {\cf20  *}\par
+00031 {\cf20  * Output:          None}\par
+00032 {\cf20  *}\par
+00033 {\cf20  * Overview:        Iniciliza la comunicacion con el bluetooth}\par
+00034 {\cf20  *}\par
+00035 {\cf20  * Note:            None}\par
+00036 {\cf20  ********************************************************************/}\par
+00037 {\cf18 void} USART_Init({\cf18 long} baud_rate) \{\par
+00038     {\cf18 float} temp;\par
+00039     TRISC6 = 0; {\cf20 /*Make Tx pin as output*/}\par
+00040     TRISC7 = 1; {\cf20 /*Make Rx pin as input*/}\par
+00041     temp = Baud_value;\par
+00042     SPBRG = (int) temp; {\cf20 /*baud rate=9600, SPBRG = (F_CPU /(64*9600))-1*/}\par
+00043     TXSTA = 0x20; {\cf20 /*Transmit Enable(TX) enable*/}\par
+00044     RCSTA = 0x90; {\cf20 /*Receive Enable(RX) enable and serial port enable */}\par
+00045     {\cf19 return};\par
+00046 \}\par
+00047 \par
+00048 {\cf20 /*********************************************************************}\par
+00049 {\cf20  * Function:        void USART_TransmitChar(char out)}\par
+00050 {\cf20  *}\par
+00051 {\cf20  * Input:           char out: El dato que se recibe}\par
+00052 {\cf20  *}\par
+00053 {\cf20  * Output:          None}\par
+00054 {\cf20  *}\par
+00055 {\cf20  * Overview:        Transminete los datos }\par
+00056 {\cf20  *}\par
+00057 {\cf20  * Note:            None}\par
+00058 {\cf20  ********************************************************************/}\par
+00059 {\cf18 void} USART_TransmitChar({\cf18 char} out) \{\par
+00060     {\cf19 while} (TXIF == 0); {\cf20 /*wait for transmit interrupt flag*/}\par
+00061     TXREG = out; {\cf20 /*wait for transmit interrupt flag to set which indicates TXREG is ready}\par
+00062 {\cf20                                     for another transmission*/}\par
+00063 \}\par
+00064 \par
+00065 {\cf20 /*********************************************************************}\par
+00066 {\cf20  * Function:        char USART_ReceiveChar()}\par
+00067 {\cf20  *}\par
+00068 {\cf20  * Input:           None}\par
+00069 {\cf20  *}\par
+00070 {\cf20  * Output:          char RCREG: Regresa el dato en el registro RCREG}\par
+00071 {\cf20  *}\par
+00072 {\cf20  * Overview:        Envia los datos recibidos y los regresa an menu principal}\par
+00073 {\cf20  *}\par
+00074 {\cf20  * Note:            None}\par
+00075 {\cf20  ********************************************************************/}\par
+00076 {\cf18 char} USART_ReceiveChar() \{\par
+00077 \par
+00078     {\cf19 while} (RCIF == 0); {\cf20 /*wait for receive interrupt flag*/}\par
+00079     {\cf19 return} (RCREG); {\cf20 /*receive data is stored in RCREG register and return to main program */}\par
+00080 \}\par
+00081 \par
+00082 {\cf20 /*********************************************************************}\par
+00083 {\cf20  * Function:        void USART_SendString(const char *out)}\par
+00084 {\cf20  *}\par
+00085 {\cf20  * Input:           const char *out: Envia el mensaje a imprimir}\par
+00086 {\cf20  *}\par
+00087 {\cf20  * Output:          None}\par
+00088 {\cf20  *}\par
+00089 {\cf20  * Overview:        Envia el mensaje a imprimir}\par
+00090 {\cf20  *}\par
+00091 {\cf20  * Note:            None}\par
+00092 {\cf20  ********************************************************************/}\par
+00093 {\cf18 void} USART_SendString({\cf17 const} {\cf18 char} *out) \{\par
+00094     {\cf19 while} (*out != {\cf23 '\\0'}) \{\par
+00095         USART_TransmitChar(*out);\par
+00096         out++;\par
+00097     \}\par
+00098 \}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referencia del Archivo D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/config.h\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/config.h}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/config.h}
+{\bkmkstart AAAAAAAAAW}
+{\bkmkend AAAAAAAAAW}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <xc.h>}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+config.h\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/config.h}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/config.h}
+{\bkmkstart AAAAAAAAAB}
+{\bkmkend AAAAAAAAAB}
+Ir a la documentaci\'F3n de este archivo.{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf20 // PIC18F4550 Configuration Bit Settings}\par
+00002 \par
+00003 {\cf20 // 'C' source line config statements}\par
+00004 \par
+00005 {\cf20 // CONFIG1L}\par
+00006 {\cf21 #pragma config PLLDIV = 1       }{\cf20 // PLL Prescaler Selection bits (No prescale (4 MHz oscillator input drives PLL directly))}\par
+00007 {\cf21 #pragma config CPUDIV = OSC1_PLL2}{\cf20 // System Clock Postscaler Selection bits ([Primary Oscillator Src: /1][96 MHz PLL Src: /2])}\par
+00008 {\cf21 #pragma config USBDIV = 1       }{\cf20 // USB Clock Selection bit (used in Full-Speed USB mode only; UCFG:FSEN = 1) (USB clock source comes directly from the primary oscillator block with no postscale)}\par
+00009 \par
+00010 {\cf20 // CONFIG1H}\par
+00011 {\cf21 #pragma config FOSC = INTOSC_EC        }{\cf20 // Oscillator Selection bits (HS oscillator (HS))}\par
+00012 {\cf21 #pragma config FCMEN = OFF      }{\cf20 // Fail-Safe Clock Monitor Enable bit (Fail-Safe Clock Monitor disabled)}\par
+00013 {\cf21 #pragma config IESO = OFF       }{\cf20 // Internal/External Oscillator Switchover bit (Oscillator Switchover mode disabled)}\par
+00014 \par
+00015 {\cf20 // CONFIG2L}\par
+00016 {\cf21 #pragma config PWRT = ON        }{\cf20 // Power-up Timer Enable bit (PWRT enabled)}\par
+00017 {\cf21 #pragma config BOR = OFF        }{\cf20 // Brown-out Reset Enable bits (Brown-out Reset disabled in hardware and software)}\par
+00018 {\cf21 #pragma config BORV = 3         }{\cf20 // Brown-out Reset Voltage bits (Minimum setting 2.05V)}\par
+00019 {\cf21 #pragma config VREGEN = OFF     }{\cf20 // USB Voltage Regulator Enable bit (USB voltage regulator disabled)}\par
+00020 \par
+00021 {\cf20 // CONFIG2H}\par
+00022 {\cf21 #pragma config WDT = OFF        }{\cf20 // Watchdog Timer Enable bit (WDT disabled (control is placed on the SWDTEN bit))}\par
+00023 {\cf21 #pragma config WDTPS = 32768    }{\cf20 // Watchdog Timer Postscale Select bits (1:32768)}\par
+00024 \par
+00025 {\cf20 // CONFIG3H}\par
+00026 {\cf21 #pragma config CCP2MX = ON      }{\cf20 // CCP2 MUX bit (CCP2 input/output is multiplexed with RC1)}\par
+00027 {\cf21 #pragma config PBADEN = OFF      }{\cf20 // PORTB A/D Enable bit (PORTB<4:0> pins are configured as analog input channels on Reset)}\par
+00028 {\cf21 #pragma config LPT1OSC = OFF    }{\cf20 // Low-Power Timer 1 Oscillator Enable bit (Timer1 configured for higher power operation)}\par
+00029 {\cf21 #pragma config MCLRE = ON       }{\cf20 // MCLR Pin Enable bit (MCLR pin enabled; RE3 input pin disabled)}\par
+00030 \par
+00031 {\cf20 // CONFIG4L}\par
+00032 {\cf21 #pragma config STVREN = OFF     }{\cf20 // Stack Full/Underflow Reset Enable bit (Stack full/underflow will not cause Reset)}\par
+00033 {\cf21 #pragma config LVP = OFF        }{\cf20 // Single-Supply ICSP Enable bit (Single-Supply ICSP disabled)}\par
+00034 {\cf21 #pragma config ICPRT = OFF      }{\cf20 // Dedicated In-Circuit Debug/Programming Port (ICPORT) Enable bit (ICPORT disabled)}\par
+00035 {\cf21 #pragma config XINST = OFF      }{\cf20 // Extended Instruction Set Enable bit (Instruction set extension and Indexed Addressing mode disabled (Legacy mode))}\par
+00036 \par
+00037 {\cf20 // CONFIG5L}\par
+00038 {\cf21 #pragma config CP0 = OFF        }{\cf20 // Code Protection bit (Block 0 (000800-001FFFh) is not code-protected)}\par
+00039 {\cf21 #pragma config CP1 = OFF        }{\cf20 // Code Protection bit (Block 1 (002000-003FFFh) is not code-protected)}\par
+00040 {\cf21 #pragma config CP2 = OFF        }{\cf20 // Code Protection bit (Block 2 (004000-005FFFh) is not code-protected)}\par
+00041 {\cf21 #pragma config CP3 = OFF        }{\cf20 // Code Protection bit (Block 3 (006000-007FFFh) is not code-protected)}\par
+00042 \par
+00043 {\cf20 // CONFIG5H}\par
+00044 {\cf21 #pragma config CPB = OFF        }{\cf20 // Boot Block Code Protection bit (Boot block (000000-0007FFh) is not code-protected)}\par
+00045 {\cf21 #pragma config CPD = OFF        }{\cf20 // Data EEPROM Code Protection bit (Data EEPROM is not code-protected)}\par
+00046 \par
+00047 {\cf20 // CONFIG6L}\par
+00048 {\cf21 #pragma config WRT0 = OFF       }{\cf20 // Write Protection bit (Block 0 (000800-001FFFh) is not write-protected)}\par
+00049 {\cf21 #pragma config WRT1 = OFF       }{\cf20 // Write Protection bit (Block 1 (002000-003FFFh) is not write-protected)}\par
+00050 {\cf21 #pragma config WRT2 = OFF       }{\cf20 // Write Protection bit (Block 2 (004000-005FFFh) is not write-protected)}\par
+00051 {\cf21 #pragma config WRT3 = OFF       }{\cf20 // Write Protection bit (Block 3 (006000-007FFFh) is not write-protected)}\par
+00052 \par
+00053 {\cf20 // CONFIG6H}\par
+00054 {\cf21 #pragma config WRTC = OFF       }{\cf20 // Configuration Register Write Protection bit (Configuration registers (300000-3000FFh) are not write-protected)}\par
+00055 {\cf21 #pragma config WRTB = OFF       }{\cf20 // Boot Block Write Protection bit (Boot block (000000-0007FFh) is not write-protected)}\par
+00056 {\cf21 #pragma config WRTD = OFF       }{\cf20 // Data EEPROM Write Protection bit (Data EEPROM is not write-protected)}\par
+00057 \par
+00058 {\cf20 // CONFIG7L}\par
+00059 {\cf21 #pragma config EBTR0 = OFF      }{\cf20 // Table Read Protection bit (Block 0 (000800-001FFFh) is not protected from table reads executed in other blocks)}\par
+00060 {\cf21 #pragma config EBTR1 = OFF      }{\cf20 // Table Read Protection bit (Block 1 (002000-003FFFh) is not protected from table reads executed in other blocks)}\par
+00061 {\cf21 #pragma config EBTR2 = OFF      }{\cf20 // Table Read Protection bit (Block 2 (004000-005FFFh) is not protected from table reads executed in other blocks)}\par
+00062 {\cf21 #pragma config EBTR3 = OFF      }{\cf20 // Table Read Protection bit (Block 3 (006000-007FFFh) is not protected from table reads executed in other blocks)}\par
+00063 \par
+00064 {\cf20 // CONFIG7H}\par
+00065 {\cf21 #pragma config EBTRB = OFF      }{\cf20 // Boot Block Table Read Protection bit (Boot block (000000-0007FFh) is not protected from table reads executed in other blocks)}\par
+00066 \par
+00067 {\cf20 // #pragma config statements should precede project file includes.}\par
+00068 {\cf20 // Use project enums instead of #define for ON and OFF.}\par
+00069 \par
+00070 {\cf21 #include <xc.h>}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referencia del Archivo D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Estados.c\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Estados.c}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Estados.c}
+{\bkmkstart AAAAAAAAAX}
+{\bkmkend AAAAAAAAAX}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "Funciones.h"}\par
+{\f2 #include "Melodia.h"}\par
+{\f2 #include "Usart.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funciones\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b Estados} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Sunny_State} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Cloudy_State} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Rainy_State} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Alarm_Status} (void)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de las funciones\par
+\pard\plain 
+{\xe \v Alarm_Status\:Estados.c}
+{\xe \v Estados.c\:Alarm_Status}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Alarm_Status (void )}}
+\par
+{\bkmkstart AAAAAAAAAY}
+{\bkmkend AAAAAAAAAY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 130} del archivo {\b Estados.c}.}\par
+}
+{\xe \v Cloudy_State\:Estados.c}
+{\xe \v Estados.c\:Cloudy_State}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Cloudy_State (void )}}
+\par
+{\bkmkstart AAAAAAAAAZ}
+{\bkmkend AAAAAAAAAZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 82} del archivo {\b Estados.c}.}\par
+}
+{\xe \v Estados\:Estados.c}
+{\xe \v Estados.c\:Estados}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Estados (void )}}
+\par
+{\bkmkstart AAAAAAAABA}
+{\bkmkend AAAAAAAABA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 25} del archivo {\b Estados.c}.}\par
+}
+{\xe \v Rainy_State\:Estados.c}
+{\xe \v Estados.c\:Rainy_State}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Rainy_State (void )}}
+\par
+{\bkmkstart AAAAAAAABB}
+{\bkmkend AAAAAAAABB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 107} del archivo {\b Estados.c}.}\par
+}
+{\xe \v Sunny_State\:Estados.c}
+{\xe \v Estados.c\:Sunny_State}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Sunny_State (void )}}
+\par
+{\bkmkstart AAAAAAAABC}
+{\bkmkend AAAAAAAABC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 56} del archivo {\b Estados.c}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Estados.c\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Estados.c}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Estados.c}
+{\bkmkstart AAAAAAAAAC}
+{\bkmkend AAAAAAAAAC}
+Ir a la documentaci\'F3n de este archivo.{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf20 /* }\par
+00002 {\cf20  * File:   Estados.c}\par
+00003 {\cf20  * Author: Arlex Fabian Galindez-Geraldina Ivonne Carlosama-Juan Sebastian Osorio}\par
+00004 {\cf20  *}\par
+00005 {\cf20  * Created on 4 de octubre de 2021, 10:59 AM}\par
+00006 {\cf20  */}\par
+00007 \par
+00008 {\cf21 #include "Funciones.h"}\par
+00009 {\cf21 #include "Melodia.h"}\par
+00010 {\cf21 #include "Usart.h"}\par
+00011 \par
+00012 {\cf20 /*********************************************************************}\par
+00013 {\cf20  * Function:        int Estados()}\par
+00014 {\cf20  *}\par
+00015 {\cf20  * Input:           None}\par
+00016 {\cf20  *}\par
+00017 {\cf20  * Output:          Entero: Devuelve un numero entero positivo dependiendo }\par
+00018 {\cf20  *                  de cada una de las condiciones}\par
+00019 {\cf20  *}\par
+00020 {\cf20  * Overview:        Permite determinar cada uno de los respectivos casos a usar}\par
+00021 {\cf20  *}\par
+00022 {\cf20  * Note:            None}\par
+00023 {\cf20  ********************************************************************/}\par
+00024 \par
+00025 {\cf18 int} Estados() \{\par
+00026     tempar = ReadADC();\par
+00027     luz = ReadLUZ();\par
+00028 \par
+00029     {\cf20 //data_in = USART_ReceiveChar();}\par
+00030     {\cf19 if} (tempar > 15 && (luz > 0 && luz < 400)) \{\par
+00031         {\cf19 return} 1;\par
+00032     \} {\cf19 else} {\cf19 if} ((tempar >= 12 && tempar <= 15)&&(luz > 400 && luz < 700)) \{\par
+00033         {\cf19 return} 2;\par
+00034 \par
+00035     \} {\cf19 else} {\cf19 if} (tempar < 12 && (luz > 700 && luz < 1500)) \{\par
+00036         {\cf19 return} 3;\par
+00037     \}\par
+00038     {\cf19 if}(data_in =={\cf23 '1'})\{\par
+00039         {\cf19 return} 4;\par
+00040     \}\par
+00041 \}\par
+00042 \par
+00043 {\cf20 /*********************************************************************}\par
+00044 {\cf20  * Function:        void Sunny_State()}\par
+00045 {\cf20  *}\par
+00046 {\cf20  * Input:           None}\par
+00047 {\cf20  *}\par
+00048 {\cf20  * Output:          None}\par
+00049 {\cf20  *}\par
+00050 {\cf20  * Overview:        Imprime la temperatura y apaga los leds (si estan prendidos),}\par
+00051 {\cf20  *                  ademas imprime un emoticon en una pantalla LCD}\par
+00052 {\cf20  *}\par
+00053 {\cf20  * Note:            None}\par
+00054 {\cf20  ********************************************************************/}\par
+00055 \par
+00056 {\cf18 void} Sunny_State() \{\par
+00057     LED_GREEN = OFF;\par
+00058     LED_GREEN1 = OFF;\par
+00059     LED_GREEN2 = OFF;\par
+00060     sprintf(Stemp, {\cf22 "%0.0fC"}, tempar);\par
+00061     LCD_String_xy(1, 0, Stemp);\par
+00062     LCD_Custom_Char(0, character2); {\cf20 /* Write custom character to CGRAM 0x00 memory location */}\par
+00063     LCD_Command(0xc0);\par
+00064     LCD_Char(0);\par
+00065     \par
+00066     {\cf19 return};\par
+00067 \}\par
+00068 \par
+00069 {\cf20 /*********************************************************************}\par
+00070 {\cf20  * Function:        void Cloudy_State()}\par
+00071 {\cf20  *}\par
+00072 {\cf20  * Input:           None}\par
+00073 {\cf20  *}\par
+00074 {\cf20  * Output:          None}\par
+00075 {\cf20  *}\par
+00076 {\cf20  * Overview:        Imprime la temperatura y prende dos leds (si estan apagados),}\par
+00077 {\cf20  *                  ademas imprime un emoticon en una pantalla LCD}\par
+00078 {\cf20  *}\par
+00079 {\cf20  * Note:            None}\par
+00080 {\cf20  ********************************************************************/}\par
+00081 \par
+00082 {\cf18 void} Cloudy_State() \{\par
+00083     LED_GREEN = ON;\par
+00084     LED_GREEN1 = ON;\par
+00085     LED_GREEN2 = OFF;\par
+00086     sprintf(Stemp, {\cf22 "%0.0fC"}, tempar);\par
+00087     LCD_String_xy(1, 0, Stemp);\par
+00088     LCD_Custom_Char(0, character3); {\cf20 /* Write custom character to CGRAM 0x00 memory location */}\par
+00089     LCD_Command(0xc0);\par
+00090     LCD_Char(0);\par
+00091     {\cf19 return};\par
+00092 \}\par
+00093 \par
+00094 {\cf20 /*********************************************************************}\par
+00095 {\cf20  * Function:        void Rainy_State()}\par
+00096 {\cf20  *}\par
+00097 {\cf20  * Input:           None}\par
+00098 {\cf20  *}\par
+00099 {\cf20  * Output:          None}\par
+00100 {\cf20  *}\par
+00101 {\cf20  * Overview:        Imprime la temperatura y prende todos leds (si estan apagados),}\par
+00102 {\cf20  *                  ademas imprime un emoticon en una pantalla LCD}\par
+00103 {\cf20  *}\par
+00104 {\cf20  * Note:            None}\par
+00105 {\cf20  ********************************************************************/}\par
+00106 \par
+00107 {\cf18 void} Rainy_State() \{\par
+00108     LED_GREEN = ON;\par
+00109     LED_GREEN1 = ON;\par
+00110     LED_GREEN2 = ON;\par
+00111     sprintf(Stemp, {\cf22 "%0.0fC"}, tempar);\par
+00112     LCD_String_xy(1, 0, Stemp);\par
+00113     LCD_Custom_Char(0, character1); {\cf20 /* Write custom character to CGRAM 0x00 memory location */}\par
+00114     LCD_Command(0xc0);\par
+00115     LCD_Char(0);\par
+00116     {\cf19 return};\par
+00117 \}\par
+00118 \par
+00119 {\cf20 /*********************************************************************}\par
+00120 {\cf20  * Function:        void Alarm_Status(void)}\par
+00121 {\cf20  *}\par
+00122 {\cf20  * Input:           None}\par
+00123 {\cf20  *}\par
+00124 {\cf20  * Output:          None}\par
+00125 {\cf20  *}\par
+00126 {\cf20  * Overview:        Se encarga de hacer sonar la alarma e imprimir un mensaje de buenos dias}\par
+00127 {\cf20  *}\par
+00128 {\cf20  * Note:            None}\par
+00129 {\cf20  ********************************************************************/}\par
+00130 {\cf18 void} Alarm_Status({\cf18 void}) \{\par
+00131     \par
+00132     USART_SendString({\cf22 "Buenos Dias"});\par
+00133     PlayCancion();\par
+00134     {\cf19 return};\par
+00135 \}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referencia del Archivo D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Funciones.h\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Funciones.h}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Funciones.h}
+{\bkmkstart AAAAAAAABD}
+{\bkmkend AAAAAAAABD}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <xc.h>}\par
+{\f2 #include <pic18f4550.h>}\par
+{\f2 #include "config.h"}\par
+{\f2 #include "LCD_caracter.h"}\par
+{\f2 #include <stdio.h>}\par
+{\f2 #include <stdint.h>}\par
+{\f2 #include <stdbool.h>}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+defines\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b LED_GREEN}\~ LATE0\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b LED_GREEN1}\~ LATE1\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b LED_GREEN2}\~ LATE2\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b ON}\~ 1\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b OFF}\~ 0\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funciones\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+uint16_t {\b ReadADC} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+uint16_t {\b ReadLUZ} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b Estados} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Sunny_State} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Cloudy_State} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Rainy_State} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Alarm_Status} (void)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b tempar}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b luz}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b Stemp} [20]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b Sluz} [20]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+uint16_t {\b result}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b i}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b data_in}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+unsigned char {\b character1} [8] = \{0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00\}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+unsigned char {\b character2} [8] = \{0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00\}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+unsigned char {\b character3} [8] = \{0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00\}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de los 'defines'\par
+\pard\plain 
+{\xe \v LED_GREEN\:Funciones.h}
+{\xe \v Funciones.h\:LED_GREEN}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define LED_GREEN\~ LATE0}}
+\par
+{\bkmkstart AAAAAAAABE}
+{\bkmkend AAAAAAAABE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 20} del archivo {\b Funciones.h}.}\par
+}
+{\xe \v LED_GREEN1\:Funciones.h}
+{\xe \v Funciones.h\:LED_GREEN1}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define LED_GREEN1\~ LATE1}}
+\par
+{\bkmkstart AAAAAAAABF}
+{\bkmkend AAAAAAAABF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 21} del archivo {\b Funciones.h}.}\par
+}
+{\xe \v LED_GREEN2\:Funciones.h}
+{\xe \v Funciones.h\:LED_GREEN2}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define LED_GREEN2\~ LATE2}}
+\par
+{\bkmkstart AAAAAAAABG}
+{\bkmkend AAAAAAAABG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 22} del archivo {\b Funciones.h}.}\par
+}
+{\xe \v OFF\:Funciones.h}
+{\xe \v Funciones.h\:OFF}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define OFF\~ 0}}
+\par
+{\bkmkstart AAAAAAAABH}
+{\bkmkend AAAAAAAABH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 24} del archivo {\b Funciones.h}.}\par
+}
+{\xe \v ON\:Funciones.h}
+{\xe \v Funciones.h\:ON}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define ON\~ 1}}
+\par
+{\bkmkstart AAAAAAAABI}
+{\bkmkend AAAAAAAABI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 23} del archivo {\b Funciones.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de las funciones\par
+\pard\plain 
+{\xe \v Alarm_Status\:Funciones.h}
+{\xe \v Funciones.h\:Alarm_Status}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Alarm_Status (void )}}
+\par
+{\bkmkstart AAAAAAAABJ}
+{\bkmkend AAAAAAAABJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 130} del archivo {\b Estados.c}.}\par
+}
+{\xe \v Cloudy_State\:Funciones.h}
+{\xe \v Funciones.h\:Cloudy_State}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Cloudy_State (void )}}
+\par
+{\bkmkstart AAAAAAAABK}
+{\bkmkend AAAAAAAABK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 82} del archivo {\b Estados.c}.}\par
+}
+{\xe \v Estados\:Funciones.h}
+{\xe \v Funciones.h\:Estados}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Estados (void )}}
+\par
+{\bkmkstart AAAAAAAABL}
+{\bkmkend AAAAAAAABL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 25} del archivo {\b Estados.c}.}\par
+}
+{\xe \v Rainy_State\:Funciones.h}
+{\xe \v Funciones.h\:Rainy_State}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Rainy_State (void )}}
+\par
+{\bkmkstart AAAAAAAABM}
+{\bkmkend AAAAAAAABM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 107} del archivo {\b Estados.c}.}\par
+}
+{\xe \v ReadADC\:Funciones.h}
+{\xe \v Funciones.h\:ReadADC}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+uint16_t ReadADC (void )}}
+\par
+{\bkmkstart AAAAAAAABN}
+{\bkmkend AAAAAAAABN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 22} del archivo {\b Temperatura.c}.}\par
+}
+{\xe \v ReadLUZ\:Funciones.h}
+{\xe \v Funciones.h\:ReadLUZ}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+uint16_t ReadLUZ (void )}}
+\par
+{\bkmkstart AAAAAAAABO}
+{\bkmkend AAAAAAAABO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 21} del archivo {\b Sensor_luz.c}.}\par
+}
+{\xe \v Sunny_State\:Funciones.h}
+{\xe \v Funciones.h\:Sunny_State}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Sunny_State (void )}}
+\par
+{\bkmkstart AAAAAAAABP}
+{\bkmkend AAAAAAAABP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 56} del archivo {\b Estados.c}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de las variables\par
+\pard\plain 
+{\xe \v character1\:Funciones.h}
+{\xe \v Funciones.h\:character1}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+unsigned char character1[8] = \{0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00\}}}
+\par
+{\bkmkstart AAAAAAAABQ}
+{\bkmkend AAAAAAAABQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 34} del archivo {\b Funciones.h}.}\par
+}
+{\xe \v character2\:Funciones.h}
+{\xe \v Funciones.h\:character2}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+unsigned char character2[8] = \{0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00\}}}
+\par
+{\bkmkstart AAAAAAAABR}
+{\bkmkend AAAAAAAABR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 35} del archivo {\b Funciones.h}.}\par
+}
+{\xe \v character3\:Funciones.h}
+{\xe \v Funciones.h\:character3}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+unsigned char character3[8] = \{0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00\}}}
+\par
+{\bkmkstart AAAAAAAABS}
+{\bkmkend AAAAAAAABS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 36} del archivo {\b Funciones.h}.}\par
+}
+{\xe \v data_in\:Funciones.h}
+{\xe \v Funciones.h\:data_in}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char data_in}}
+\par
+{\bkmkstart AAAAAAAABT}
+{\bkmkend AAAAAAAABT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 32} del archivo {\b Funciones.h}.}\par
+}
+{\xe \v i\:Funciones.h}
+{\xe \v Funciones.h\:i}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char i}}
+\par
+{\bkmkstart AAAAAAAABU}
+{\bkmkend AAAAAAAABU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 31} del archivo {\b Funciones.h}.}\par
+}
+{\xe \v luz\:Funciones.h}
+{\xe \v Funciones.h\:luz}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float luz}}
+\par
+{\bkmkstart AAAAAAAABV}
+{\bkmkend AAAAAAAABV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 27} del archivo {\b Funciones.h}.}\par
+}
+{\xe \v result\:Funciones.h}
+{\xe \v Funciones.h\:result}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+uint16_t result}}
+\par
+{\bkmkstart AAAAAAAABW}
+{\bkmkend AAAAAAAABW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 30} del archivo {\b Funciones.h}.}\par
+}
+{\xe \v Sluz\:Funciones.h}
+{\xe \v Funciones.h\:Sluz}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char Sluz[20]}}
+\par
+{\bkmkstart AAAAAAAABX}
+{\bkmkend AAAAAAAABX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 29} del archivo {\b Funciones.h}.}\par
+}
+{\xe \v Stemp\:Funciones.h}
+{\xe \v Funciones.h\:Stemp}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char Stemp[20]}}
+\par
+{\bkmkstart AAAAAAAABY}
+{\bkmkend AAAAAAAABY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 28} del archivo {\b Funciones.h}.}\par
+}
+{\xe \v tempar\:Funciones.h}
+{\xe \v Funciones.h\:tempar}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float tempar}}
+\par
+{\bkmkstart AAAAAAAABZ}
+{\bkmkend AAAAAAAABZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 26} del archivo {\b Funciones.h}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Funciones.h\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Funciones.h}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Funciones.h}
+{\bkmkstart AAAAAAAAAD}
+{\bkmkend AAAAAAAAAD}
+Ir a la documentaci\'F3n de este archivo.{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf20 /* }\par
+00002 {\cf20  * File:  Funciones.h }\par
+00003 {\cf20  * Author: Arlex Fabian Galindez-Geraldina Ivonne Carlosama-Juan Sebastian Osorio}\par
+00004 {\cf20  * Comments: Liberia que contiene las especificaciones de las variables utilizadas en Temperatura.c,}\par
+00005 {\cf20  *          Sensor_luz.c, asi como la declaracion de funciones, leds y los emoticones que se mostraran}\par
+00006 {\cf20  * Revision history: }\par
+00007 {\cf20  */}\par
+00008 {\cf20 // This is a guard condition so that contents of this file are not included}\par
+00009 {\cf20 // more than once.  }\par
+00010 \par
+00011 {\cf21 #include <xc.h>}\par
+00012 {\cf21 #include <pic18f4550.h>}  {\cf20 /*Header file PIC18f4550 definitions*/}\par
+00013 {\cf21 #include "config.h"}\par
+00014 {\cf21 #include "LCD_caracter.h"}\par
+00015 {\cf21 #include <stdio.h>}\par
+00016 {\cf21 #include <stdint.h>}\par
+00017 {\cf21 #include <stdbool.h>}\par
+00018 \par
+00019 \par
+00020 {\cf21 #define LED_GREEN LATE0}\par
+00021 {\cf21 #define LED_GREEN1 LATE1}\par
+00022 {\cf21 #define LED_GREEN2 LATE2}\par
+00023 {\cf21 #define ON 1}\par
+00024 {\cf21 #define OFF 0}\par
+00025 \par
+00026 {\cf18 float} tempar;\par
+00027 {\cf18 float} luz;\par
+00028 {\cf18 char} Stemp[20];\par
+00029 {\cf18 char} Sluz[20];\par
+00030 uint16_t result;\par
+00031 {\cf18 char} i;\par
+00032 {\cf18 char} data_in;\par
+00033 \par
+00034 {\cf18 unsigned} {\cf18 char} character1[ 8 ] = \{0x0e, 0x1f, 0x1f, 0x0e, 0x00, 0x0a, 0x0a, 0x00\}; {\cf20 /*  Value for Rainy day  */}\par
+00035 {\cf18 unsigned} {\cf18 char} character2[ 8 ] = \{0x15, 0x0e, 0x11, 0x11, 0x0e, 0x15, 0x00, 0x00\}; {\cf20 /*  Value for Sunny day  */}\par
+00036 {\cf18 unsigned} {\cf18 char} character3[ 8 ] = \{0x00, 0x08, 0x16, 0x1f, 0x1f, 0x16, 0x08, 0x00\}; {\cf20 /*  Value for Cloudy day  */}\par
+00037 \par
+00038 uint16_t ReadADC({\cf18 void});{\cf20 /*Lee el sensor de Temperatura*/}\par
+00039 uint16_t ReadLUZ({\cf18 void});{\cf20 /*Lee el sensor de Luz*/}\par
+00040 {\cf18 int} Estados({\cf18 void});{\cf20 /*Se encarga de determinar el estado al que se debe ir*/}\par
+00041 {\cf18 void} Sunny_State({\cf18 void});{\cf20 /*Estado para dias soleados*/}\par
+00042 {\cf18 void} Cloudy_State({\cf18 void});{\cf20 /*Estado para dias nublados*/}\par
+00043 {\cf18 void} Rainy_State({\cf18 void});{\cf20 /*Estado de dias lluviosos*/}\par
+00044 {\cf18 void} Alarm_Status({\cf18 void});{\cf20 /*Estado para sonar la alarma*/}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referencia del Archivo D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/I2C_Master_File.h\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/I2C_Master_File.h}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/I2C_Master_File.h}
+{\bkmkstart AAAAAAAACA}
+{\bkmkend AAAAAAAACA}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <xc.h>}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+defines\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b F_OSC}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b I2C_CLOCK}\~ 100000                    /* I2C clock frequency is 100 kHz*/\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b BITRATE}\~ (({\b F_OSC}/(4*{\b I2C_CLOCK}))-1)  /* find bit rate to assign this value to SSPADD register*/\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funciones\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b I2C_Ready} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b I2C_Init} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b I2C_Start} (char)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b I2C_Start_Wait} (char)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b I2C_Repeated_Start} (char)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b I2C_Stop} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b I2C_Write} (unsigned char)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b I2C_Ack} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b I2C_Nack} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b I2C_Read} (char flag)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b RTC_Calendario} (void)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de los 'defines'\par
+\pard\plain 
+{\xe \v BITRATE\:I2C_Master_File.h}
+{\xe \v I2C_Master_File.h\:BITRATE}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define BITRATE\~ (({\b F_OSC}/(4*{\b I2C_CLOCK}))-1)  /* find bit rate to assign this value to SSPADD register*/}}
+\par
+{\bkmkstart AAAAAAAACB}
+{\bkmkend AAAAAAAACB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 13} del archivo {\b I2C_Master_File.h}.}\par
+}
+{\xe \v F_OSC\:I2C_Master_File.h}
+{\xe \v I2C_Master_File.h\:F_OSC}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define F_OSC}}
+\par
+{\bkmkstart AAAAAAAACC}
+{\bkmkend AAAAAAAACC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Valor:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid                                                8000000                       {\cf20 /* define F_OSC for finding bit rate }\par
+{\cf20                                                here oscillator frequency is 8 MHz so define as 800000 */}\par
+}
+{
+Definici\'F3n en la l\'EDnea {\b 11} del archivo {\b I2C_Master_File.h}.}\par
+}
+{\xe \v I2C_CLOCK\:I2C_Master_File.h}
+{\xe \v I2C_Master_File.h\:I2C_CLOCK}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define I2C_CLOCK\~ 100000                    /* I2C clock frequency is 100 kHz*/}}
+\par
+{\bkmkstart AAAAAAAACD}
+{\bkmkend AAAAAAAACD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 12} del archivo {\b I2C_Master_File.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de las funciones\par
+\pard\plain 
+{\xe \v I2C_Ack\:I2C_Master_File.h}
+{\xe \v I2C_Master_File.h\:I2C_Ack}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void I2C_Ack (void )}}
+\par
+{\bkmkstart AAAAAAAACE}
+{\bkmkend AAAAAAAACE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 230} del archivo {\b Reloj_ar.c}.}\par
+}
+{\xe \v I2C_Init\:I2C_Master_File.h}
+{\xe \v I2C_Master_File.h\:I2C_Init}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void I2C_Init (void )}}
+\par
+{\bkmkstart AAAAAAAACF}
+{\bkmkend AAAAAAAACF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 57} del archivo {\b Reloj_ar.c}.}\par
+}
+{\xe \v I2C_Nack\:I2C_Master_File.h}
+{\xe \v I2C_Master_File.h\:I2C_Nack}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void I2C_Nack (void )}}
+\par
+{\bkmkstart AAAAAAAACG}
+{\bkmkend AAAAAAAACG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 250} del archivo {\b Reloj_ar.c}.}\par
+}
+{\xe \v I2C_Read\:I2C_Master_File.h}
+{\xe \v I2C_Master_File.h\:I2C_Read}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char I2C_Read (char  {\i flag})}}
+\par
+{\bkmkstart AAAAAAAACH}
+{\bkmkend AAAAAAAACH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 27} del archivo {\b Reloj_ar.c}.}\par
+}
+{\xe \v I2C_Ready\:I2C_Master_File.h}
+{\xe \v I2C_Master_File.h\:I2C_Ready}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void I2C_Ready (void )}}
+\par
+{\bkmkstart AAAAAAAACI}
+{\bkmkend AAAAAAAACI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 83} del archivo {\b Reloj_ar.c}.}\par
+}
+{\xe \v I2C_Repeated_Start\:I2C_Master_File.h}
+{\xe \v I2C_Master_File.h\:I2C_Repeated_Start}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char I2C_Repeated_Start (char  {\i slave_read_address})}}
+\par
+{\bkmkstart AAAAAAAACJ}
+{\bkmkend AAAAAAAACJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 159} del archivo {\b Reloj_ar.c}.}\par
+}
+{\xe \v I2C_Start\:I2C_Master_File.h}
+{\xe \v I2C_Master_File.h\:I2C_Start}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char I2C_Start (char  {\i slave_write_address})}}
+\par
+{\bkmkstart AAAAAAAACK}
+{\bkmkend AAAAAAAACK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 134} del archivo {\b Reloj_ar.c}.}\par
+}
+{\xe \v I2C_Start_Wait\:I2C_Master_File.h}
+{\xe \v I2C_Master_File.h\:I2C_Start_Wait}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void I2C_Start_Wait (char  {\i slave_write_address})}}
+\par
+{\bkmkstart AAAAAAAACL}
+{\bkmkend AAAAAAAACL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 101} del archivo {\b Reloj_ar.c}.}\par
+}
+{\xe \v I2C_Stop\:I2C_Master_File.h}
+{\xe \v I2C_Master_File.h\:I2C_Stop}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char I2C_Stop (void )}}
+\par
+{\bkmkstart AAAAAAAACM}
+{\bkmkend AAAAAAAACM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 186} del archivo {\b Reloj_ar.c}.}\par
+}
+{\xe \v I2C_Write\:I2C_Master_File.h}
+{\xe \v I2C_Master_File.h\:I2C_Write}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char I2C_Write (unsigned char  {\i data})}}
+\par
+{\bkmkstart AAAAAAAACN}
+{\bkmkend AAAAAAAACN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 208} del archivo {\b Reloj_ar.c}.}\par
+}
+{\xe \v RTC_Calendario\:I2C_Master_File.h}
+{\xe \v I2C_Master_File.h\:RTC_Calendario}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void RTC_Calendario (void )}}
+\par
+{\bkmkstart AAAAAAAACO}
+{\bkmkend AAAAAAAACO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 79} del archivo {\b reloj.c}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+I2C_Master_File.h\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/I2C_Master_File.h}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/I2C_Master_File.h}
+{\bkmkstart AAAAAAAAAE}
+{\bkmkend AAAAAAAAAE}
+Ir a la documentaci\'F3n de este archivo.{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf20 /*}\par
+00002 {\cf20  * PIC18F4550 LCD16x2 Header File}\par
+00003 {\cf20  * http://www.electronicwings.com}\par
+00004 {\cf20  */} \par
+00005 \par
+00006 {\cf21 #ifndef I2C_Master_H}\par
+00007 {\cf21 #define I2C_Master_H}\par
+00008 \par
+00009 {\cf21 #include <xc.h>} {\cf20 // include processor files - each processor file is guarded.  }\par
+00010 \par
+00011 {\cf21 #define F_OSC 8000000                       }{\cf20 /* define F_OSC for finding bit rate }\par
+00012 {\cf20                                                here oscillator frequency is 8 MHz so define as 800000 */}{\cf21 }\par
+00013 {\cf21 #define I2C_CLOCK 100000                    }{\cf20 /* I2C clock frequency is 100 kHz*/}{\cf21 }\par
+00014 {\cf21 #define BITRATE ((F_OSC/(4*I2C_CLOCK))-1)  }{\cf20 /* find bit rate to assign this value to SSPADD register*/}{\cf21 }\par
+00015 \par
+00016 {\cf18 void} I2C_Ready({\cf18 void});                           {\cf20 /* check and wait weather I2C is ready or not */}\par
+00017 {\cf18 void} I2C_Init({\cf18 void});                            {\cf20 /* initialize I2C register configuration*/}\par
+00018 {\cf18 char} I2C_Start({\cf18 char});                       {\cf20 /* send start pulse along with slave device address */}\par
+00019 {\cf18 void} I2C_Start_Wait({\cf18 char});                  {\cf20 /* send start pulse along with slave device address }\par
+00020 {\cf20                                              * and wait if not work */}\par
+00021 {\cf18 char} I2C_Repeated_Start({\cf18 char});              {\cf20 /* send repeated start pulse along with device write address*/}\par
+00022 {\cf18 char} I2C_Stop({\cf18 void});                            {\cf20 /* send stop pulse*/}\par
+00023 {\cf18 char} I2C_Write({\cf18 unsigned} {\cf18 char});              {\cf20 /* transmit/write data/address to slave device */}\par
+00024 {\cf18 void} I2C_Ack({\cf18 void});                             {\cf20 /* send acknowledge from master for another read */}\par
+00025 {\cf18 void} I2C_Nack({\cf18 void});                            {\cf20 /* send negative acknowledge from master for stop reading */}\par
+00026 {\cf18 char} I2C_Read({\cf18 char} flag);                   {\cf20 /* read data from slave devices*/}\par
+00027 {\cf18 void} RTC_Calendario({\cf18 void});                      {\cf20 /* call the clock, calendar functions and display the data*/}\par
+00028 \par
+00029 \par
+00030 \par
+00031 {\cf21 #endif  }{\cf20 /* I2C_Master_H */}{\cf21 }\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referencia del Archivo D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/LCD_caracter.c\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/LCD_caracter.c}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/LCD_caracter.c}
+{\bkmkstart AAAAAAAACP}
+{\bkmkend AAAAAAAACP}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "Funciones.h"}\par
+{\f2 #include "LCD_caracter.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funciones\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b LCD_Init} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b LCD_Command} (unsigned char cmd)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b LCD_Char} (unsigned char dat)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b LCD_String} (const char *msg)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b LCD_String_xy} (char row, char pos, const char *msg)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b LCD_Clear} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b LCD_Custom_Char} (unsigned char loc, unsigned char *msg)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b LCD_MSdelay} (unsigned int val)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de las funciones\par
+\pard\plain 
+{\xe \v LCD_Char\:LCD_caracter.c}
+{\xe \v LCD_caracter.c\:LCD_Char}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void LCD_Char (unsigned char  {\i dat})}}
+\par
+{\bkmkstart AAAAAAAACQ}
+{\bkmkend AAAAAAAACQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 75} del archivo {\b LCD_caracter.c}.}\par
+}
+{\xe \v LCD_Clear\:LCD_caracter.c}
+{\xe \v LCD_caracter.c\:LCD_Clear}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void LCD_Clear (void )}}
+\par
+{\bkmkstart AAAAAAAACR}
+{\bkmkend AAAAAAAACR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 155} del archivo {\b LCD_caracter.c}.}\par
+}
+{\xe \v LCD_Command\:LCD_caracter.c}
+{\xe \v LCD_caracter.c\:LCD_Command}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void LCD_Command (unsigned char  {\i cmd})}}
+\par
+{\bkmkstart AAAAAAAACS}
+{\bkmkend AAAAAAAACS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 48} del archivo {\b LCD_caracter.c}.}\par
+}
+{\xe \v LCD_Custom_Char\:LCD_caracter.c}
+{\xe \v LCD_caracter.c\:LCD_Custom_Char}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void LCD_Custom_Char (unsigned char  {\i loc}, unsigned char *  {\i msg})}}
+\par
+{\bkmkstart AAAAAAAACT}
+{\bkmkend AAAAAAAACT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 174} del archivo {\b LCD_caracter.c}.}\par
+}
+{\xe \v LCD_Init\:LCD_caracter.c}
+{\xe \v LCD_caracter.c\:LCD_Init}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void LCD_Init (void )}}
+\par
+{\bkmkstart AAAAAAAACU}
+{\bkmkend AAAAAAAACU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 23} del archivo {\b LCD_caracter.c}.}\par
+}
+{\xe \v LCD_MSdelay\:LCD_caracter.c}
+{\xe \v LCD_caracter.c\:LCD_MSdelay}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void LCD_MSdelay (unsigned int  {\i val})}}
+\par
+{\bkmkstart AAAAAAAACV}
+{\bkmkend AAAAAAAACV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 199} del archivo {\b LCD_caracter.c}.}\par
+}
+{\xe \v LCD_String\:LCD_caracter.c}
+{\xe \v LCD_caracter.c\:LCD_String}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void LCD_String (const char *  {\i msg})}}
+\par
+{\bkmkstart AAAAAAAACW}
+{\bkmkend AAAAAAAACW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 101} del archivo {\b LCD_caracter.c}.}\par
+}
+{\xe \v LCD_String_xy\:LCD_caracter.c}
+{\xe \v LCD_caracter.c\:LCD_String_xy}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void LCD_String_xy (char  {\i row}, char  {\i pos}, const char *  {\i msg})}}
+\par
+{\bkmkstart AAAAAAAACX}
+{\bkmkend AAAAAAAACX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 124} del archivo {\b LCD_caracter.c}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+LCD_caracter.c\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/LCD_caracter.c}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/LCD_caracter.c}
+{\bkmkstart AAAAAAAAAF}
+{\bkmkend AAAAAAAAAF}
+Ir a la documentaci\'F3n de este archivo.{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf20 /*}\par
+00002 {\cf20  * PIC18F4550 I2C Source File}\par
+00003 {\cf20  * http://www.electronicwings.com}\par
+00004 {\cf20  */} \par
+00005 \par
+00006 {\cf21 #include "Funciones.h"}\par
+00007 {\cf21 #include "LCD_caracter.h"}\par
+00008 \par
+00009 {\cf20 /****************************Functions********************************/}\par
+00010 \par
+00011 {\cf20 /*********************************************************************}\par
+00012 {\cf20  * Function:        void LCD_Init(void)}\par
+00013 {\cf20  *}\par
+00014 {\cf20  * Input:           None}\par
+00015 {\cf20  *}\par
+00016 {\cf20  * Output:          None}\par
+00017 {\cf20  *}\par
+00018 {\cf20  * Overview:        Inicializa la configuracion de la pantalla LCD}\par
+00019 {\cf20  *}\par
+00020 {\cf20  * Note:            None}\par
+00021 {\cf20  ********************************************************************/}\par
+00022 \par
+00023 {\cf18 void} LCD_Init({\cf18 void})\par
+00024 \{\par
+00025     LCD_Port = 0;       {\cf20 /*PORT as Output Port*/}\par
+00026     LCD_MSdelay(15);        {\cf20 /*15ms,16x2 LCD Power on delay*/}\par
+00027     LCD_Command(0x02);  {\cf20 /*send for initialization of LCD }\par
+00028 {\cf20                           for nibble (4-bit) mode */}\par
+00029     LCD_Command(0x28);  {\cf20 /*use 2 line and }\par
+00030 {\cf20                           initialize 5*8 matrix in (4-bit mode)*/}\par
+00031     LCD_Command(0x01);  {\cf20 /*clear display screen*/}\par
+00032     LCD_Command(0x0c);  {\cf20 /*display on cursor off*/}\par
+00033     LCD_Command(0x06);  {\cf20 /*increment cursor (shift cursor to right)*/}       \par
+00034 \}\par
+00035 \par
+00036 {\cf20 /*********************************************************************}\par
+00037 {\cf20  * Function:        void LCD_Command(unsigned char cmd )}\par
+00038 {\cf20  *}\par
+00039 {\cf20  * Input:           unsigned char cmd: Resibe la fila en donde se imprimira la informacion}\par
+00040 {\cf20  *}\par
+00041 {\cf20  * Output:          None}\par
+00042 {\cf20  *}\par
+00043 {\cf20  * Overview:        Con la direccion recibida determina en donde se mostrara la informacion}\par
+00044 {\cf20  *}\par
+00045 {\cf20  * Note:            None}\par
+00046 {\cf20  ********************************************************************/}\par
+00047 \par
+00048 {\cf18 void} LCD_Command({\cf18 unsigned} {\cf18 char} cmd )\par
+00049 \{\par
+00050     ldata = (ldata & 0x0f) |(0xF0 & cmd);  {\cf20 /*Send higher nibble of command first to PORT*/} \par
+00051     RS = 0;  {\cf20 /*Command Register is selected i.e.RS=0*/} \par
+00052     EN = 1;  {\cf20 /*High-to-low pulse on Enable pin to latch data*/} \par
+00053     NOP();\par
+00054     EN = 0;\par
+00055     LCD_MSdelay(1);\par
+00056     ldata = (ldata & 0x0f) | (cmd<<4);  {\cf20 /*Send lower nibble of command to PORT */}\par
+00057     EN = 1;\par
+00058     NOP();\par
+00059     EN = 0;\par
+00060     LCD_MSdelay(3);\par
+00061 \}\par
+00062 \par
+00063 {\cf20 /*********************************************************************}\par
+00064 {\cf20  * Function:        void LCD_Char(unsigned char dat)}\par
+00065 {\cf20  *}\par
+00066 {\cf20  * Input:           unsigned char dat: Resibe los datos que se enviaran al LCD}\par
+00067 {\cf20  *}\par
+00068 {\cf20  * Output:          None}\par
+00069 {\cf20  *}\par
+00070 {\cf20  * Overview:        Trasmite la informacion recibida al LCD}\par
+00071 {\cf20  *}\par
+00072 {\cf20  * Note:            None}\par
+00073 {\cf20  ********************************************************************/}\par
+00074 \par
+00075 {\cf18 void} LCD_Char({\cf18 unsigned} {\cf18 char} dat)\par
+00076 \{\par
+00077     ldata = (ldata & 0x0f) | (0xF0 & dat);  {\cf20 /*Send higher nibble of data first to PORT*/}\par
+00078     RS = 1;  {\cf20 /*Data Register is selected*/}\par
+00079     EN = 1;  {\cf20 /*High-to-low pulse on Enable pin to latch data*/}\par
+00080     NOP();\par
+00081     EN = 0;\par
+00082     LCD_MSdelay(1);\par
+00083     ldata = (ldata & 0x0f) | (dat<<4);  {\cf20 /*Send lower nibble of data to PORT*/}\par
+00084     EN = 1;  {\cf20 /*High-to-low pulse on Enable pin to latch data*/}\par
+00085     NOP();\par
+00086     EN = 0;\par
+00087     LCD_MSdelay(3);\par
+00088 \}\par
+00089 {\cf20 /*********************************************************************}\par
+00090 {\cf20  * Function:        void LCD_String(const char *msg)}\par
+00091 {\cf20  *}\par
+00092 {\cf20  * Input:           const char *msg: Lleva la informacion}\par
+00093 {\cf20  *}\par
+00094 {\cf20  * Output:          None}\par
+00095 {\cf20  *}\par
+00096 {\cf20  * Overview:        Muestra la informacion en el LCD}\par
+00097 {\cf20  *}\par
+00098 {\cf20  * Note:            None}\par
+00099 {\cf20  ********************************************************************/}\par
+00100 \par
+00101 {\cf18 void} LCD_String({\cf17 const} {\cf18 char} *msg)\par
+00102 \{\par
+00103     {\cf19 while}((*msg)!=0)\par
+00104     \{       \par
+00105       LCD_Char(*msg);\par
+00106       msg++;    \par
+00107     \}\par
+00108 \}\par
+00109 \par
+00110 {\cf20 /*********************************************************************}\par
+00111 {\cf20  * Function:        void LCD_String_xy(char row,char pos,const char *msg)}\par
+00112 {\cf20  *}\par
+00113 {\cf20  * Input:           char row: Determina la Fila}\par
+00114 {\cf20  *                  char pos: Determina la posicion}\par
+00115 {\cf20  *                  const char *msg: Lleva la informacion a imprimir}\par
+00116 {\cf20  *}\par
+00117 {\cf20  * Output:          None}\par
+00118 {\cf20  *}\par
+00119 {\cf20  * Overview:        Muestra la informacion en el LCD}\par
+00120 {\cf20  *}\par
+00121 {\cf20  * Note:            None}\par
+00122 {\cf20  ********************************************************************/}\par
+00123 \par
+00124 {\cf18 void} LCD_String_xy({\cf18 char} row,{\cf18 char} pos,{\cf17 const} {\cf18 char} *msg)\par
+00125 \{\par
+00126     {\cf18 char} location=0;\par
+00127     {\cf19 if}(row<=1)\par
+00128     \{\par
+00129         location=(0x80) | ((pos) & 0x0f);  {\cf20 /*Print message on 1st row and desired location*/}\par
+00130         LCD_Command(location);\par
+00131     \}\par
+00132     {\cf19 else}\par
+00133     \{\par
+00134         location=(0xC0) | ((pos) & 0x0f);  {\cf20 /*Print message on 2nd row and desired location*/}\par
+00135         LCD_Command(location);    \par
+00136     \}  \par
+00137     \par
+00138 \par
+00139     LCD_String(msg);\par
+00140 \par
+00141 \}\par
+00142 \par
+00143 {\cf20 /*********************************************************************}\par
+00144 {\cf20  * Function:       void LCD_Clear(void)}\par
+00145 {\cf20  *}\par
+00146 {\cf20  * Input:           None}\par
+00147 {\cf20  *}\par
+00148 {\cf20  * Output:          None}\par
+00149 {\cf20  *}\par
+00150 {\cf20  * Overview:        Limpia la pantalla LCD}\par
+00151 {\cf20  *}\par
+00152 {\cf20  * Note:            None}\par
+00153 {\cf20  ********************************************************************/}\par
+00154 \par
+00155 {\cf18 void} LCD_Clear({\cf18 void})\par
+00156 \{\par
+00157     LCD_Command(0x01);  {\cf20 /*clear display screen*/}\par
+00158     LCD_MSdelay(3);\par
+00159 \}\par
+00160 \par
+00161 {\cf20 /*********************************************************************}\par
+00162 {\cf20  * Function:       void  LCD_Custom_Char ( unsigned  char  loc, unsigned  char  *msg) }\par
+00163 {\cf20  *}\par
+00164 {\cf20  * Input:           unsigned  char  loc: Determina la posicion}\par
+00165 {\cf20  *                  unsigned  char  *msg: Lleva la informacion}\par
+00166 {\cf20  *}\par
+00167 {\cf20  * Output:          None}\par
+00168 {\cf20  *}\par
+00169 {\cf20  * Overview:        Determina el tama\'F1o de ventana en donde se mostrara la informacion}\par
+00170 {\cf20  *}\par
+00171 {\cf20  * Note:            None}\par
+00172 {\cf20  ********************************************************************/}\par
+00173 \par
+00174 {\cf18 void}  LCD_Custom_Char ( {\cf18 unsigned}  {\cf18 char}  loc, {\cf18 unsigned}  {\cf18 char}  *msg) \par
+00175 \{ \par
+00176     {\cf18 unsigned}  {\cf18 char}  i; \par
+00177     {\cf19 if} (loc< 8 ) \par
+00178     \{ \par
+00179      LCD_Command ( 0x40 +(loc* 8 ));      {\cf20 /*  Command 0x40 and onwards forces the device to point CGRAM address  */} \par
+00180        {\cf19 for} (i= 0 ;i< 8 ;i++)              {\cf20 /*  Write 8 byte for generation of 1 character  */} \par
+00181            LCD_Char (msg[i]); \par
+00182         \par
+00183     \}    \par
+00184 \}\par
+00185 \par
+00186 {\cf20 /*********************************************************************}\par
+00187 {\cf20  * Function:       void LCD_MSdelay(unsigned int val)}\par
+00188 {\cf20  *}\par
+00189 {\cf20  * Input:           unsigned int val: Determina el tiempo del retardo}\par
+00190 {\cf20  *}\par
+00191 {\cf20  * Output:          None}\par
+00192 {\cf20  *}\par
+00193 {\cf20  * Overview:        Se encarga del tiempo que se mostrara la infprmacion }\par
+00194 {\cf20  *                  en el LCD}\par
+00195 {\cf20  *}\par
+00196 {\cf20  * Note:            None}\par
+00197 {\cf20  ********************************************************************/}\par
+00198 \par
+00199 {\cf18 void} LCD_MSdelay({\cf18 unsigned} {\cf18 int} val)\par
+00200 \{\par
+00201  {\cf18 unsigned} {\cf18 int} i,j;\par
+00202  {\cf19 for}(i=0;i<val;i++)\par
+00203      {\cf19 for}(j=0;j<165;j++);  {\cf20 /*This count Provide delay of 1 ms for 8MHz Frequency */}\par
+00204  \}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referencia del Archivo D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/LCD_caracter.h\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/LCD_caracter.h}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/LCD_caracter.h}
+{\bkmkstart AAAAAAAACY}
+{\bkmkend AAAAAAAACY}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <xc.h>}\par
+{\f2 #include <pic18f4550.h>}\par
+{\f2 #include "config.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+defines\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b _XTAL_FREQ}\~ 8000000\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b RS}\~ LATD0  /*PIN 0 of PORTD is assigned for register select Pin of LCD*/\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b EN}\~ LATD1  /*PIN 1 of PORTD is assigned for enable Pin of LCD */\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b ldata}\~ LATD  /*PORTD(PD4-PD7) is assigned for LCD Data Output*/\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b LCD_Port}\~ TRISD  /*define macros for PORTD Direction Register*/\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funciones\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b LCD_MSdelay} (unsigned int)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b LCD_Init} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b LCD_Command} (unsigned char)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b LCD_Char} (unsigned char x)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b LCD_String} (const char *)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b LCD_String_xy} (char, char, const char *)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b LCD_Clear} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b LCD_Custom_Char} (unsigned char, unsigned char *)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de los 'defines'\par
+\pard\plain 
+{\xe \v _XTAL_FREQ\:LCD_caracter.h}
+{\xe \v LCD_caracter.h\:_XTAL_FREQ}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define _XTAL_FREQ\~ 8000000}}
+\par
+{\bkmkstart AAAAAAAACZ}
+{\bkmkend AAAAAAAACZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 17} del archivo {\b LCD_caracter.h}.}\par
+}
+{\xe \v EN\:LCD_caracter.h}
+{\xe \v LCD_caracter.h\:EN}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define EN\~ LATD1  /*PIN 1 of PORTD is assigned for enable Pin of LCD */}}
+\par
+{\bkmkstart AAAAAAAADA}
+{\bkmkend AAAAAAAADA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 21} del archivo {\b LCD_caracter.h}.}\par
+}
+{\xe \v LCD_Port\:LCD_caracter.h}
+{\xe \v LCD_caracter.h\:LCD_Port}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define LCD_Port\~ TRISD  /*define macros for PORTD Direction Register*/}}
+\par
+{\bkmkstart AAAAAAAADB}
+{\bkmkend AAAAAAAADB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 23} del archivo {\b LCD_caracter.h}.}\par
+}
+{\xe \v ldata\:LCD_caracter.h}
+{\xe \v LCD_caracter.h\:ldata}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define ldata\~ LATD  /*PORTD(PD4-PD7) is assigned for LCD Data Output*/}}
+\par
+{\bkmkstart AAAAAAAADC}
+{\bkmkend AAAAAAAADC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 22} del archivo {\b LCD_caracter.h}.}\par
+}
+{\xe \v RS\:LCD_caracter.h}
+{\xe \v LCD_caracter.h\:RS}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define RS\~ LATD0  /*PIN 0 of PORTD is assigned for register select Pin of LCD*/}}
+\par
+{\bkmkstart AAAAAAAADD}
+{\bkmkend AAAAAAAADD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 20} del archivo {\b LCD_caracter.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de las funciones\par
+\pard\plain 
+{\xe \v LCD_Char\:LCD_caracter.h}
+{\xe \v LCD_caracter.h\:LCD_Char}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void LCD_Char (unsigned char  {\i x})}}
+\par
+{\bkmkstart AAAAAAAADE}
+{\bkmkend AAAAAAAADE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 75} del archivo {\b LCD_caracter.c}.}\par
+}
+{\xe \v LCD_Clear\:LCD_caracter.h}
+{\xe \v LCD_caracter.h\:LCD_Clear}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void LCD_Clear (void )}}
+\par
+{\bkmkstart AAAAAAAADF}
+{\bkmkend AAAAAAAADF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 155} del archivo {\b LCD_caracter.c}.}\par
+}
+{\xe \v LCD_Command\:LCD_caracter.h}
+{\xe \v LCD_caracter.h\:LCD_Command}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void LCD_Command (unsigned char  {\i cmd})}}
+\par
+{\bkmkstart AAAAAAAADG}
+{\bkmkend AAAAAAAADG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 48} del archivo {\b LCD_caracter.c}.}\par
+}
+{\xe \v LCD_Custom_Char\:LCD_caracter.h}
+{\xe \v LCD_caracter.h\:LCD_Custom_Char}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void LCD_Custom_Char (unsigned char  {\i loc}, unsigned char *  {\i msg})}}
+\par
+{\bkmkstart AAAAAAAADH}
+{\bkmkend AAAAAAAADH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 174} del archivo {\b LCD_caracter.c}.}\par
+}
+{\xe \v LCD_Init\:LCD_caracter.h}
+{\xe \v LCD_caracter.h\:LCD_Init}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void LCD_Init (void )}}
+\par
+{\bkmkstart AAAAAAAADI}
+{\bkmkend AAAAAAAADI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 23} del archivo {\b LCD_caracter.c}.}\par
+}
+{\xe \v LCD_MSdelay\:LCD_caracter.h}
+{\xe \v LCD_caracter.h\:LCD_MSdelay}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void LCD_MSdelay (unsigned int  {\i val})}}
+\par
+{\bkmkstart AAAAAAAADJ}
+{\bkmkend AAAAAAAADJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 199} del archivo {\b LCD_caracter.c}.}\par
+}
+{\xe \v LCD_String\:LCD_caracter.h}
+{\xe \v LCD_caracter.h\:LCD_String}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void LCD_String (const char *  {\i msg})}}
+\par
+{\bkmkstart AAAAAAAADK}
+{\bkmkend AAAAAAAADK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 101} del archivo {\b LCD_caracter.c}.}\par
+}
+{\xe \v LCD_String_xy\:LCD_caracter.h}
+{\xe \v LCD_caracter.h\:LCD_String_xy}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void LCD_String_xy (char  {\i row}, char  {\i pos}, const char *  {\i msg})}}
+\par
+{\bkmkstart AAAAAAAADL}
+{\bkmkend AAAAAAAADL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 124} del archivo {\b LCD_caracter.c}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+LCD_caracter.h\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/LCD_caracter.h}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/LCD_caracter.h}
+{\bkmkstart AAAAAAAAAG}
+{\bkmkend AAAAAAAAAG}
+Ir a la documentaci\'F3n de este archivo.{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf20 /*}\par
+00002 {\cf20  * PIC18F4550 LCD16x2 Header File}\par
+00003 {\cf20  * http://www.electronicwings.com}\par
+00004 {\cf20  */} \par
+00005 \par
+00006 \par
+00007 {\cf20 // This is a guard condition so that contents of this file are not included}\par
+00008 {\cf20 // more than once.  }\par
+00009 {\cf21 #ifndef XC_HEADER_TEMPLATE_H}\par
+00010 {\cf21 #define XC_HEADER_TEMPLATE_H}\par
+00011 \par
+00012 {\cf21 #include <xc.h>} {\cf20 // include processor files - each processor file is guarded.  }\par
+00013 \par
+00014 {\cf21 #include <pic18f4550.h>}\par
+00015 {\cf21 #include "config.h"}\par
+00016 \par
+00017 {\cf21 #define _XTAL_FREQ 8000000}\par
+00018 {\cf20 /*********************Definition of Ports********************************/}\par
+00019 \par
+00020 {\cf21 #define RS LATD0  }{\cf20 /*PIN 0 of PORTD is assigned for register select Pin of LCD*/}{\cf21 }\par
+00021 {\cf21 #define EN LATD1  }{\cf20 /*PIN 1 of PORTD is assigned for enable Pin of LCD */}{\cf21 }\par
+00022 {\cf21 #define ldata LATD  }{\cf20 /*PORTD(PD4-PD7) is assigned for LCD Data Output*/}{\cf21  }\par
+00023 {\cf21 #define LCD_Port TRISD  }{\cf20 /*define macros for PORTD Direction Register*/}{\cf21 }\par
+00024 {\cf20 /*********************Proto-Type Declaration*****************************/}\par
+00025 \par
+00026 {\cf18 void} LCD_MSdelay({\cf18 unsigned} {\cf18 int} );        {\cf20 /*Generate delay in ms*/}\par
+00027 {\cf18 void} LCD_Init({\cf18 void});                    {\cf20 /*Initialize LCD*/}\par
+00028 {\cf18 void} LCD_Command({\cf18 unsigned} {\cf18 char} );   {\cf20 /*Send command to LCD*/}\par
+00029 {\cf18 void} LCD_Char({\cf18 unsigned} {\cf18 char} x);     {\cf20 /*Send data to LCD*/}\par
+00030 {\cf18 void} LCD_String({\cf17 const} {\cf18 char} *);      {\cf20 /*Display data string on LCD*/}\par
+00031 {\cf18 void} LCD_String_xy({\cf18 char}, {\cf18 char} , {\cf17 const} {\cf18 char} *);{\cf20 /*Display data string on LCD*/}\par
+00032 {\cf18 void} LCD_Clear({\cf18 void});                   {\cf20 /*Clear LCD Screen*/}\par
+00033 {\cf18 void}  LCD_Custom_Char ( {\cf18 unsigned}  {\cf18 char} , {\cf18 unsigned}  {\cf18 char} *); \par
+00034 {\cf21 #endif  }{\cf20 /* XC_HEADER_TEMPLATE_H */}{\cf21 }\par
+00035 \par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referencia del Archivo D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Melodia.c\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Melodia.c}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Melodia.c}
+{\bkmkstart AAAAAAAADM}
+{\bkmkend AAAAAAAADM}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "Funciones.h"}\par
+{\f2 #include "LCD_caracter.h"}\par
+{\f2 #include "Melodia.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funciones\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b delay_us} (int nota)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b play} (int nota, int octava, int duracion)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b PlayCancion} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de las funciones\par
+\pard\plain 
+{\xe \v delay_us\:Melodia.c}
+{\xe \v Melodia.c\:delay_us}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void delay_us (int  {\i nota})}}
+\par
+{\bkmkstart AAAAAAAADN}
+{\bkmkend AAAAAAAADN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 24} del archivo {\b Melodia.c}.}\par
+}
+{\xe \v play\:Melodia.c}
+{\xe \v Melodia.c\:play}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void play (int  {\i nota}, int  {\i octava}, int  {\i duracion})}}
+\par
+{\bkmkstart AAAAAAAADO}
+{\bkmkend AAAAAAAADO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 46} del archivo {\b Melodia.c}.}\par
+}
+{\xe \v PlayCancion\:Melodia.c}
+{\xe \v Melodia.c\:PlayCancion}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void PlayCancion (void )}}
+\par
+{\bkmkstart AAAAAAAADP}
+{\bkmkend AAAAAAAADP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 93} del archivo {\b Melodia.c}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Melodia.c\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Melodia.c}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Melodia.c}
+{\bkmkstart AAAAAAAAAH}
+{\bkmkend AAAAAAAAAH}
+Ir a la documentaci\'F3n de este archivo.{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf20 //  4.3.4. Creaci\'F3n de melod\'EDas}\par
+00002 {\cf20 //  Autores: Jes\'FAs Mar\'EDa Corres, Carlos Ruiz Zamarre\'F1o y C\'E1ndido Bari\'E1in}\par
+00003 {\cf20 //  Pamplona, Agosto 2016}\par
+00004 \par
+00005 {\cf20 // ARCHIVOS DE DEFINICIONES}\par
+00006 \par
+00007 {\cf21 #include "Funciones.h"}\par
+00008 {\cf21 #include "LCD_caracter.h"}\par
+00009 {\cf21 #include "Melodia.h"}\par
+00010 \par
+00011 {\cf20 /*********************************************************************}\par
+00012 {\cf20  * Function:        void delay_us(int nota)}\par
+00013 {\cf20  *}\par
+00014 {\cf20  * Input:           int nota: Entero que determina la duracion del retardo}\par
+00015 {\cf20  *}\par
+00016 {\cf20  * Output:          None}\par
+00017 {\cf20  *}\par
+00018 {\cf20  * Overview:        Determina la duracion del retardo en funcion del }\par
+00019 {\cf20  *                  entero recibido}\par
+00020 {\cf20  *}\par
+00021 {\cf20  * Note:            None}\par
+00022 {\cf20  ********************************************************************/}\par
+00023 \par
+00024 {\cf18 void} delay_us({\cf18 int} nota)\{\par
+00025     {\cf19 for}({\cf18 int} i=0; i<=nota;i++ )\{\par
+00026         __delay_us(1);\par
+00027     \}\par
+00028 \}\par
+00029 \par
+00030 {\cf20 /*********************************************************************}\par
+00031 {\cf20  * Function:        void play(int nota, int octava, int duracion)}\par
+00032 {\cf20  *}\par
+00033 {\cf20  * Input:           int nota: Entero que determina la duracion del retardo}\par
+00034 {\cf20  *                  int octava: Entero para determinar la nota a tocar}\par
+00035 {\cf20  *                  int duracion: El tiempo que se tocara la nota determinada}\par
+00036 {\cf20  *}\par
+00037 {\cf20  * Output:          None}\par
+00038 {\cf20  *}\par
+00039 {\cf20  * Overview:        Se encarga de configurar el parlante donde sonara la melodia}\par
+00040 {\cf20  *                  ademas de determinar la frecuencia y duracion de la misma}\par
+00041 {\cf20  *}\par
+00042 {\cf20  * Note:            None}\par
+00043 {\cf20  ********************************************************************/}\par
+00044 \par
+00045 \par
+00046 {\cf18 void} play({\cf18 int} nota, {\cf18 int} octava, {\cf18 int} duracion)\{\par
+00047      {\cf18 int} fn;\par
+00048      {\cf18 int} mS_Transcurridos=0;\par
+00049      {\cf18 int} CiclosL=0;\par
+00050     \par
+00051      fn=FreqNota[nota];         {\cf20 // Define los retardos para generar}\par
+00052                                 {\cf20 // la frecuencia de cada nota}\par
+00053      fn>>=(octava);             {\cf20 // Adapta la frecuencia}\par
+00054                             {\cf20 // a la octava actual}\par
+00055    \par
+00056     {\cf19 do}\{\par
+00057         \par
+00058         TRISCbits . TRISC1 =  0;   {\cf20 // Genera la frecuancia}\par
+00059         LATCbits . LATC1 =  1 ;\par
+00060         delay_us(fn);;           {\cf20 // con los retardos mientras}\par
+00061         CiclosL+=(fn);          {\cf20 // aumenta el contador de}\par
+00062                             {\cf20 // ciclos transcurridos}\par
+00063         LATCbits . LATC1 =  0 ;    {\cf20 // en dos partes para repartir el}\par
+00064          delay_us(fn);           {\cf20 // trabajo entre estado alto y bajo.}\par
+00065         CiclosL+=(fn);          {\cf20 //}\par
+00066         CiclosL+=25;            {\cf20 // Compensador.}\par
+00067        \par
+00068         {\cf19 while}(CiclosL>999)\{     {\cf20 // Se queda en el bucle mientras}\par
+00069                                 {\cf20 // CiclosL sea menor a 1000 (1 mS)}\par
+00070            CiclosL-=1000;       {\cf20 // Le resta 1000 a CiclosL}\par
+00071            mS_Transcurridos++;  {\cf20 // y le suma 1 a mS_Transcurridos.}\par
+00072            CiclosL+=25;         {\cf20 // Compensador.}\par
+00073         \}\par
+00074      \}{\cf19 while} (duracion>mS_Transcurridos); {\cf20 // Repite el bucle hasta}\par
+00075                                          {\cf20 // que haya pasado el}\par
+00076                                          {\cf20 // tiempo indicado.}\par
+00077     \par
+00078   \par
+00079 \}\par
+00080 \par
+00081 {\cf20 /*********************************************************************}\par
+00082 {\cf20  * Function:        void PlayCancion(}\par
+00083 {\cf20  *}\par
+00084 {\cf20  * Input:           None}\par
+00085 {\cf20  *}\par
+00086 {\cf20  * Output:          None}\par
+00087 {\cf20  *}\par
+00088 {\cf20  * Overview:        Contiene la melodia que se va a tocar}\par
+00089 {\cf20  *}\par
+00090 {\cf20  * Note:            None}\par
+00091 {\cf20  ********************************************************************/}\par
+00092 \par
+00093 {\cf18 void} PlayCancion()\{\par
+00094 \par
+00095    \par
+00096         play (nMI   ,4,150);\par
+00097         __delay_ms (50);\par
+00098         play (nMI   ,4,150);\par
+00099         __delay_ms (150);\par
+00100         play (nMI   ,4,150);\par
+00101         __delay_ms (200);\par
+00102 \par
+00103         play (nDO   ,4,125);\par
+00104         __delay_ms (50);\par
+00105         play (nMI   ,4,125);\par
+00106         __delay_ms (150);\par
+00107         play (nSOL   ,4,200);\par
+00108         __delay_ms (400);\par
+00109         play (nSOL   ,3,350);\par
+00110         __delay_ms (300);\par
+00111         \par
+00112         {\cf19 return};\par
+00113 \}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referencia del Archivo D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Melodia.h\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Melodia.h}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Melodia.h}
+{\bkmkstart AAAAAAAADQ}
+{\bkmkend AAAAAAAADQ}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+defines\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b nDO}\~ 0\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b nDO_}\~ 1\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b nRE}\~ 2\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b nRE_}\~ 3\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b nMI}\~ 4\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b nFA}\~ 5\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b nFA_}\~ 6\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b nSOL}\~ 7\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b nSOL_}\~ 8\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b nLA}\~ 9\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b nLA_}\~ 10\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b nSI}\~ 11\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funciones\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b Play} (int nota, int octava, int duracion)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b PlayCancion} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b delay_us} (int nota)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b FreqNota} [12]\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de los 'defines'\par
+\pard\plain 
+{\xe \v nDO\:Melodia.h}
+{\xe \v Melodia.h\:nDO}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define nDO\~ 0}}
+\par
+{\bkmkstart AAAAAAAADR}
+{\bkmkend AAAAAAAADR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 9} del archivo {\b Melodia.h}.}\par
+}
+{\xe \v nDO_\:Melodia.h}
+{\xe \v Melodia.h\:nDO_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define nDO_\~ 1}}
+\par
+{\bkmkstart AAAAAAAADS}
+{\bkmkend AAAAAAAADS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 10} del archivo {\b Melodia.h}.}\par
+}
+{\xe \v nFA\:Melodia.h}
+{\xe \v Melodia.h\:nFA}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define nFA\~ 5}}
+\par
+{\bkmkstart AAAAAAAADT}
+{\bkmkend AAAAAAAADT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 14} del archivo {\b Melodia.h}.}\par
+}
+{\xe \v nFA_\:Melodia.h}
+{\xe \v Melodia.h\:nFA_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define nFA_\~ 6}}
+\par
+{\bkmkstart AAAAAAAADU}
+{\bkmkend AAAAAAAADU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 15} del archivo {\b Melodia.h}.}\par
+}
+{\xe \v nLA\:Melodia.h}
+{\xe \v Melodia.h\:nLA}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define nLA\~ 9}}
+\par
+{\bkmkstart AAAAAAAADV}
+{\bkmkend AAAAAAAADV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 18} del archivo {\b Melodia.h}.}\par
+}
+{\xe \v nLA_\:Melodia.h}
+{\xe \v Melodia.h\:nLA_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define nLA_\~ 10}}
+\par
+{\bkmkstart AAAAAAAADW}
+{\bkmkend AAAAAAAADW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 19} del archivo {\b Melodia.h}.}\par
+}
+{\xe \v nMI\:Melodia.h}
+{\xe \v Melodia.h\:nMI}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define nMI\~ 4}}
+\par
+{\bkmkstart AAAAAAAADX}
+{\bkmkend AAAAAAAADX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 13} del archivo {\b Melodia.h}.}\par
+}
+{\xe \v nRE\:Melodia.h}
+{\xe \v Melodia.h\:nRE}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define nRE\~ 2}}
+\par
+{\bkmkstart AAAAAAAADY}
+{\bkmkend AAAAAAAADY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 11} del archivo {\b Melodia.h}.}\par
+}
+{\xe \v nRE_\:Melodia.h}
+{\xe \v Melodia.h\:nRE_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define nRE_\~ 3}}
+\par
+{\bkmkstart AAAAAAAADZ}
+{\bkmkend AAAAAAAADZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 12} del archivo {\b Melodia.h}.}\par
+}
+{\xe \v nSI\:Melodia.h}
+{\xe \v Melodia.h\:nSI}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define nSI\~ 11}}
+\par
+{\bkmkstart AAAAAAAAEA}
+{\bkmkend AAAAAAAAEA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 20} del archivo {\b Melodia.h}.}\par
+}
+{\xe \v nSOL\:Melodia.h}
+{\xe \v Melodia.h\:nSOL}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define nSOL\~ 7}}
+\par
+{\bkmkstart AAAAAAAAEB}
+{\bkmkend AAAAAAAAEB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 16} del archivo {\b Melodia.h}.}\par
+}
+{\xe \v nSOL_\:Melodia.h}
+{\xe \v Melodia.h\:nSOL_}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define nSOL_\~ 8}}
+\par
+{\bkmkstart AAAAAAAAEC}
+{\bkmkend AAAAAAAAEC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 17} del archivo {\b Melodia.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de las funciones\par
+\pard\plain 
+{\xe \v delay_us\:Melodia.h}
+{\xe \v Melodia.h\:delay_us}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void delay_us (int  {\i nota})}}
+\par
+{\bkmkstart AAAAAAAAED}
+{\bkmkend AAAAAAAAED}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 24} del archivo {\b Melodia.c}.}\par
+}
+{\xe \v Play\:Melodia.h}
+{\xe \v Melodia.h\:Play}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void Play (int  {\i nota}, int  {\i octava}, int  {\i duracion})}}
+\par
+{\bkmkstart AAAAAAAAEE}
+{\bkmkend AAAAAAAAEE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v PlayCancion\:Melodia.h}
+{\xe \v Melodia.h\:PlayCancion}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void PlayCancion (void )}}
+\par
+{\bkmkstart AAAAAAAAEF}
+{\bkmkend AAAAAAAAEF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 93} del archivo {\b Melodia.c}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de las variables\par
+\pard\plain 
+{\xe \v FreqNota\:Melodia.h}
+{\xe \v Melodia.h\:FreqNota}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int FreqNota[12]}}
+\par
+{\bkmkstart AAAAAAAAEG}
+{\bkmkend AAAAAAAAEG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+{\b Valor inicial:}{
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid =\{  \par
+                            \par
+15289, \par
+14430, \par
+13620, \par
+12856, \par
+12134, \par
+11453, \par
+10810, \par
+10204, \par
+9631,  \par
+9090,  \par
+8580,  \par
+8099   \par
+\}\par
+}
+{
+Definici\'F3n en la l\'EDnea {\b 22} del archivo {\b Melodia.h}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Melodia.h\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Melodia.h}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Melodia.h}
+{\bkmkstart AAAAAAAAAI}
+{\bkmkend AAAAAAAAAI}
+Ir a la documentaci\'F3n de este archivo.{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf20 /* }\par
+00002 {\cf20  * File:  Melodia.h }\par
+00003 {\cf20  * Author: Arlex Fabian Galindez-Geraldina Ivonne Carlosama-Juan Sebastian Osorio}\par
+00004 {\cf20  * Comments: Liberia que contiene las especificaciones de las notas musicales }\par
+00005 {\cf20  *            y la declaracion de las funciones}\par
+00006 {\cf20  * Revision history: }\par
+00007 {\cf20  */}\par
+00008 \par
+00009 {\cf21 #define nDO     0    }{\cf20 // DO}\par
+00010 {\cf21 #define nDO_    1    }{\cf20 // DO#}\par
+00011 {\cf21 #define nRE     2    }{\cf20 // RE}\par
+00012 {\cf21 #define nRE_    3    }{\cf20 // RE#}\par
+00013 {\cf21 #define nMI     4    }{\cf20 // MI}\par
+00014 {\cf21 #define nFA     5    }{\cf20 // FA}\par
+00015 {\cf21 #define nFA_    6    }{\cf20 // FA#}\par
+00016 {\cf21 #define nSOL    7    }{\cf20 // SOL}\par
+00017 {\cf21 #define nSOL_   8    }{\cf20 // SOL#}\par
+00018 {\cf21 #define nLA     9    }{\cf20 // LA}\par
+00019 {\cf21 #define nLA_    10   }{\cf20 // LA#}\par
+00020 {\cf21 #define nSI     11   }{\cf20 // SI}\par
+00021 \par
+00022 {\cf18 int} FreqNota[12]=\{  {\cf20 // retardos entre estado alto}\par
+00023                             {\cf20 // y bajo para generar las notas}\par
+00024 15289, {\cf20 // DO}\par
+00025 14430, {\cf20 // DO#}\par
+00026 13620, {\cf20 // RE}\par
+00027 12856, {\cf20 // RE#}\par
+00028 12134, {\cf20 // MI}\par
+00029 11453, {\cf20 // FA}\par
+00030 10810, {\cf20 // FA#}\par
+00031 10204, {\cf20 // SOL}\par
+00032 9631,  {\cf20 // SOL#}\par
+00033 9090,  {\cf20 // LA}\par
+00034 8580,  {\cf20 // LA#}\par
+00035 8099   {\cf20 // SI}\par
+00036 \};\par
+00037 \par
+00038 {\cf18 void} Play({\cf18 int} nota,{\cf18 int} octava,{\cf18 int} duracion);\par
+00039 {\cf18 void} PlayCancion({\cf18 void});\par
+00040 {\cf18 void} delay_us({\cf18 int} nota);\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referencia del Archivo D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/reloj.c\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/reloj.c}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/reloj.c}
+{\bkmkstart AAAAAAAAEH}
+{\bkmkend AAAAAAAAEH}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "Funciones.h"}\par
+{\f2 #include "I2C_Master_File.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+defines\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b device_id_write}\~ 0xD0\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b device_id_read}\~ 0xD1\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funciones\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b RTC_Read_Clock} (char read_clock_address)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b RTC_Read_Calendar} (char read_calendar_address)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b RTC_Calendario} (void)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b sec}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b min}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b hour}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b Day}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b Date}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b Month}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b Year}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de los 'defines'\par
+\pard\plain 
+{\xe \v device_id_read\:reloj.c}
+{\xe \v reloj.c\:device_id_read}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define device_id_read\~ 0xD1}}
+\par
+{\bkmkstart AAAAAAAAEI}
+{\bkmkend AAAAAAAAEI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 11} del archivo {\b reloj.c}.}\par
+}
+{\xe \v device_id_write\:reloj.c}
+{\xe \v reloj.c\:device_id_write}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define device_id_write\~ 0xD0}}
+\par
+{\bkmkstart AAAAAAAAEJ}
+{\bkmkend AAAAAAAAEJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 10} del archivo {\b reloj.c}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de las funciones\par
+\pard\plain 
+{\xe \v RTC_Calendario\:reloj.c}
+{\xe \v reloj.c\:RTC_Calendario}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void RTC_Calendario (void )}}
+\par
+{\bkmkstart AAAAAAAAEK}
+{\bkmkend AAAAAAAAEK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 79} del archivo {\b reloj.c}.}\par
+}
+{\xe \v RTC_Read_Calendar\:reloj.c}
+{\xe \v reloj.c\:RTC_Read_Calendar}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void RTC_Read_Calendar (char  {\i read_calendar_address})}}
+\par
+{\bkmkstart AAAAAAAAEL}
+{\bkmkend AAAAAAAAEL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 51} del archivo {\b reloj.c}.}\par
+}
+{\xe \v RTC_Read_Clock\:reloj.c}
+{\xe \v reloj.c\:RTC_Read_Clock}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void RTC_Read_Clock (char  {\i read_clock_address})}}
+\par
+{\bkmkstart AAAAAAAAEM}
+{\bkmkend AAAAAAAAEM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 28} del archivo {\b reloj.c}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de las variables\par
+\pard\plain 
+{\xe \v Date\:reloj.c}
+{\xe \v reloj.c\:Date}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Date}}
+\par
+{\bkmkstart AAAAAAAAEN}
+{\bkmkend AAAAAAAAEN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 14} del archivo {\b reloj.c}.}\par
+}
+{\xe \v Day\:reloj.c}
+{\xe \v reloj.c\:Day}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Day}}
+\par
+{\bkmkstart AAAAAAAAEO}
+{\bkmkend AAAAAAAAEO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 14} del archivo {\b reloj.c}.}\par
+}
+{\xe \v hour\:reloj.c}
+{\xe \v reloj.c\:hour}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int hour}}
+\par
+{\bkmkstart AAAAAAAAEP}
+{\bkmkend AAAAAAAAEP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 13} del archivo {\b reloj.c}.}\par
+}
+{\xe \v min\:reloj.c}
+{\xe \v reloj.c\:min}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int min}}
+\par
+{\bkmkstart AAAAAAAAEQ}
+{\bkmkend AAAAAAAAEQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 13} del archivo {\b reloj.c}.}\par
+}
+{\xe \v Month\:reloj.c}
+{\xe \v reloj.c\:Month}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Month}}
+\par
+{\bkmkstart AAAAAAAAER}
+{\bkmkend AAAAAAAAER}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 14} del archivo {\b reloj.c}.}\par
+}
+{\xe \v sec\:reloj.c}
+{\xe \v reloj.c\:sec}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int sec}}
+\par
+{\bkmkstart AAAAAAAAES}
+{\bkmkend AAAAAAAAES}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 13} del archivo {\b reloj.c}.}\par
+}
+{\xe \v Year\:reloj.c}
+{\xe \v reloj.c\:Year}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int Year}}
+\par
+{\bkmkstart AAAAAAAAET}
+{\bkmkend AAAAAAAAET}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 14} del archivo {\b reloj.c}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+reloj.c\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/reloj.c}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/reloj.c}
+{\bkmkstart AAAAAAAAAJ}
+{\bkmkend AAAAAAAAAJ}
+Ir a la documentaci\'F3n de este archivo.{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf20 /*}\par
+00002 {\cf20  * PIC18F4550 interfacing with RTC DS1307}\par
+00003 {\cf20  * http://www.electronicwings.com}\par
+00004 {\cf20  */} \par
+00005 \par
+00006 \par
+00007 {\cf21 #include "Funciones.h"}\par
+00008 {\cf21 #include "I2C_Master_File.h"}\par
+00009 \par
+00010 {\cf21 #define device_id_write 0xD0}\par
+00011 {\cf21 #define device_id_read 0xD1}\par
+00012 \par
+00013 {\cf18 int} sec,min,hour;\par
+00014 {\cf18 int} Day,Date,Month,Year;\par
+00015 \par
+00016 {\cf20 /*********************************************************************}\par
+00017 {\cf20  * Function:        void RTC_Read_Clock(char read_clock_address)}\par
+00018 {\cf20  *}\par
+00019 {\cf20  * Input:           char read_clock_address: direccion para leer la hora, minutos y segundos}\par
+00020 {\cf20  *}\par
+00021 {\cf20  * Output:          None}\par
+00022 {\cf20  *}\par
+00023 {\cf20  * Overview:        Permite leer la hora del reloj RTC}\par
+00024 {\cf20  *}\par
+00025 {\cf20  * Note:            None}\par
+00026 {\cf20  ********************************************************************/}\par
+00027 \par
+00028 {\cf18 void} RTC_Read_Clock({\cf18 char} read_clock_address)\par
+00029 \{\par
+00030     I2C_Start(device_id_write);\par
+00031     I2C_Write(read_clock_address);     {\cf20 /* address from where time needs to be read*/}\par
+00032     I2C_Repeated_Start(device_id_read);\par
+00033     sec = I2C_Read(0);                 {\cf20 /*read data and send ack for continuous reading*/}\par
+00034     min = I2C_Read(0);                 {\cf20 /*read data and send ack for continuous reading*/}\par
+00035     hour= I2C_Read(1);                 {\cf20 /*read data and send nack for indicating stop reading*/}\par
+00036     \par
+00037 \}\par
+00038 \par
+00039 {\cf20 /*********************************************************************}\par
+00040 {\cf20  * Function:        void RTC_Read_Calendar(char read_calendar_address)}\par
+00041 {\cf20  *}\par
+00042 {\cf20  * Input:           char read_calendar_address: direccion para leer dia,mes,fecha}\par
+00043 {\cf20  *}\par
+00044 {\cf20  * Output:          None}\par
+00045 {\cf20  *}\par
+00046 {\cf20  * Overview:        Permite leer la fecha del RTC}\par
+00047 {\cf20  *}\par
+00048 {\cf20  * Note:            None}\par
+00049 {\cf20  ********************************************************************/}\par
+00050 \par
+00051 {\cf18 void} RTC_Read_Calendar({\cf18 char} read_calendar_address)\par
+00052 \{   \par
+00053     I2C_Start(device_id_write);\par
+00054     I2C_Write(read_calendar_address); {\cf20 /* address from where time needs to be read*/}\par
+00055     I2C_Repeated_Start(device_id_read);\par
+00056     Day = I2C_Read(0);                {\cf20 /*read data and send ack for continuous reading*/}\par
+00057     Date = I2C_Read(0);               {\cf20 /*read data and send ack for continuous reading*/}\par
+00058     Month = I2C_Read(0);              {\cf20 /*read data and send ack for continuous reading*/}\par
+00059     Year = I2C_Read(1);               {\cf20 /*read data and send nack for indicating stop reading*/}\par
+00060     I2C_Stop();\par
+00061 \}\par
+00062 \par
+00063 {\cf20 /*********************************************************************}\par
+00064 {\cf20  * Function:        void RTC_Calendario()}\par
+00065 {\cf20  *}\par
+00066 {\cf20  *}\par
+00067 {\cf20  * Input:           None}\par
+00068 {\cf20  *}\par
+00069 {\cf20  * Output:          None}\par
+00070 {\cf20  *}\par
+00071 {\cf20  *}\par
+00072 {\cf20  * Overview:        Hace el llamado de las funciones de reloj y calendario}\par
+00073 {\cf20  *                  para luego hacer las conversiones necesarias y mostrarlas en }\par
+00074 {\cf20  *                  una pantalla LCD}\par
+00075 {\cf20  *}\par
+00076 {\cf20  * Note:            None}\par
+00077 {\cf20  ********************************************************************/}\par
+00078 \par
+00079 {\cf18 void} RTC_Calendario({\cf18 void})\par
+00080 \{\par
+00081     \par
+00082     {\cf18 char} secs[10],mins[10],hours[10];\par
+00083     {\cf18 char} date[10],month[10],year[10];\par
+00084     {\cf18 char} Clock_type = 0x06;\par
+00085     {\cf18 char} AM_PM = 0x05;\par
+00086     {\cf18 char} days[7] = \{{\cf23 'S'},{\cf23 'M'},{\cf23 'T'},{\cf23 'W'},{\cf23 't'},{\cf23 'F'},{\cf23 's'}\};\par
+00087     OSCCON=0x72;                    {\cf20 /*Use internal oscillator and }\par
+00088 {\cf20                                      *set frequency to 8 MHz*/} \par
+00089     I2C_Init();                     {\cf20 /*initialize I2C protocol*/}\par
+00090     LCD_Init();                     {\cf20 /*initialize LCD16x2*/}    \par
+00091     LCD_Clear();\par
+00092     LCD_MSdelay(10);\par
+00093     {\cf19 while}(1)\par
+00094     \{ \par
+00095         RTC_Read_Clock(0);              {\cf20 /*gives second,minute and hour*/}\par
+00096         {\cf19 if}(hour & (1<<Clock_type))\{     {\cf20 /* check clock is 12hr or 24hr */}\par
+00097             \par
+00098             {\cf19 if}(hour & (1<<AM_PM))\{      {\cf20 /* check AM or PM */}\par
+00099                 LCD_String_xy(1,14,{\cf22 "PM"});\par
+00100             \}\par
+00101             {\cf19 else}\{\par
+00102                 LCD_String_xy(1,14,{\cf22 "AM"});\par
+00103             \}\par
+00104             \par
+00105             hour = hour & (0x1f);\par
+00106             sprintf(secs,{\cf22 "%x "},sec);   {\cf20 /*%x for reading BCD format from RTC DS1307*/}\par
+00107             sprintf(mins,{\cf22 "%x:"},min);    \par
+00108             sprintf(hours,{\cf22 "%x:"},hour);  \par
+00109             LCD_String_xy(0,4,hours);            \par
+00110             LCD_String(mins);\par
+00111             LCD_String(secs);\par
+00112         \}\par
+00113         {\cf19 else}\{\par
+00114             \par
+00115             hour = hour & (0x3f);\par
+00116             sprintf(secs,{\cf22 "%x "},sec);   {\cf20 /*%x for reading BCD format from RTC DS1307*/}\par
+00117             sprintf(mins,{\cf22 "%x:"},min);    \par
+00118             sprintf(hours,{\cf22 "%x:"},hour);  \par
+00119             LCD_String_xy(0,4,hours);            \par
+00120             LCD_String(mins);\par
+00121             LCD_String(secs); \par
+00122         \}\par
+00123         \par
+00124         RTC_Read_Calendar(3);        {\cf20 /*gives day, date, month, year*/}        \par
+00125         I2C_Stop();\par
+00126         sprintf(date,{\cf22 "%x-"},Date);\par
+00127         sprintf(month,{\cf22 "%x-"},Month);\par
+00128         sprintf(year,{\cf22 "%x "},Year);\par
+00129         LCD_String_xy(2,2,date);\par
+00130         LCD_String(month);\par
+00131         LCD_String(year);\par
+00132 \par
+00133     {\cf20 /* find day */}\par
+00134         {\cf19 switch}(days[Day])\par
+00135         \{\par
+00136             {\cf19 case} {\cf23 'S'}:\par
+00137                         LCD_String({\cf22 "Sun"});\par
+00138                         {\cf19 return};\par
+00139                         {\cf19 break};\par
+00140             {\cf19 case} {\cf23 'M'}:\par
+00141                         LCD_String({\cf22 "Mon"});\par
+00142                         {\cf19 return};\par
+00143                         {\cf19 break};                \par
+00144             {\cf19 case} {\cf23 'T'}:\par
+00145                         LCD_String({\cf22 "Tue"});\par
+00146                         {\cf19 return};\par
+00147                         {\cf19 break};                \par
+00148             {\cf19 case} {\cf23 'W'}:   \par
+00149                         LCD_String({\cf22 "Wed"});\par
+00150                         {\cf19 return};\par
+00151                         {\cf19 break};                \par
+00152             {\cf19 case} {\cf23 't'}:\par
+00153                         LCD_String({\cf22 "Thu"});\par
+00154                         {\cf19 return};\par
+00155                         {\cf19 break};\par
+00156             {\cf19 case} {\cf23 'F'}:\par
+00157                         LCD_String({\cf22 "Fri"});\par
+00158                         {\cf19 return};\par
+00159                         {\cf19 break};                \par
+00160             {\cf19 case} {\cf23 's'}:\par
+00161                         LCD_String({\cf22 "Sat"});\par
+00162                         {\cf19 return};\par
+00163                         {\cf19 break};\par
+00164             {\cf19 default}: \par
+00165                         {\cf19 break};\par
+00166                         \par
+00167         \}\par
+00168         {\cf19 return};\par
+00169     \}    \par
+00170 \}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referencia del Archivo D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Reloj_ar.c\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Reloj_ar.c}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Reloj_ar.c}
+{\bkmkstart AAAAAAAAEU}
+{\bkmkend AAAAAAAAEU}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "I2C_Master_File.h"}\par
+{\f2 #include <pic18f4550.h>}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funciones\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b I2C_Read} (char flag)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b I2C_Init} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b I2C_Ready} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b I2C_Start_Wait} (char slave_write_address)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b I2C_Start} (char slave_write_address)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b I2C_Repeated_Start} (char slave_read_address)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b I2C_Stop} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b I2C_Write} (unsigned char data)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b I2C_Ack} (void)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b I2C_Nack} (void)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de las funciones\par
+\pard\plain 
+{\xe \v I2C_Ack\:Reloj_ar.c}
+{\xe \v Reloj_ar.c\:I2C_Ack}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void I2C_Ack (void )}}
+\par
+{\bkmkstart AAAAAAAAEV}
+{\bkmkend AAAAAAAAEV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 230} del archivo {\b Reloj_ar.c}.}\par
+}
+{\xe \v I2C_Init\:Reloj_ar.c}
+{\xe \v Reloj_ar.c\:I2C_Init}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void I2C_Init (void )}}
+\par
+{\bkmkstart AAAAAAAAEW}
+{\bkmkend AAAAAAAAEW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 57} del archivo {\b Reloj_ar.c}.}\par
+}
+{\xe \v I2C_Nack\:Reloj_ar.c}
+{\xe \v Reloj_ar.c\:I2C_Nack}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void I2C_Nack (void )}}
+\par
+{\bkmkstart AAAAAAAAEX}
+{\bkmkend AAAAAAAAEX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 250} del archivo {\b Reloj_ar.c}.}\par
+}
+{\xe \v I2C_Read\:Reloj_ar.c}
+{\xe \v Reloj_ar.c\:I2C_Read}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char I2C_Read (char  {\i flag})}}
+\par
+{\bkmkstart AAAAAAAAEY}
+{\bkmkend AAAAAAAAEY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 27} del archivo {\b Reloj_ar.c}.}\par
+}
+{\xe \v I2C_Ready\:Reloj_ar.c}
+{\xe \v Reloj_ar.c\:I2C_Ready}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void I2C_Ready (void )}}
+\par
+{\bkmkstart AAAAAAAAEZ}
+{\bkmkend AAAAAAAAEZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 83} del archivo {\b Reloj_ar.c}.}\par
+}
+{\xe \v I2C_Repeated_Start\:Reloj_ar.c}
+{\xe \v Reloj_ar.c\:I2C_Repeated_Start}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char I2C_Repeated_Start (char  {\i slave_read_address})}}
+\par
+{\bkmkstart AAAAAAAAFA}
+{\bkmkend AAAAAAAAFA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 159} del archivo {\b Reloj_ar.c}.}\par
+}
+{\xe \v I2C_Start\:Reloj_ar.c}
+{\xe \v Reloj_ar.c\:I2C_Start}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char I2C_Start (char  {\i slave_write_address})}}
+\par
+{\bkmkstart AAAAAAAAFB}
+{\bkmkend AAAAAAAAFB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 134} del archivo {\b Reloj_ar.c}.}\par
+}
+{\xe \v I2C_Start_Wait\:Reloj_ar.c}
+{\xe \v Reloj_ar.c\:I2C_Start_Wait}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void I2C_Start_Wait (char  {\i slave_write_address})}}
+\par
+{\bkmkstart AAAAAAAAFC}
+{\bkmkend AAAAAAAAFC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 101} del archivo {\b Reloj_ar.c}.}\par
+}
+{\xe \v I2C_Stop\:Reloj_ar.c}
+{\xe \v Reloj_ar.c\:I2C_Stop}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char I2C_Stop (void )}}
+\par
+{\bkmkstart AAAAAAAAFD}
+{\bkmkend AAAAAAAAFD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 186} del archivo {\b Reloj_ar.c}.}\par
+}
+{\xe \v I2C_Write\:Reloj_ar.c}
+{\xe \v Reloj_ar.c\:I2C_Write}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char I2C_Write (unsigned char  {\i data})}}
+\par
+{\bkmkstart AAAAAAAAFE}
+{\bkmkend AAAAAAAAFE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 208} del archivo {\b Reloj_ar.c}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Reloj_ar.c\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Reloj_ar.c}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Reloj_ar.c}
+{\bkmkstart AAAAAAAAAK}
+{\bkmkend AAAAAAAAAK}
+Ir a la documentaci\'F3n de este archivo.{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 \par
+00002 {\cf20 /*}\par
+00003 {\cf20  * PIC18F4550 I2C Source File}\par
+00004 {\cf20  * http://www.electronicwings.com}\par
+00005 {\cf20  */} \par
+00006 \par
+00007 \par
+00008 \par
+00009 {\cf21 #include "I2C_Master_File.h"}\par
+00010 {\cf21 #include <pic18f4550.h>}\par
+00011 \par
+00012 {\cf20 /*********************************************************************}\par
+00013 {\cf20  * Function:        char I2C_Read(char flag)}\par
+00014 {\cf20  *}\par
+00015 {\cf20  *}\par
+00016 {\cf20  * Input:           char flag: bandera utilizada para seguir leyendo o para salir}\par
+00017 {\cf20  *}\par
+00018 {\cf20  * Output:          char buffer: dato recuperado}\par
+00019 {\cf20  *}\par
+00020 {\cf20  *}\par
+00021 {\cf20  * Overview:        Lee la informacion del reloj y la retorna para cada variable}\par
+00022 {\cf20  *                  que lo requiere}\par
+00023 {\cf20  *}\par
+00024 {\cf20  * Note:            None}\par
+00025 {\cf20  ********************************************************************/}\par
+00026 \par
+00027 {\cf18 char} I2C_Read({\cf18 char} flag)                 {\cf20 /*read data from location and }\par
+00028 {\cf20                                          *send ack or nack depending upon parameter*/}\par
+00029 \{\par
+00030         {\cf18 char} buffer;\par
+00031         RCEN = 1;                         {\cf20 /*enable receive*/}\par
+00032         {\cf19 while}(!SSPSTATbits.BF);         {\cf20 /*wait for buffer full flag }\par
+00033 {\cf20                                          *which is set when complete byte received*/}\par
+00034         buffer = SSPBUF;                  {\cf20 /*copy SSPBUF to buffer*/}\par
+00035        {\cf20 /*send acknowledgment or negative acknowledgment */}        \par
+00036         {\cf19 if}(flag==0)\par
+00037             I2C_Ack();\par
+00038         {\cf19 else}\par
+00039             I2C_Nack();\par
+00040         I2C_Ready();\par
+00041         {\cf19 return}(buffer);\par
+00042 \}\par
+00043 \par
+00044 {\cf20 /*********************************************************************}\par
+00045 {\cf20  * Function:        void I2C_Init(void)}\par
+00046 {\cf20  *}\par
+00047 {\cf20  *}\par
+00048 {\cf20  * Input:           None}\par
+00049 {\cf20  *}\par
+00050 {\cf20  * Output:          None}\par
+00051 {\cf20  *}\par
+00052 {\cf20  * Overview:        Inicializa los puertos y configura el reloj}\par
+00053 {\cf20  *}\par
+00054 {\cf20  * Note:            None}\par
+00055 {\cf20  ********************************************************************/}\par
+00056 \par
+00057 {\cf18 void} I2C_Init({\cf18 void})\par
+00058 \{\par
+00059     TRISB0=1;                           {\cf20 /*set up I2C lines by setting as input*/}\par
+00060     TRISB1=1;\par
+00061     SSPSTAT=80;                         {\cf20 /*slew rate disabled, other bits are cleared*/}\par
+00062     SSPCON1=0x28;                       {\cf20 /*enable SSP port for I2C Master mode,}\par
+00063 {\cf20                                          *clock = FOSC / (4 * (SSPADD+1))*/} \par
+00064     SSPCON2=0;\par
+00065     SSPADD=BITRATE;                    {\cf20 /*clock 100 kHz*/}  \par
+00066     SSPIE=1;                            {\cf20 /*enable SSPIF interrupt*/}\par
+00067     SSPIF=0;\par
+00068 \}\par
+00069 \par
+00070 {\cf20 /*********************************************************************}\par
+00071 {\cf20  * Function:        void I2C_Ready(void)}\par
+00072 {\cf20  *}\par
+00073 {\cf20  *}\par
+00074 {\cf20  * Input:           None}\par
+00075 {\cf20  *}\par
+00076 {\cf20  * Output:          None}\par
+00077 {\cf20  *}\par
+00078 {\cf20  * Overview:        Se encarga de comprobar la operacion si se completa o no}\par
+00079 {\cf20  *}\par
+00080 {\cf20  * Note:            None}\par
+00081 {\cf20  ********************************************************************/}\par
+00082 \par
+00083 {\cf18 void} I2C_Ready({\cf18 void})\par
+00084 \{\par
+00085     {\cf19 while}(!SSPIF);                  {\cf20 /* Wait for operation complete */}\par
+00086     SSPIF=0;                        {\cf20 /*clear SSPIF interrupt flag*/}\par
+00087 \}\par
+00088 \par
+00089 {\cf20 /*********************************************************************}\par
+00090 {\cf20  * Function:        void I2C_Start_Wait(char slave_write_address)}\par
+00091 {\cf20  *}\par
+00092 {\cf20  * Input:           char slave_write_address: Direccion de escritura del esclavo}\par
+00093 {\cf20  *}\par
+00094 {\cf20  * Output:          None}\par
+00095 {\cf20  *}\par
+00096 {\cf20  * Overview:        Se encarga de escribir la informacion en el esclavo}\par
+00097 {\cf20  *}\par
+00098 {\cf20  * Note:            None}\par
+00099 {\cf20  ********************************************************************/}\par
+00100 \par
+00101 {\cf18 void} I2C_Start_Wait({\cf18 char} slave_write_address)\par
+00102 \{\par
+00103   {\cf19 while}(1)\par
+00104   \{   \par
+00105     SSPCON2bits.SEN=1;              {\cf20 /*send start pulse*/}\par
+00106     {\cf19 while}(SSPCON2bits.SEN);         {\cf20 /*wait for completion of start pulse*/}\par
+00107     SSPIF=0;\par
+00108     {\cf19 if}(!SSPSTATbits.S)              {\cf20 /*wait till start bit is detected*/}    \par
+00109         {\cf19 continue};\par
+00110     I2C_Write(slave_write_address); {\cf20 /*write slave device address with write to communicate*/}\par
+00111     {\cf19 if}(ACKSTAT)\par
+00112     \{\par
+00113         I2C_Stop();\par
+00114         {\cf19 continue};\par
+00115     \}    \par
+00116     {\cf19 break};        \par
+00117   \}\par
+00118 \}\par
+00119 \par
+00120 {\cf20 /*********************************************************************}\par
+00121 {\cf20  * Function:        char I2C_Start(char slave_write_address)}\par
+00122 {\cf20  *}\par
+00123 {\cf20  * Input:           char slave_write_address: Direccion de escritura del esclavo}\par
+00124 {\cf20  *}\par
+00125 {\cf20  * Output:          char I2C_Write(slave_write_address): Retorna la direccion de erscritura}\par
+00126 {\cf20  *                  del esclavo para comunicarse}\par
+00127 {\cf20  *}\par
+00128 {\cf20  * Overview:        Se encarga iniciar la comunicacion con el esclavo}\par
+00129 {\cf20  *                  para poder escribir en el}\par
+00130 {\cf20  *}\par
+00131 {\cf20  * Note:            None}\par
+00132 {\cf20  ********************************************************************/}\par
+00133 \par
+00134 {\cf18 char} I2C_Start({\cf18 char} slave_write_address)\par
+00135 \{   \par
+00136     SSPCON2bits.SEN=1;              {\cf20 /*send start pulse*/}\par
+00137     {\cf19 while}(SSPCON2bits.SEN);         {\cf20 /*wait for completion of start */}\par
+00138     SSPIF=0;\par
+00139     {\cf19 if}(!SSPSTATbits.S)              {\cf20 /*wait till start bit is detected*/}\par
+00140     {\cf19 return} 0;                       {\cf20 /*start failed*/}    \par
+00141     {\cf19 return} (I2C_Write(slave_write_address));     {\cf20 /*write slave device address with write to communicate*/}\par
+00142      \par
+00143 \}\par
+00144 \par
+00145 {\cf20 /*********************************************************************}\par
+00146 {\cf20  * Function:        char I2C_Repeated_Start(char slave_read_address)}\par
+00147 {\cf20  *}\par
+00148 {\cf20  * Input:           char slave_read_address: Direccion de lectura del esclavo}\par
+00149 {\cf20  *}\par
+00150 {\cf20  * Output:          char Numero: Bandera para determinar si se continua}\par
+00151 {\cf20  *                  leyendo o no}\par
+00152 {\cf20  *}\par
+00153 {\cf20  * Overview:        Se encarga de determinar si se debe seguir leyendo}\par
+00154 {\cf20  *                  la informacion o no}\par
+00155 {\cf20  *}\par
+00156 {\cf20  * Note:            None}\par
+00157 {\cf20  ********************************************************************/}\par
+00158 \par
+00159 {\cf18 char} I2C_Repeated_Start({\cf18 char} slave_read_address)\par
+00160 \{\par
+00161     RSEN = 1;                         {\cf20 /*send repeated start pulse*/}\par
+00162     {\cf19 while}(RSEN);                    {\cf20 /*wait for completion of repeated start pulse*/}\par
+00163     SSPIF = 0;\par
+00164     {\cf19 if}(!SSPSTATbits.S)             {\cf20 /*wait till start bit is detected*/}\par
+00165     {\cf19 return} 0;                       {\cf20 /*start failed*/}    \par
+00166     I2C_Write(slave_read_address);      {\cf20 /*write slave device address with read to communicate*/}\par
+00167     {\cf19 if} (ACKSTAT)\par
+00168      {\cf19 return} 1;\par
+00169     {\cf19 else}\par
+00170      {\cf19 return} 2;\par
+00171 \}\par
+00172 \par
+00173 {\cf20 /*********************************************************************}\par
+00174 {\cf20  * Function:        char I2C_Stop(void)}\par
+00175 {\cf20  *}\par
+00176 {\cf20  * Input:           None}\par
+00177 {\cf20  *}\par
+00178 {\cf20  * Output:          char Numero: Si se falla en deterner la comunicacion}\par
+00179 {\cf20  *}\par
+00180 {\cf20  * Overview:        Se encarga de deterner la comunicacion con el esclavo}\par
+00181 {\cf20  *                  ya sea en modo lectura o escritura}\par
+00182 {\cf20  *}\par
+00183 {\cf20  * Note:            None}\par
+00184 {\cf20  ********************************************************************/}\par
+00185 \par
+00186 {\cf18 char} I2C_Stop({\cf18 void})\par
+00187 \{\par
+00188     PEN = 1;                          {\cf20 /*stop communication*/}\par
+00189     {\cf19 while}(PEN);                     {\cf20 /*wait for end of stop pulse*/}\par
+00190     {\cf19 if}(!SSPSTATbits.P);             {\cf20 /*wait till stop bit is detected*/}\par
+00191     {\cf19 return} 0;                       {\cf20 /*stop failed*/}        \par
+00192 \}\par
+00193 \par
+00194 {\cf20 /*********************************************************************}\par
+00195 {\cf20  * Function:        char I2C_Write(unsigned char data)}\par
+00196 {\cf20  *}\par
+00197 {\cf20  * Input:           char data: El dato a escribir en el SSPBUF}\par
+00198 {\cf20  *}\par
+00199 {\cf20  * Output:          char Numero: Bandera para determinar si la escritura}\par
+00200 {\cf20  *                  fue correcta o no}\par
+00201 {\cf20  *}\par
+00202 {\cf20  * Overview:        Se encarga de escrinir la informacion en el registro }\par
+00203 {\cf20  *                  SSPBUF}\par
+00204 {\cf20  *}\par
+00205 {\cf20  * Note:            None}\par
+00206 {\cf20  ********************************************************************/}\par
+00207 \par
+00208 {\cf18 char} I2C_Write({\cf18 unsigned} {\cf18 char} data)\par
+00209 \{\par
+00210       SSPBUF = data;                  {\cf20 /*write data to SSPBUF*/}\par
+00211       I2C_Ready();\par
+00212       {\cf19 if} (ACKSTAT)                  {\cf20 /*check for acknowledge bit*/}\par
+00213         {\cf19 return} 1;\par
+00214       {\cf19 else}\par
+00215         {\cf19 return} 2;\par
+00216 \}\par
+00217 \par
+00218 {\cf20 /*********************************************************************}\par
+00219 {\cf20  * Function:        void I2C_Ack(void)}\par
+00220 {\cf20  *}\par
+00221 {\cf20  * Input:           None}\par
+00222 {\cf20  *}\par
+00223 {\cf20  * Output:          None}\par
+00224 {\cf20  *}\par
+00225 {\cf20  * Overview:        Se encarga de reconocer los datos que se enviaran}\par
+00226 {\cf20  *}\par
+00227 {\cf20  * Note:            None}\par
+00228 {\cf20  ********************************************************************/}\par
+00229 \par
+00230 {\cf18 void} I2C_Ack({\cf18 void})\par
+00231 \{\par
+00232     ACKDT=0;                    {\cf20 /*acknowledge data 1:NACK,0:ACK */}\par
+00233     ACKEN=1;                    {\cf20 /*enable ACK to send*/}            \par
+00234     {\cf19 while}(ACKEN);\par
+00235 \}\par
+00236 \par
+00237 {\cf20 /*********************************************************************}\par
+00238 {\cf20  * Function:        void I2C_NAck(void)}\par
+00239 {\cf20  *}\par
+00240 {\cf20  * Input:           None}\par
+00241 {\cf20  *}\par
+00242 {\cf20  * Output:          None}\par
+00243 {\cf20  *}\par
+00244 {\cf20  * Overview:        Se encarga de reconocer los datos que se enviaran y determinar}\par
+00245 {\cf20  *                  que no se quieren enviar mas datos}\par
+00246 {\cf20  *}\par
+00247 {\cf20  * Note:            None}\par
+00248 {\cf20  ********************************************************************/}\par
+00249 \par
+00250 {\cf18 void} I2C_Nack({\cf18 void})\par
+00251 \{\par
+00252     ACKDT=1;                    {\cf20 /*acknowledge data 1:NACK,0:ACK*/}\par
+00253     ACKEN=1;                    {\cf20 /*enable ACK to send*/}            \par
+00254     {\cf19 while}(ACKEN);\par
+00255 \}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referencia del Archivo D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Sensor_luz.c\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Sensor_luz.c}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Sensor_luz.c}
+{\bkmkstart AAAAAAAAFF}
+{\bkmkend AAAAAAAAFF}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "Funciones.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funciones\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+uint16_t {\b ReadLUZ} (void)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de las funciones\par
+\pard\plain 
+{\xe \v ReadLUZ\:Sensor_luz.c}
+{\xe \v Sensor_luz.c\:ReadLUZ}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+uint16_t ReadLUZ (void )}}
+\par
+{\bkmkstart AAAAAAAAFG}
+{\bkmkend AAAAAAAAFG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 21} del archivo {\b Sensor_luz.c}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Sensor_luz.c\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Sensor_luz.c}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Sensor_luz.c}
+{\bkmkstart AAAAAAAAAL}
+{\bkmkend AAAAAAAAAL}
+Ir a la documentaci\'F3n de este archivo.{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf20 /*}\par
+00002 {\cf20  * PIC18F4550 I2C Source File}\par
+00003 {\cf20  * http://www.electronicwings.com}\par
+00004 {\cf20  */}\par
+00005 \par
+00006 {\cf21 #include "Funciones.h"}\par
+00007 \par
+00008 {\cf20 /*********************************************************************}\par
+00009 {\cf20  * Function:        uint16_t ReadLUZ(void)}\par
+00010 {\cf20  *}\par
+00011 {\cf20  * Input:           None}\par
+00012 {\cf20  *}\par
+00013 {\cf20  * Output:          uint16_t result: Informacion de la temperatura luego de la }\par
+00014 {\cf20  *                  conversion}\par
+00015 {\cf20  *}\par
+00016 {\cf20  * Overview:        Funcion que se encarga de tomar la informacion en el sensor de luz}\par
+00017 {\cf20  *}\par
+00018 {\cf20  * Note:            None}\par
+00019 {\cf20  ********************************************************************/}\par
+00020 \par
+00021 uint16_t ReadLUZ({\cf18 void}) \{\par
+00022 \par
+00023     TRISD = 0x00;\par
+00024     TRISA = 0xFF;\par
+00025 \par
+00026     OSCCONbits.IRCF = 0b111; {\cf20 //Configura oscilador interno (FOSC = 8Mhz)}\par
+00027     OSCCONbits.SCS = 0b10; {\cf20 // Oscilador del sistema = Fosc interno}\par
+00028 \par
+00029     {\cf20 //ADC = 10bits, Tad = 1us, Tacq = 4us, Vref = 5v-0v, RA=ANALOG}\par
+00030     ADCON1bits.PCFG = 0b1101; {\cf20 //  Configura el Puerto como Entrada Anal\'F3gica.}\par
+00031     ADCON1bits.VCFG = 0b00; {\cf20 //  Selecciona Voltajes de Referencia (5v-0v).}\par
+00032     ADCON0bits.CHS = 0b0001; {\cf20 //  Selecciona el Canal Anal\'F3gico.}\par
+00033     ADCON2bits.ACQT = 0b010; {\cf20 //  Tiempo de Adquisici\'F3n 4Tad.}\par
+00034     ADCON2bits.ADCS = 0b001; {\cf20 //  Tiempo de Conversi\'F3n Fosc/8.}\par
+00035     ADCON2bits.ADFM = 1; {\cf20 //  Justificaci\'F3n derecha (modo-10bits).}\par
+00036     ADCON0bits.ADON = 1; {\cf20 //  Habilita el M\'F3dulo AD.}\par
+00037 \par
+00038     {\cf19 while} (1) \{\par
+00039         ADCON0bits.GO_DONE = 1; {\cf20 //Inicia la COnversi\'F3 AD.}\par
+00040         {\cf19 while} (ADCON0bits.GO_DONE); {\cf20 //  Espera a que termine la conversi\'F3n AD.}\par
+00041         result = ADRESH; {\cf20 //  Lectura de valor AD.}\par
+00042         result = (result << 8) + ADRESL;\par
+00043 \par
+00044         {\cf19 return} result;\par
+00045     \}\par
+00046 \}\par
+00047 \par
+00048 \par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referencia del Archivo D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/smart_main.c\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/smart_main.c}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/smart_main.c}
+{\bkmkstart AAAAAAAAFH}
+{\bkmkend AAAAAAAAFH}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "LCD_caracter.h"}\par
+{\f2 #include "I2C_Master_File.h"}\par
+{\f2 #include "Funciones.h"}\par
+{\f2 #include "Usart.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funciones\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b main} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de las funciones\par
+\pard\plain 
+{\xe \v main\:smart_main.c}
+{\xe \v smart_main.c\:main}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void main ()}}
+\par
+{\bkmkstart AAAAAAAAFI}
+{\bkmkend AAAAAAAAFI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 26} del archivo {\b smart_main.c}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+smart_main.c\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/smart_main.c}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/smart_main.c}
+{\bkmkstart AAAAAAAAAM}
+{\bkmkend AAAAAAAAAM}
+Ir a la documentaci\'F3n de este archivo.{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf20 /* }\par
+00002 {\cf20  * File:   smart_main.c}\par
+00003 {\cf20  * Author: Arlex Fabian Galindez-Geraldina Ivonne Carlosama-Juan Sebastian Osorio}\par
+00004 {\cf20  *}\par
+00005 {\cf20  * Created on 4 de octubre de 2021, 10:59 AM}\par
+00006 {\cf20  */}\par
+00007 \par
+00008 {\cf21 #include "LCD_caracter.h"}\par
+00009 {\cf21 #include "I2C_Master_File.h"}\par
+00010 {\cf21 #include "Funciones.h"}\par
+00011 {\cf21 #include "Usart.h"}\par
+00012 \par
+00013 {\cf20 /*********************************************************************}\par
+00014 {\cf20  * Function:        void main()}\par
+00015 {\cf20  *}\par
+00016 {\cf20  * Input:           None}\par
+00017 {\cf20  *}\par
+00018 {\cf20  * Output:          None}\par
+00019 {\cf20  *}\par
+00020 {\cf20  * Overview:        Funcion pricipal que se encarga del funcionamiento}\par
+00021 {\cf20  *                  del programa}\par
+00022 {\cf20  *}\par
+00023 {\cf20  * Note:            None}\par
+00024 {\cf20  ********************************************************************/}\par
+00025 \par
+00026 {\cf18 void} main() \{\par
+00027     OSCCON = 0x72; {\cf20 /* Use internal oscillator of 8MHz Frequency */}\par
+00028     TRISE = 0x00; {\cf20 /* Set direction of PORTB as OUTPUT to which LED is connected */}\par
+00029 \par
+00030 \par
+00031     I2C_Init(); {\cf20 /*Initialize the I2C protocol*/}\par
+00032     USART_Init(9600); {\cf20 /* initialize USART operation with 9600 baud rate */}\par
+00033     LCD_Init(); {\cf20 /*Initialize LCD to 5*8 matrix in 4-bit mode*/}\par
+00034 \par
+00035     {\cf19 while} (1) \{\par
+00036         RTC_Calendario();\par
+00037         {\cf18 int} caso = Estados();\par
+00038         {\cf19 switch} (caso) \{\par
+00039             {\cf19 case} 1:\par
+00040                 Sunny_State();\par
+00041                 {\cf19 break};\par
+00042 \par
+00043             {\cf19 case} 2:\par
+00044                 Cloudy_State();\par
+00045                 {\cf19 break};\par
+00046 \par
+00047             {\cf19 case} 3:\par
+00048                 Rainy_State();\par
+00049                 {\cf19 break};\par
+00050                 \par
+00051             {\cf19 case} 4:\par
+00052                 Alarm_Status();\par
+00053                 {\cf19 break};\par
+00054 \par
+00055             {\cf19 default}:\par
+00056                 {\cf19 break};\par
+00057 \par
+00058         \}\par
+00059         LCD_MSdelay(3000);\par
+00060         LCD_Clear();\par
+00061     \};\par
+00062 \par
+00063 \}\par
+00064 \par
+00065 \par
+00066 \par
+00067 \par
+00068 \par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referencia del Archivo D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Temperatura.c\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Temperatura.c}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Temperatura.c}
+{\bkmkstart AAAAAAAAFJ}
+{\bkmkend AAAAAAAAFJ}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "Funciones.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funciones\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+uint16_t {\b ReadADC} (void)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de las funciones\par
+\pard\plain 
+{\xe \v ReadADC\:Temperatura.c}
+{\xe \v Temperatura.c\:ReadADC}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+uint16_t ReadADC (void )}}
+\par
+{\bkmkstart AAAAAAAAFK}
+{\bkmkend AAAAAAAAFK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 22} del archivo {\b Temperatura.c}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Temperatura.c\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Temperatura.c}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Temperatura.c}
+{\bkmkstart AAAAAAAAAN}
+{\bkmkend AAAAAAAAAN}
+Ir a la documentaci\'F3n de este archivo.{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf20 /*}\par
+00002 {\cf20  * PIC18F4550 I2C Source File}\par
+00003 {\cf20  * http://www.electronicwings.com}\par
+00004 {\cf20  */} \par
+00005 \par
+00006 {\cf21 #include "Funciones.h"}\par
+00007 \par
+00008 {\cf20 /*********************************************************************}\par
+00009 {\cf20  * Function:        uint16_t ReadADC(void)}\par
+00010 {\cf20  *}\par
+00011 {\cf20  * Input:           None}\par
+00012 {\cf20  *}\par
+00013 {\cf20  * Output:          uint16_t result: Informacion de la temperatura luego de la }\par
+00014 {\cf20  *                  conversion}\par
+00015 {\cf20  *}\par
+00016 {\cf20  * Overview:        Funcion que se encarga de tomar la informacion en el ADC}\par
+00017 {\cf20  *                  y volverla mas facil de enterder para poder mostrala en el LCD}\par
+00018 {\cf20  *}\par
+00019 {\cf20  * Note:            None}\par
+00020 {\cf20  ********************************************************************/}\par
+00021 \par
+00022 uint16_t ReadADC({\cf18 void}) \{\par
+00023     \par
+00024     uint16_t result;\par
+00025 \par
+00026     TRISD = 0x00;    \par
+00027     TRISA = 0xFF;\par
+00028     \par
+00029     OSCCONbits.IRCF = 0b111; {\cf20 //Configura oscilador interno (FOSC = 8Mhz)}\par
+00030     OSCCONbits.SCS = 0b10; {\cf20 // Oscilador del sistema = Fosc interno}\par
+00031 \par
+00032     {\cf20 //ADC = 10bits, Tad = 1us, Tacq = 4us, Vref = 5v-0v, RA=ANALOG}\par
+00033     ADCON1bits.PCFG = 0b1110; {\cf20 //  Configura el Puerto como Entrada Anal\'F3gica.}\par
+00034     ADCON1bits.VCFG = 0b00; {\cf20 //  Selecciona Voltajes de Referencia (5v-0v).}\par
+00035     ADCON0bits.CHS = 0b0000; {\cf20 //  Selecciona el Canal Anal\'F3gico.}\par
+00036     ADCON2bits.ACQT = 0b010; {\cf20 //  Tiempo de Adquisici\'F3n 4Tad.}\par
+00037     ADCON2bits.ADCS = 0b001; {\cf20 //  Tiempo de Conversi\'F3n Fosc/8.}\par
+00038     ADCON2bits.ADFM = 1; {\cf20 //  Justificaci\'F3n derecha (modo-10bits).}\par
+00039     ADCON0bits.ADON = 1; {\cf20 //  Habilita el M\'F3dulo AD.}\par
+00040 \par
+00041       {\cf19 while} (1) \{\par
+00042         ADCON0bits.GO_DONE = 1; {\cf20 //Inicia la COnversi\'F3 AD.}\par
+00043         {\cf19 while} (ADCON0bits.GO_DONE); {\cf20 //  Espera a que termine la conversi\'F3n AD.}\par
+00044         result = ADRESH; {\cf20 //  Lectura de valor AD.}\par
+00045         result = (result << 8) + ADRESL;\par
+00046         result = ((result*500.0)/1023.0)-49.5;\par
+00047        \par
+00048         {\cf19 return} result;\par
+00049     \}\par
+00050 \}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Referencia del Archivo D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Usart.h\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Usart.h}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Usart.h}
+{\bkmkstart AAAAAAAAFL}
+{\bkmkend AAAAAAAAFL}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Funciones\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b USART_Init} (long)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b USART_TransmitChar} (char)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b USART_SendString} (const char *)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b USART_ReceiveChar} (void)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Documentaci\'F3n de las funciones\par
+\pard\plain 
+{\xe \v USART_Init\:Usart.h}
+{\xe \v Usart.h\:USART_Init}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void USART_Init (long  {\i baud_rate})}}
+\par
+{\bkmkstart AAAAAAAAFM}
+{\bkmkend AAAAAAAAFM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 37} del archivo {\b Bluetooth.c}.}\par
+}
+{\xe \v USART_ReceiveChar\:Usart.h}
+{\xe \v Usart.h\:USART_ReceiveChar}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char USART_ReceiveChar (void )}}
+\par
+{\bkmkstart AAAAAAAAFN}
+{\bkmkend AAAAAAAAFN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 76} del archivo {\b Bluetooth.c}.}\par
+}
+{\xe \v USART_SendString\:Usart.h}
+{\xe \v Usart.h\:USART_SendString}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void USART_SendString (const char *  {\i out})}}
+\par
+{\bkmkstart AAAAAAAAFO}
+{\bkmkend AAAAAAAAFO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 93} del archivo {\b Bluetooth.c}.}\par
+}
+{\xe \v USART_TransmitChar\:Usart.h}
+{\xe \v Usart.h\:USART_TransmitChar}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void USART_TransmitChar (char  {\i out})}}
+\par
+{\bkmkstart AAAAAAAAFP}
+{\bkmkend AAAAAAAAFP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definici\'F3n en la l\'EDnea {\b 59} del archivo {\b Bluetooth.c}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Usart.h\par \pard\plain 
+{\tc\tcl2 \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Usart.h}
+{\xe \v D:/Clases 2021/Arquitectura Computacional/Github/Smart_Watch/SmartWatch.X/Usart.h}
+{\bkmkstart AAAAAAAAAO}
+{\bkmkend AAAAAAAAAO}
+Ir a la documentaci\'F3n de este archivo.{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf20 /* }\par
+00002 {\cf20  * File:   Estados.c}\par
+00003 {\cf20  * Author: Arlex Fabian Galindez-Geraldina Ivonne Carlosama-Juan Sebastian Osorio}\par
+00004 {\cf20  *}\par
+00005 {\cf20  * Created on 4 de octubre de 2021, 10:59 AM}\par
+00006 {\cf20  */}\par
+00007 \par
+00008 \par
+00009 {\cf20 // This is a guard condition so that contents of this file are not included}\par
+00010 {\cf20 // more than once.  }\par
+00011 {\cf18 void} USART_Init({\cf18 long});{\cf20 /*Inicializa el Bluetooth*/}\par
+00012 {\cf18 void} USART_TransmitChar({\cf18 char});{\cf20 /*Trasnmite los datos*/}\par
+00013 {\cf18 void} USART_SendString({\cf17 const} {\cf18 char} *);{\cf20 /*Envia el mensaje a imprimir*/}\par
+00014 {\cf18 char} USART_ReceiveChar({\cf18 void});{\cf20 /*Recibe los datos*/}\par
+00015 \par
+}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \'CDndice\par 
+\pard\plain 
+{\tc \v \'CDndice}
+{\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
+}

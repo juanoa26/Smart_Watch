@@ -1,0 +1,88 @@
+\hypertarget{_bluetooth_8c_source}{}\doxysection{Bluetooth.\+c}
+\label{_bluetooth_8c_source}\index{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/Bluetooth.c@{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/Bluetooth.c}}
+\mbox{\hyperlink{_bluetooth_8c}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00018}00018 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_funciones_8h}{Funciones.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00019}00019 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_usart_8h}{Usart.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00021}\mbox{\hyperlink{_bluetooth_8c_a43bafb28b29491ec7f871319b5a3b2f8}{00021}} \textcolor{preprocessor}{\#define F\_CPU 8000000/64}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00022}00022 \textcolor{comment}{//\#define Baud\_value(baud\_rate) (((float)(F\_CPU)/(float)baud\_rate)-\/1)}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00023}\mbox{\hyperlink{_bluetooth_8c_acea008bd2e51bf8d1466e20b35ff2742}{00023}} \textcolor{preprocessor}{\#define Baud\_value (((float)(F\_CPU)/(float)baud\_rate)-\/1)}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00026}00026 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00027}00027 \textcolor{comment}{ * Function:        void USART\_Init(long baud\_rate)}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00028}00028 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00029}00029 \textcolor{comment}{ * Input:           long baud\_rate: Valor de frecuencia}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00030}00030 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00031}00031 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00032}00032 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00033}00033 \textcolor{comment}{ * Overview:        Iniciliza la comunicacion con el bluetooth}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00034}00034 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00035}00035 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00036}00036 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00037}\mbox{\hyperlink{_bluetooth_8c_afb4b88e1987584afc1fa235f899852c3}{00037}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_bluetooth_8c_afb4b88e1987584afc1fa235f899852c3}{USART\_Init}}(\textcolor{keywordtype}{long} baud\_rate) \{}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00038}00038     \textcolor{keywordtype}{float} temp;}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00039}00039     TRISC6 = 0; \textcolor{comment}{/*Make Tx pin as output*/}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00040}00040     TRISC7 = 1; \textcolor{comment}{/*Make Rx pin as input*/}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00041}00041     temp = \mbox{\hyperlink{_bluetooth_8c_acea008bd2e51bf8d1466e20b35ff2742}{Baud\_value}};}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00042}00042     SPBRG = (int) temp; \textcolor{comment}{/*baud rate=9600, SPBRG = (F\_CPU /(64*9600))-\/1*/}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00043}00043     TXSTA = 0x20; \textcolor{comment}{/*Transmit Enable(TX) enable*/}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00044}00044     RCSTA = 0x90; \textcolor{comment}{/*Receive Enable(RX) enable and serial port enable */}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00045}00045     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00046}00046 \}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00048}00048 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00049}00049 \textcolor{comment}{ * Function:        void USART\_TransmitChar(char out)}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00050}00050 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00051}00051 \textcolor{comment}{ * Input:           char out: El dato que se recibe}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00052}00052 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00053}00053 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00054}00054 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00055}00055 \textcolor{comment}{ * Overview:        Transminete los datos }}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00056}00056 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00057}00057 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00058}00058 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00059}\mbox{\hyperlink{_bluetooth_8c_a96cc1393d248457f33a434ea6bc41bcc}{00059}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_bluetooth_8c_a96cc1393d248457f33a434ea6bc41bcc}{USART\_TransmitChar}}(\textcolor{keywordtype}{char} out) \{}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00060}00060     \textcolor{keywordflow}{while} (TXIF == 0); \textcolor{comment}{/*wait for transmit interrupt flag*/}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00061}00061     TXREG = out; \textcolor{comment}{/*wait for transmit interrupt flag to set which indicates TXREG is ready}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00062}00062 \textcolor{comment}{                                    for another transmission*/}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00063}00063 \}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00065}00065 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00066}00066 \textcolor{comment}{ * Function:        char USART\_ReceiveChar()}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00067}00067 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00068}00068 \textcolor{comment}{ * Input:           None}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00069}00069 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00070}00070 \textcolor{comment}{ * Output:          char RCREG: Regresa el dato en el registro RCREG}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00071}00071 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00072}00072 \textcolor{comment}{ * Overview:        Envia los datos recibidos y los regresa an menu principal}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00073}00073 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00074}00074 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00075}00075 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00076}\mbox{\hyperlink{_bluetooth_8c_ac68cc29e75e5cd9147d5e3501dd56de1}{00076}} \textcolor{keywordtype}{char} \mbox{\hyperlink{_bluetooth_8c_ac68cc29e75e5cd9147d5e3501dd56de1}{USART\_ReceiveChar}}() \{}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00078}00078     \textcolor{keywordflow}{while} (RCIF == 0); \textcolor{comment}{/*wait for receive interrupt flag*/}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00079}00079     \textcolor{keywordflow}{return} (RCREG); \textcolor{comment}{/*receive data is stored in RCREG register and return to main program */}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00080}00080 \}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00082}00082 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00083}00083 \textcolor{comment}{ * Function:        void USART\_SendString(const char *out)}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00084}00084 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00085}00085 \textcolor{comment}{ * Input:           const char *out: Envia el mensaje a imprimir}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00086}00086 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00087}00087 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00088}00088 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00089}00089 \textcolor{comment}{ * Overview:        Envia el mensaje a imprimir}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00090}00090 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00091}00091 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00092}00092 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00093}\mbox{\hyperlink{_bluetooth_8c_ae1e70f3887da174491e3ac3ec22573e9}{00093}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_bluetooth_8c_ae1e70f3887da174491e3ac3ec22573e9}{USART\_SendString}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *out) \{}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00094}00094     \textcolor{keywordflow}{while} (*out != \textcolor{charliteral}{'\(\backslash\)0'}) \{}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00095}00095         \mbox{\hyperlink{_bluetooth_8c_a96cc1393d248457f33a434ea6bc41bcc}{USART\_TransmitChar}}(*out);}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00096}00096         out++;}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00097}00097     \}}
+\DoxyCodeLine{\Hypertarget{_bluetooth_8c_source_l00098}00098 \}}
+
+\end{DoxyCode}

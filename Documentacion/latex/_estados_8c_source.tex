@@ -1,0 +1,141 @@
+\hypertarget{_estados_8c_source}{}\doxysection{Estados.\+c}
+\label{_estados_8c_source}\index{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/Estados.c@{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/Estados.c}}
+\mbox{\hyperlink{_estados_8c}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00001}00001 \textcolor{comment}{/* }}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00002}00002 \textcolor{comment}{ * File:   Estados.c}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00003}00003 \textcolor{comment}{ * Author: Arlex Fabian Galindez-\/Geraldina Ivonne Carlosama-\/Juan Sebastian Osorio}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00005}00005 \textcolor{comment}{ * Created on 4 de octubre de 2021, 10:59 AM}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00006}00006 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_funciones_8h}{Funciones.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00009}00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_melodia_8h}{Melodia.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00010}00010 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_usart_8h}{Usart.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00012}00012 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00013}00013 \textcolor{comment}{ * Function:        int Estados()}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00014}00014 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00015}00015 \textcolor{comment}{ * Input:           None}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00016}00016 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00017}00017 \textcolor{comment}{ * Output:          Entero: Devuelve un numero entero positivo dependiendo }}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00018}00018 \textcolor{comment}{ *                  de cada una de las condiciones}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00019}00019 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00020}00020 \textcolor{comment}{ * Overview:        Permite determinar cada uno de los respectivos casos a usar}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00021}00021 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00022}00022 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00023}00023 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00025}\mbox{\hyperlink{_estados_8c_a081d772a85ba5c76e5c5dec6d30ff6db}{00025}} \textcolor{keywordtype}{int} \mbox{\hyperlink{_estados_8c_a081d772a85ba5c76e5c5dec6d30ff6db}{Estados}}() \{}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00026}00026     \mbox{\hyperlink{_funciones_8h_a39342d023c3c8b731ec9969c1da501b3}{tempar}} = \mbox{\hyperlink{_funciones_8h_ab85a6b14f71898d5cc3a3e0e49aeabf6}{ReadADC}}();}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00027}00027     \mbox{\hyperlink{_funciones_8h_aa22435b55a8b84bf16cf00696cefbad1}{luz}} = \mbox{\hyperlink{_funciones_8h_afb955c54b43d44528d96dafe21c10c12}{ReadLUZ}}();}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00029}00029     \textcolor{comment}{//data\_in = USART\_ReceiveChar();}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00030}00030     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_funciones_8h_a39342d023c3c8b731ec9969c1da501b3}{tempar}} > 15 \&\& (\mbox{\hyperlink{_funciones_8h_aa22435b55a8b84bf16cf00696cefbad1}{luz}} > 0 \&\& \mbox{\hyperlink{_funciones_8h_aa22435b55a8b84bf16cf00696cefbad1}{luz}} < 400)) \{}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00031}00031         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00032}00032     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((\mbox{\hyperlink{_funciones_8h_a39342d023c3c8b731ec9969c1da501b3}{tempar}} >= 12 \&\& \mbox{\hyperlink{_funciones_8h_a39342d023c3c8b731ec9969c1da501b3}{tempar}} <= 15)\&\&(\mbox{\hyperlink{_funciones_8h_aa22435b55a8b84bf16cf00696cefbad1}{luz}} > 400 \&\& \mbox{\hyperlink{_funciones_8h_aa22435b55a8b84bf16cf00696cefbad1}{luz}} < 700)) \{}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00033}00033         \textcolor{keywordflow}{return} 2;}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00035}00035     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{_funciones_8h_a39342d023c3c8b731ec9969c1da501b3}{tempar}} < 12 \&\& (\mbox{\hyperlink{_funciones_8h_aa22435b55a8b84bf16cf00696cefbad1}{luz}} > 700 \&\& \mbox{\hyperlink{_funciones_8h_aa22435b55a8b84bf16cf00696cefbad1}{luz}} < 1500)) \{}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00036}00036         \textcolor{keywordflow}{return} 3;}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00037}00037     \}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00038}00038     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_funciones_8h_a022d44290a5b59e97a335fd3813df345}{data\_in}} ==\textcolor{charliteral}{'1'})\{}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00039}00039         \textcolor{keywordflow}{return} 4;}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00040}00040     \}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00041}00041 \}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00043}00043 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00044}00044 \textcolor{comment}{ * Function:        void Sunny\_State()}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00045}00045 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00046}00046 \textcolor{comment}{ * Input:           None}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00047}00047 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00048}00048 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00049}00049 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00050}00050 \textcolor{comment}{ * Overview:        Imprime la temperatura y apaga los leds (si estan prendidos),}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00051}00051 \textcolor{comment}{ *                  ademas imprime un emoticon en una pantalla LCD}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00052}00052 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00053}00053 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00054}00054 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00056}\mbox{\hyperlink{_estados_8c_a1dd75174d69d3b13fe0453bf80164361}{00056}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_estados_8c_a1dd75174d69d3b13fe0453bf80164361}{Sunny\_State}}() \{}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00057}00057     \mbox{\hyperlink{_funciones_8h_aca338dbd19d7940923334629f6e5f3b7}{LED\_GREEN}} = \mbox{\hyperlink{_funciones_8h_a29e413f6725b2ba32d165ffaa35b01e5}{OFF}};}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00058}00058     \mbox{\hyperlink{_funciones_8h_afc7538065c055feb629130ef7ce1bbd6}{LED\_GREEN1}} = \mbox{\hyperlink{_funciones_8h_a29e413f6725b2ba32d165ffaa35b01e5}{OFF}};}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00059}00059     \mbox{\hyperlink{_funciones_8h_a6b0e03aa51516e668b51b434473a2f1a}{LED\_GREEN2}} = \mbox{\hyperlink{_funciones_8h_a29e413f6725b2ba32d165ffaa35b01e5}{OFF}};}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00060}00060     sprintf(\mbox{\hyperlink{_funciones_8h_a7ebb946df38a3648f7d2baa6ff6f05a9}{Stemp}}, \textcolor{stringliteral}{"{}\%0.0fC"{}}, \mbox{\hyperlink{_funciones_8h_a39342d023c3c8b731ec9969c1da501b3}{tempar}});}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00061}00061     \mbox{\hyperlink{_l_c_d__caracter_8c_ac164102b5548d181e0865cca65dffd73}{LCD\_String\_xy}}(1, 0, \mbox{\hyperlink{_funciones_8h_a7ebb946df38a3648f7d2baa6ff6f05a9}{Stemp}});}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00062}00062     \mbox{\hyperlink{_l_c_d__caracter_8c_a6e5c72963efdd48dd7fc0b77c58c1ee2}{LCD\_Custom\_Char}}(0, \mbox{\hyperlink{_funciones_8h_a5a49a4fade8c6ce06a62a6779075f3ac}{character2}}); \textcolor{comment}{/* Write custom character to CGRAM 0x00 memory location */}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00063}00063     \mbox{\hyperlink{_l_c_d__caracter_8c_a5deccc9bde4056e7354d6e4a02b24a41}{LCD\_Command}}(0xc0);}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00064}00064     \mbox{\hyperlink{_l_c_d__caracter_8c_a4d327799821093ffa93c41ec634b0ca6}{LCD\_Char}}(0);}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00065}00065     }
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00066}00066     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00067}00067 \}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00069}00069 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00070}00070 \textcolor{comment}{ * Function:        void Cloudy\_State()}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00071}00071 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00072}00072 \textcolor{comment}{ * Input:           None}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00073}00073 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00074}00074 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00075}00075 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00076}00076 \textcolor{comment}{ * Overview:        Imprime la temperatura y prende dos leds (si estan apagados),}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00077}00077 \textcolor{comment}{ *                  ademas imprime un emoticon en una pantalla LCD}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00078}00078 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00079}00079 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00080}00080 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00082}\mbox{\hyperlink{_estados_8c_aa82b2fd93674b5714ea32b117a601413}{00082}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_estados_8c_aa82b2fd93674b5714ea32b117a601413}{Cloudy\_State}}() \{}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00083}00083     \mbox{\hyperlink{_funciones_8h_aca338dbd19d7940923334629f6e5f3b7}{LED\_GREEN}} = \mbox{\hyperlink{_funciones_8h_ad76d1750a6cdeebd506bfcd6752554d2}{ON}};}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00084}00084     \mbox{\hyperlink{_funciones_8h_afc7538065c055feb629130ef7ce1bbd6}{LED\_GREEN1}} = \mbox{\hyperlink{_funciones_8h_ad76d1750a6cdeebd506bfcd6752554d2}{ON}};}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00085}00085     \mbox{\hyperlink{_funciones_8h_a6b0e03aa51516e668b51b434473a2f1a}{LED\_GREEN2}} = \mbox{\hyperlink{_funciones_8h_a29e413f6725b2ba32d165ffaa35b01e5}{OFF}};}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00086}00086     sprintf(\mbox{\hyperlink{_funciones_8h_a7ebb946df38a3648f7d2baa6ff6f05a9}{Stemp}}, \textcolor{stringliteral}{"{}\%0.0fC"{}}, \mbox{\hyperlink{_funciones_8h_a39342d023c3c8b731ec9969c1da501b3}{tempar}});}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00087}00087     \mbox{\hyperlink{_l_c_d__caracter_8c_ac164102b5548d181e0865cca65dffd73}{LCD\_String\_xy}}(1, 0, \mbox{\hyperlink{_funciones_8h_a7ebb946df38a3648f7d2baa6ff6f05a9}{Stemp}});}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00088}00088     \mbox{\hyperlink{_l_c_d__caracter_8c_a6e5c72963efdd48dd7fc0b77c58c1ee2}{LCD\_Custom\_Char}}(0, \mbox{\hyperlink{_funciones_8h_a274ffde827b969dfb2922f934129d718}{character3}}); \textcolor{comment}{/* Write custom character to CGRAM 0x00 memory location */}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00089}00089     \mbox{\hyperlink{_l_c_d__caracter_8c_a5deccc9bde4056e7354d6e4a02b24a41}{LCD\_Command}}(0xc0);}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00090}00090     \mbox{\hyperlink{_l_c_d__caracter_8c_a4d327799821093ffa93c41ec634b0ca6}{LCD\_Char}}(0);}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00091}00091     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00092}00092 \}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00094}00094 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00095}00095 \textcolor{comment}{ * Function:        void Rainy\_State()}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00096}00096 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00097}00097 \textcolor{comment}{ * Input:           None}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00098}00098 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00099}00099 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00100}00100 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00101}00101 \textcolor{comment}{ * Overview:        Imprime la temperatura y prende todos leds (si estan apagados),}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00102}00102 \textcolor{comment}{ *                  ademas imprime un emoticon en una pantalla LCD}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00103}00103 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00104}00104 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00105}00105 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00107}\mbox{\hyperlink{_estados_8c_acef58d0cc9be73df7c16f50e8fb9e534}{00107}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_estados_8c_acef58d0cc9be73df7c16f50e8fb9e534}{Rainy\_State}}() \{}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00108}00108     \mbox{\hyperlink{_funciones_8h_aca338dbd19d7940923334629f6e5f3b7}{LED\_GREEN}} = \mbox{\hyperlink{_funciones_8h_ad76d1750a6cdeebd506bfcd6752554d2}{ON}};}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00109}00109     \mbox{\hyperlink{_funciones_8h_afc7538065c055feb629130ef7ce1bbd6}{LED\_GREEN1}} = \mbox{\hyperlink{_funciones_8h_ad76d1750a6cdeebd506bfcd6752554d2}{ON}};}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00110}00110     \mbox{\hyperlink{_funciones_8h_a6b0e03aa51516e668b51b434473a2f1a}{LED\_GREEN2}} = \mbox{\hyperlink{_funciones_8h_ad76d1750a6cdeebd506bfcd6752554d2}{ON}};}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00111}00111     sprintf(\mbox{\hyperlink{_funciones_8h_a7ebb946df38a3648f7d2baa6ff6f05a9}{Stemp}}, \textcolor{stringliteral}{"{}\%0.0fC"{}}, \mbox{\hyperlink{_funciones_8h_a39342d023c3c8b731ec9969c1da501b3}{tempar}});}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00112}00112     \mbox{\hyperlink{_l_c_d__caracter_8c_ac164102b5548d181e0865cca65dffd73}{LCD\_String\_xy}}(1, 0, \mbox{\hyperlink{_funciones_8h_a7ebb946df38a3648f7d2baa6ff6f05a9}{Stemp}});}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00113}00113     \mbox{\hyperlink{_l_c_d__caracter_8c_a6e5c72963efdd48dd7fc0b77c58c1ee2}{LCD\_Custom\_Char}}(0, \mbox{\hyperlink{_funciones_8h_aa743fe5bf1870d778aee253442e1d9b0}{character1}}); \textcolor{comment}{/* Write custom character to CGRAM 0x00 memory location */}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00114}00114     \mbox{\hyperlink{_l_c_d__caracter_8c_a5deccc9bde4056e7354d6e4a02b24a41}{LCD\_Command}}(0xc0);}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00115}00115     \mbox{\hyperlink{_l_c_d__caracter_8c_a4d327799821093ffa93c41ec634b0ca6}{LCD\_Char}}(0);}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00116}00116     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00117}00117 \}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00119}00119 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00120}00120 \textcolor{comment}{ * Function:        void Alarm\_Status(void)}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00121}00121 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00122}00122 \textcolor{comment}{ * Input:           None}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00123}00123 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00124}00124 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00125}00125 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00126}00126 \textcolor{comment}{ * Overview:        Se encarga de hacer sonar la alarma e imprimir un mensaje de buenos dias}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00127}00127 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00128}00128 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00129}00129 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00130}\mbox{\hyperlink{_estados_8c_aa8fb3329093dbace8c2b5699b3bcae19}{00130}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_estados_8c_aa8fb3329093dbace8c2b5699b3bcae19}{Alarm\_Status}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00131}00131     }
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00132}00132     \mbox{\hyperlink{_bluetooth_8c_ae1e70f3887da174491e3ac3ec22573e9}{USART\_SendString}}(\textcolor{stringliteral}{"{}Buenos Dias"{}});}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00133}00133     \mbox{\hyperlink{_melodia_8c_a8491551dd0c1c5ca953d1415f2524d51}{PlayCancion}}();}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00134}00134     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_estados_8c_source_l00135}00135 \}}
+
+\end{DoxyCode}

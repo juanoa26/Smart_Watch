@@ -1,0 +1,176 @@
+\hypertarget{reloj_8c_source}{}\doxysection{reloj.\+c}
+\label{reloj_8c_source}\index{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/reloj.c@{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/reloj.c}}
+\mbox{\hyperlink{reloj_8c}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00001}00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00002}00002 \textcolor{comment}{ * PIC18F4550 interfacing with RTC DS1307}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00003}00003 \textcolor{comment}{ * http://www.electronicwings.com}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00004}00004 \textcolor{comment}{ */} }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00007}00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_funciones_8h}{Funciones.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_i2_c___master___file_8h}{I2C\_Master\_File.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00010}\mbox{\hyperlink{reloj_8c_a8612827752029385a17f0708a4444d07}{00010}} \textcolor{preprocessor}{\#define device\_id\_write 0xD0}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00011}\mbox{\hyperlink{reloj_8c_a9b98cab8220d3618e2ae6a97690f27df}{00011}} \textcolor{preprocessor}{\#define device\_id\_read 0xD1}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00013}\mbox{\hyperlink{reloj_8c_a15df9ba285cfd842f284025f904edc9c}{00013}} \textcolor{keywordtype}{int} \mbox{\hyperlink{reloj_8c_a90c2ace84e5523d06b7162ea5928acc1}{sec}},\mbox{\hyperlink{reloj_8c_a3e202b201e6255d975cd6d3aff1f5a4d}{min}},\mbox{\hyperlink{reloj_8c_a15df9ba285cfd842f284025f904edc9c}{hour}};}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00014}\mbox{\hyperlink{reloj_8c_a6fda9b1a478471ec7a785df4109f17d6}{00014}} \textcolor{keywordtype}{int} \mbox{\hyperlink{reloj_8c_a8f67164de537e3ec2b47e3204ddd3400}{Day}},\mbox{\hyperlink{reloj_8c_a6fda9b1a478471ec7a785df4109f17d6}{Date}},\mbox{\hyperlink{reloj_8c_a530b376ec91a278ac98531d3ea17f148}{Month}},\mbox{\hyperlink{reloj_8c_a42e645110404fbf4f10235789577fa32}{Year}};}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00016}00016 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00017}00017 \textcolor{comment}{ * Function:        void RTC\_Read\_Clock(char read\_clock\_address)}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00018}00018 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00019}00019 \textcolor{comment}{ * Input:           char read\_clock\_address: direccion para leer la hora, minutos y segundos}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00020}00020 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00021}00021 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00022}00022 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00023}00023 \textcolor{comment}{ * Overview:        Permite leer la hora del reloj RTC}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00024}00024 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00025}00025 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00026}00026 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00028}\mbox{\hyperlink{reloj_8c_a25802d09146b657ce5a7317d991dc1b7}{00028}} \textcolor{keywordtype}{void} \mbox{\hyperlink{reloj_8c_a25802d09146b657ce5a7317d991dc1b7}{RTC\_Read\_Clock}}(\textcolor{keywordtype}{char} read\_clock\_address)}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00029}00029 \{}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00030}00030     \mbox{\hyperlink{_i2_c___master___file_8h_a6fb40f6f2bfd9d3e1dd2ea13784dcad9}{I2C\_Start}}(\mbox{\hyperlink{reloj_8c_a8612827752029385a17f0708a4444d07}{device\_id\_write}});}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00031}00031     \mbox{\hyperlink{_i2_c___master___file_8h_ab64f1e627a5b012a18549321a26ecc9e}{I2C\_Write}}(read\_clock\_address);     \textcolor{comment}{/* address from where time needs to be read*/}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00032}00032     \mbox{\hyperlink{_i2_c___master___file_8h_a2709cf403f0c24fe87e0e55850ae85d8}{I2C\_Repeated\_Start}}(\mbox{\hyperlink{reloj_8c_a9b98cab8220d3618e2ae6a97690f27df}{device\_id\_read}});}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00033}00033     \mbox{\hyperlink{reloj_8c_a90c2ace84e5523d06b7162ea5928acc1}{sec}} = \mbox{\hyperlink{_i2_c___master___file_8h_ae659adbd3c6a366248a65a5a06ccaddf}{I2C\_Read}}(0);                 \textcolor{comment}{/*read data and send ack for continuous reading*/}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00034}00034     \mbox{\hyperlink{reloj_8c_a3e202b201e6255d975cd6d3aff1f5a4d}{min}} = \mbox{\hyperlink{_i2_c___master___file_8h_ae659adbd3c6a366248a65a5a06ccaddf}{I2C\_Read}}(0);                 \textcolor{comment}{/*read data and send ack for continuous reading*/}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00035}00035     \mbox{\hyperlink{reloj_8c_a15df9ba285cfd842f284025f904edc9c}{hour}}= \mbox{\hyperlink{_i2_c___master___file_8h_ae659adbd3c6a366248a65a5a06ccaddf}{I2C\_Read}}(1);                 \textcolor{comment}{/*read data and send nack for indicating stop reading*/}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00036}00036     }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00037}00037 \}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00039}00039 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00040}00040 \textcolor{comment}{ * Function:        void RTC\_Read\_Calendar(char read\_calendar\_address)}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00041}00041 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00042}00042 \textcolor{comment}{ * Input:           char read\_calendar\_address: direccion para leer dia,mes,fecha}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00043}00043 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00044}00044 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00045}00045 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00046}00046 \textcolor{comment}{ * Overview:        Permite leer la fecha del RTC}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00047}00047 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00048}00048 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00049}00049 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00051}\mbox{\hyperlink{reloj_8c_a3a25eb43def7a911c034b9b737fc44e3}{00051}} \textcolor{keywordtype}{void} \mbox{\hyperlink{reloj_8c_a3a25eb43def7a911c034b9b737fc44e3}{RTC\_Read\_Calendar}}(\textcolor{keywordtype}{char} read\_calendar\_address)}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00052}00052 \{   }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00053}00053     \mbox{\hyperlink{_i2_c___master___file_8h_a6fb40f6f2bfd9d3e1dd2ea13784dcad9}{I2C\_Start}}(\mbox{\hyperlink{reloj_8c_a8612827752029385a17f0708a4444d07}{device\_id\_write}});}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00054}00054     \mbox{\hyperlink{_i2_c___master___file_8h_ab64f1e627a5b012a18549321a26ecc9e}{I2C\_Write}}(read\_calendar\_address); \textcolor{comment}{/* address from where time needs to be read*/}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00055}00055     \mbox{\hyperlink{_i2_c___master___file_8h_a2709cf403f0c24fe87e0e55850ae85d8}{I2C\_Repeated\_Start}}(\mbox{\hyperlink{reloj_8c_a9b98cab8220d3618e2ae6a97690f27df}{device\_id\_read}});}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00056}00056     \mbox{\hyperlink{reloj_8c_a8f67164de537e3ec2b47e3204ddd3400}{Day}} = \mbox{\hyperlink{_i2_c___master___file_8h_ae659adbd3c6a366248a65a5a06ccaddf}{I2C\_Read}}(0);                \textcolor{comment}{/*read data and send ack for continuous reading*/}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00057}00057     \mbox{\hyperlink{reloj_8c_a6fda9b1a478471ec7a785df4109f17d6}{Date}} = \mbox{\hyperlink{_i2_c___master___file_8h_ae659adbd3c6a366248a65a5a06ccaddf}{I2C\_Read}}(0);               \textcolor{comment}{/*read data and send ack for continuous reading*/}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00058}00058     \mbox{\hyperlink{reloj_8c_a530b376ec91a278ac98531d3ea17f148}{Month}} = \mbox{\hyperlink{_i2_c___master___file_8h_ae659adbd3c6a366248a65a5a06ccaddf}{I2C\_Read}}(0);              \textcolor{comment}{/*read data and send ack for continuous reading*/}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00059}00059     \mbox{\hyperlink{reloj_8c_a42e645110404fbf4f10235789577fa32}{Year}} = \mbox{\hyperlink{_i2_c___master___file_8h_ae659adbd3c6a366248a65a5a06ccaddf}{I2C\_Read}}(1);               \textcolor{comment}{/*read data and send nack for indicating stop reading*/}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00060}00060     \mbox{\hyperlink{_i2_c___master___file_8h_a8c642a2d729a9cf462643092a54c2fc4}{I2C\_Stop}}();}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00061}00061 \}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00063}00063 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00064}00064 \textcolor{comment}{ * Function:        void RTC\_Calendario()}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00065}00065 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00066}00066 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00067}00067 \textcolor{comment}{ * Input:           None}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00068}00068 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00069}00069 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00070}00070 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00071}00071 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00072}00072 \textcolor{comment}{ * Overview:        Hace el llamado de las funciones de reloj y calendario}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00073}00073 \textcolor{comment}{ *                  para luego hacer las conversiones necesarias y mostrarlas en }}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00074}00074 \textcolor{comment}{ *                  una pantalla LCD}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00075}00075 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00076}00076 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00077}00077 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00079}\mbox{\hyperlink{_i2_c___master___file_8h_a4a67d4bb2679cbcf9361dce21fb7b61a}{00079}} \textcolor{keywordtype}{void} \mbox{\hyperlink{reloj_8c_a4a67d4bb2679cbcf9361dce21fb7b61a}{RTC\_Calendario}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00080}00080 \{}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00081}00081     }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00082}00082     \textcolor{keywordtype}{char} secs[10],mins[10],hours[10];}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00083}00083     \textcolor{keywordtype}{char} date[10],month[10],year[10];}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00084}00084     \textcolor{keywordtype}{char} Clock\_type = 0x06;}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00085}00085     \textcolor{keywordtype}{char} AM\_PM = 0x05;}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00086}00086     \textcolor{keywordtype}{char} days[7] = \{\textcolor{charliteral}{'S'},\textcolor{charliteral}{'M'},\textcolor{charliteral}{'T'},\textcolor{charliteral}{'W'},\textcolor{charliteral}{'t'},\textcolor{charliteral}{'F'},\textcolor{charliteral}{'s'}\};}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00087}00087     OSCCON=0x72;                    \textcolor{comment}{/*Use internal oscillator and }}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00088}00088 \textcolor{comment}{                                     *set frequency to 8 MHz*/} }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00089}00089     \mbox{\hyperlink{_i2_c___master___file_8h_a84df9a5887b8b8230cfe85d18e53900e}{I2C\_Init}}();                     \textcolor{comment}{/*initialize I2C protocol*/}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00090}00090     \mbox{\hyperlink{_l_c_d__caracter_8c_aa53c9d40f3aa552a9974cd55ac510cb3}{LCD\_Init}}();                     \textcolor{comment}{/*initialize LCD16x2*/}    }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00091}00091     \mbox{\hyperlink{_l_c_d__caracter_8c_ae60d0b62d7eb3fa31266c095d7b3c245}{LCD\_Clear}}();}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00092}00092     \mbox{\hyperlink{_l_c_d__caracter_8c_ac4e08e9c48cd802f4ab493b5c4546f6f}{LCD\_MSdelay}}(10);}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00093}00093     \textcolor{keywordflow}{while}(1)}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00094}00094     \{ }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00095}00095         \mbox{\hyperlink{reloj_8c_a25802d09146b657ce5a7317d991dc1b7}{RTC\_Read\_Clock}}(0);              \textcolor{comment}{/*gives second,minute and hour*/}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00096}00096         \textcolor{keywordflow}{if}(\mbox{\hyperlink{reloj_8c_a15df9ba285cfd842f284025f904edc9c}{hour}} \& (1<<Clock\_type))\{     \textcolor{comment}{/* check clock is 12hr or 24hr */}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00097}00097             }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00098}00098             \textcolor{keywordflow}{if}(\mbox{\hyperlink{reloj_8c_a15df9ba285cfd842f284025f904edc9c}{hour}} \& (1<<AM\_PM))\{      \textcolor{comment}{/* check AM or PM */}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00099}00099                 \mbox{\hyperlink{_l_c_d__caracter_8c_ac164102b5548d181e0865cca65dffd73}{LCD\_String\_xy}}(1,14,\textcolor{stringliteral}{"{}PM"{}});}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00100}00100             \}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00101}00101             \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00102}00102                 \mbox{\hyperlink{_l_c_d__caracter_8c_ac164102b5548d181e0865cca65dffd73}{LCD\_String\_xy}}(1,14,\textcolor{stringliteral}{"{}AM"{}});}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00103}00103             \}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00104}00104             }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00105}00105             \mbox{\hyperlink{reloj_8c_a15df9ba285cfd842f284025f904edc9c}{hour}} = \mbox{\hyperlink{reloj_8c_a15df9ba285cfd842f284025f904edc9c}{hour}} \& (0x1f);}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00106}00106             sprintf(secs,\textcolor{stringliteral}{"{}\%x "{}},\mbox{\hyperlink{reloj_8c_a90c2ace84e5523d06b7162ea5928acc1}{sec}});   \textcolor{comment}{/*\%x for reading BCD format from RTC DS1307*/}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00107}00107             sprintf(mins,\textcolor{stringliteral}{"{}\%x:"{}},\mbox{\hyperlink{reloj_8c_a3e202b201e6255d975cd6d3aff1f5a4d}{min}});    }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00108}00108             sprintf(hours,\textcolor{stringliteral}{"{}\%x:"{}},\mbox{\hyperlink{reloj_8c_a15df9ba285cfd842f284025f904edc9c}{hour}});  }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00109}00109             \mbox{\hyperlink{_l_c_d__caracter_8c_ac164102b5548d181e0865cca65dffd73}{LCD\_String\_xy}}(0,4,hours);            }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00110}00110             \mbox{\hyperlink{_l_c_d__caracter_8c_ae82669e730dd8cd249730db12f4de7c4}{LCD\_String}}(mins);}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00111}00111             \mbox{\hyperlink{_l_c_d__caracter_8c_ae82669e730dd8cd249730db12f4de7c4}{LCD\_String}}(secs);}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00112}00112         \}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00113}00113         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00114}00114             }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00115}00115             \mbox{\hyperlink{reloj_8c_a15df9ba285cfd842f284025f904edc9c}{hour}} = \mbox{\hyperlink{reloj_8c_a15df9ba285cfd842f284025f904edc9c}{hour}} \& (0x3f);}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00116}00116             sprintf(secs,\textcolor{stringliteral}{"{}\%x "{}},\mbox{\hyperlink{reloj_8c_a90c2ace84e5523d06b7162ea5928acc1}{sec}});   \textcolor{comment}{/*\%x for reading BCD format from RTC DS1307*/}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00117}00117             sprintf(mins,\textcolor{stringliteral}{"{}\%x:"{}},\mbox{\hyperlink{reloj_8c_a3e202b201e6255d975cd6d3aff1f5a4d}{min}});    }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00118}00118             sprintf(hours,\textcolor{stringliteral}{"{}\%x:"{}},\mbox{\hyperlink{reloj_8c_a15df9ba285cfd842f284025f904edc9c}{hour}});  }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00119}00119             \mbox{\hyperlink{_l_c_d__caracter_8c_ac164102b5548d181e0865cca65dffd73}{LCD\_String\_xy}}(0,4,hours);            }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00120}00120             \mbox{\hyperlink{_l_c_d__caracter_8c_ae82669e730dd8cd249730db12f4de7c4}{LCD\_String}}(mins);}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00121}00121             \mbox{\hyperlink{_l_c_d__caracter_8c_ae82669e730dd8cd249730db12f4de7c4}{LCD\_String}}(secs); }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00122}00122         \}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00123}00123         }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00124}00124         \mbox{\hyperlink{reloj_8c_a3a25eb43def7a911c034b9b737fc44e3}{RTC\_Read\_Calendar}}(3);        \textcolor{comment}{/*gives day, date, month, year*/}        }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00125}00125         \mbox{\hyperlink{_i2_c___master___file_8h_a8c642a2d729a9cf462643092a54c2fc4}{I2C\_Stop}}();}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00126}00126         sprintf(date,\textcolor{stringliteral}{"{}\%x-\/"{}},\mbox{\hyperlink{reloj_8c_a6fda9b1a478471ec7a785df4109f17d6}{Date}});}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00127}00127         sprintf(month,\textcolor{stringliteral}{"{}\%x-\/"{}},\mbox{\hyperlink{reloj_8c_a530b376ec91a278ac98531d3ea17f148}{Month}});}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00128}00128         sprintf(year,\textcolor{stringliteral}{"{}\%x "{}},\mbox{\hyperlink{reloj_8c_a42e645110404fbf4f10235789577fa32}{Year}});}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00129}00129         \mbox{\hyperlink{_l_c_d__caracter_8c_ac164102b5548d181e0865cca65dffd73}{LCD\_String\_xy}}(2,2,date);}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00130}00130         \mbox{\hyperlink{_l_c_d__caracter_8c_ae82669e730dd8cd249730db12f4de7c4}{LCD\_String}}(month);}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00131}00131         \mbox{\hyperlink{_l_c_d__caracter_8c_ae82669e730dd8cd249730db12f4de7c4}{LCD\_String}}(year);}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00133}00133     \textcolor{comment}{/* find day */}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00134}00134         \textcolor{keywordflow}{switch}(days[\mbox{\hyperlink{reloj_8c_a8f67164de537e3ec2b47e3204ddd3400}{Day}}])}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00135}00135         \{}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00136}00136             \textcolor{keywordflow}{case} \textcolor{charliteral}{'S'}:}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00137}00137                         \mbox{\hyperlink{_l_c_d__caracter_8c_ae82669e730dd8cd249730db12f4de7c4}{LCD\_String}}(\textcolor{stringliteral}{"{}Sun"{}});}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00138}00138                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00139}00139                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00140}00140             \textcolor{keywordflow}{case} \textcolor{charliteral}{'M'}:}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00141}00141                         \mbox{\hyperlink{_l_c_d__caracter_8c_ae82669e730dd8cd249730db12f4de7c4}{LCD\_String}}(\textcolor{stringliteral}{"{}Mon"{}});}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00142}00142                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00143}00143                         \textcolor{keywordflow}{break};                }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00144}00144             \textcolor{keywordflow}{case} \textcolor{charliteral}{'T'}:}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00145}00145                         \mbox{\hyperlink{_l_c_d__caracter_8c_ae82669e730dd8cd249730db12f4de7c4}{LCD\_String}}(\textcolor{stringliteral}{"{}Tue"{}});}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00146}00146                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00147}00147                         \textcolor{keywordflow}{break};                }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00148}00148             \textcolor{keywordflow}{case} \textcolor{charliteral}{'W'}:   }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00149}00149                         \mbox{\hyperlink{_l_c_d__caracter_8c_ae82669e730dd8cd249730db12f4de7c4}{LCD\_String}}(\textcolor{stringliteral}{"{}Wed"{}});}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00150}00150                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00151}00151                         \textcolor{keywordflow}{break};                }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00152}00152             \textcolor{keywordflow}{case} \textcolor{charliteral}{'t'}:}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00153}00153                         \mbox{\hyperlink{_l_c_d__caracter_8c_ae82669e730dd8cd249730db12f4de7c4}{LCD\_String}}(\textcolor{stringliteral}{"{}Thu"{}});}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00154}00154                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00155}00155                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00156}00156             \textcolor{keywordflow}{case} \textcolor{charliteral}{'F'}:}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00157}00157                         \mbox{\hyperlink{_l_c_d__caracter_8c_ae82669e730dd8cd249730db12f4de7c4}{LCD\_String}}(\textcolor{stringliteral}{"{}Fri"{}});}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00158}00158                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00159}00159                         \textcolor{keywordflow}{break};                }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00160}00160             \textcolor{keywordflow}{case} \textcolor{charliteral}{'s'}:}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00161}00161                         \mbox{\hyperlink{_l_c_d__caracter_8c_ae82669e730dd8cd249730db12f4de7c4}{LCD\_String}}(\textcolor{stringliteral}{"{}Sat"{}});}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00162}00162                         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00163}00163                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00164}00164             \textcolor{keywordflow}{default}: }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00165}00165                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00166}00166                         }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00167}00167         \}}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00168}00168         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00169}00169     \}    }
+\DoxyCodeLine{\Hypertarget{reloj_8c_source_l00170}00170 \}}
+
+\end{DoxyCode}

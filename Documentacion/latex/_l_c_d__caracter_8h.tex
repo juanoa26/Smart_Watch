@@ -1,0 +1,173 @@
+\hypertarget{_l_c_d__caracter_8h}{}\doxysection{Referencia del Archivo D\+:/\+Clases 2021/\+Arquitectura Computacional/\+Github/\+Smart\+\_\+\+Watch/\+Smart\+Watch.X/\+LCD\+\_\+caracter.h}
+\label{_l_c_d__caracter_8h}\index{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/LCD\_caracter.h@{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/LCD\_caracter.h}}
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include $<$pic18f4550.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+\doxysubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_l_c_d__caracter_8h_a024148e99a7143db044a48216664d03d}{\+\_\+\+XTAL\+\_\+\+FREQ}}~8000000
+\item 
+\#define \mbox{\hyperlink{_l_c_d__caracter_8h_af8903d8eea3868940c60af887473b152}{RS}}~LATD0  /$\ast$PIN 0 of PORTD is assigned for register select Pin of LCD$\ast$/
+\item 
+\#define \mbox{\hyperlink{_l_c_d__caracter_8h_a22e6626f2c98ed902f8ded47f6438c05}{EN}}~LATD1  /$\ast$PIN 1 of PORTD is assigned for enable Pin of LCD $\ast$/
+\item 
+\#define \mbox{\hyperlink{_l_c_d__caracter_8h_a9ab6954b25558526556ab556c4be540b}{ldata}}~LATD  /$\ast$PORTD(PD4-\/PD7) is assigned for LCD Data Output$\ast$/
+\item 
+\#define \mbox{\hyperlink{_l_c_d__caracter_8h_aa1454638c60ba2bfd8885e763b6e637b}{LCD\+\_\+\+Port}}~TRISD  /$\ast$define macros for PORTD Direction Register$\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_l_c_d__caracter_8h_af3f584e77ba91ec162cf5e58136d90af}{LCD\+\_\+\+MSdelay}} (unsigned int)
+\item 
+void \mbox{\hyperlink{_l_c_d__caracter_8h_aa53c9d40f3aa552a9974cd55ac510cb3}{LCD\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{_l_c_d__caracter_8h_a28735c052c54fa576f8f6f8bca963fe4}{LCD\+\_\+\+Command}} (unsigned char)
+\item 
+void \mbox{\hyperlink{_l_c_d__caracter_8h_aabb29c7a1ecbadd623142601b109caff}{LCD\+\_\+\+Char}} (unsigned char x)
+\item 
+void \mbox{\hyperlink{_l_c_d__caracter_8h_a22f0a1e06eef47597408d0b782fa49f6}{LCD\+\_\+\+String}} (const char $\ast$)
+\item 
+void \mbox{\hyperlink{_l_c_d__caracter_8h_afedff6ea961e4641984f319129e3a1d4}{LCD\+\_\+\+String\+\_\+xy}} (char, char, const char $\ast$)
+\item 
+void \mbox{\hyperlink{_l_c_d__caracter_8h_ae60d0b62d7eb3fa31266c095d7b3c245}{LCD\+\_\+\+Clear}} (void)
+\item 
+void \mbox{\hyperlink{_l_c_d__caracter_8h_ac66f26197fce908f497e4cea7a9f38f3}{LCD\+\_\+\+Custom\+\_\+\+Char}} (unsigned char, unsigned char $\ast$)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\mbox{\Hypertarget{_l_c_d__caracter_8h_a024148e99a7143db044a48216664d03d}\label{_l_c_d__caracter_8h_a024148e99a7143db044a48216664d03d}} 
+\index{LCD\_caracter.h@{LCD\_caracter.h}!\_XTAL\_FREQ@{\_XTAL\_FREQ}}
+\index{\_XTAL\_FREQ@{\_XTAL\_FREQ}!LCD\_caracter.h@{LCD\_caracter.h}}
+\doxysubsubsection{\texorpdfstring{\_XTAL\_FREQ}{\_XTAL\_FREQ}}
+{\footnotesize\ttfamily \#define \+\_\+\+XTAL\+\_\+\+FREQ~8000000}
+
+
+
+Definición en la línea \mbox{\hyperlink{_l_c_d__caracter_8h_source_l00017}{17}} del archivo \mbox{\hyperlink{_l_c_d__caracter_8h_source}{LCD\+\_\+caracter.\+h}}.
+
+\mbox{\Hypertarget{_l_c_d__caracter_8h_a22e6626f2c98ed902f8ded47f6438c05}\label{_l_c_d__caracter_8h_a22e6626f2c98ed902f8ded47f6438c05}} 
+\index{LCD\_caracter.h@{LCD\_caracter.h}!EN@{EN}}
+\index{EN@{EN}!LCD\_caracter.h@{LCD\_caracter.h}}
+\doxysubsubsection{\texorpdfstring{EN}{EN}}
+{\footnotesize\ttfamily \#define EN~LATD1  /$\ast$PIN 1 of PORTD is assigned for enable Pin of LCD $\ast$/}
+
+
+
+Definición en la línea \mbox{\hyperlink{_l_c_d__caracter_8h_source_l00021}{21}} del archivo \mbox{\hyperlink{_l_c_d__caracter_8h_source}{LCD\+\_\+caracter.\+h}}.
+
+\mbox{\Hypertarget{_l_c_d__caracter_8h_aa1454638c60ba2bfd8885e763b6e637b}\label{_l_c_d__caracter_8h_aa1454638c60ba2bfd8885e763b6e637b}} 
+\index{LCD\_caracter.h@{LCD\_caracter.h}!LCD\_Port@{LCD\_Port}}
+\index{LCD\_Port@{LCD\_Port}!LCD\_caracter.h@{LCD\_caracter.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_Port}{LCD\_Port}}
+{\footnotesize\ttfamily \#define LCD\+\_\+\+Port~TRISD  /$\ast$define macros for PORTD Direction Register$\ast$/}
+
+
+
+Definición en la línea \mbox{\hyperlink{_l_c_d__caracter_8h_source_l00023}{23}} del archivo \mbox{\hyperlink{_l_c_d__caracter_8h_source}{LCD\+\_\+caracter.\+h}}.
+
+\mbox{\Hypertarget{_l_c_d__caracter_8h_a9ab6954b25558526556ab556c4be540b}\label{_l_c_d__caracter_8h_a9ab6954b25558526556ab556c4be540b}} 
+\index{LCD\_caracter.h@{LCD\_caracter.h}!ldata@{ldata}}
+\index{ldata@{ldata}!LCD\_caracter.h@{LCD\_caracter.h}}
+\doxysubsubsection{\texorpdfstring{ldata}{ldata}}
+{\footnotesize\ttfamily \#define ldata~LATD  /$\ast$PORTD(PD4-\/PD7) is assigned for LCD Data Output$\ast$/}
+
+
+
+Definición en la línea \mbox{\hyperlink{_l_c_d__caracter_8h_source_l00022}{22}} del archivo \mbox{\hyperlink{_l_c_d__caracter_8h_source}{LCD\+\_\+caracter.\+h}}.
+
+\mbox{\Hypertarget{_l_c_d__caracter_8h_af8903d8eea3868940c60af887473b152}\label{_l_c_d__caracter_8h_af8903d8eea3868940c60af887473b152}} 
+\index{LCD\_caracter.h@{LCD\_caracter.h}!RS@{RS}}
+\index{RS@{RS}!LCD\_caracter.h@{LCD\_caracter.h}}
+\doxysubsubsection{\texorpdfstring{RS}{RS}}
+{\footnotesize\ttfamily \#define RS~LATD0  /$\ast$PIN 0 of PORTD is assigned for register select Pin of LCD$\ast$/}
+
+
+
+Definición en la línea \mbox{\hyperlink{_l_c_d__caracter_8h_source_l00020}{20}} del archivo \mbox{\hyperlink{_l_c_d__caracter_8h_source}{LCD\+\_\+caracter.\+h}}.
+
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{_l_c_d__caracter_8h_aabb29c7a1ecbadd623142601b109caff}\label{_l_c_d__caracter_8h_aabb29c7a1ecbadd623142601b109caff}} 
+\index{LCD\_caracter.h@{LCD\_caracter.h}!LCD\_Char@{LCD\_Char}}
+\index{LCD\_Char@{LCD\_Char}!LCD\_caracter.h@{LCD\_caracter.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_Char()}{LCD\_Char()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Char (\begin{DoxyParamCaption}\item[{unsigned char}]{x }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_l_c_d__caracter_8c_source_l00075}{75}} del archivo \mbox{\hyperlink{_l_c_d__caracter_8c_source}{LCD\+\_\+caracter.\+c}}.
+
+\mbox{\Hypertarget{_l_c_d__caracter_8h_ae60d0b62d7eb3fa31266c095d7b3c245}\label{_l_c_d__caracter_8h_ae60d0b62d7eb3fa31266c095d7b3c245}} 
+\index{LCD\_caracter.h@{LCD\_caracter.h}!LCD\_Clear@{LCD\_Clear}}
+\index{LCD\_Clear@{LCD\_Clear}!LCD\_caracter.h@{LCD\_caracter.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_Clear()}{LCD\_Clear()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_l_c_d__caracter_8c_source_l00155}{155}} del archivo \mbox{\hyperlink{_l_c_d__caracter_8c_source}{LCD\+\_\+caracter.\+c}}.
+
+\mbox{\Hypertarget{_l_c_d__caracter_8h_a28735c052c54fa576f8f6f8bca963fe4}\label{_l_c_d__caracter_8h_a28735c052c54fa576f8f6f8bca963fe4}} 
+\index{LCD\_caracter.h@{LCD\_caracter.h}!LCD\_Command@{LCD\_Command}}
+\index{LCD\_Command@{LCD\_Command}!LCD\_caracter.h@{LCD\_caracter.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_Command()}{LCD\_Command()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Command (\begin{DoxyParamCaption}\item[{unsigned char}]{cmd }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_l_c_d__caracter_8c_source_l00048}{48}} del archivo \mbox{\hyperlink{_l_c_d__caracter_8c_source}{LCD\+\_\+caracter.\+c}}.
+
+\mbox{\Hypertarget{_l_c_d__caracter_8h_ac66f26197fce908f497e4cea7a9f38f3}\label{_l_c_d__caracter_8h_ac66f26197fce908f497e4cea7a9f38f3}} 
+\index{LCD\_caracter.h@{LCD\_caracter.h}!LCD\_Custom\_Char@{LCD\_Custom\_Char}}
+\index{LCD\_Custom\_Char@{LCD\_Custom\_Char}!LCD\_caracter.h@{LCD\_caracter.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_Custom\_Char()}{LCD\_Custom\_Char()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Custom\+\_\+\+Char (\begin{DoxyParamCaption}\item[{unsigned char}]{loc,  }\item[{unsigned char $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_l_c_d__caracter_8c_source_l00174}{174}} del archivo \mbox{\hyperlink{_l_c_d__caracter_8c_source}{LCD\+\_\+caracter.\+c}}.
+
+\mbox{\Hypertarget{_l_c_d__caracter_8h_aa53c9d40f3aa552a9974cd55ac510cb3}\label{_l_c_d__caracter_8h_aa53c9d40f3aa552a9974cd55ac510cb3}} 
+\index{LCD\_caracter.h@{LCD\_caracter.h}!LCD\_Init@{LCD\_Init}}
+\index{LCD\_Init@{LCD\_Init}!LCD\_caracter.h@{LCD\_caracter.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_Init()}{LCD\_Init()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_l_c_d__caracter_8c_source_l00023}{23}} del archivo \mbox{\hyperlink{_l_c_d__caracter_8c_source}{LCD\+\_\+caracter.\+c}}.
+
+\mbox{\Hypertarget{_l_c_d__caracter_8h_af3f584e77ba91ec162cf5e58136d90af}\label{_l_c_d__caracter_8h_af3f584e77ba91ec162cf5e58136d90af}} 
+\index{LCD\_caracter.h@{LCD\_caracter.h}!LCD\_MSdelay@{LCD\_MSdelay}}
+\index{LCD\_MSdelay@{LCD\_MSdelay}!LCD\_caracter.h@{LCD\_caracter.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_MSdelay()}{LCD\_MSdelay()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+MSdelay (\begin{DoxyParamCaption}\item[{unsigned int}]{val }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_l_c_d__caracter_8c_source_l00199}{199}} del archivo \mbox{\hyperlink{_l_c_d__caracter_8c_source}{LCD\+\_\+caracter.\+c}}.
+
+\mbox{\Hypertarget{_l_c_d__caracter_8h_a22f0a1e06eef47597408d0b782fa49f6}\label{_l_c_d__caracter_8h_a22f0a1e06eef47597408d0b782fa49f6}} 
+\index{LCD\_caracter.h@{LCD\_caracter.h}!LCD\_String@{LCD\_String}}
+\index{LCD\_String@{LCD\_String}!LCD\_caracter.h@{LCD\_caracter.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_String()}{LCD\_String()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_l_c_d__caracter_8c_source_l00101}{101}} del archivo \mbox{\hyperlink{_l_c_d__caracter_8c_source}{LCD\+\_\+caracter.\+c}}.
+
+\mbox{\Hypertarget{_l_c_d__caracter_8h_afedff6ea961e4641984f319129e3a1d4}\label{_l_c_d__caracter_8h_afedff6ea961e4641984f319129e3a1d4}} 
+\index{LCD\_caracter.h@{LCD\_caracter.h}!LCD\_String\_xy@{LCD\_String\_xy}}
+\index{LCD\_String\_xy@{LCD\_String\_xy}!LCD\_caracter.h@{LCD\_caracter.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_String\_xy()}{LCD\_String\_xy()}}
+{\footnotesize\ttfamily void LCD\+\_\+\+String\+\_\+xy (\begin{DoxyParamCaption}\item[{char}]{row,  }\item[{char}]{pos,  }\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_l_c_d__caracter_8c_source_l00124}{124}} del archivo \mbox{\hyperlink{_l_c_d__caracter_8c_source}{LCD\+\_\+caracter.\+c}}.
+

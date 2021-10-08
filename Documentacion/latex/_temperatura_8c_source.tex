@@ -1,0 +1,56 @@
+\hypertarget{_temperatura_8c_source}{}\doxysection{Temperatura.\+c}
+\label{_temperatura_8c_source}\index{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/Temperatura.c@{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/Temperatura.c}}
+\mbox{\hyperlink{_temperatura_8c}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00001}00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00002}00002 \textcolor{comment}{ * PIC18F4550 I2C Source File}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00003}00003 \textcolor{comment}{ * http://www.electronicwings.com}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00004}00004 \textcolor{comment}{ */} }
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_funciones_8h}{Funciones.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00008}00008 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00009}00009 \textcolor{comment}{ * Function:        uint16\_t ReadADC(void)}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00010}00010 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00011}00011 \textcolor{comment}{ * Input:           None}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00012}00012 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00013}00013 \textcolor{comment}{ * Output:          uint16\_t result: Informacion de la temperatura luego de la }}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00014}00014 \textcolor{comment}{ *                  conversion}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00015}00015 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00016}00016 \textcolor{comment}{ * Overview:        Funcion que se encarga de tomar la informacion en el ADC}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00017}00017 \textcolor{comment}{ *                  y volverla mas facil de enterder para poder mostrala en el LCD}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00018}00018 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00019}00019 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00020}00020 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00022}\mbox{\hyperlink{_funciones_8h_ab85a6b14f71898d5cc3a3e0e49aeabf6}{00022}} uint16\_t \mbox{\hyperlink{_temperatura_8c_ab85a6b14f71898d5cc3a3e0e49aeabf6}{ReadADC}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00023}00023     }
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00024}00024     uint16\_t \mbox{\hyperlink{_funciones_8h_abfd24350fd0f519cf2cc67a7827ab6fa}{result}};}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00026}00026     TRISD = 0x00;    }
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00027}00027     TRISA = 0xFF;}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00028}00028     }
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00029}00029     OSCCONbits.IRCF = 0b111; \textcolor{comment}{//Configura oscilador interno (FOSC = 8Mhz)}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00030}00030     OSCCONbits.SCS = 0b10; \textcolor{comment}{// Oscilador del sistema = Fosc interno}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00032}00032     \textcolor{comment}{//ADC = 10bits, Tad = 1us, Tacq = 4us, Vref = 5v-\/0v, RA=ANALOG}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00033}00033     ADCON1bits.PCFG = 0b1110; \textcolor{comment}{//  Configura el Puerto como Entrada Analógica.}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00034}00034     ADCON1bits.VCFG = 0b00; \textcolor{comment}{//  Selecciona Voltajes de Referencia (5v-\/0v).}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00035}00035     ADCON0bits.CHS = 0b0000; \textcolor{comment}{//  Selecciona el Canal Analógico.}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00036}00036     ADCON2bits.ACQT = 0b010; \textcolor{comment}{//  Tiempo de Adquisición 4Tad.}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00037}00037     ADCON2bits.ADCS = 0b001; \textcolor{comment}{//  Tiempo de Conversión Fosc/8.}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00038}00038     ADCON2bits.ADFM = 1; \textcolor{comment}{//  Justificación derecha (modo-\/10bits).}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00039}00039     ADCON0bits.ADON = 1; \textcolor{comment}{//  Habilita el Módulo AD.}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00041}00041       \textcolor{keywordflow}{while} (1) \{}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00042}00042         ADCON0bits.GO\_DONE = 1; \textcolor{comment}{//Inicia la COnversió AD.}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00043}00043         \textcolor{keywordflow}{while} (ADCON0bits.GO\_DONE); \textcolor{comment}{//  Espera a que termine la conversión AD.}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00044}00044         \mbox{\hyperlink{_funciones_8h_abfd24350fd0f519cf2cc67a7827ab6fa}{result}} = ADRESH; \textcolor{comment}{//  Lectura de valor AD.}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00045}00045         \mbox{\hyperlink{_funciones_8h_abfd24350fd0f519cf2cc67a7827ab6fa}{result}} = (\mbox{\hyperlink{_funciones_8h_abfd24350fd0f519cf2cc67a7827ab6fa}{result}} << 8) + ADRESL;}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00046}00046         \mbox{\hyperlink{_funciones_8h_abfd24350fd0f519cf2cc67a7827ab6fa}{result}} = ((\mbox{\hyperlink{_funciones_8h_abfd24350fd0f519cf2cc67a7827ab6fa}{result}}*500.0)/1023.0)-\/49.5;}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00047}00047        }
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00048}00048         \textcolor{keywordflow}{return} \mbox{\hyperlink{_funciones_8h_abfd24350fd0f519cf2cc67a7827ab6fa}{result}};}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00049}00049     \}}
+\DoxyCodeLine{\Hypertarget{_temperatura_8c_source_l00050}00050 \}}
+
+\end{DoxyCode}

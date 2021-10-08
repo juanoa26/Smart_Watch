@@ -1,0 +1,74 @@
+\hypertarget{smart__main_8c_source}{}\doxysection{smart\+\_\+main.\+c}
+\label{smart__main_8c_source}\index{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/smart\_main.c@{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/smart\_main.c}}
+\mbox{\hyperlink{smart__main_8c}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00001}00001 \textcolor{comment}{/* }}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00002}00002 \textcolor{comment}{ * File:   smart\_main.c}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00003}00003 \textcolor{comment}{ * Author: Arlex Fabian Galindez-\/Geraldina Ivonne Carlosama-\/Juan Sebastian Osorio}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00004}00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00005}00005 \textcolor{comment}{ * Created on 4 de octubre de 2021, 10:59 AM}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00006}00006 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_l_c_d__caracter_8h}{LCD\_caracter.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00009}00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_i2_c___master___file_8h}{I2C\_Master\_File.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00010}00010 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_funciones_8h}{Funciones.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00011}00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_usart_8h}{Usart.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00013}00013 \textcolor{comment}{/*********************************************************************}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00014}00014 \textcolor{comment}{ * Function:        void main()}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00015}00015 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00016}00016 \textcolor{comment}{ * Input:           None}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00017}00017 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00018}00018 \textcolor{comment}{ * Output:          None}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00019}00019 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00020}00020 \textcolor{comment}{ * Overview:        Funcion pricipal que se encarga del funcionamiento}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00021}00021 \textcolor{comment}{ *                  del programa}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00022}00022 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00023}00023 \textcolor{comment}{ * Note:            None}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00024}00024 \textcolor{comment}{ ********************************************************************/}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00026}\mbox{\hyperlink{smart__main_8c_acdef7a1fd863a6d3770c1268cb06add3}{00026}} \textcolor{keywordtype}{void} \mbox{\hyperlink{smart__main_8c_acdef7a1fd863a6d3770c1268cb06add3}{main}}() \{}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00027}00027     OSCCON = 0x72; \textcolor{comment}{/* Use internal oscillator of 8MHz Frequency */}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00028}00028     TRISE = 0x00; \textcolor{comment}{/* Set direction of PORTB as OUTPUT to which LED is connected */}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00031}00031     \mbox{\hyperlink{_i2_c___master___file_8h_a84df9a5887b8b8230cfe85d18e53900e}{I2C\_Init}}(); \textcolor{comment}{/*Initialize the I2C protocol*/}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00032}00032     \mbox{\hyperlink{_bluetooth_8c_afb4b88e1987584afc1fa235f899852c3}{USART\_Init}}(9600); \textcolor{comment}{/* initialize USART operation with 9600 baud rate */}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00033}00033     \mbox{\hyperlink{_l_c_d__caracter_8c_aa53c9d40f3aa552a9974cd55ac510cb3}{LCD\_Init}}(); \textcolor{comment}{/*Initialize LCD to 5*8 matrix in 4-\/bit mode*/}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00035}00035     \textcolor{keywordflow}{while} (1) \{}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00036}00036         \mbox{\hyperlink{_i2_c___master___file_8h_a4a67d4bb2679cbcf9361dce21fb7b61a}{RTC\_Calendario}}();}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00037}00037         \textcolor{keywordtype}{int} caso = \mbox{\hyperlink{_estados_8c_a081d772a85ba5c76e5c5dec6d30ff6db}{Estados}}();}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00038}00038         \textcolor{keywordflow}{switch} (caso) \{}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00039}00039             \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00040}00040                 \mbox{\hyperlink{_estados_8c_a1dd75174d69d3b13fe0453bf80164361}{Sunny\_State}}();}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00041}00041                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00043}00043             \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00044}00044                 \mbox{\hyperlink{_estados_8c_aa82b2fd93674b5714ea32b117a601413}{Cloudy\_State}}();}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00045}00045                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00047}00047             \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00048}00048                 \mbox{\hyperlink{_estados_8c_acef58d0cc9be73df7c16f50e8fb9e534}{Rainy\_State}}();}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00049}00049                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00050}00050                 }
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00051}00051             \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00052}00052                 \mbox{\hyperlink{_estados_8c_aa8fb3329093dbace8c2b5699b3bcae19}{Alarm\_Status}}();}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00053}00053                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00055}00055             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00056}00056                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00058}00058         \}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00059}00059         \mbox{\hyperlink{_l_c_d__caracter_8c_ac4e08e9c48cd802f4ab493b5c4546f6f}{LCD\_MSdelay}}(3000);}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00060}00060         \mbox{\hyperlink{_l_c_d__caracter_8c_ae60d0b62d7eb3fa31266c095d7b3c245}{LCD\_Clear}}();}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00061}00061     \};}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00063}00063 \}}
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{smart__main_8c_source_l00068}00068 }
+
+\end{DoxyCode}

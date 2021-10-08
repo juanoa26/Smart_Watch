@@ -1,0 +1,189 @@
+\hypertarget{_i2_c___master___file_8h}{}\doxysection{Referencia del Archivo D\+:/\+Clases 2021/\+Arquitectura Computacional/\+Github/\+Smart\+\_\+\+Watch/\+Smart\+Watch.X/\+I2\+C\+\_\+\+Master\+\_\+\+File.h}
+\label{_i2_c___master___file_8h}\index{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/I2C\_Master\_File.h@{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/I2C\_Master\_File.h}}
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+\doxysubsection*{defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_i2_c___master___file_8h_a3aee3beceffb391d6aa3012c48f0a35b}{F\+\_\+\+OSC}}
+\item 
+\#define \mbox{\hyperlink{_i2_c___master___file_8h_ae604a867b14d500ceccdee38d17edf84}{I2\+C\+\_\+\+CLOCK}}~100000                    /$\ast$ I2C clock frequency is 100 k\+Hz$\ast$/
+\item 
+\#define \mbox{\hyperlink{_i2_c___master___file_8h_a17468d10f0c67a4ee7b38aab09d9e096}{BITRATE}}~((\mbox{\hyperlink{_i2_c___master___file_8h_a3aee3beceffb391d6aa3012c48f0a35b}{F\+\_\+\+OSC}}/(4$\ast$\mbox{\hyperlink{_i2_c___master___file_8h_ae604a867b14d500ceccdee38d17edf84}{I2\+C\+\_\+\+CLOCK}}))-\/1)  /$\ast$ find bit rate to assign this value to SSPADD register$\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_i2_c___master___file_8h_a32604c6594874020996a591d1c44a36b}{I2\+C\+\_\+\+Ready}} (void)
+\item 
+void \mbox{\hyperlink{_i2_c___master___file_8h_a84df9a5887b8b8230cfe85d18e53900e}{I2\+C\+\_\+\+Init}} (void)
+\item 
+char \mbox{\hyperlink{_i2_c___master___file_8h_a6fb40f6f2bfd9d3e1dd2ea13784dcad9}{I2\+C\+\_\+\+Start}} (char)
+\item 
+void \mbox{\hyperlink{_i2_c___master___file_8h_adffc05a44d65341315d4e2c2da1ec87d}{I2\+C\+\_\+\+Start\+\_\+\+Wait}} (char)
+\item 
+char \mbox{\hyperlink{_i2_c___master___file_8h_a2709cf403f0c24fe87e0e55850ae85d8}{I2\+C\+\_\+\+Repeated\+\_\+\+Start}} (char)
+\item 
+char \mbox{\hyperlink{_i2_c___master___file_8h_a8c642a2d729a9cf462643092a54c2fc4}{I2\+C\+\_\+\+Stop}} (void)
+\item 
+char \mbox{\hyperlink{_i2_c___master___file_8h_ab64f1e627a5b012a18549321a26ecc9e}{I2\+C\+\_\+\+Write}} (unsigned char)
+\item 
+void \mbox{\hyperlink{_i2_c___master___file_8h_aecd9f094a397ce4ca002fe6ca1513634}{I2\+C\+\_\+\+Ack}} (void)
+\item 
+void \mbox{\hyperlink{_i2_c___master___file_8h_a4fd80a89587fb0f5cc8b743c841f4a42}{I2\+C\+\_\+\+Nack}} (void)
+\item 
+char \mbox{\hyperlink{_i2_c___master___file_8h_ae659adbd3c6a366248a65a5a06ccaddf}{I2\+C\+\_\+\+Read}} (char flag)
+\item 
+void \mbox{\hyperlink{_i2_c___master___file_8h_a4a67d4bb2679cbcf9361dce21fb7b61a}{RTC\+\_\+\+Calendario}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de los \textquotesingle{}defines\textquotesingle{}}
+\mbox{\Hypertarget{_i2_c___master___file_8h_a17468d10f0c67a4ee7b38aab09d9e096}\label{_i2_c___master___file_8h_a17468d10f0c67a4ee7b38aab09d9e096}} 
+\index{I2C\_Master\_File.h@{I2C\_Master\_File.h}!BITRATE@{BITRATE}}
+\index{BITRATE@{BITRATE}!I2C\_Master\_File.h@{I2C\_Master\_File.h}}
+\doxysubsubsection{\texorpdfstring{BITRATE}{BITRATE}}
+{\footnotesize\ttfamily \#define BITRATE~((\mbox{\hyperlink{_i2_c___master___file_8h_a3aee3beceffb391d6aa3012c48f0a35b}{F\+\_\+\+OSC}}/(4$\ast$\mbox{\hyperlink{_i2_c___master___file_8h_ae604a867b14d500ceccdee38d17edf84}{I2\+C\+\_\+\+CLOCK}}))-\/1)  /$\ast$ find bit rate to assign this value to SSPADD register$\ast$/}
+
+
+
+Definición en la línea \mbox{\hyperlink{_i2_c___master___file_8h_source_l00013}{13}} del archivo \mbox{\hyperlink{_i2_c___master___file_8h_source}{I2\+C\+\_\+\+Master\+\_\+\+File.\+h}}.
+
+\mbox{\Hypertarget{_i2_c___master___file_8h_a3aee3beceffb391d6aa3012c48f0a35b}\label{_i2_c___master___file_8h_a3aee3beceffb391d6aa3012c48f0a35b}} 
+\index{I2C\_Master\_File.h@{I2C\_Master\_File.h}!F\_OSC@{F\_OSC}}
+\index{F\_OSC@{F\_OSC}!I2C\_Master\_File.h@{I2C\_Master\_File.h}}
+\doxysubsubsection{\texorpdfstring{F\_OSC}{F\_OSC}}
+{\footnotesize\ttfamily \#define F\+\_\+\+OSC}
+
+{\bfseries Valor\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                               8000000                       \textcolor{comment}{/* define F\_OSC for finding bit rate }}
+\DoxyCodeLine{\textcolor{comment}{                                               here oscillator frequency is 8 MHz so define as 800000 */}}
+
+\end{DoxyCode}
+
+
+Definición en la línea \mbox{\hyperlink{_i2_c___master___file_8h_source_l00011}{11}} del archivo \mbox{\hyperlink{_i2_c___master___file_8h_source}{I2\+C\+\_\+\+Master\+\_\+\+File.\+h}}.
+
+\mbox{\Hypertarget{_i2_c___master___file_8h_ae604a867b14d500ceccdee38d17edf84}\label{_i2_c___master___file_8h_ae604a867b14d500ceccdee38d17edf84}} 
+\index{I2C\_Master\_File.h@{I2C\_Master\_File.h}!I2C\_CLOCK@{I2C\_CLOCK}}
+\index{I2C\_CLOCK@{I2C\_CLOCK}!I2C\_Master\_File.h@{I2C\_Master\_File.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_CLOCK}{I2C\_CLOCK}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+CLOCK~100000                    /$\ast$ I2C clock frequency is 100 k\+Hz$\ast$/}
+
+
+
+Definición en la línea \mbox{\hyperlink{_i2_c___master___file_8h_source_l00012}{12}} del archivo \mbox{\hyperlink{_i2_c___master___file_8h_source}{I2\+C\+\_\+\+Master\+\_\+\+File.\+h}}.
+
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{_i2_c___master___file_8h_aecd9f094a397ce4ca002fe6ca1513634}\label{_i2_c___master___file_8h_aecd9f094a397ce4ca002fe6ca1513634}} 
+\index{I2C\_Master\_File.h@{I2C\_Master\_File.h}!I2C\_Ack@{I2C\_Ack}}
+\index{I2C\_Ack@{I2C\_Ack}!I2C\_Master\_File.h@{I2C\_Master\_File.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_Ack()}{I2C\_Ack()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Ack (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00230}{230}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
+\mbox{\Hypertarget{_i2_c___master___file_8h_a84df9a5887b8b8230cfe85d18e53900e}\label{_i2_c___master___file_8h_a84df9a5887b8b8230cfe85d18e53900e}} 
+\index{I2C\_Master\_File.h@{I2C\_Master\_File.h}!I2C\_Init@{I2C\_Init}}
+\index{I2C\_Init@{I2C\_Init}!I2C\_Master\_File.h@{I2C\_Master\_File.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_Init()}{I2C\_Init()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00057}{57}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
+\mbox{\Hypertarget{_i2_c___master___file_8h_a4fd80a89587fb0f5cc8b743c841f4a42}\label{_i2_c___master___file_8h_a4fd80a89587fb0f5cc8b743c841f4a42}} 
+\index{I2C\_Master\_File.h@{I2C\_Master\_File.h}!I2C\_Nack@{I2C\_Nack}}
+\index{I2C\_Nack@{I2C\_Nack}!I2C\_Master\_File.h@{I2C\_Master\_File.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_Nack()}{I2C\_Nack()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Nack (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00250}{250}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
+\mbox{\Hypertarget{_i2_c___master___file_8h_ae659adbd3c6a366248a65a5a06ccaddf}\label{_i2_c___master___file_8h_ae659adbd3c6a366248a65a5a06ccaddf}} 
+\index{I2C\_Master\_File.h@{I2C\_Master\_File.h}!I2C\_Read@{I2C\_Read}}
+\index{I2C\_Read@{I2C\_Read}!I2C\_Master\_File.h@{I2C\_Master\_File.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_Read()}{I2C\_Read()}}
+{\footnotesize\ttfamily char I2\+C\+\_\+\+Read (\begin{DoxyParamCaption}\item[{char}]{flag }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00027}{27}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
+\mbox{\Hypertarget{_i2_c___master___file_8h_a32604c6594874020996a591d1c44a36b}\label{_i2_c___master___file_8h_a32604c6594874020996a591d1c44a36b}} 
+\index{I2C\_Master\_File.h@{I2C\_Master\_File.h}!I2C\_Ready@{I2C\_Ready}}
+\index{I2C\_Ready@{I2C\_Ready}!I2C\_Master\_File.h@{I2C\_Master\_File.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_Ready()}{I2C\_Ready()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Ready (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00083}{83}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
+\mbox{\Hypertarget{_i2_c___master___file_8h_a2709cf403f0c24fe87e0e55850ae85d8}\label{_i2_c___master___file_8h_a2709cf403f0c24fe87e0e55850ae85d8}} 
+\index{I2C\_Master\_File.h@{I2C\_Master\_File.h}!I2C\_Repeated\_Start@{I2C\_Repeated\_Start}}
+\index{I2C\_Repeated\_Start@{I2C\_Repeated\_Start}!I2C\_Master\_File.h@{I2C\_Master\_File.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_Repeated\_Start()}{I2C\_Repeated\_Start()}}
+{\footnotesize\ttfamily char I2\+C\+\_\+\+Repeated\+\_\+\+Start (\begin{DoxyParamCaption}\item[{char}]{slave\+\_\+read\+\_\+address }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00159}{159}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
+\mbox{\Hypertarget{_i2_c___master___file_8h_a6fb40f6f2bfd9d3e1dd2ea13784dcad9}\label{_i2_c___master___file_8h_a6fb40f6f2bfd9d3e1dd2ea13784dcad9}} 
+\index{I2C\_Master\_File.h@{I2C\_Master\_File.h}!I2C\_Start@{I2C\_Start}}
+\index{I2C\_Start@{I2C\_Start}!I2C\_Master\_File.h@{I2C\_Master\_File.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_Start()}{I2C\_Start()}}
+{\footnotesize\ttfamily char I2\+C\+\_\+\+Start (\begin{DoxyParamCaption}\item[{char}]{slave\+\_\+write\+\_\+address }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00134}{134}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
+\mbox{\Hypertarget{_i2_c___master___file_8h_adffc05a44d65341315d4e2c2da1ec87d}\label{_i2_c___master___file_8h_adffc05a44d65341315d4e2c2da1ec87d}} 
+\index{I2C\_Master\_File.h@{I2C\_Master\_File.h}!I2C\_Start\_Wait@{I2C\_Start\_Wait}}
+\index{I2C\_Start\_Wait@{I2C\_Start\_Wait}!I2C\_Master\_File.h@{I2C\_Master\_File.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_Start\_Wait()}{I2C\_Start\_Wait()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Start\+\_\+\+Wait (\begin{DoxyParamCaption}\item[{char}]{slave\+\_\+write\+\_\+address }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00101}{101}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
+\mbox{\Hypertarget{_i2_c___master___file_8h_a8c642a2d729a9cf462643092a54c2fc4}\label{_i2_c___master___file_8h_a8c642a2d729a9cf462643092a54c2fc4}} 
+\index{I2C\_Master\_File.h@{I2C\_Master\_File.h}!I2C\_Stop@{I2C\_Stop}}
+\index{I2C\_Stop@{I2C\_Stop}!I2C\_Master\_File.h@{I2C\_Master\_File.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_Stop()}{I2C\_Stop()}}
+{\footnotesize\ttfamily char I2\+C\+\_\+\+Stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00186}{186}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
+\mbox{\Hypertarget{_i2_c___master___file_8h_ab64f1e627a5b012a18549321a26ecc9e}\label{_i2_c___master___file_8h_ab64f1e627a5b012a18549321a26ecc9e}} 
+\index{I2C\_Master\_File.h@{I2C\_Master\_File.h}!I2C\_Write@{I2C\_Write}}
+\index{I2C\_Write@{I2C\_Write}!I2C\_Master\_File.h@{I2C\_Master\_File.h}}
+\doxysubsubsection{\texorpdfstring{I2C\_Write()}{I2C\_Write()}}
+{\footnotesize\ttfamily char I2\+C\+\_\+\+Write (\begin{DoxyParamCaption}\item[{unsigned char}]{data }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00208}{208}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
+\mbox{\Hypertarget{_i2_c___master___file_8h_a4a67d4bb2679cbcf9361dce21fb7b61a}\label{_i2_c___master___file_8h_a4a67d4bb2679cbcf9361dce21fb7b61a}} 
+\index{I2C\_Master\_File.h@{I2C\_Master\_File.h}!RTC\_Calendario@{RTC\_Calendario}}
+\index{RTC\_Calendario@{RTC\_Calendario}!I2C\_Master\_File.h@{I2C\_Master\_File.h}}
+\doxysubsubsection{\texorpdfstring{RTC\_Calendario()}{RTC\_Calendario()}}
+{\footnotesize\ttfamily void RTC\+\_\+\+Calendario (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{reloj_8c_source_l00079}{79}} del archivo \mbox{\hyperlink{reloj_8c_source}{reloj.\+c}}.
+

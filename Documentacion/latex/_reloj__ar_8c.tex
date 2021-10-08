@@ -1,0 +1,130 @@
+\hypertarget{_reloj__ar_8c}{}\doxysection{Referencia del Archivo D\+:/\+Clases 2021/\+Arquitectura Computacional/\+Github/\+Smart\+\_\+\+Watch/\+Smart\+Watch.X/\+Reloj\+\_\+ar.c}
+\label{_reloj__ar_8c}\index{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/Reloj\_ar.c@{D:/Clases 2021/Arquitectura Computacional/Github/Smart\_Watch/SmartWatch.X/Reloj\_ar.c}}
+{\ttfamily \#include \char`\"{}I2\+C\+\_\+\+Master\+\_\+\+File.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$pic18f4550.\+h$>$}\newline
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{_reloj__ar_8c_ae659adbd3c6a366248a65a5a06ccaddf}{I2\+C\+\_\+\+Read}} (char flag)
+\item 
+void \mbox{\hyperlink{_reloj__ar_8c_a84df9a5887b8b8230cfe85d18e53900e}{I2\+C\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{_reloj__ar_8c_a32604c6594874020996a591d1c44a36b}{I2\+C\+\_\+\+Ready}} (void)
+\item 
+void \mbox{\hyperlink{_reloj__ar_8c_aff7530294861de4d4bb4ce79a4f5b3de}{I2\+C\+\_\+\+Start\+\_\+\+Wait}} (char slave\+\_\+write\+\_\+address)
+\item 
+char \mbox{\hyperlink{_reloj__ar_8c_ad950d0a7957b30765c9d0e4eb3f5394f}{I2\+C\+\_\+\+Start}} (char slave\+\_\+write\+\_\+address)
+\item 
+char \mbox{\hyperlink{_reloj__ar_8c_a9a2b57ae2f4edb1810bff9d0bf28f8f8}{I2\+C\+\_\+\+Repeated\+\_\+\+Start}} (char slave\+\_\+read\+\_\+address)
+\item 
+char \mbox{\hyperlink{_reloj__ar_8c_a8c642a2d729a9cf462643092a54c2fc4}{I2\+C\+\_\+\+Stop}} (void)
+\item 
+char \mbox{\hyperlink{_reloj__ar_8c_a2be0ceba485b7169b498e59090edabcf}{I2\+C\+\_\+\+Write}} (unsigned char data)
+\item 
+void \mbox{\hyperlink{_reloj__ar_8c_aecd9f094a397ce4ca002fe6ca1513634}{I2\+C\+\_\+\+Ack}} (void)
+\item 
+void \mbox{\hyperlink{_reloj__ar_8c_a4fd80a89587fb0f5cc8b743c841f4a42}{I2\+C\+\_\+\+Nack}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{_reloj__ar_8c_aecd9f094a397ce4ca002fe6ca1513634}\label{_reloj__ar_8c_aecd9f094a397ce4ca002fe6ca1513634}} 
+\index{Reloj\_ar.c@{Reloj\_ar.c}!I2C\_Ack@{I2C\_Ack}}
+\index{I2C\_Ack@{I2C\_Ack}!Reloj\_ar.c@{Reloj\_ar.c}}
+\doxysubsubsection{\texorpdfstring{I2C\_Ack()}{I2C\_Ack()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Ack (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00230}{230}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
+\mbox{\Hypertarget{_reloj__ar_8c_a84df9a5887b8b8230cfe85d18e53900e}\label{_reloj__ar_8c_a84df9a5887b8b8230cfe85d18e53900e}} 
+\index{Reloj\_ar.c@{Reloj\_ar.c}!I2C\_Init@{I2C\_Init}}
+\index{I2C\_Init@{I2C\_Init}!Reloj\_ar.c@{Reloj\_ar.c}}
+\doxysubsubsection{\texorpdfstring{I2C\_Init()}{I2C\_Init()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00057}{57}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
+\mbox{\Hypertarget{_reloj__ar_8c_a4fd80a89587fb0f5cc8b743c841f4a42}\label{_reloj__ar_8c_a4fd80a89587fb0f5cc8b743c841f4a42}} 
+\index{Reloj\_ar.c@{Reloj\_ar.c}!I2C\_Nack@{I2C\_Nack}}
+\index{I2C\_Nack@{I2C\_Nack}!Reloj\_ar.c@{Reloj\_ar.c}}
+\doxysubsubsection{\texorpdfstring{I2C\_Nack()}{I2C\_Nack()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Nack (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00250}{250}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
+\mbox{\Hypertarget{_reloj__ar_8c_ae659adbd3c6a366248a65a5a06ccaddf}\label{_reloj__ar_8c_ae659adbd3c6a366248a65a5a06ccaddf}} 
+\index{Reloj\_ar.c@{Reloj\_ar.c}!I2C\_Read@{I2C\_Read}}
+\index{I2C\_Read@{I2C\_Read}!Reloj\_ar.c@{Reloj\_ar.c}}
+\doxysubsubsection{\texorpdfstring{I2C\_Read()}{I2C\_Read()}}
+{\footnotesize\ttfamily char I2\+C\+\_\+\+Read (\begin{DoxyParamCaption}\item[{char}]{flag }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00027}{27}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
+\mbox{\Hypertarget{_reloj__ar_8c_a32604c6594874020996a591d1c44a36b}\label{_reloj__ar_8c_a32604c6594874020996a591d1c44a36b}} 
+\index{Reloj\_ar.c@{Reloj\_ar.c}!I2C\_Ready@{I2C\_Ready}}
+\index{I2C\_Ready@{I2C\_Ready}!Reloj\_ar.c@{Reloj\_ar.c}}
+\doxysubsubsection{\texorpdfstring{I2C\_Ready()}{I2C\_Ready()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Ready (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00083}{83}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
+\mbox{\Hypertarget{_reloj__ar_8c_a9a2b57ae2f4edb1810bff9d0bf28f8f8}\label{_reloj__ar_8c_a9a2b57ae2f4edb1810bff9d0bf28f8f8}} 
+\index{Reloj\_ar.c@{Reloj\_ar.c}!I2C\_Repeated\_Start@{I2C\_Repeated\_Start}}
+\index{I2C\_Repeated\_Start@{I2C\_Repeated\_Start}!Reloj\_ar.c@{Reloj\_ar.c}}
+\doxysubsubsection{\texorpdfstring{I2C\_Repeated\_Start()}{I2C\_Repeated\_Start()}}
+{\footnotesize\ttfamily char I2\+C\+\_\+\+Repeated\+\_\+\+Start (\begin{DoxyParamCaption}\item[{char}]{slave\+\_\+read\+\_\+address }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00159}{159}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
+\mbox{\Hypertarget{_reloj__ar_8c_ad950d0a7957b30765c9d0e4eb3f5394f}\label{_reloj__ar_8c_ad950d0a7957b30765c9d0e4eb3f5394f}} 
+\index{Reloj\_ar.c@{Reloj\_ar.c}!I2C\_Start@{I2C\_Start}}
+\index{I2C\_Start@{I2C\_Start}!Reloj\_ar.c@{Reloj\_ar.c}}
+\doxysubsubsection{\texorpdfstring{I2C\_Start()}{I2C\_Start()}}
+{\footnotesize\ttfamily char I2\+C\+\_\+\+Start (\begin{DoxyParamCaption}\item[{char}]{slave\+\_\+write\+\_\+address }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00134}{134}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
+\mbox{\Hypertarget{_reloj__ar_8c_aff7530294861de4d4bb4ce79a4f5b3de}\label{_reloj__ar_8c_aff7530294861de4d4bb4ce79a4f5b3de}} 
+\index{Reloj\_ar.c@{Reloj\_ar.c}!I2C\_Start\_Wait@{I2C\_Start\_Wait}}
+\index{I2C\_Start\_Wait@{I2C\_Start\_Wait}!Reloj\_ar.c@{Reloj\_ar.c}}
+\doxysubsubsection{\texorpdfstring{I2C\_Start\_Wait()}{I2C\_Start\_Wait()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Start\+\_\+\+Wait (\begin{DoxyParamCaption}\item[{char}]{slave\+\_\+write\+\_\+address }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00101}{101}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
+\mbox{\Hypertarget{_reloj__ar_8c_a8c642a2d729a9cf462643092a54c2fc4}\label{_reloj__ar_8c_a8c642a2d729a9cf462643092a54c2fc4}} 
+\index{Reloj\_ar.c@{Reloj\_ar.c}!I2C\_Stop@{I2C\_Stop}}
+\index{I2C\_Stop@{I2C\_Stop}!Reloj\_ar.c@{Reloj\_ar.c}}
+\doxysubsubsection{\texorpdfstring{I2C\_Stop()}{I2C\_Stop()}}
+{\footnotesize\ttfamily char I2\+C\+\_\+\+Stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00186}{186}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
+\mbox{\Hypertarget{_reloj__ar_8c_a2be0ceba485b7169b498e59090edabcf}\label{_reloj__ar_8c_a2be0ceba485b7169b498e59090edabcf}} 
+\index{Reloj\_ar.c@{Reloj\_ar.c}!I2C\_Write@{I2C\_Write}}
+\index{I2C\_Write@{I2C\_Write}!Reloj\_ar.c@{Reloj\_ar.c}}
+\doxysubsubsection{\texorpdfstring{I2C\_Write()}{I2C\_Write()}}
+{\footnotesize\ttfamily char I2\+C\+\_\+\+Write (\begin{DoxyParamCaption}\item[{unsigned char}]{data }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_reloj__ar_8c_source_l00208}{208}} del archivo \mbox{\hyperlink{_reloj__ar_8c_source}{Reloj\+\_\+ar.\+c}}.
+
