@@ -4,9 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/Clases%202021/Arquitectura%20Computacional/Github/Smart_Watch/SmartWatch.X/Estados.c</file>
-            <file>file:/D:/Clases%202021/Arquitectura%20Computacional/Github/Smart_Watch/SmartWatch.X/I2C_Master_File.h</file>
+            <file>file:/D:/Clases%202021/Arquitectura%20Computacional/Github/Smart_Watch/SmartWatch.X/LCD_caracter.c</file>
+            <file>file:/D:/Clases%202021/Arquitectura%20Computacional/Github/Smart_Watch/SmartWatch.X/smart_main.c</file>
             <file>file:/D:/Clases%202021/Arquitectura%20Computacional/Github/Smart_Watch/SmartWatch.X/Melodia.h</file>
             <file>file:/D:/Clases%202021/Arquitectura%20Computacional/Github/Smart_Watch/SmartWatch.X/reloj.c</file>
+            <file>file:/D:/Clases%202021/Arquitectura%20Computacional/Github/Smart_Watch/SmartWatch.X/Reloj_ar.c</file>
         </group>
     </open-files>
 </project-private>

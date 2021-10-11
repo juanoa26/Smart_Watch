@@ -6092,7 +6092,7 @@ void Sunny_State() {
     LCD_Custom_Char(0, character2);
     LCD_Command(0xc0);
     LCD_Char(0);
-
+    PlayCancion();
     return;
 }
 # 82 "Estados.c"
